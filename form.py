@@ -11,20 +11,25 @@
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
+    QCursor, QFont, QFontDatabase, QGradient,
+    QIcon, QImage, QKeySequence, QLinearGradient,
+    QPainter, QPalette, QPixmap, QRadialGradient,
+    QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QHBoxLayout,
-    QLabel, QLineEdit, QMainWindow, QMenuBar,
-    QPushButton, QScrollArea, QSizePolicy, QStatusBar,
-    QVBoxLayout, QWidget)
+    QLabel, QLineEdit, QMainWindow, QMenu,
+    QMenuBar, QPushButton, QScrollArea, QSizePolicy,
+    QStatusBar, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(672, 384)
+        self.action_chart_week = QAction(MainWindow)
+        self.action_chart_week.setObjectName(u"action_chart_week")
+        self.action_chart_three = QAction(MainWindow)
+        self.action_chart_three.setObjectName(u"action_chart_three")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout_2 = QVBoxLayout(self.centralwidget)
@@ -164,10 +169,16 @@ class Ui_MainWindow(object):
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
         self.menubar.setGeometry(QRect(0, 0, 672, 22))
+        self.menu = QMenu(self.menubar)
+        self.menu.setObjectName(u"menu")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
         MainWindow.setStatusBar(self.statusbar)
+
+        self.menubar.addAction(self.menu.menuAction())
+        self.menu.addAction(self.action_chart_week)
+        self.menu.addAction(self.action_chart_three)
 
         self.retranslateUi(MainWindow)
 
@@ -176,6 +187,8 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.action_chart_week.setText(QCoreApplication.translate("MainWindow", u"\u043d\u0430 \u043d\u0435\u0434\u0435\u043b\u044e", None))
+        self.action_chart_three.setText(QCoreApplication.translate("MainWindow", u"\u043d\u0430 \u0442\u0440\u0438 \u0434\u043d\u044f", None))
         self.label_city.setText(QCoreApplication.translate("MainWindow", u"\u0433\u043e\u0440\u043e\u0434:", None))
         self.pushButtonsearce.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u0438\u0441\u043a", None))
         self.label_0.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
@@ -186,5 +199,6 @@ class Ui_MainWindow(object):
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.menu.setTitle(QCoreApplication.translate("MainWindow", u"\u0413\u0440\u0430\u0444\u0438\u043a\u0438 \u043f\u043e\u0433\u043e\u0434\u044b", None))
     # retranslateUi
 

@@ -237,8 +237,26 @@
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Графики погоды</string>
+    </property>
+    <addaction name="action_chart_week"/>
+    <addaction name="action_chart_three"/>
+   </widget>
+   <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_chart_week">
+   <property name="text">
+    <string>на неделю</string>
+   </property>
+  </action>
+  <action name="action_chart_three">
+   <property name="text">
+    <string>на три дня</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
