@@ -36,10 +36,10 @@ class Ui_Dialog_charts(object):
 
         self.horizontalLayout.addWidget(self.label)
 
-        self.comboBox_2 = QComboBox(Dialog_charts)
-        self.comboBox_2.setObjectName(u"comboBox_2")
+        self.comboBox_week = QComboBox(Dialog_charts)
+        self.comboBox_week.setObjectName(u"comboBox_week")
 
-        self.horizontalLayout.addWidget(self.comboBox_2)
+        self.horizontalLayout.addWidget(self.comboBox_week)
 
         self.label_2 = QLabel(Dialog_charts)
         self.label_2.setObjectName(u"label_2")
@@ -47,10 +47,10 @@ class Ui_Dialog_charts(object):
 
         self.horizontalLayout.addWidget(self.label_2)
 
-        self.comboBox = QComboBox(Dialog_charts)
-        self.comboBox.setObjectName(u"comboBox")
+        self.comboBox_2daly = QComboBox(Dialog_charts)
+        self.comboBox_2daly.setObjectName(u"comboBox_2daly")
 
-        self.horizontalLayout.addWidget(self.comboBox)
+        self.horizontalLayout.addWidget(self.comboBox_2daly)
 
 
         self.verticalLayout.addLayout(self.horizontalLayout)

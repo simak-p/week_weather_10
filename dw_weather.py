@@ -24,4 +24,8 @@ def get_weather_dict(lon: float, lat: float) -> dict:
 def loc_to_coord(city_name: str):
     location_url = f"https://geocoding-api.open-meteo.com/v1/search?name={city_name}&language=ru"
     resp = requests.get(location_url)
-    return [resp.json()['results'][0]['latitude'], resp.json()['results'][0]['longitude']]
+    results = []
+    for i in resp.json()['results']:
+        results.append([i['name'], i['country'], i['latitude'], i['longitude']])
+        print(results)
+    return results

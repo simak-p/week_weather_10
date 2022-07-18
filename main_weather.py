@@ -34,10 +34,10 @@ class MainWeather(QMainWindow):
 
     def weather_from_name(self):
         geo_coord = loc_to_coord(self.ui.lineEdit_Cyty.text())
-        self.mw_dict = get_weather_dict(geo_coord[1], geo_coord[0])
-        create_str_daily(self.mw_dict, self.label_list)
-        print(self.mw_dict['hourly'].keys())
-        # pprint(self.mw_dict['hourly']['time'])
+        # self.mw_dict = get_weather_dict(geo_coord[1], geo_coord[0])
+        # create_str_daily(self.mw_dict, self.label_list)
+        # print(self.mw_dict['hourly'].keys())
+        # # pprint(self.mw_dict['hourly']['time'])
 
     def charts_show(self):
         self.dialog_charts = DialogCarts(self.mw_dict['hourly'])

@@ -33,3 +33,8 @@ time_list2 = []
 for i in time_list:
     time_list2.append(QDateTime.fromSecsSinceEpoch(i))
 # print(time_list2)
+
+float_list = [1.2, 2.5, 6.4, 5.1, 4.2, 5.7, 5.9]
+
+int_list = list(map(int, float_list))
+print(int_list)

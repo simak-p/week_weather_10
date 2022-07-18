@@ -68,7 +68,6 @@ def w_code(code: float):
 
 def wind_srt(degree_f: float):
     degree = int(degree_f)
-    wind = ''
     if degree in range(22, 68):
         wind = 'Северо-восточный'
     elif degree in range(68, 112):
@@ -109,28 +108,53 @@ def create_data(hourly: dict):
     chart_data = {'temp': hourly['temperature_2m'], 'press': hourly['surface_pressure'],
                   'humidity': hourly['relativehumidity_2m'], 'feels': hourly['apparent_temperature'],
                   'time': list(map(QDateTime.fromSecsSinceEpoch, hourly['time'])), 'dt': hourly['time'],
-                  'windspeed': hourly['windspeed_10m']}
+                  'windspeed': hourly['windspeed_10m'], 'wind_gust': hourly['windgusts_10m'],
+                  'dew_point': hourly['dewpoint_2m'], 'snow_depth': hourly['snow_depth'],
+                  'precipitation': hourly['precipitation'], 'shortwave_radiation': hourly['shortwave_radiation'],
+                  'soil_temp_6': hourly['soil_temperature_6cm'], 'soil_temp_18': hourly['soil_temperature_18cm'],
+                  'soil_moist': hourly['soil_moisture_3_9cm']}
+    # print(chart_data['soil_moist'])
     return chart_data
 
 
 class HourlyChartsData:
     def __init__(self, hourly: dict):
         chart_data = create_data(hourly)
-        self.temp_series = chart_points(chart_data['dt'], chart_data['temp'])
-        self.feels_series = chart_points(chart_data['dt'], chart_data['feels'])
+        self.tempSeries = chart_points(chart_data['dt'], chart_data['temp'])
+        self.feelsSeries = chart_points(chart_data['dt'], chart_data['feels'])
         self.pressSeries = chart_points(chart_data['dt'], chart_data['press'])
         self.humiditySeries = chart_points(chart_data['dt'], chart_data['humidity'])
-        self.uviSeries = chart_points(chart_data['dt'], chart_data['windspeed'])
+        self.speedSeries = chart_points(chart_data['dt'], chart_data['windspeed'])
+        self.gustSeries = chart_points(chart_data['dt'], chart_data['wind_gust'])
+        self.dew_pointSeries = chart_points(chart_data['dt'], chart_data['dew_point'])
+        self.snowSeries = chart_points(chart_data['dt'], chart_data['snow_depth'])
+        self.precipSeries = chart_points(chart_data['dt'], chart_data['precipitation'])
+        self.radiationSeries = chart_points(chart_data['dt'], chart_data['shortwave_radiation'])
+        self.soil_temp_6Series = chart_points(chart_data['dt'], chart_data['soil_temp_6'])
+        self.soil_temp_18Series = chart_points(chart_data['dt'], chart_data['soil_temp_18'])
+        self.soil_moistSeries = chart_points(chart_data['dt'], chart_data['soil_moist'])
         self.x_axisMin = x_axis_range(chart_data['time'])[0]
         self.x_axsMax = x_axis_range(chart_data['time'])[1]
-        self.y_tempAxisMin = y_axis_range([chart_data['temp'],chart_data['feels']])[0]
+        self.y_tempAxisMin = y_axis_range([chart_data['temp'], chart_data['feels']])[0]
         self.y_tempAxisMax = y_axis_range([chart_data['temp'], chart_data['feels']])[1]
         self.y_pressAxisMin = y_axis_range([chart_data['press']])[0]
         self.y_pressAxisMax = y_axis_range([chart_data['press']])[1]
         self.y_humidityAxisMin = y_axis_range([chart_data['humidity']])[0]
         self.y_humidityAxisMax = y_axis_range([chart_data['humidity']])[1]
-        self.y_uviAxisMin = y_axis_range([chart_data['windspeed']])[0]
-        self.y_uviAxisMax = y_axis_range([chart_data['windspeed']])[1]
+        self.y_speedAxisMin = y_axis_range([chart_data['windspeed'], chart_data['wind_gust']])[0]
+        self.y_speedAxisMax = y_axis_range([chart_data['windspeed'], chart_data['wind_gust']])[1]
+        self.y_devPointAxisMin = y_axis_range([chart_data['dew_point']])[0]
+        self.y_devPointAxisMax = y_axis_range([chart_data['dew_point']])[1]
+        self.y_snowAxisMin = y_axis_range([chart_data['snow_depth']])[0]
+        self.y_snowAxisMax = y_axis_range([chart_data['snow_depth']])[1]
+        self.y_precipAxisMin = y_axis_range([chart_data['precipitation']])[0]
+        self.y_precipAxisMax = y_axis_range([chart_data['precipitation']])[1]
+        self.y_radiationAxisMin = y_axis_range([chart_data['shortwave_radiation']])[0]
+        self.y_radiationAxisMax = y_axis_range([chart_data['shortwave_radiation']])[1]
+        self.y_soil_temp_AxisMin = y_axis_range([chart_data['soil_temp_6'], chart_data['soil_temp_18']])[0]
+        self.y_soil_temp_AxisMax = y_axis_range([chart_data['soil_temp_6'], chart_data['soil_temp_18']])[1]
+        self.y_soil_moistAxisMin = y_axis_range([chart_data['soil_moist']])[0]
+        self.y_soil_moistAxisMax = y_axis_range([chart_data['soil_moist']])[1]
 
 
 def x_axis_range(qdates: list):
