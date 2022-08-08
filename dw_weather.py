@@ -1,11 +1,13 @@
 from pprint import pprint
+from shlex import join
 
 import requests
 
 
 def get_weather_dict(lon: float, lat: float) -> dict:
     try:
-        weather_url = f"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&hourly=temperature_2m," \
+        weather_url = f"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&current_weather" \
+                      f"&hourly=temperature_2m," \
                       f"relativehumidity_2m,dewpoint_2m,apparent_temperature,surface_pressure,precipitation," \
                       f"weathercode,snow_depth,cloudcover,shortwave_radiation,windspeed_10m,winddirection_10m," \
                       f"windgusts_10m,soil_temperature_6cm,soil_temperature_18cm," \
@@ -13,7 +15,7 @@ def get_weather_dict(lon: float, lat: float) -> dict:
                       f"apparent_temperature_max,apparent_temperature_min,sunrise,sunset,precipitation_sum," \
                       f"precipitation_hours,windspeed_10m_max,windgusts_10m_max,winddirection_10m_dominant," \
                       f"shortwave_radiation_sum&timeformat=unixtime&timezone=Europe%2FMoscow&windspeed_unit=ms" \
-                      f"&past_days=1"
+                      f"&past_days=0"
         resp = requests.get(weather_url)
         # pprint(resp.json())
         return resp.json()
@@ -26,6 +28,5 @@ def loc_to_coord(city_name: str):
     resp = requests.get(location_url)
     results = []
     for i in resp.json()['results']:
-        results.append([i['name'], i['country'], i['latitude'], i['longitude']])
-        print(results)
+        results.append(', '.join([i['name'], i['country'], str(i['latitude']), str(i['longitude'])]))
     return results

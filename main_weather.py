@@ -1,11 +1,8 @@
-import pickle
 import sys
 from pprint import pprint
-from save_dowwnload_data import load_data, saved_data
-from wc_data import create_str_daily, create_data
-
+from wc_data import create_str_daily
 from PySide6.QtGui import QScreen, QIcon
-from PySide6.QtWidgets import QMainWindow, QApplication
+from PySide6.QtWidgets import QMainWindow, QApplication, QInputDialog
 from form import Ui_MainWindow
 from dw_weather import get_weather_dict, loc_to_coord
 from my_dialog_charts import DialogCarts
@@ -17,7 +14,9 @@ class MainWeather(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.mw_dict = {}
+        self.searce_list = []
         self.dialog_charts = None
+        self.dialog_searce = None
         self.label_list = [self.ui.label_0, self.ui.label_1, self.ui.label_2, self.ui.label_3, self.ui.label_4,
                            self.ui.label_5, self.ui.label_6, self.ui.label_7]
         self.ui.pushButtonsearce.clicked.connect(self.weather_from_name)
@@ -33,11 +32,17 @@ class MainWeather(QMainWindow):
     #     # pprint(self.mw_dict['hourly'])
 
     def weather_from_name(self):
-        geo_coord = loc_to_coord(self.ui.lineEdit_Cyty.text())
-        # self.mw_dict = get_weather_dict(geo_coord[1], geo_coord[0])
-        # create_str_daily(self.mw_dict, self.label_list)
-        # print(self.mw_dict['hourly'].keys())
-        # # pprint(self.mw_dict['hourly']['time'])
+        self.searce_list = loc_to_coord(self.ui.lineEdit_Cyty.text())
+        print(self.searce_list)
+        selection, ok = QInputDialog.getItem(self, 'Выбор города.', 'Выберите нужный вам\nгород из списка',
+                                             self.searce_list, 0, False)
+        if ok and not selection == '':
+            ret_list = selection.split(', ')
+
+            self.mw_dict = get_weather_dict(float(ret_list[3]), float(ret_list[2]))
+            create_str_daily(self.mw_dict, self.label_list)
+            pprint(self.mw_dict)
+            # pprint(self.mw_dict['hourly']['time'])
 
     def charts_show(self):
         self.dialog_charts = DialogCarts(self.mw_dict['hourly'])

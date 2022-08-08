@@ -12,7 +12,7 @@ class MyXAxis(QDateTimeAxis):
         super().__init__()
         self.setFormat('ddd HH:MM')
         self.setLabelsColor('orange')
-        self.setTickCount(17)
+        self.setTickCount(29)
         self.setLabelsAngle(270)
         self.setTitleText('Часы')
         self.setTitleBrush(QColor('orange'))
