@@ -17,7 +17,7 @@ class MainWeather(QMainWindow):
         self.searce_list = []
         self.dialog_charts = None
         self.dialog_searce = None
-        self.label_list = [self.ui.label_0, self.ui.label_1, self.ui.label_2, self.ui.label_3, self.ui.label_4,
+        self.label_list = [self.ui.label_1, self.ui.label_2, self.ui.label_3, self.ui.label_4,
                            self.ui.label_5, self.ui.label_6, self.ui.label_7]
         self.ui.pushButtonsearce.clicked.connect(self.weather_from_name)
         self.ui.action_chart_week.triggered.connect(self.charts_show)
@@ -37,9 +37,9 @@ class MainWeather(QMainWindow):
         selection, ok = QInputDialog.getItem(self, 'Выбор города.', 'Выберите нужный вам\nгород из списка',
                                              self.searce_list, 0, False)
         if ok and not selection == '':
-            ret_list = selection.split(', ')
+            ret_list = selection.split('  ')
 
-            self.mw_dict = get_weather_dict(float(ret_list[3]), float(ret_list[2]))
+            self.mw_dict = get_weather_dict(float(ret_list[3]), float(ret_list[4]))
             create_str_daily(self.mw_dict, self.label_list)
             pprint(self.mw_dict)
             # pprint(self.mw_dict['hourly']['time'])
@@ -54,8 +54,8 @@ if __name__ == '__main__':
     window = MainWeather()
     window.resize(QScreen.availableGeometry(QApplication.primaryScreen()).width() / 1.5,
                   QScreen.availableGeometry(QApplication.primaryScreen()).height() / 1.5)
-    # window.setWindowIcon(QIcon('program_icon.png'))
-    window.setWindowTitle('Подробный прогноз погоды на три дня.')
+    window.setWindowIcon(QIcon('program_icon.png'))
+    window.setWindowTitle('Подробный прогноз погоды на неделю.')
     f = open('my_qssStyle.qss', 'r')
     with f:
         qss = f.read()

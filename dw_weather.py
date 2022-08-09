@@ -1,12 +1,11 @@
 from pprint import pprint
-from shlex import join
 
 import requests
 
 
-def get_weather_dict(lon: float, lat: float) -> dict:
+def get_weather_dict(lat: float, lon: float) -> dict:
     try:
-        weather_url = f"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&current_weather" \
+        weather_url = f"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&current_weather=true" \
                       f"&hourly=temperature_2m," \
                       f"relativehumidity_2m,dewpoint_2m,apparent_temperature,surface_pressure,precipitation," \
                       f"weathercode,snow_depth,cloudcover,shortwave_radiation,windspeed_10m,winddirection_10m," \
@@ -28,5 +27,6 @@ def loc_to_coord(city_name: str):
     resp = requests.get(location_url)
     results = []
     for i in resp.json()['results']:
-        results.append(', '.join([i['name'], i['country'], str(i['latitude']), str(i['longitude'])]))
+        results.append(f"{i['name']}  {i.get('country', 'нет данных')}  {i.get('admin1', 'нет данных')}  "
+                       f"{i.get('latitude', 'нет данных')}  {i.get('longitude', 'нет данных')}")
     return results
