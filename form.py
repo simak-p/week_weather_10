@@ -16,10 +16,10 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QHBoxLayout,
-    QLabel, QLineEdit, QMainWindow, QMenu,
-    QMenuBar, QPushButton, QScrollArea, QSizePolicy,
-    QStatusBar, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
+    QLineEdit, QMainWindow, QMenu, QMenuBar,
+    QPushButton, QScrollArea, QSizePolicy, QStatusBar,
+    QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -54,19 +54,17 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout.addWidget(self.pushButtonsearce)
 
-        self.comboBox_favorites = QComboBox(self.centralwidget)
-        self.comboBox_favorites.setObjectName(u"comboBox_favorites")
+        self.pushButton_favorites = QPushButton(self.centralwidget)
+        self.pushButton_favorites.setObjectName(u"pushButton_favorites")
 
-        self.horizontalLayout.addWidget(self.comboBox_favorites)
+        self.horizontalLayout.addWidget(self.pushButton_favorites)
 
-        self.comboBox_history = QComboBox(self.centralwidget)
-        self.comboBox_history.setObjectName(u"comboBox_history")
+        self.pushButton_history = QPushButton(self.centralwidget)
+        self.pushButton_history.setObjectName(u"pushButton_history")
 
-        self.horizontalLayout.addWidget(self.comboBox_history)
+        self.horizontalLayout.addWidget(self.pushButton_history)
 
         self.horizontalLayout.setStretch(1, 2)
-        self.horizontalLayout.setStretch(3, 1)
-        self.horizontalLayout.setStretch(4, 1)
 
         self.verticalLayout.addLayout(self.horizontalLayout)
 
@@ -191,6 +189,8 @@ class Ui_MainWindow(object):
         self.action_chart_three.setText(QCoreApplication.translate("MainWindow", u"\u043d\u0430 \u0442\u0440\u0438 \u0434\u043d\u044f", None))
         self.label_city.setText(QCoreApplication.translate("MainWindow", u"\u0433\u043e\u0440\u043e\u0434:", None))
         self.pushButtonsearce.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u0438\u0441\u043a", None))
+        self.pushButton_favorites.setText(QCoreApplication.translate("MainWindow", u"\u0418\u0437\u0431\u0440\u0430\u043d\u043d\u043e\u0435", None))
+        self.pushButton_history.setText(QCoreApplication.translate("MainWindow", u"\u0418\u0441\u0442\u043e\u0440\u0438\u044f", None))
         self.label_0.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.label_1.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))

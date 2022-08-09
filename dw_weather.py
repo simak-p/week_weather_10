@@ -16,7 +16,6 @@ def get_weather_dict(lat: float, lon: float) -> dict:
                       f"shortwave_radiation_sum&timeformat=unixtime&timezone=Europe%2FMoscow&windspeed_unit=ms" \
                       f"&past_days=0"
         resp = requests.get(weather_url)
-        # pprint(resp.json())
         return resp.json()
     except Exception as ex:
         print(ex)
@@ -25,8 +24,4 @@ def get_weather_dict(lat: float, lon: float) -> dict:
 def loc_to_coord(city_name: str):
     location_url = f"https://geocoding-api.open-meteo.com/v1/search?name={city_name}&language=ru"
     resp = requests.get(location_url)
-    results = []
-    for i in resp.json()['results']:
-        results.append(f"{i['name']}  {i.get('country', 'нет данных')}  {i.get('admin1', 'нет данных')}  "
-                       f"{i.get('latitude', 'нет данных')}  {i.get('longitude', 'нет данных')}")
-    return results
+    return resp

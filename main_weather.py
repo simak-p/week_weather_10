@@ -1,11 +1,33 @@
+import json
 import sys
 from pprint import pprint
 from wc_data import create_str_daily
 from PySide6.QtGui import QScreen, QIcon
-from PySide6.QtWidgets import QMainWindow, QApplication, QInputDialog
+from PySide6.QtWidgets import QMainWindow, QApplication, QDialog
 from form import Ui_MainWindow
 from dw_weather import get_weather_dict, loc_to_coord
 from my_dialog_charts import DialogCarts
+from choose_city.choose_sity_dialog import ChooseCity
+from history_dialog.histoey_dialog import HistoryDialog
+
+
+def choose_dialog_show(city_list: list):
+    choose_dialog = ChooseCity(city_list)
+    if choose_dialog.exec() == QDialog.Accepted:
+        return choose_dialog.return_index_data()
+    else:
+        pass
+    choose_dialog.deleteLater()
+
+
+def saved_data(data: list, name_file: str):
+    with open(name_file, "w") as write_file:
+        json.dump(data, write_file)
+
+
+def load_data(name_File: str):
+    with open(name_File, "r") as read_file:
+        return json.load(read_file)
 
 
 class MainWeather(QMainWindow):
@@ -14,39 +36,50 @@ class MainWeather(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.mw_dict = {}
-        self.searce_list = []
-        self.dialog_charts = None
-        self.dialog_searce = None
+        # self.searce_list = []
+        self.favorites_list = []
+        self.history_list = []
+        self.history_file = 'data_stor/history.json'
         self.label_list = [self.ui.label_1, self.ui.label_2, self.ui.label_3, self.ui.label_4,
                            self.ui.label_5, self.ui.label_6, self.ui.label_7]
         self.ui.pushButtonsearce.clicked.connect(self.weather_from_name)
         self.ui.action_chart_week.triggered.connect(self.charts_show)
+        self.ui.pushButton_history.clicked.connect(self.history_dialog_show)
 
-    # def create_weather_dict(self):
-    #     mw_dict = get_weather_dict()
-    #     if mw_dict is not None:
-    #         pass
-    #     else:
-    #         print('No connection')
-    #     # print(self.mw_dict['hourly'].keys())
-    #     # pprint(self.mw_dict['hourly'])
+        try:
+            self.history_list = load_data(self.history_file)
+        except FileNotFoundError:
+            pass
+        print(self.history_list)
 
     def weather_from_name(self):
-        self.searce_list = loc_to_coord(self.ui.lineEdit_Cyty.text())
-        print(self.searce_list)
-        selection, ok = QInputDialog.getItem(self, 'Выбор города.', 'Выберите нужный вам\nгород из списка',
-                                             self.searce_list, 0, False)
-        if ok and not selection == '':
-            ret_list = selection.split('  ')
+        try:
+            resp = loc_to_coord(self.ui.lineEdit_Cyty.text())
+            searce_list = []
+            for i in resp.json()['results']:
+                searce_list.append(
+                    f"{i['name']}  {i.get('country', 'нет данных')}  {i.get('admin1', 'нет данных')}  "
+                    f"{i.get('latitude', 'нет данных')}  {i.get('longitude', 'нет данных')}")
+            ret_list = choose_dialog_show(searce_list).split('  ')
+            print('ret', ret_list)
 
             self.mw_dict = get_weather_dict(float(ret_list[3]), float(ret_list[4]))
             create_str_daily(self.mw_dict, self.label_list)
-            pprint(self.mw_dict)
+            # pprint(self.mw_dict)
             # pprint(self.mw_dict['hourly']['time'])
+            self.history_list.insert(0, '  '.join(ret_list))
+            print('history', self.history_list)
+            saved_data(self.history_list, self.history_file)
+        except KeyError:
+            print('такого города не найдено')
 
     def charts_show(self):
-        self.dialog_charts = DialogCarts(self.mw_dict['hourly'])
-        self.dialog_charts.show()
+        dialog_charts = DialogCarts(self.mw_dict['hourly'])
+        dialog_charts.show()
+
+    def history_dialog_show(self):
+        history_dialog = HistoryDialog(self.history_list, self.favorites_list)
+        history_dialog.exec()
 
 
 if __name__ == '__main__':
