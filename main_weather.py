@@ -73,13 +73,25 @@ class MainWeather(QMainWindow):
         except KeyError:
             print('такого города не найдено')
 
+    def weather_from_dialog(self, ret_list: list):
+        self.mw_dict = get_weather_dict(float(ret_list[3]), float(ret_list[4]))
+        create_str_daily(self.mw_dict, self.label_list)
+
     def charts_show(self):
         dialog_charts = DialogCarts(self.mw_dict['hourly'])
         dialog_charts.show()
 
     def history_dialog_show(self):
         history_dialog = HistoryDialog(self.history_list, self.favorites_list)
+        # history_dialog.weather_action.triggered.connect(self.weather_from_dialog(history_dialog.))
+        history_dialog.del_action.triggered.connect(self.save_history_list(history_dialog.delete_row()))
         history_dialog.exec()
+
+    def save_history_list(self, history: list):
+        print('his', history)
+        self.history_list = history
+        print('his. list', self.history_list)
+        saved_data(self.history_list, self.history_file)
 
 
 if __name__ == '__main__':

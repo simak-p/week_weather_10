@@ -1,4 +1,5 @@
 from PySide6.QtCore import QStringListModel
+from PySide6.QtGui import Qt, QAction
 from PySide6.QtWidgets import QDialog
 
 from history_dialog.history_form import Ui_Dialog
@@ -16,12 +17,21 @@ class HistoryDialog(QDialog):
         self.history_model = QStringListModel()
         self.history_model.setStringList(history_list)
         self.ui.listView.setModel(self.history_model)
+        self.ui.listView.setContextMenuPolicy(Qt.ActionsContextMenu)
 
-    def remove_row(self):
+        self.add_favorite_action = QAction()
+        self.add_favorite_action.setText('Добавить в избранное')
+        self.ui.listView.addAction(self.add_favorite_action)
+
+        self.del_action = QAction()
+        self.del_action.setText('Delete')
+        self.del_action.triggered.connect(self.delete_row)
+        self.ui.listView.addAction(self.del_action)
+
+        self.weather_action = QAction()
+        self.weather_action.setText('Показать погоду')
+        self.ui.listView.addAction(self.weather_action)
+
+    def delete_row(self):
         self.ui.listView.model().removeRow(self.ui.listView.currentIndex().row())
-
-    def show_weather(self):
-        return self.ui.listView.currentIndex().data()
-
-    def add_row_favorites(self, favorites_list: list):
-        favorites_list.insert(0, self.ui.listView.currentIndex().data())
+        return self.history_model.stringList()
