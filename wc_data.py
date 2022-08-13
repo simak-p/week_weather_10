@@ -104,6 +104,20 @@ def create_str_daily(mw_dict: dict, label_list: list[QLabel]):
         label_list[i].setText(day_str)
 
 
+def create_str_current(cw_dict: dict, city_dict: list, label: QLabel):
+    if city_dict[0] == city_dict[2]:
+        current_str = f"Погода на {dt.fromtimestamp(cw_dict['time']): %H:%M}\n" \
+                      f"гор.{city_dict[0]} {city_dict[1]} \n" \
+                      f"{w_code(cw_dict['weathercode'])}  температура:{cw_dict['temperature']}°C\n " \
+                      f" ветер  {wind_srt(cw_dict['winddirection'])}  скорость:{cw_dict['windspeed']}м/с"
+    else:
+        current_str = f"Погода на {dt.fromtimestamp(cw_dict['time']): %H:%M}\n" \
+                      f"гор.{city_dict[0]} {city_dict[1]} регион: {city_dict[2]}\n" \
+                      f"{w_code(cw_dict['weathercode'])}  температура:{cw_dict['temperature']}°C\n " \
+                      f" ветер  {wind_srt(cw_dict['winddirection'])}  скорость:{cw_dict['windspeed']}м/с"
+    label.setText(current_str)
+
+
 def create_data(hourly: dict):
     chart_data = {'temp': hourly['temperature_2m'], 'press': hourly['surface_pressure'],
                   'humidity': hourly['relativehumidity_2m'], 'feels': hourly['apparent_temperature'],
