@@ -1,3 +1,13 @@
-QWidget, QListView {
-        font:200 14pt;
+QWidget {
+        font: 800 14pt;
+        font-family: roboto/Roboto-BoldItalic;
+        background-color: #BAFF8F;
+}
+
+QLabel{
+        background-color: #8FFF9C;
+}
+
+QLineEdit{
+        background-color: #EDFBE4;
 }
