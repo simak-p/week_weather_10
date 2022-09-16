@@ -208,6 +208,7 @@ class Ui_MainWindow(object):
         self.listView_searce = QListView(self.dockWidgetContents_2)
         self.listView_searce.setObjectName(u"listView_searce")
         self.listView_searce.setContextMenuPolicy(Qt.ActionsContextMenu)
+        self.listView_searce.setAlternatingRowColors(True)
 
         self.verticalLayout_6.addWidget(self.listView_searce)
 
@@ -229,6 +230,7 @@ class Ui_MainWindow(object):
         self.listView_history = QListView(self.dockWidgetContents)
         self.listView_history.setObjectName(u"listView_history")
         self.listView_history.setContextMenuPolicy(Qt.ActionsContextMenu)
+        self.listView_history.setAlternatingRowColors(True)
 
         self.verticalLayout_3.addWidget(self.listView_history)
 
@@ -250,6 +252,7 @@ class Ui_MainWindow(object):
         self.listView_favorites = QListView(self.dockWidgetContents_3)
         self.listView_favorites.setObjectName(u"listView_favorites")
         self.listView_favorites.setContextMenuPolicy(Qt.ActionsContextMenu)
+        self.listView_favorites.setAlternatingRowColors(True)
 
         self.verticalLayout_5.addWidget(self.listView_favorites)
 

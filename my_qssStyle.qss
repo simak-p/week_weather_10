@@ -1,5 +1,5 @@
 QWidget {
-        font: 800 14pt;
+        font: 14pt;
         font-family: roboto/Roboto-BoldItalic;
         background-color: #BAFF8F;
 }
@@ -10,4 +10,51 @@ QLabel{
 
 QLineEdit{
         background-color: #EDFBE4;
+}
+
+QPushButton{
+        border: 2px solid;
+        background-color: #87E548;
+        border-radius: 8px;
+}
+
+QPushButton:pressed{
+        background-color: #EDFBE4;
+}
+
+QListView {
+    show-decoration-selected: 1; /* make the selection span the entire width of the view */
+}
+
+QListView::item:alternate {
+    background: #8FFFB8;
+}
+
+QListView::item:selected {
+    border: 1px solid khaki;
+}
+
+QListView::item:selected:active {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #87E548, stop: 1 #63E9D5);
+}
+
+QListView::item:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #EDFBE4, stop: 1 #DCDEF1);
+}
+
+QMenu {
+    /*background-color: #ABABAB; /* sets background of the menu */
+    border: 1px solid khaki;
+}
+
+QMenu::item {
+    /* sets background of menu item. set this to something non-transparent
+        if you want menu color and menu item color to be different */
+    background-color: transparent;
+}
+
+QMenu::item:selected { /* when user selects item using mouse or keyboard */
+    background-color:#87E548;
 }

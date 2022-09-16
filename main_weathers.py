@@ -2,15 +2,16 @@ import json
 import sys
 from pprint import pprint
 
-from PySide6 import QtGui, QtCore
+from PySide6 import QtGui
 from PySide6.QtCore import QStringListModel
 
 from wc_data import create_str_daily, create_str_current
-from PySide6.QtGui import QScreen, QIcon, QAction, Qt, QFont
+from PySide6.QtGui import QScreen, QIcon, QAction, Qt
 from PySide6.QtWidgets import QMainWindow, QApplication, QToolBar
 from main_form import Ui_MainWindow
 from dw_weather import get_weather_dict, loc_to_coord
 from my_dialog_charts import DialogCarts
+import pysnooper
 
 
 def saved_data(data: list, name_file: str):  # аргументы: данные и имя файла
@@ -112,10 +113,13 @@ class MainWeather(QMainWindow):
         saved_data(self.history_list, self.history_file)
 
     def add_to_favorites(self):
-        self.favorites_list.insert(0, self.ui.listView_history.currentIndex().data())
-        self.favorites_model.setStringList(self.favorites_list)
-        self.ui.listView_favorites.setModel(self.favorites_model)
-        saved_data(self.favorites_list, self.favorites_file)
+        if self.ui.listView_history.currentIndex().data() not in self.favorites_list:
+            self.favorites_list.insert(0, self.ui.listView_history.currentIndex().data())
+            self.favorites_model.setStringList(self.favorites_list)
+            self.ui.listView_favorites.setModel(self.favorites_model)
+            saved_data(self.favorites_list, self.favorites_file)
+        else:
+            print('Этот город был добавлен ранее.')
 
     def delete_row_favorites(self):
         self.ui.listView_favorites.model().removeRow(self.ui.listView_favorites.currentIndex().row())
@@ -148,6 +152,7 @@ class MainWeather(QMainWindow):
         elif not self.ui.dockWidget_searce.isVisible():
             self.ui.dockWidget_searce.setVisible(True)
 
+    @pysnooper.snoop()
     def chose_list_from_name(self):
         try:
             resp = loc_to_coord(self.ui.lineEdit_searce.text())
