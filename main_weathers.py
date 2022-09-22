@@ -1,5 +1,6 @@
 import json
 import sys
+from copy import copy
 from pprint import pprint
 
 from PySide6 import QtGui
@@ -14,7 +15,7 @@ from my_dialog_charts import DialogCarts
 import pysnooper
 
 
-def saved_data(data: list, name_file: str):  # аргументы: данные и имя файла
+def saved_data(data: [list, dict], name_file: str):  # аргументы: данные и имя файла
     with open(name_file, "w") as write_file:  # открываем файл для записи
         json.dump(data, write_file)  # записываем данные
 
@@ -32,24 +33,24 @@ class MainWeather(QMainWindow):
         self.ui.setupUi(self)
         self.mw_dict = {}
 
-        self.favorites_list = []
         self.history_list = []
-        self.favorites_file = 'data_stor/favorites.json'
+        self.by_popularity_dict = {}
         self.history_file = 'data_stor/history.json'
+        self.popularity_file = 'data_stor/popularity.json'
         self.history_model = QStringListModel()
         self.favorites_model = QStringListModel()
         self.searce_model = QStringListModel()
 
         try:
             self.history_list = load_data(self.history_file)
-            self.favorites_list = load_data(self.favorites_file)
+            self.by_popularity_dict = load_data(self.popularity_file)
         except FileNotFoundError:
             pass
-        # print(self.history_list)
+
         self.history_model.setStringList(self.history_list)
         self.ui.listView_history.setModel(self.history_model)
 
-        self.favorites_model.setStringList(self.favorites_list)
+        self.favorites_model.setStringList(list(self.by_popularity_dict))
         self.ui.listView_favorites.setModel(self.favorites_model)
 
         self.ui.listView_history.setContextMenuPolicy(Qt.ActionsContextMenu)
@@ -106,6 +107,14 @@ class MainWeather(QMainWindow):
         self.ui.listView_history.addAction(self.show_weather_history_action)
         self.show_weather_history_action.triggered.connect(self.weather_from_history)
 
+        self.popularity_action = QAction('Сортировать по популярности')
+        self.ui.listView_favorites.addAction(self.popularity_action)
+        self.popularity_action.triggered.connect(self.sorted_popularity)
+
+        self.abc_action = QAction('Сортировать по алфавиту')
+        self.ui.listView_favorites.addAction(self.abc_action)
+        self.popularity_action.triggered.connect(self.sorted_abc)
+
     def remove_row_history_list(self):
         self.ui.listView_history.model().removeRow(self.ui.listView_history.currentIndex().row())
         self.history_list = self.history_model.stringList()
@@ -113,18 +122,19 @@ class MainWeather(QMainWindow):
         saved_data(self.history_list, self.history_file)
 
     def add_to_favorites(self):
-        if self.ui.listView_history.currentIndex().data() not in self.favorites_list:
-            self.favorites_list.insert(0, self.ui.listView_history.currentIndex().data())
-            self.favorites_model.setStringList(self.favorites_list)
-            self.ui.listView_favorites.setModel(self.favorites_model)
-            saved_data(self.favorites_list, self.favorites_file)
+        if self.ui.listView_history.currentIndex().data() not in list(self.by_popularity_dict.keys()):
+            self.by_popularity_dict[self.ui.listView_history.currentIndex().data()] = 0
+            self.favorites_model.setStringList(list(self.by_popularity_dict))
+            saved_data(self.by_popularity_dict, self.popularity_file)
         else:
             print('Этот город был добавлен ранее.')
 
     def delete_row_favorites(self):
         self.ui.listView_favorites.model().removeRow(self.ui.listView_favorites.currentIndex().row())
-        self.favorites_list = self.favorites_model.stringList()
-        saved_data(self.favorites_list, self.favorites_file)
+        for i in list(self.by_popularity_dict):
+            if i not in self.favorites_model.stringList():
+                del (self.by_popularity_dict[i])
+        saved_data(self.by_popularity_dict, self.popularity_file)
 
     def charts_show(self):
         dialog_charts = DialogCarts(self.mw_dict['hourly'])
@@ -174,6 +184,8 @@ class MainWeather(QMainWindow):
             create_str_daily(self.mw_dict, self.label_list)
             pprint(self.mw_dict)
             self.history_list.insert(0, '  '.join(ret_list))
+            if len(self.history_list) > 50:
+                del self.history_list[50:]
             self.history_model.setStringList(self.history_list)
             self.ui.listView_history.setModel(self.history_model)
             print('history', self.history_list)
@@ -192,6 +204,7 @@ class MainWeather(QMainWindow):
         print('history', self.history_list)
         saved_data(self.history_list, self.history_file)
 
+    @pysnooper.snoop()
     def weather_from_favorite(self):
         ret_list = self.ui.listView_favorites.currentIndex().data().split('  ')
         print('ret_list', ret_list)
@@ -201,8 +214,28 @@ class MainWeather(QMainWindow):
         self.history_list.insert(0, '  '.join(ret_list))
         self.history_model.setStringList(self.history_list)
         self.ui.listView_history.setModel(self.history_model)
-        print('history', self.history_list)
+        # print('history', self.history_list)
         saved_data(self.history_list, self.history_file)
+
+        city = self.ui.listView_favorites.currentIndex().data()
+        for key in self.by_popularity_dict.keys():
+            if key == city:
+                self.by_popularity_dict[key] += 1
+                sorted_dict = dict(sorted(self.by_popularity_dict.items(), key=lambda item: item[1], reverse=True))
+                self.by_popularity_dict = copy(sorted_dict)
+                print(self.by_popularity_dict)
+                saved_data(sorted_dict, self.popularity_file)
+
+    def sorted_popularity(self):
+        city_list = list(self.by_popularity_dict)
+        self.favorites_model.setStringList(city_list)
+        saved_data(self.by_popularity_dict, self.popularity_file)
+
+    def sorted_abc(self):
+        city_list = list(self.by_popularity_dict)
+        city_list.sort()
+        self.favorites_model.setStringList(city_list)
+        # saved_data(self.by_popularity_dict, self.popularity_file)
 
 
 if __name__ == '__main__':
