@@ -57,7 +57,7 @@ class MainWeather(QMainWindow):
         self.ui.listView_favorites.setContextMenuPolicy(Qt.ActionsContextMenu)
 
         self.tool_bar = QToolBar('Окна')
-        self.tool_bar.setOrientation(Qt.Vertical)
+        self.tool_bar.setOrientation(Qt.Orientation.Vertical)
         self.searce_action = QAction('Поиск')
         self.favorites_action = QAction('Избранное')
         self.history_action = QAction('История')

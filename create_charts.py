@@ -4,8 +4,6 @@ from PySide6.QtGui import QPen, QColor, QFont
 
 from wc_data import HourlyChartsData
 
-chart_font = QFont("Sans Serif", 12, QFont.StyleItalic)
-
 
 class MyXAxis(QDateTimeAxis):
     def __init__(self, ax_min: QDateTime, ax_max: QDateTime):
@@ -17,7 +15,7 @@ class MyXAxis(QDateTimeAxis):
         self.setTitleText('Часы')
         self.setTitleBrush(QColor('orange'))
         self.setRange(ax_min, ax_max)
-        self.setLabelsFont(chart_font)
+        # self.setLabelsFont(chart_font)
 
 
 class MyYAxis(QValueAxis):
@@ -26,7 +24,7 @@ class MyYAxis(QValueAxis):
         self.setRange(ax_min, ax_max)
         self.setTickCount((ax_max - ax_min) // dev + 1)
         self.setTitleText(name)
-        self.setLabelsFont(chart_font)
+        # self.setLabelsFont(chart_font)
 
 
 class MySplineSeries(QSplineSeries):
@@ -40,7 +38,8 @@ class MySplineSeries(QSplineSeries):
 class TempChart(QChart):
     def __init__(self, hourly):
         super().__init__()
-        self.setTheme(QChart.ChartThemeBlueCerulean)
+        print(type(hourly))
+        self.setTheme(QChart.ChartTheme.ChartThemeBlueCerulean)
         hd = HourlyChartsData(hourly)
 
         self._y_axis = MyYAxis(hd.y_tempAxisMin, hd.y_tempAxisMax, 2, 'Градусы')
@@ -61,7 +60,7 @@ class PressChart(QChart):
     def __init__(self, hourly):
         super().__init__()
 
-        self.setTheme(QChart.ChartThemeBlueCerulean)
+        self.setTheme(QChart.ChartTheme.ChartThemeBlueCerulean)
         hd = HourlyChartsData(hourly)
         #
         self._x_axis = MyXAxis(hd.x_axisMin, hd.x_axsMax)
@@ -79,7 +78,7 @@ class PressChart(QChart):
 class HumidityChart(QChart):
     def __init__(self, hourly):
         super().__init__()
-        self.setTheme(QChart.ChartThemeBlueCerulean)
+        self.setTheme(QChart.ChartTheme.ChartThemeBlueCerulean)
         hd = HourlyChartsData(hourly)
         #
         self._x_axis = MyXAxis(hd.x_axisMin, hd.x_axsMax)
@@ -97,7 +96,7 @@ class HumidityChart(QChart):
 class WindChart(QChart):
     def __init__(self, hourly):
         super().__init__()
-        self.setTheme(QChart.ChartThemeBlueCerulean)
+        self.setTheme(QChart.ChartTheme.ChartThemeBlueCerulean)
         hd = HourlyChartsData(hourly)
         self._x_axis = MyXAxis(hd.x_axisMin, hd.x_axsMax)
         self._y_axis = MyYAxis(hd.y_speedAxisMin, hd.y_speedAxisMax, 2, 'м/с.')
@@ -115,7 +114,7 @@ class WindChart(QChart):
 class PrecipChart(QChart):
     def __init__(self, hourly):
         super().__init__()
-        self.setTheme(QChart.ChartThemeBlueCerulean)
+        self.setTheme(QChart.ChartTheme.ChartThemeBlueCerulean)
         hd = HourlyChartsData(hourly)
         self._x_axis = MyXAxis(hd.x_axisMin, hd.x_axsMax)
         self._y_axis = MyYAxis(hd.y_pressAxisMin, hd.y_precipAxisMax, 2, 'мм.')
@@ -130,7 +129,7 @@ class PrecipChart(QChart):
 class DewPointChart(QChart):
     def __init__(self, hourly):
         super().__init__()
-        self.setTheme(QChart.ChartThemeBlueCerulean)
+        self.setTheme(QChart.ChartTheme.ChartThemeBlueCerulean)
         hd = HourlyChartsData(hourly)
         self._x_axis = MyXAxis(hd.x_axisMin, hd.x_axsMax)
         self._y_axis = MyYAxis(hd.y_humidityAxisMin, hd.y_humidityAxisMax, 6, '°C')
@@ -145,7 +144,7 @@ class DewPointChart(QChart):
 class SunRadChart(QChart):
     def __init__(self, hourly):
         super().__init__()
-        self.setTheme(QChart.ChartThemeBlueCerulean)
+        self.setTheme(QChart.ChartTheme.ChartThemeBlueCerulean)
         hd = HourlyChartsData(hourly)
         self._x_axis = MyXAxis(hd.x_axisMin, hd.x_axsMax)
         self._y_axis = MyYAxis(hd.y_radiationAxisMin, hd.y_radiationAxisMax, 100, 'Радиация Вт/м')
@@ -160,7 +159,7 @@ class SunRadChart(QChart):
 class SnowDepthChart(QChart):
     def __init__(self, hourly):
         super().__init__()
-        self.setTheme(QChart.ChartThemeBlueCerulean)
+        self.setTheme(QChart.ChartTheme.ChartThemeBlueCerulean)
         hd = HourlyChartsData(hourly)
         self._x_axis = MyXAxis(hd.x_axisMin, hd.x_axsMax)
         self._y_axis = MyYAxis(hd.y_snowAxisMin, hd.y_snowAxisMax, 100, 'Высота снежного\nпокрова см.')
@@ -175,7 +174,7 @@ class SnowDepthChart(QChart):
 class SoilChart(QChart):
     def __init__(self, hourly):
         super().__init__()
-        self.setTheme(QChart.ChartThemeBlueCerulean)
+        self.setTheme(QChart.ChartTheme.ChartThemeBlueCerulean)
         hd = HourlyChartsData(hourly)
         self._x_axis = MyXAxis(hd.x_axisMin, hd.x_axsMax)
         self._y_temp_axis = MyYAxis(hd.y_soil_temp_AxisMin, hd.y_soil_temp_AxisMax, 2, 'Температура почвы °C')

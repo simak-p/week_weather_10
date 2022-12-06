@@ -2,6 +2,7 @@ QWidget {
         font: 14pt;
         font-family: roboto/Roboto-BoldItalic;
         background-color: #BAFF8F;
+        color: black;
 }
 
 QLabel{
