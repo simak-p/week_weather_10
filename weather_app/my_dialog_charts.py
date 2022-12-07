@@ -1,10 +1,10 @@
 from PySide6.QtCharts import QChartView
-from PySide6.QtGui import QScreen, QPainter, QAction
-from PySide6.QtWidgets import QDialog, QApplication, QButtonGroup
+from PySide6.QtGui import QScreen, QPainter
+from PySide6.QtWidgets import QDialog, QApplication
 
-from create_charts import TempChart, PressChart, HumidityChart, WindChart, PrecipChart, DewPointChart, SunRadChart, \
+from weather_app.create_charts import TempChart, PressChart, HumidityChart, WindChart, PrecipChart, DewPointChart, SunRadChart, \
                             SnowDepthChart, SoilChart
-from dialog_charts import Ui_Dialog_charts
+from weather_app.dialog_charts import Ui_Dialog_charts
 
 
 class DialogCarts(QDialog):

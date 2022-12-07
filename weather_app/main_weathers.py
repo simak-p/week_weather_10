@@ -9,19 +9,30 @@ from PySide6.QtCore import QStringListModel
 from wc_data import create_str_daily, create_str_current
 from PySide6.QtGui import QScreen, QIcon, QAction, Qt
 from PySide6.QtWidgets import QMainWindow, QApplication, QToolBar
-from main_form import Ui_MainWindow
-from dw_weather import get_weather_dict, loc_to_coord
+from weather_app.main_form import Ui_MainWindow
+from weather_app.dw_weather import get_weather_dict, loc_to_coord
 from my_dialog_charts import DialogCarts
 import pysnooper
 
 
 def saved_data(data: [list, dict], name_file: str):  # аргументы: данные и имя файла
+    """
+
+    :param data:
+    :param name_file:
+    :return:
+    """
     with open(name_file, "w") as write_file:  # открываем файл для записи
         json.dump(data, write_file)  # записываем данные
 
 
 # читает данные из файла
 def load_data(name_file: str):  # аргумент: имя файла
+    """
+
+    :param name_file:
+    :return:
+    """
     with open(name_file, "r") as read_file:  # открываем файл для чтения
         return json.load(read_file)  # возвращает данные
 
@@ -53,8 +64,8 @@ class MainWeather(QMainWindow):
         self.favorites_model.setStringList(list(self.by_popularity_dict))
         self.ui.listView_favorites.setModel(self.favorites_model)
 
-        self.ui.listView_history.setContextMenuPolicy(Qt.ActionsContextMenu)
-        self.ui.listView_favorites.setContextMenuPolicy(Qt.ActionsContextMenu)
+        self.ui.listView_history.setContextMenuPolicy(Qt.ContextMenuPolicy.ActionsContextMenu)
+        self.ui.listView_favorites.setContextMenuPolicy(Qt.ContextMenuPolicy.ActionsContextMenu)
 
         self.tool_bar = QToolBar('Окна')
         self.tool_bar.setOrientation(Qt.Orientation.Vertical)
@@ -116,12 +127,20 @@ class MainWeather(QMainWindow):
         self.popularity_action.triggered.connect(self.sorted_abc)
 
     def remove_row_history_list(self):
+        """
+
+        :return:
+        """
         self.ui.listView_history.model().removeRow(self.ui.listView_history.currentIndex().row())
         self.history_list = self.history_model.stringList()
         print('his. list', self.history_list)
         saved_data(self.history_list, self.history_file)
 
     def add_to_favorites(self):
+        """
+
+        :return:
+        """
         if self.ui.listView_history.currentIndex().data() not in list(self.by_popularity_dict.keys()):
             self.by_popularity_dict[self.ui.listView_history.currentIndex().data()] = 0
             self.favorites_model.setStringList(list(self.by_popularity_dict))
@@ -130,6 +149,10 @@ class MainWeather(QMainWindow):
             print('Этот город был добавлен ранее.')
 
     def delete_row_favorites(self):
+        """
+
+        :return:
+        """
         self.ui.listView_favorites.model().removeRow(self.ui.listView_favorites.currentIndex().row())
         for i in list(self.by_popularity_dict):
             if i not in self.favorites_model.stringList():
@@ -137,6 +160,10 @@ class MainWeather(QMainWindow):
         saved_data(self.by_popularity_dict, self.popularity_file)
 
     def charts_show(self):
+        """
+
+        :return:
+        """
         dialog_charts = DialogCarts(self.mw_dict['hourly'])
         file = open('my_qssStyle.qss', 'r')
         with file:
@@ -145,18 +172,30 @@ class MainWeather(QMainWindow):
         dialog_charts.exec()
 
     def favorites_state(self):
+        """
+
+        :return:
+        """
         if self.ui.dockWidget_favorites.isVisible():
             self.ui.dockWidget_favorites.setVisible(False)
         elif not self.ui.dockWidget_favorites.isVisible():
             self.ui.dockWidget_favorites.setVisible(True)
 
     def history_state(self):
+        """
+
+        :return:
+        """
         if self.ui.dockWidget_history.isVisible():
             self.ui.dockWidget_history.setVisible(False)
         elif not self.ui.dockWidget_history.isVisible():
             self.ui.dockWidget_history.setVisible(True)
 
     def searce_state(self):
+        """
+
+        :return:
+        """
         if self.ui.dockWidget_searce.isVisible():
             self.ui.dockWidget_searce.setVisible(False)
         elif not self.ui.dockWidget_searce.isVisible():
@@ -164,6 +203,10 @@ class MainWeather(QMainWindow):
 
     @pysnooper.snoop()
     def chose_list_from_name(self):
+        """
+
+        :return:
+        """
         try:
             resp = loc_to_coord(self.ui.lineEdit_searce.text())
             searce_list = []
@@ -177,6 +220,10 @@ class MainWeather(QMainWindow):
             print('Такой город не найден')
 
     def weather_from_searce_list(self):
+        """
+
+        :return:
+        """
         try:
             ret_list = self.ui.listView_searce.currentIndex().data().split('  ')
             self.mw_dict = get_weather_dict(float(ret_list[3]), float(ret_list[4]))
@@ -194,6 +241,10 @@ class MainWeather(QMainWindow):
             pass
 
     def weather_from_history(self):
+        """
+
+        :return:
+        """
         ret_list = self.ui.listView_history.currentIndex().data().split('  ')
         self.mw_dict = get_weather_dict(float(ret_list[3]), float(ret_list[4]))
         create_str_current(self.mw_dict['current_weather'], ret_list, self.ui.label)
@@ -206,6 +257,10 @@ class MainWeather(QMainWindow):
 
     @pysnooper.snoop()
     def weather_from_favorite(self):
+        """
+
+        :return:
+        """
         ret_list = self.ui.listView_favorites.currentIndex().data().split('  ')
         print('ret_list', ret_list)
         self.mw_dict = get_weather_dict(float(ret_list[3]), float(ret_list[4]))
@@ -227,15 +282,22 @@ class MainWeather(QMainWindow):
                 saved_data(sorted_dict, self.popularity_file)
 
     def sorted_popularity(self):
+        """
+
+        :return:
+        """
         city_list = list(self.by_popularity_dict)
         self.favorites_model.setStringList(city_list)
         saved_data(self.by_popularity_dict, self.popularity_file)
 
     def sorted_abc(self):
+        """
+
+        :return:
+        """
         city_list = list(self.by_popularity_dict)
         city_list.sort()
         self.favorites_model.setStringList(city_list)
-        # saved_data(self.by_popularity_dict, self.popularity_file)
 
 
 if __name__ == '__main__':

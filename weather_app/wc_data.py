@@ -88,6 +88,13 @@ def wind_srt(degree_f: float):
 
 
 def create_str_daily(mw_dict: dict, label_list: list[QLabel]):
+    """
+    Создаёт строки с погодой на семь дней по числу labels в
+    label_list и вставляет их туда.
+    :param mw_dict:
+    :param label_list:
+    :return:
+    """
     daily = mw_dict['daily']
     for i in range(len(daily['time'])):
         day_str = f"{dt.fromtimestamp(daily['time'][i]): %A  %d %B}.    {w_code(daily['weathercode'][i])}\n" \
@@ -105,6 +112,13 @@ def create_str_daily(mw_dict: dict, label_list: list[QLabel]):
 
 
 def create_str_current(cw_dict: dict, city_dict: list, label: QLabel):
+    """
+
+    :param cw_dict:
+    :param city_dict:
+    :param label:
+    :return:
+    """
     if city_dict[0] == city_dict[2]:
         current_str = f"Погода на {dt.fromtimestamp(cw_dict['time']): %H:%M}\n" \
                       f"гор.{city_dict[0]} {city_dict[1]} \n" \
@@ -119,6 +133,11 @@ def create_str_current(cw_dict: dict, city_dict: list, label: QLabel):
 
 
 def create_data(hourly: dict):
+    """
+
+    :param hourly:
+    :return:
+    """
     chart_data = {'temp': hourly['temperature_2m'], 'press': hourly['surface_pressure'],
                   'humidity': hourly['relativehumidity_2m'], 'feels': hourly['apparent_temperature'],
                   'time': list(map(QDateTime.fromSecsSinceEpoch, hourly['time'])), 'dt': hourly['time'],
@@ -132,7 +151,14 @@ def create_data(hourly: dict):
 
 
 class HourlyChartsData:
+    """
+
+    """
     def __init__(self, hourly: dict):
+        """
+
+        :param hourly:
+        """
         chart_data = create_data(hourly)
         self.tempSeries = chart_points(chart_data['dt'], chart_data['temp'])
         self.feelsSeries = chart_points(chart_data['dt'], chart_data['feels'])
@@ -172,10 +198,20 @@ class HourlyChartsData:
 
 
 def x_axis_range(qdates: list):
+    """
+
+    :param qdates:
+    :return:
+    """
     return [min(qdates), max(qdates)]
 
 
 def y_axis_range(y_axes: list):
+    """
+
+    :param y_axes:
+    :return:
+    """
     n = int
     full_axes = sum(y_axes, [])
     for n in range(1, 5):
@@ -187,4 +223,10 @@ def y_axis_range(y_axes: list):
 
 
 def chart_points(dates: list, chart_list: list):
+    """
+
+    :param dates:
+    :param chart_list:
+    :return:
+    """
     return list(map(QPointF, dates, chart_list))

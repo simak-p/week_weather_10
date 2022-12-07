@@ -1,6 +1,6 @@
 from PySide6.QtCharts import QChart, QSplineSeries, QValueAxis, QDateTimeAxis
 from PySide6.QtCore import Qt, QDateTime
-from PySide6.QtGui import QPen, QColor, QFont
+from PySide6.QtGui import QPen, QColor
 
 from wc_data import HourlyChartsData
 

@@ -4,6 +4,12 @@ import requests
 
 
 def get_weather_dict(lat: float, lon: float) -> dict:
+    """
+
+    :param lat:
+    :param lon:
+    :return:
+    """
     try:
         weather_url = f"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&current_weather=true" \
                       f"&hourly=temperature_2m," \
@@ -22,6 +28,11 @@ def get_weather_dict(lat: float, lon: float) -> dict:
 
 
 def loc_to_coord(city_name: str):
+    """
+
+    :param city_name:
+    :return:
+    """
     location_url = f"https://geocoding-api.open-meteo.com/v1/search?name={city_name}&language=ru"
     resp = requests.get(location_url)
     return resp
