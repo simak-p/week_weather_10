@@ -8,7 +8,14 @@ from weather_app.dialog_charts import Ui_Dialog_charts
 
 
 class DialogCarts(QDialog):
+    """
+
+    """
     def __init__(self, hourly):
+        """
+
+        :param hourly:
+        """
         super(DialogCarts, self).__init__()
         self.ui = Ui_Dialog_charts()
         self.ui.setupUi(self)
@@ -26,7 +33,6 @@ class DialogCarts(QDialog):
         self.chart_list = ['Температура', 'Давление', 'Влажность', 'Ветер', 'Точка росы', 'Осадки', 'Высота снега',
                            'Солнечная радиация', 'Почва']
         self.ui.comboBox_week.addItems(self.chart_list)
-        self.ui.comboBox_2daly.addItems(self.chart_list)
         self.chart = QChartView()
         self.chart.setChart(self.temp_chart)
         self.ui.verticalLayout.addWidget(self.chart)
@@ -35,6 +41,11 @@ class DialogCarts(QDialog):
         self.chart.setRenderHint(QPainter.Antialiasing)
 
     def set_chart(self, text):
+        """
+
+        :param text:
+        :return:
+        """
         if text == 'Температура':
             self.chart.setChart(self.temp_chart)
         elif text == 'Давление':

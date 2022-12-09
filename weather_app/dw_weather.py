@@ -5,10 +5,10 @@ import requests
 
 def get_weather_dict(lat: float, lon: float) -> dict:
     """
-
-    :param lat:
-    :param lon:
-    :return:
+    возвращает словарь с данными о погоде на семь дней
+    :param lat:  широта
+    :param lon:  долгота
+    :return:  словарь с данными о погоде
     """
     try:
         weather_url = f"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&current_weather=true" \
@@ -27,12 +27,14 @@ def get_weather_dict(lat: float, lon: float) -> dict:
         print(ex)
 
 
-def loc_to_coord(city_name: str):
+def loc_to_coord(city_name: str) -> requests.models.Response:
     """
-
+    делает запрос по названию города и возвращает list
+    с данными городов с похожими названиями
     :param city_name:
     :return:
     """
     location_url = f"https://geocoding-api.open-meteo.com/v1/search?name={city_name}&language=ru"
     resp = requests.get(location_url)
+    print('resp_type', type(resp))
     return resp

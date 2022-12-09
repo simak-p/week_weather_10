@@ -1,4 +1,5 @@
 from datetime import datetime as dt
+from pprint import pprint
 
 from PySide6.QtCore import QPointF, QDateTime
 from PySide6.QtWidgets import QLabel
@@ -154,6 +155,7 @@ class HourlyChartsData:
     """
 
     """
+
     def __init__(self, hourly: dict):
         """
 
@@ -167,7 +169,8 @@ class HourlyChartsData:
         self.speedSeries = chart_points(chart_data['dt'], chart_data['windspeed'])
         self.gustSeries = chart_points(chart_data['dt'], chart_data['wind_gust'])
         self.dew_pointSeries = chart_points(chart_data['dt'], chart_data['dew_point'])
-        self.snowSeries = chart_points(chart_data['dt'], chart_data['snow_depth'])
+        snow_list = snow_dept_no_sm(chart_data['snow_depth'])
+        self.snowSeries = chart_points(chart_data['dt'], snow_list)
         self.precipSeries = chart_points(chart_data['dt'], chart_data['precipitation'])
         self.radiationSeries = chart_points(chart_data['dt'], chart_data['shortwave_radiation'])
         self.soil_temp_6Series = chart_points(chart_data['dt'], chart_data['soil_temp_6'])
@@ -185,8 +188,8 @@ class HourlyChartsData:
         self.y_speedAxisMax = y_axis_range([chart_data['windspeed'], chart_data['wind_gust']])[1]
         self.y_devPointAxisMin = y_axis_range([chart_data['dew_point']])[0]
         self.y_devPointAxisMax = y_axis_range([chart_data['dew_point']])[1]
-        self.y_snowAxisMin = y_axis_range([chart_data['snow_depth']])[0]
-        self.y_snowAxisMax = y_axis_range([chart_data['snow_depth']])[1]
+        self.y_snowAxisMin = y_axis_range([snow_dept_no_sm(chart_data['snow_depth'])])[0]
+        self.y_snowAxisMax = y_axis_range([snow_dept_no_sm(chart_data['snow_depth'])])[1]
         self.y_precipAxisMin = y_axis_range([chart_data['precipitation']])[0]
         self.y_precipAxisMax = y_axis_range([chart_data['precipitation']])[1]
         self.y_radiationAxisMin = y_axis_range([chart_data['shortwave_radiation']])[0]
@@ -195,6 +198,15 @@ class HourlyChartsData:
         self.y_soil_temp_AxisMax = y_axis_range([chart_data['soil_temp_6'], chart_data['soil_temp_18']])[1]
         self.y_soil_moistAxisMin = y_axis_range([chart_data['soil_moist']])[0]
         self.y_soil_moistAxisMax = y_axis_range([chart_data['soil_moist']])[1]
+
+
+def snow_dept_no_sm(qdata: list) -> list:
+    """
+    умножает каждый элемент списка на 100
+    :param qdata:
+    :return:
+    """
+    return [i * 100 for i in qdata]
 
 
 def x_axis_range(qdates: list):

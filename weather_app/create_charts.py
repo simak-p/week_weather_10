@@ -6,6 +6,9 @@ from wc_data import HourlyChartsData
 
 
 class MyXAxis(QDateTimeAxis):
+    """
+
+    """
     def __init__(self, ax_min: QDateTime, ax_max: QDateTime):
         super().__init__()
         self.setFormat('ddd HH:MM')
@@ -19,6 +22,9 @@ class MyXAxis(QDateTimeAxis):
 
 
 class MyYAxis(QValueAxis):
+    """
+
+    """
     def __init__(self, ax_min: int, ax_max: int, dev: int, name: str):
         super().__init__()
         self.setRange(ax_min, ax_max)
@@ -28,7 +34,16 @@ class MyYAxis(QValueAxis):
 
 
 class MySplineSeries(QSplineSeries):
+    """
+
+    """
     def __init__(self, name: str, list_series: list, color):
+        """
+
+        :param name:
+        :param list_series:
+        :param color:
+        """
         super().__init__()
         self.setName(name)
         self.append(list_series)
@@ -36,7 +51,14 @@ class MySplineSeries(QSplineSeries):
 
 
 class TempChart(QChart):
+    """
+
+    """
     def __init__(self, hourly):
+        """
+
+        :param hourly:
+        """
         super().__init__()
         print(type(hourly))
         self.setTheme(QChart.ChartTheme.ChartThemeBlueCerulean)
@@ -57,7 +79,14 @@ class TempChart(QChart):
 
 
 class PressChart(QChart):
+    """
+
+    """
     def __init__(self, hourly):
+        """
+
+        :param hourly:
+        """
         super().__init__()
 
         self.setTheme(QChart.ChartTheme.ChartThemeBlueCerulean)
@@ -76,7 +105,14 @@ class PressChart(QChart):
 
 
 class HumidityChart(QChart):
+    """
+
+    """
     def __init__(self, hourly):
+        """
+
+        :param hourly:
+        """
         super().__init__()
         self.setTheme(QChart.ChartTheme.ChartThemeBlueCerulean)
         hd = HourlyChartsData(hourly)
@@ -94,7 +130,14 @@ class HumidityChart(QChart):
 
 
 class WindChart(QChart):
+    """
+
+    """
     def __init__(self, hourly):
+        """
+
+        :param hourly:
+        """
         super().__init__()
         self.setTheme(QChart.ChartTheme.ChartThemeBlueCerulean)
         hd = HourlyChartsData(hourly)
@@ -112,7 +155,14 @@ class WindChart(QChart):
 
 
 class PrecipChart(QChart):
+    """
+
+    """
     def __init__(self, hourly):
+        """
+
+        :param hourly:
+        """
         super().__init__()
         self.setTheme(QChart.ChartTheme.ChartThemeBlueCerulean)
         hd = HourlyChartsData(hourly)
@@ -127,7 +177,14 @@ class PrecipChart(QChart):
 
 
 class DewPointChart(QChart):
+    """
+
+    """
     def __init__(self, hourly):
+        """
+
+        :param hourly:
+        """
         super().__init__()
         self.setTheme(QChart.ChartTheme.ChartThemeBlueCerulean)
         hd = HourlyChartsData(hourly)
@@ -142,7 +199,14 @@ class DewPointChart(QChart):
 
 
 class SunRadChart(QChart):
+    """
+
+    """
     def __init__(self, hourly):
+        """
+
+        :param hourly:
+        """
         super().__init__()
         self.setTheme(QChart.ChartTheme.ChartThemeBlueCerulean)
         hd = HourlyChartsData(hourly)
@@ -157,7 +221,14 @@ class SunRadChart(QChart):
 
 
 class SnowDepthChart(QChart):
+    """
+
+    """
     def __init__(self, hourly):
+        """
+
+        :param hourly:
+        """
         super().__init__()
         self.setTheme(QChart.ChartTheme.ChartThemeBlueCerulean)
         hd = HourlyChartsData(hourly)
@@ -172,7 +243,14 @@ class SnowDepthChart(QChart):
 
 
 class SoilChart(QChart):
+    """
+
+    """
     def __init__(self, hourly):
+        """
+
+        :param hourly:
+        """
         super().__init__()
         self.setTheme(QChart.ChartTheme.ChartThemeBlueCerulean)
         hd = HourlyChartsData(hourly)
