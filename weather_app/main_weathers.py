@@ -201,7 +201,6 @@ class MainWeather(QMainWindow):
         elif not self.ui.dockWidget_searce.isVisible():
             self.ui.dockWidget_searce.setVisible(True)
 
-    @pysnooper.snoop()
     def chose_list_from_name(self):
         """
 
@@ -210,10 +209,12 @@ class MainWeather(QMainWindow):
         try:
             resp = loc_to_coord(self.ui.lineEdit_searce.text())
             searce_list = []
+            pprint(resp.json())
             for i in resp.json()['results']:
                 searce_list.append(
                     f"{i['name']}  {i.get('country', 'нет данных')}  {i.get('admin1', 'нет данных')}  "
-                    f"{i.get('latitude', 'нет данных')}  {i.get('longitude', 'нет данных')}")
+                    f"{i.get('latitude', 'нет данных')}  {i.get('longitude', 'нет данных')}"
+                    f"  {i.get('timezone', 'нет данных')}")
             self.searce_model.setStringList(searce_list)
             self.ui.listView_searce.setModel(self.searce_model)
         except KeyError:
@@ -228,8 +229,8 @@ class MainWeather(QMainWindow):
             ret_list = self.ui.listView_searce.currentIndex().data().split('  ')
             self.mw_dict = get_weather_dict(float(ret_list[3]), float(ret_list[4]))
             create_str_current(self.mw_dict['current_weather'], ret_list, self.ui.label)
-            create_str_daily(self.mw_dict, self.label_list)
-            pprint(self.mw_dict)
+            create_str_daily(self.mw_dict, self.label_list, ret_list[5])
+            # pprint(self.mw_dict)
             self.history_list.insert(0, '  '.join(ret_list))
             if len(self.history_list) > 50:
                 del self.history_list[50:]
@@ -237,6 +238,7 @@ class MainWeather(QMainWindow):
             self.ui.listView_history.setModel(self.history_model)
             print('history', self.history_list)
             saved_data(self.history_list, self.history_file)
+            self.searce_state()
         except KeyError:
             pass
 
@@ -248,29 +250,32 @@ class MainWeather(QMainWindow):
         ret_list = self.ui.listView_history.currentIndex().data().split('  ')
         self.mw_dict = get_weather_dict(float(ret_list[3]), float(ret_list[4]))
         create_str_current(self.mw_dict['current_weather'], ret_list, self.ui.label)
-        create_str_daily(self.mw_dict, self.label_list)
+        create_str_daily(self.mw_dict, self.label_list, ret_list[4])
         self.history_list.insert(0, '  '.join(ret_list))
         self.history_model.setStringList(self.history_list)
         self.ui.listView_history.setModel(self.history_model)
         print('history', self.history_list)
         saved_data(self.history_list, self.history_file)
+        self.history_state()
 
-    @pysnooper.snoop()
+    # @pysnooper.snoop()
     def weather_from_favorite(self):
         """
 
         :return:
         """
         ret_list = self.ui.listView_favorites.currentIndex().data().split('  ')
+
         print('ret_list', ret_list)
         self.mw_dict = get_weather_dict(float(ret_list[3]), float(ret_list[4]))
         create_str_current(self.mw_dict['current_weather'], ret_list, self.ui.label)
-        create_str_daily(self.mw_dict, self.label_list)
+        create_str_daily(self.mw_dict, self.label_list, ret_list[5])
         self.history_list.insert(0, '  '.join(ret_list))
         self.history_model.setStringList(self.history_list)
         self.ui.listView_history.setModel(self.history_model)
         # print('history', self.history_list)
         saved_data(self.history_list, self.history_file)
+        self.favorites_state()
 
         city = self.ui.listView_favorites.currentIndex().data()
         for key in self.by_popularity_dict.keys():

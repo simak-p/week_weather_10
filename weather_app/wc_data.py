@@ -1,4 +1,6 @@
+
 from datetime import datetime as dt
+import pytz
 from pprint import pprint
 
 from PySide6.QtCore import QPointF, QDateTime
@@ -88,14 +90,16 @@ def wind_srt(degree_f: float):
     return wind
 
 
-def create_str_daily(mw_dict: dict, label_list: list[QLabel]):
+def create_str_daily(mw_dict: dict, label_list: list[QLabel], t_zone: str):
     """
     Создаёт строки с погодой на семь дней по числу labels в
     label_list и вставляет их туда.
+    :param t_zone:
     :param mw_dict:
     :param label_list:
     :return:
     """
+    city_timezone = pytz.timezone(t_zone)
     daily = mw_dict['daily']
     for i in range(len(daily['time'])):
         day_str = f"{dt.fromtimestamp(daily['time'][i]): %A  %d %B}.    {w_code(daily['weathercode'][i])}\n" \
@@ -107,8 +111,9 @@ def create_str_daily(mw_dict: dict, label_list: list[QLabel]):
                   f"скорость {daily['windspeed_10m_max'][i]}м/с   порывы до {daily['windgusts_10m_max'][i]}м/с\n " \
                   f"Количество осадков {daily['precipitation_sum'][i]}мм    " \
                   f"количество часов за сутки с осадками {daily['precipitation_hours'][i]}\n" \
-                  f"Солнце:  Восход {dt.fromtimestamp(daily['sunrise'][i]): %H:%M}    " \
-                  f"Закат {dt.fromtimestamp(daily['sunset'][i]): %H:%M}"
+                  f"Солнце:  Восход {dt.fromtimestamp(daily['sunrise'][i], tz=city_timezone): %H:%M}    " \
+                  f"Закат {dt.fromtimestamp(daily['sunset'][i], tz=city_timezone): %H:%M}   Долгота дня: " \
+                  f" {dt.utcfromtimestamp(daily['sunset'][i] - daily['sunrise'][i]): %H:%M}"
         label_list[i].setText(day_str)
 
 
