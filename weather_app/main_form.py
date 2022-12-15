@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'main_form.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.3.1
+## Created by: Qt User Interface Compiler version 6.4.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -62,11 +62,13 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 134, 386))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 148, 436))
         self.verticalLayout = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.gridLayout = QGridLayout()
         self.gridLayout.setObjectName(u"gridLayout")
+        self.gridLayout.setHorizontalSpacing(20)
+        self.gridLayout.setVerticalSpacing(40)
         self.icon_0 = QLabel(self.scrollAreaWidgetContents)
         self.icon_0.setObjectName(u"icon_0")
         self.icon_0.setAlignment(Qt.AlignCenter)
