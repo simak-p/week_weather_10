@@ -9,6 +9,8 @@ from PySide6.QtCore import QStringListModel
 from wc_data import create_str_daily, create_str_current
 from PySide6.QtGui import QScreen, QIcon, QAction, Qt
 from PySide6.QtWidgets import QMainWindow, QApplication, QToolBar
+
+from weather_app.dictionary_sort import count_sorted_list, abc_sorted_list
 from weather_app.main_form import Ui_MainWindow
 from weather_app.dw_weather import get_weather_dict, loc_to_coord
 from my_dialog_charts import DialogCarts
@@ -124,7 +126,7 @@ class MainWeather(QMainWindow):
 
         self.abc_action = QAction('Сортировать по алфавиту')
         self.ui.listView_favorites.addAction(self.abc_action)
-        self.popularity_action.triggered.connect(self.sorted_abc)
+        self.abc_action.triggered.connect(self.sorted_abc)
 
     def remove_row_history_list(self):
         """
@@ -282,27 +284,34 @@ class MainWeather(QMainWindow):
             if key == city:
                 self.by_popularity_dict[key] += 1
                 sorted_dict = dict(sorted(self.by_popularity_dict.items(), key=lambda item: item[1], reverse=True))
-                self.by_popularity_dict = copy(sorted_dict)
-                print(self.by_popularity_dict)
+                # self.by_popularity_dict = copy(sorted_dict)
+                # print(self.by_popularity_dict)
                 saved_data(sorted_dict, self.popularity_file)
 
     def sorted_popularity(self):
-        """
-
-        :return:
-        """
-        city_list = list(self.by_popularity_dict)
-        self.favorites_model.setStringList(city_list)
+        sorted_list = count_sorted_list(self.by_popularity_dict)
+        print('popup', sorted_list)
+        self.favorites_model.setStringList(sorted_list)
         saved_data(self.by_popularity_dict, self.popularity_file)
+        # """
+        #
+        # :return:city
+        # """
+        # city_list = list(self.by_popularity_dict)
+        # self.favorites_model.setStringList(city_list)
+        # saved_data(self.by_popularity_dict, self.popularity_file)
 
     def sorted_abc(self):
-        """
-
-        :return:
-        """
-        city_list = list(self.by_popularity_dict)
-        city_list.sort()
-        self.favorites_model.setStringList(city_list)
+        sorted_list = abc_sorted_list(self.by_popularity_dict)
+        print('abc', sorted_list)
+        self.favorites_model.setStringList(sorted_list)
+        saved_data(self.by_popularity_dict, self.popularity_file)
+        # """
+        #
+        # :return:
+        # """
+        # sorted_list = list(self.by_popularity_dict)
+        # sorted_list.sort()
 
 
 if __name__ == '__main__':
