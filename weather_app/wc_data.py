@@ -207,7 +207,7 @@ class HourlyChartsData:
 
 def snow_dept_no_sm(qdata: list) -> list:
     """
-    умножает каждый элемент списка на 100
+    Умножает каждый элемент списка на 100
     :param qdata:
     :return:
     """

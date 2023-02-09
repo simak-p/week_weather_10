@@ -1,20 +1,20 @@
 import json
 import sys
 from copy import copy
-from pprint import pprint
 
 from PySide6 import QtGui
 from PySide6.QtCore import QStringListModel
-
-from wc_data import create_str_daily, create_str_current
 from PySide6.QtGui import QScreen, QIcon, QAction, Qt
-from PySide6.QtWidgets import QMainWindow, QApplication, QToolBar
+from PySide6.QtWidgets import QMainWindow, QApplication, QToolBar, QMessageBox
 
-from weather_app.dictionary_sort import count_sorted_list, abc_sorted_list
-from weather_app.main_form import Ui_MainWindow
-from weather_app.dw_weather import get_weather_dict, loc_to_coord
 from my_dialog_charts import DialogCarts
-import pysnooper
+from searce_dialog.dialog_searce import Dialog_searce
+from wc_data import create_str_daily, create_str_current
+from weather_app.dictionary_sort import count_sorted_list, abc_sorted_list
+from weather_app.dw_weather import get_weather_dict
+from weather_app.favorites_dialog.dialog_favorite import DialogFavorite
+from weather_app.history_dialog.dialog_history import DialogHistory
+from weather_app.main_form import Ui_MainWindow
 
 
 def saved_data(data: [list, dict], name_file: str):  # аргументы: данные и имя файла
@@ -44,15 +44,16 @@ class MainWeather(QMainWindow):
         super().__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+
         self.mw_dict = {}
 
         self.history_list = []
         self.by_popularity_dict = {}
         self.history_file = 'data_stor/history.json'
         self.popularity_file = 'data_stor/popularity.json'
-        self.history_model = QStringListModel()
-        self.favorites_model = QStringListModel()
-        self.searce_model = QStringListModel()
+        self.dialog_history = DialogHistory()
+        self.dialog_searce = Dialog_searce()
+        self.dialog_favorite = DialogFavorite()
 
         try:
             self.history_list = load_data(self.history_file)
@@ -60,14 +61,11 @@ class MainWeather(QMainWindow):
         except FileNotFoundError:
             pass
 
+        self.history_model = QStringListModel()
         self.history_model.setStringList(self.history_list)
-        self.ui.listView_history.setModel(self.history_model)
 
-        self.favorites_model.setStringList(list(self.by_popularity_dict))
-        self.ui.listView_favorites.setModel(self.favorites_model)
-
-        self.ui.listView_history.setContextMenuPolicy(Qt.ContextMenuPolicy.ActionsContextMenu)
-        self.ui.listView_favorites.setContextMenuPolicy(Qt.ContextMenuPolicy.ActionsContextMenu)
+        self.favorites_model = QStringListModel()
+        self.favorites_model.setStringList(list(self.by_popularity_dict.keys()))
 
         self.tool_bar = QToolBar('Окна')
         self.tool_bar.setOrientation(Qt.Orientation.Vertical)
@@ -82,84 +80,44 @@ class MainWeather(QMainWindow):
         self.tool_bar.addAction(self.charts_action)
         self.addToolBar(self.tool_bar)
 
-        self.searce_action.triggered.connect(self.searce_state)
-        self.history_action.triggered.connect(self.history_state)
-        self.favorites_action.triggered.connect(self.favorites_state)
+        self.searce_action.triggered.connect(self.searce_show)
+        self.history_action.triggered.connect(self.history_show)
+        self.favorites_action.triggered.connect(self.favorite_show)
         self.charts_action.triggered.connect(self.charts_show)
-
-        self.ui.dockWidget_searce.setVisible(False)
-        self.ui.dockWidget_favorites.setVisible(False)
-        self.ui.dockWidget_history.setVisible(False)
 
         self.label_list = [self.ui.label_0, self.ui.label_1, self.ui.label_2, self.ui.label_3, self.ui.label_4,
                            self.ui.label_5, self.ui.label_6]
-
-        self.ui.pushButton_searce.clicked.connect(self.chose_list_from_name)
-
-        self.chose_action = QAction('Выбрать')
-        self.chose_action.triggered.connect(self.weather_from_searce_list)
-        self.ui.listView_searce.addAction(self.chose_action)
-
-        self.delete_action = QAction('Удалить из истории')
-        self.ui.listView_history.addAction(self.delete_action)
-        self.delete_action.triggered.connect(self.remove_row_history_list)
-
-        self.add_favorite_action = QAction('Добавить в избранное')
-        self.ui.listView_history.addAction(self.add_favorite_action)
-        self.add_favorite_action.triggered.connect(self.add_to_favorites)
-
-        self.delete_favorites_action = QAction('Удалить мз избранного')
-        self.ui.listView_favorites.addAction(self.delete_favorites_action)
-        self.delete_favorites_action.triggered.connect(self.delete_row_favorites)
-
-        self.show_weather_favorites_action = QAction('Показать погоду')
-        self.ui.listView_favorites.addAction(self.show_weather_favorites_action)
-        self.show_weather_favorites_action.triggered.connect(self.weather_from_favorite)
-
-        self.show_weather_history_action = QAction('Показать погоду')
-        self.ui.listView_history.addAction(self.show_weather_history_action)
-        self.show_weather_history_action.triggered.connect(self.weather_from_history)
-
-        self.popularity_action = QAction('Сортировать по популярности')
-        self.ui.listView_favorites.addAction(self.popularity_action)
-        self.popularity_action.triggered.connect(self.sorted_popularity)
-
-        self.abc_action = QAction('Сортировать по алфавиту')
-        self.ui.listView_favorites.addAction(self.abc_action)
-        self.abc_action.triggered.connect(self.sorted_abc)
-
-    def remove_row_history_list(self):
-        """
-
-        :return:
-        """
-        self.ui.listView_history.model().removeRow(self.ui.listView_history.currentIndex().row())
-        self.history_list = self.history_model.stringList()
-        print('his. list', self.history_list)
-        saved_data(self.history_list, self.history_file)
 
     def add_to_favorites(self):
         """
 
         :return:
         """
-        if self.ui.listView_history.currentIndex().data() not in list(self.by_popularity_dict.keys()):
-            self.by_popularity_dict[self.ui.listView_history.currentIndex().data()] = 0
+        if self.dialog_history.ui.listView.currentIndex().data() not in list(self.by_popularity_dict):
+            self.by_popularity_dict[self.dialog_history.ui.listView.currentIndex().data()] = 0
             self.favorites_model.setStringList(list(self.by_popularity_dict))
+            self.dialog_favorite.ui.listView.setModel(self.favorites_model)
             saved_data(self.by_popularity_dict, self.popularity_file)
+            QMessageBox.information(self, 'Информация!',
+                                    'Город успешно добавлен в "Избранное"', QMessageBox.StandardButton.Ok)
         else:
-            print('Этот город был добавлен ранее.')
+            QMessageBox.information(self, 'Информация!',
+                                    'Этот город уже есть в списке "Избранного"', QMessageBox.StandardButton.Ok)
 
     def delete_row_favorites(self):
         """
 
         :return:
         """
-        self.ui.listView_favorites.model().removeRow(self.ui.listView_favorites.currentIndex().row())
+        self.dialog_favorite.ui.listView.setModel(self.favorites_model)
+        self.dialog_favorite.ui.listView.model().removeRow(self.dialog_favorite.ui.listView.currentIndex().row())
         for i in list(self.by_popularity_dict):
             if i not in self.favorites_model.stringList():
                 del (self.by_popularity_dict[i])
+        self.dialog_favorite.ui.listView.setModel(self.favorites_model)
         saved_data(self.by_popularity_dict, self.popularity_file)
+        QMessageBox.information(self, 'Информация!.',
+                                'Город успешно удалён из "Избранного".', QMessageBox.StandardButton.Ok)
 
     def charts_show(self):
         """
@@ -167,151 +125,160 @@ class MainWeather(QMainWindow):
         :return:
         """
         dialog_charts = DialogCarts(self.mw_dict['hourly'])
-        file = open('my_qssStyle.qss', 'r')
+        file = open('qss_styles/my_qssStyle.qss', 'r')
         with file:
             my_qss = file.read()
             dialog_charts.setStyleSheet(my_qss)
         dialog_charts.exec()
 
-    def favorites_state(self):
+    def searce_show(self):
         """
 
         :return:
         """
-        if self.ui.dockWidget_favorites.isVisible():
-            self.ui.dockWidget_favorites.setVisible(False)
-        elif not self.ui.dockWidget_favorites.isVisible():
-            self.ui.dockWidget_favorites.setVisible(True)
+        file = open('qss_styles/my_qssStyle.qss', 'r')
+        with file:
+            my_qss = file.read()
+            self.dialog_searce.setStyleSheet(my_qss)
+        if self.dialog_searce.exec():
+            self.weather_from_searce_list(self.dialog_searce.ui.listView_searce.currentIndex().data().
+                                          split('  '))
+        else:
+            pass
 
-    def history_state(self):
+    def remove_row_history_list(self):
         """
 
         :return:
         """
-        if self.ui.dockWidget_history.isVisible():
-            self.ui.dockWidget_history.setVisible(False)
-        elif not self.ui.dockWidget_history.isVisible():
-            self.ui.dockWidget_history.setVisible(True)
+        self.dialog_history.ui.listView.setModel(self.history_model)
+        self.dialog_history.ui.listView.model().removeRow(self.dialog_history.ui.
+                                                          listView.currentIndex().row())
+        self.history_list = self.history_model.stringList()
+        self.history_model.setStringList(self.history_list)
+        self.dialog_history.ui.listView.setModel(self.history_model)
+        saved_data(self.history_list, self.history_file)
+        QMessageBox.information(self, 'Информация!',
+                                'Этот город успешно удалён из списке "История поиска"', QMessageBox.StandardButton.Ok)
 
-    def searce_state(self):
+    def favorite_show(self):
         """
 
         :return:
         """
-        if self.ui.dockWidget_searce.isVisible():
-            self.ui.dockWidget_searce.setVisible(False)
-        elif not self.ui.dockWidget_searce.isVisible():
-            self.ui.dockWidget_searce.setVisible(True)
+        file = open('qss_styles/my_qssStyle.qss', 'r')
+        with file:
+            my_qss = file.read()
+            self.dialog_favorite.setStyleSheet(my_qss)
 
-    def chose_list_from_name(self):
+        self.dialog_favorite.ui.listView.setModel(self.favorites_model)
+
+        self.dialog_favorite.ui.pushButton_delete.clicked.connect(self.delete_row_favorites)
+        self.dialog_favorite.ui.pushButton_abc.clicked.connect(self.sorted_abc)
+        self.dialog_favorite.ui.pushButton_popularity.clicked.connect(self.sorted_popularity)
+
+        if self.dialog_favorite.exec():
+            self.weather_from_favorite()
+        else:
+            pass
+
+    def history_show(self):
+        """
+
+        :return:
+        """
+        file = open('qss_styles/my_qssStyle.qss', 'r')
+        with file:
+            my_qss = file.read()
+            self.dialog_history.setStyleSheet(my_qss)
+
+        self.dialog_history.ui.listView.setModel(self.history_model)
+
+        self.dialog_history.ui.pushButton_addFavorit.clicked.connect(self.add_to_favorites)
+        self.dialog_history.ui.pushButton_delete.clicked.connect(self.remove_row_history_list)
+
+        if self.dialog_history.isVisible():
+            QMessageBox.information(self, 'Теперь нужно выбрать город.',
+                                    'Выделите город из списка.', QMessageBox.StandardButton.Ok)
+
+        if self.dialog_history.exec():
+            self.weather_from_history(self.dialog_history.ui.listView.currentIndex().data().split('  '))
+        else:
+            pass
+
+    def weather_from_searce_list(self, city_data: list):
         """
 
         :return:
         """
         try:
-            resp = loc_to_coord(self.ui.lineEdit_searce.text())
-            searce_list = []
-            pprint(resp.json())
-            for i in resp.json()['results']:
-                searce_list.append(
-                    f"{i['name']}  {i.get('country', 'нет данных')}  {i.get('admin1', 'нет данных')}  "
-                    f"{i.get('latitude', 'нет данных')}  {i.get('longitude', 'нет данных')}"
-                    f"  {i.get('timezone', 'нет данных')}")
-            self.searce_model.setStringList(searce_list)
-            self.ui.listView_searce.setModel(self.searce_model)
-        except KeyError:
-            print('Такой город не найден')
-
-    def weather_from_searce_list(self):
-        """
-
-        :return:
-        """
-        try:
-            ret_list = self.ui.listView_searce.currentIndex().data().split('  ')
+            ret_list = city_data
             self.mw_dict = get_weather_dict(float(ret_list[3]), float(ret_list[4]))
             create_str_current(self.mw_dict['current_weather'], ret_list, self.ui.label)
             create_str_daily(self.mw_dict, self.label_list, ret_list[5])
-            # pprint(self.mw_dict)
-            self.history_list.insert(0, '  '.join(ret_list))
-            if len(self.history_list) > 50:
-                del self.history_list[50:]
-            self.history_model.setStringList(self.history_list)
-            self.ui.listView_history.setModel(self.history_model)
-            print('history', self.history_list)
-            saved_data(self.history_list, self.history_file)
-            self.searce_state()
+            if '  '.join(ret_list) not in self.history_list:
+                self.history_list.insert(0, '  '.join(ret_list))
+                self.history_model.setStringList(self.history_list)
+                self.dialog_history.ui.listView.setModel(self.history_model)
+                saved_data(self.history_list, self.history_file)
+            else:
+                pass
         except KeyError:
             pass
 
-    def weather_from_history(self):
+    def weather_from_history(self, city_data: list):
         """
 
         :return:
         """
-        ret_list = self.ui.listView_history.currentIndex().data().split('  ')
+        ret_list = city_data
         self.mw_dict = get_weather_dict(float(ret_list[3]), float(ret_list[4]))
         create_str_current(self.mw_dict['current_weather'], ret_list, self.ui.label)
-        create_str_daily(self.mw_dict, self.label_list, ret_list[4])
+        create_str_daily(self.mw_dict, self.label_list, ret_list[5])
         self.history_list.insert(0, '  '.join(ret_list))
-        self.history_model.setStringList(self.history_list)
-        self.ui.listView_history.setModel(self.history_model)
-        print('history', self.history_list)
-        saved_data(self.history_list, self.history_file)
-        self.history_state()
 
-    # @pysnooper.snoop()
     def weather_from_favorite(self):
         """
 
         :return:
         """
-        ret_list = self.ui.listView_favorites.currentIndex().data().split('  ')
+        ret_list = self.dialog_favorite.ui.listView.currentIndex().data().split('  ')
 
-        print('ret_list', ret_list)
         self.mw_dict = get_weather_dict(float(ret_list[3]), float(ret_list[4]))
         create_str_current(self.mw_dict['current_weather'], ret_list, self.ui.label)
         create_str_daily(self.mw_dict, self.label_list, ret_list[5])
-        self.history_list.insert(0, '  '.join(ret_list))
-        self.history_model.setStringList(self.history_list)
-        self.ui.listView_history.setModel(self.history_model)
-        # print('history', self.history_list)
-        saved_data(self.history_list, self.history_file)
-        self.favorites_state()
 
-        city = self.ui.listView_favorites.currentIndex().data()
+        city = self.dialog_favorite.ui.listView.currentIndex().data()
         for key in self.by_popularity_dict.keys():
             if key == city:
                 self.by_popularity_dict[key] += 1
                 sorted_dict = dict(sorted(self.by_popularity_dict.items(), key=lambda item: item[1], reverse=True))
-                # self.by_popularity_dict = copy(sorted_dict)
-                # print(self.by_popularity_dict)
+                self.by_popularity_dict = copy(sorted_dict)
+                print(self.by_popularity_dict)
                 saved_data(sorted_dict, self.popularity_file)
 
     def sorted_popularity(self):
         sorted_list = count_sorted_list(self.by_popularity_dict)
-        print('popup', sorted_list)
         self.favorites_model.setStringList(sorted_list)
         saved_data(self.by_popularity_dict, self.popularity_file)
-        # """
-        #
-        # :return:city
-        # """
-        # city_list = list(self.by_popularity_dict)
-        # self.favorites_model.setStringList(city_list)
-        # saved_data(self.by_popularity_dict, self.popularity_file)
+        """
+
+        :return:city
+        """
+        city_list = list(self.by_popularity_dict)
+        self.favorites_model.setStringList(city_list)
+        saved_data(self.by_popularity_dict, self.popularity_file)
 
     def sorted_abc(self):
         sorted_list = abc_sorted_list(self.by_popularity_dict)
-        print('abc', sorted_list)
         self.favorites_model.setStringList(sorted_list)
         saved_data(self.by_popularity_dict, self.popularity_file)
-        # """
-        #
-        # :return:
-        # """
-        # sorted_list = list(self.by_popularity_dict)
-        # sorted_list.sort()
+        """
+
+        :return:
+        """
+        sorted_list = list(self.by_popularity_dict)
+        sorted_list.sort()
 
 
 if __name__ == '__main__':
@@ -320,9 +287,9 @@ if __name__ == '__main__':
     window = MainWeather()
     window.resize(QScreen.availableGeometry(QApplication.primaryScreen()).width() / 1.5,
                   QScreen.availableGeometry(QApplication.primaryScreen()).height() / 1.5)
-    window.setWindowIcon(QIcon('program_icon.png'))
+    window.setWindowIcon(QIcon('icon_files/program_icon.png'))
     window.setWindowTitle('Подробный прогноз погоды на неделю.')
-    f = open('my_qssStyle.qss', 'r')
+    f = open('qss_styles/my_qssStyle.qss', 'r')
     with f:
         qss = f.read()
         window.setStyleSheet(qss)

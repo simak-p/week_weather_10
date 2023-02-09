@@ -1,11 +1,11 @@
-from pprint import pprint
-
 import requests
+from PySide6.QtWidgets import QMessageBox
+from requests.exceptions import ConnectionError
 
 
 def get_weather_dict(lat: float, lon: float) -> dict:
     """
-    возвращает словарь с данными о погоде на семь дней
+    Возвращает словарь с данными о погоде на семь дней
     :param lat:  широта
     :param lon:  долгота
     :return:  словарь с данными о погоде
@@ -22,19 +22,28 @@ def get_weather_dict(lat: float, lon: float) -> dict:
                       f"shortwave_radiation_sum&timeformat=unixtime&timezone=Europe%2FMoscow&windspeed_unit=ms" \
                       f"&past_days=0"
         resp = requests.get(weather_url)
+        print('status_code', resp.status_code)
         return resp.json()
+    except ConnectionError:
+        QMessageBox.warning(None, 'Внимание', 'Возможно отсутствует соединение\n'
+                                              'с интернетом. Проверьте соединение!', QMessageBox.StandardButton.Ok)
     except Exception as ex:
         print(ex)
 
 
 def loc_to_coord(city_name: str) -> requests.models.Response:
     """
-    делает запрос по названию города и возвращает list
+    Делает запрос по названию города и возвращает list
     с данными городов с похожими названиями
     :param city_name:
     :return:
     """
-    location_url = f"https://geocoding-api.open-meteo.com/v1/search?name={city_name}&language=ru"
-    resp = requests.get(location_url)
-    print('resp_type', type(resp))
-    return resp
+    try:
+        location_url = f"https://geocoding-api.open-meteo.com/v1/search?name={city_name}&language=ru"
+        resp = requests.get(location_url)
+        print('status_', resp.status_code)
+        print('resp_type', type(resp))
+        return resp
+    except ConnectionError:
+        QMessageBox.warning(None, 'Внимание', 'Возможно отсутствует соединение\n'
+                                              'с интернетом. Проверьте соединение!', QMessageBox.StandardButton.Ok)

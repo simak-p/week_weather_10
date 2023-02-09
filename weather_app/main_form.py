@@ -16,10 +16,9 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QDockWidget, QGridLayout, QHBoxLayout,
-    QLabel, QLineEdit, QListView, QMainWindow,
-    QPushButton, QScrollArea, QSizePolicy, QStatusBar,
-    QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QGridLayout, QLabel, QMainWindow,
+    QScrollArea, QSizePolicy, QStatusBar, QVBoxLayout,
+    QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -62,7 +61,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 148, 436))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, -36, 766, 436))
         self.verticalLayout = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.gridLayout = QGridLayout()
@@ -177,92 +176,6 @@ class Ui_MainWindow(object):
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
         MainWindow.setStatusBar(self.statusbar)
-        self.dockWidget_searce = QDockWidget(MainWindow)
-        self.dockWidget_searce.setObjectName(u"dockWidget_searce")
-        self.dockWidget_searce.setFeatures(QDockWidget.DockWidgetClosable|QDockWidget.DockWidgetVerticalTitleBar)
-        self.dockWidget_searce.setAllowedAreas(Qt.LeftDockWidgetArea)
-        self.dockWidgetContents_2 = QWidget()
-        self.dockWidgetContents_2.setObjectName(u"dockWidgetContents_2")
-        self.verticalLayout_7 = QVBoxLayout(self.dockWidgetContents_2)
-        self.verticalLayout_7.setObjectName(u"verticalLayout_7")
-        self.verticalLayout_6 = QVBoxLayout()
-        self.verticalLayout_6.setObjectName(u"verticalLayout_6")
-        self.horizontalLayout_3 = QHBoxLayout()
-        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.label_19 = QLabel(self.dockWidgetContents_2)
-        self.label_19.setObjectName(u"label_19")
-
-        self.horizontalLayout_3.addWidget(self.label_19)
-
-        self.lineEdit_searce = QLineEdit(self.dockWidgetContents_2)
-        self.lineEdit_searce.setObjectName(u"lineEdit_searce")
-
-        self.horizontalLayout_3.addWidget(self.lineEdit_searce)
-
-        self.pushButton_searce = QPushButton(self.dockWidgetContents_2)
-        self.pushButton_searce.setObjectName(u"pushButton_searce")
-
-        self.horizontalLayout_3.addWidget(self.pushButton_searce)
-
-
-        self.verticalLayout_6.addLayout(self.horizontalLayout_3)
-
-        self.listView_searce = QListView(self.dockWidgetContents_2)
-        self.listView_searce.setObjectName(u"listView_searce")
-        self.listView_searce.setContextMenuPolicy(Qt.ActionsContextMenu)
-        self.listView_searce.setAlternatingRowColors(True)
-
-        self.verticalLayout_6.addWidget(self.listView_searce)
-
-
-        self.verticalLayout_7.addLayout(self.verticalLayout_6)
-
-        self.dockWidget_searce.setWidget(self.dockWidgetContents_2)
-        MainWindow.addDockWidget(Qt.LeftDockWidgetArea, self.dockWidget_searce)
-        self.dockWidget_history = QDockWidget(MainWindow)
-        self.dockWidget_history.setObjectName(u"dockWidget_history")
-        self.dockWidget_history.setFeatures(QDockWidget.DockWidgetClosable|QDockWidget.DockWidgetVerticalTitleBar)
-        self.dockWidget_history.setAllowedAreas(Qt.RightDockWidgetArea)
-        self.dockWidgetContents = QWidget()
-        self.dockWidgetContents.setObjectName(u"dockWidgetContents")
-        self.verticalLayout_4 = QVBoxLayout(self.dockWidgetContents)
-        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
-        self.verticalLayout_3 = QVBoxLayout()
-        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.listView_history = QListView(self.dockWidgetContents)
-        self.listView_history.setObjectName(u"listView_history")
-        self.listView_history.setContextMenuPolicy(Qt.ActionsContextMenu)
-        self.listView_history.setAlternatingRowColors(True)
-
-        self.verticalLayout_3.addWidget(self.listView_history)
-
-
-        self.verticalLayout_4.addLayout(self.verticalLayout_3)
-
-        self.dockWidget_history.setWidget(self.dockWidgetContents)
-        MainWindow.addDockWidget(Qt.RightDockWidgetArea, self.dockWidget_history)
-        self.dockWidget_favorites = QDockWidget(MainWindow)
-        self.dockWidget_favorites.setObjectName(u"dockWidget_favorites")
-        self.dockWidget_favorites.setFeatures(QDockWidget.DockWidgetClosable|QDockWidget.DockWidgetVerticalTitleBar)
-        self.dockWidget_favorites.setAllowedAreas(Qt.RightDockWidgetArea)
-        self.dockWidgetContents_3 = QWidget()
-        self.dockWidgetContents_3.setObjectName(u"dockWidgetContents_3")
-        self.verticalLayout_8 = QVBoxLayout(self.dockWidgetContents_3)
-        self.verticalLayout_8.setObjectName(u"verticalLayout_8")
-        self.verticalLayout_5 = QVBoxLayout()
-        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
-        self.listView_favorites = QListView(self.dockWidgetContents_3)
-        self.listView_favorites.setObjectName(u"listView_favorites")
-        self.listView_favorites.setContextMenuPolicy(Qt.ActionsContextMenu)
-        self.listView_favorites.setAlternatingRowColors(True)
-
-        self.verticalLayout_5.addWidget(self.listView_favorites)
-
-
-        self.verticalLayout_8.addLayout(self.verticalLayout_5)
-
-        self.dockWidget_favorites.setWidget(self.dockWidgetContents_3)
-        MainWindow.addDockWidget(Qt.RightDockWidgetArea, self.dockWidget_favorites)
 
         self.retranslateUi(MainWindow)
 
@@ -299,10 +212,5 @@ class Ui_MainWindow(object):
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.dockWidget_searce.setWindowTitle(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u0438\u0441\u043a \u043e \u043d\u0430\u0437\u0432\u0430\u043d\u0438\u044e", None))
-        self.label_19.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0433\u043e\u0440\u043e\u0434\u0430:", None))
-        self.pushButton_searce.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u0438\u0441\u043a", None))
-        self.dockWidget_history.setWindowTitle(QCoreApplication.translate("MainWindow", u"\u0418\u0441\u0442\u043e\u0440\u0438\u044f \u043f\u043e\u0438\u0441\u043a\u0430", None))
-        self.dockWidget_favorites.setWindowTitle(QCoreApplication.translate("MainWindow", u"\u0418\u0437\u0431\u0440\u0430\u043d\u043d\u043e\u0435", None))
     # retranslateUi
 

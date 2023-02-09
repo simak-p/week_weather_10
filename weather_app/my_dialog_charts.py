@@ -1,6 +1,5 @@
 from PySide6.QtCharts import QChartView
-from PySide6.QtCore import QEvent
-from PySide6.QtGui import QScreen, QPainter, QResizeEvent
+from PySide6.QtGui import QScreen, QPainter
 from PySide6.QtWidgets import QDialog, QApplication, QScrollArea
 
 from weather_app.create_charts import TempChart, PressChart, HumidityChart, WindChart, PrecipChart, DewPointChart, \
