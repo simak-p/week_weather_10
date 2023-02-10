@@ -1,5 +1,5 @@
 QWidget {
-        font: 14pt;
+        font: 16pt;
         font-family: roboto/Roboto-BoldItalic;
         background-color: #BAFF8F;
         color: black;
@@ -16,7 +16,7 @@ QLineEdit{
 QPushButton{
         border: 2px solid;
         background-color: #87E548;
-        border-radius: 8px;
+        border-radius: 4px;
 }
 
 QPushButton:pressed{
@@ -32,7 +32,8 @@ QListView::item:alternate {
 }
 
 QListView::item:selected {
-    border: 1px solid khaki;
+    border: 2px solid khaki;
+    color: black;
 }
 
 QListView::item:selected:active {

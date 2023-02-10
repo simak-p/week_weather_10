@@ -33,9 +33,9 @@ PyObject *module_weather_app$history_dialog$history_dialog;
 PyDictObject *moduledict_weather_app$history_dialog$history_dialog;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[112];
+static PyObject *mod_consts[119];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[112];
+static Py_hash_t mod_consts_hash[119];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,7 +50,7 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for (int i = 0; i < 112; i++) {
+        for (int i = 0; i < 119; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
@@ -70,7 +70,7 @@ void checkModuleConstants_weather_app$history_dialog$history_dialog(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for (int i = 0; i < 112; i++) {
+    for (int i = 0; i < 119; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -80,15 +80,15 @@ void checkModuleConstants_weather_app$history_dialog$history_dialog(void) {
 // The module code objects.
 static PyCodeObject *codeobj_b11233e36be069a59c51e5f5ab85364a;
 static PyCodeObject *codeobj_0ae6c47f3bcc39d22e2b5a5a75593790;
-static PyCodeObject *codeobj_9236db41f8590868019c9badd85d713e;
+static PyCodeObject *codeobj_fafad928f8ed73a8c4da7e4f7827b343;
 static PyCodeObject *codeobj_263e3e6ab4cde3201a877fd1f0f3acdd;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[107]); CHECK_OBJECT(module_filename_obj);
-    codeobj_b11233e36be069a59c51e5f5ab85364a = MAKE_CODE_OBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[108], mod_consts[108], NULL, NULL, 0, 0, 0);
-    codeobj_0ae6c47f3bcc39d22e2b5a5a75593790 = MAKE_CODE_OBJECT(module_filename_obj, 22, CO_NOFREE, mod_consts[95], mod_consts[95], mod_consts[109], NULL, 0, 0, 0);
-    codeobj_9236db41f8590868019c9badd85d713e = MAKE_CODE_OBJECT(module_filename_obj, 72, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[39], mod_consts[39], mod_consts[110], NULL, 2, 0, 0);
-    codeobj_263e3e6ab4cde3201a877fd1f0f3acdd = MAKE_CODE_OBJECT(module_filename_obj, 23, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[103], mod_consts[103], mod_consts[110], NULL, 2, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[114]); CHECK_OBJECT(module_filename_obj);
+    codeobj_b11233e36be069a59c51e5f5ab85364a = MAKE_CODE_OBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[115], mod_consts[115], NULL, NULL, 0, 0, 0);
+    codeobj_0ae6c47f3bcc39d22e2b5a5a75593790 = MAKE_CODE_OBJECT(module_filename_obj, 22, CO_NOFREE, mod_consts[102], mod_consts[102], mod_consts[116], NULL, 0, 0, 0);
+    codeobj_fafad928f8ed73a8c4da7e4f7827b343 = MAKE_CODE_OBJECT(module_filename_obj, 75, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[47], mod_consts[47], mod_consts[117], NULL, 2, 0, 0);
+    codeobj_263e3e6ab4cde3201a877fd1f0f3acdd = MAKE_CODE_OBJECT(module_filename_obj, 23, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[110], mod_consts[110], mod_consts[117], NULL, 2, 0, 0);
 }
 
 // The module function declarations.
@@ -543,14 +543,14 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__1_se
         PyObject *tmp_expression_value_7;
         CHECK_OBJECT(par_self);
         tmp_expression_value_6 = par_self;
-        tmp_expression_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[8]);
+        tmp_expression_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[13]);
         if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 35;
+            exception_lineno = 34;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -562,24 +562,38 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__1_se
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 35;
+            exception_lineno = 34;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        CHECK_OBJECT(par_self);
-        tmp_expression_value_7 = par_self;
-        tmp_args_element_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[13]);
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[16]);
+
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[16]);
+        }
+
+        if (tmp_expression_value_7 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_4);
+
+            exception_lineno = 34;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        tmp_args_element_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[17]);
         if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_4);
 
-            exception_lineno = 35;
+            exception_lineno = 34;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 35;
+        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 34;
         tmp_call_result_7 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_3);
         Py_DECREF(tmp_called_value_4);
         Py_DECREF(tmp_args_element_value_3);
@@ -589,58 +603,11 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__1_se
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 35;
+            exception_lineno = 34;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         Py_DECREF(tmp_call_result_7);
-    }
-    {
-        PyObject *tmp_assattr_value_4;
-        PyObject *tmp_called_value_5;
-        PyObject *tmp_assattr_target_4;
-        tmp_called_value_5 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[16]);
-
-        if (unlikely(tmp_called_value_5 == NULL)) {
-            tmp_called_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[16]);
-        }
-
-        if (tmp_called_value_5 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 37;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 37;
-        tmp_assattr_value_4 = CALL_FUNCTION_NO_ARGS(tmp_called_value_5);
-        if (tmp_assattr_value_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 37;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        CHECK_OBJECT(par_self);
-        tmp_assattr_target_4 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[17], tmp_assattr_value_4);
-        Py_DECREF(tmp_assattr_value_4);
-        if (tmp_result == false) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 37;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
     }
     {
         PyObject *tmp_called_instance_8;
@@ -648,22 +615,22 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__1_se
         PyObject *tmp_call_result_8;
         CHECK_OBJECT(par_self);
         tmp_expression_value_8 = par_self;
-        tmp_called_instance_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[17]);
+        tmp_called_instance_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[13]);
         if (tmp_called_instance_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 38;
+            exception_lineno = 35;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 38;
+        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 35;
         tmp_call_result_8 = CALL_METHOD_WITH_SINGLE_ARG(
             tmp_called_instance_8,
-            mod_consts[9],
-            PyTuple_GET_ITEM(mod_consts[18], 0)
+            mod_consts[18],
+            PyTuple_GET_ITEM(mod_consts[19], 0)
         );
 
         Py_DECREF(tmp_called_instance_8);
@@ -673,140 +640,171 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__1_se
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 38;
+            exception_lineno = 35;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         Py_DECREF(tmp_call_result_8);
     }
     {
-        PyObject *tmp_called_instance_9;
+        PyObject *tmp_called_value_5;
         PyObject *tmp_expression_value_9;
-        PyObject *tmp_call_result_9;
-        CHECK_OBJECT(par_self);
-        tmp_expression_value_9 = par_self;
-        tmp_called_instance_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[17]);
-        if (tmp_called_instance_9 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 39;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 39;
-        tmp_call_result_9 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_9,
-            mod_consts[1],
-            PyTuple_GET_ITEM(mod_consts[19], 0)
-        );
-
-        Py_DECREF(tmp_called_instance_9);
-        if (tmp_call_result_9 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 39;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        Py_DECREF(tmp_call_result_9);
-    }
-    {
-        PyObject *tmp_assattr_value_5;
-        PyObject *tmp_called_value_6;
-        PyObject *tmp_args_element_value_4;
-        PyObject *tmp_args_element_value_5;
-        PyObject *tmp_args_element_value_6;
         PyObject *tmp_expression_value_10;
-        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_call_result_9;
+        PyObject *tmp_args_element_value_4;
         PyObject *tmp_expression_value_11;
-        PyObject *tmp_assattr_target_5;
-        tmp_called_value_6 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[20]);
-
-        if (unlikely(tmp_called_value_6 == NULL)) {
-            tmp_called_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[20]);
-        }
-
-        if (tmp_called_value_6 == NULL) {
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_10 = par_self;
+        tmp_expression_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[13]);
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 40;
+            exception_lineno = 36;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_value_4 = mod_consts[21];
-        tmp_args_element_value_5 = mod_consts[22];
-        tmp_expression_value_10 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[23]);
-
-        if (unlikely(tmp_expression_value_10 == NULL)) {
-            tmp_expression_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[23]);
-        }
-
-        if (tmp_expression_value_10 == NULL) {
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[20]);
+        Py_DECREF(tmp_expression_value_9);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 40;
+            exception_lineno = 36;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[24]);
-        if (tmp_args_element_value_6 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 40;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        tmp_expression_value_11 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[23]);
+        tmp_expression_value_11 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[21]);
 
         if (unlikely(tmp_expression_value_11 == NULL)) {
-            tmp_expression_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[23]);
+            tmp_expression_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
         if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_args_element_value_6);
+            Py_DECREF(tmp_called_value_5);
 
-            exception_lineno = 40;
+            exception_lineno = 36;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[25]);
-        if (tmp_args_element_value_7 == NULL) {
+        tmp_args_element_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[22]);
+        if (tmp_args_element_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_args_element_value_6);
+            Py_DECREF(tmp_called_value_5);
+
+            exception_lineno = 36;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 36;
+        tmp_call_result_9 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_5, tmp_args_element_value_4);
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_args_element_value_4);
+        if (tmp_call_result_9 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 36;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        Py_DECREF(tmp_call_result_9);
+    }
+    {
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_expression_value_13;
+        PyObject *tmp_call_result_10;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_expression_value_14;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_13 = par_self;
+        tmp_expression_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[8]);
+        if (tmp_expression_value_12 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 38;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[23]);
+        Py_DECREF(tmp_expression_value_12);
+        if (tmp_called_value_6 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 38;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_14 = par_self;
+        tmp_args_element_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[13]);
+        if (tmp_args_element_value_5 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_6);
+
+            exception_lineno = 38;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 38;
+        tmp_call_result_10 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_6, tmp_args_element_value_5);
+        Py_DECREF(tmp_called_value_6);
+        Py_DECREF(tmp_args_element_value_5);
+        if (tmp_call_result_10 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 38;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        Py_DECREF(tmp_call_result_10);
+    }
+    {
+        PyObject *tmp_assattr_value_4;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_assattr_target_4;
+        tmp_called_value_7 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[24]);
+
+        if (unlikely(tmp_called_value_7 == NULL)) {
+            tmp_called_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        }
+
+        if (tmp_called_value_7 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
 
             exception_lineno = 40;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 40;
-        {
-            PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5, tmp_args_element_value_6, tmp_args_element_value_7};
-            tmp_assattr_value_5 = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_6, call_args);
-        }
-
-        Py_DECREF(tmp_args_element_value_6);
-        Py_DECREF(tmp_args_element_value_7);
-        if (tmp_assattr_value_5 == NULL) {
+        tmp_assattr_value_4 = CALL_FUNCTION_NO_ARGS(tmp_called_value_7);
+        if (tmp_assattr_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -817,9 +815,9 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__1_se
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_assattr_target_5 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_5, mod_consts[26], tmp_assattr_value_5);
-        Py_DECREF(tmp_assattr_value_5);
+        tmp_assattr_target_4 = par_self;
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[25], tmp_assattr_value_4);
+        Py_DECREF(tmp_assattr_value_4);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -832,55 +830,68 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__1_se
         }
     }
     {
-        PyObject *tmp_called_value_7;
-        PyObject *tmp_expression_value_12;
-        PyObject *tmp_expression_value_13;
-        PyObject *tmp_call_result_10;
-        PyObject *tmp_args_element_value_8;
-        PyObject *tmp_expression_value_14;
+        PyObject *tmp_called_instance_9;
+        PyObject *tmp_expression_value_15;
+        PyObject *tmp_call_result_11;
         CHECK_OBJECT(par_self);
-        tmp_expression_value_13 = par_self;
-        tmp_expression_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[17]);
-        if (tmp_expression_value_12 == NULL) {
+        tmp_expression_value_15 = par_self;
+        tmp_called_instance_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_15, mod_consts[25]);
+        if (tmp_called_instance_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 42;
+            exception_lineno = 41;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[27]);
-        Py_DECREF(tmp_expression_value_12);
-        if (tmp_called_value_7 == NULL) {
+        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 41;
+        tmp_call_result_11 = CALL_METHOD_WITH_SINGLE_ARG(
+            tmp_called_instance_9,
+            mod_consts[9],
+            PyTuple_GET_ITEM(mod_consts[26], 0)
+        );
+
+        Py_DECREF(tmp_called_instance_9);
+        if (tmp_call_result_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 42;
+            exception_lineno = 41;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
+        Py_DECREF(tmp_call_result_11);
+    }
+    {
+        PyObject *tmp_called_instance_10;
+        PyObject *tmp_expression_value_16;
+        PyObject *tmp_call_result_12;
         CHECK_OBJECT(par_self);
-        tmp_expression_value_14 = par_self;
-        tmp_args_element_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[26]);
-        if (tmp_args_element_value_8 == NULL) {
+        tmp_expression_value_16 = par_self;
+        tmp_called_instance_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[25]);
+        if (tmp_called_instance_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_value_7);
+
 
             exception_lineno = 42;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 42;
-        tmp_call_result_10 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_7, tmp_args_element_value_8);
-        Py_DECREF(tmp_called_value_7);
-        Py_DECREF(tmp_args_element_value_8);
-        if (tmp_call_result_10 == NULL) {
+        tmp_call_result_12 = CALL_METHOD_WITH_SINGLE_ARG(
+            tmp_called_instance_10,
+            mod_consts[1],
+            PyTuple_GET_ITEM(mod_consts[27], 0)
+        );
+
+        Py_DECREF(tmp_called_instance_10);
+        if (tmp_call_result_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -890,13 +901,18 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__1_se
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        Py_DECREF(tmp_call_result_10);
+        Py_DECREF(tmp_call_result_12);
     }
     {
-        PyObject *tmp_assattr_value_6;
+        PyObject *tmp_assattr_value_5;
         PyObject *tmp_called_value_8;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_expression_value_17;
         PyObject *tmp_args_element_value_9;
-        PyObject *tmp_assattr_target_6;
+        PyObject *tmp_expression_value_18;
+        PyObject *tmp_assattr_target_5;
         tmp_called_value_8 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[28]);
 
         if (unlikely(tmp_called_value_8 == NULL)) {
@@ -909,146 +925,169 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__1_se
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 44;
+            exception_lineno = 43;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        CHECK_OBJECT(par_Dialog);
-        tmp_args_element_value_9 = par_Dialog;
-        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 44;
-        tmp_assattr_value_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_8, tmp_args_element_value_9);
-        if (tmp_assattr_value_6 == NULL) {
+        tmp_args_element_value_6 = mod_consts[29];
+        tmp_args_element_value_7 = mod_consts[30];
+        tmp_expression_value_17 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[31]);
+
+        if (unlikely(tmp_expression_value_17 == NULL)) {
+            tmp_expression_value_17 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[31]);
+        }
+
+        if (tmp_expression_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 44;
+            exception_lineno = 43;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        tmp_args_element_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_17, mod_consts[32]);
+        if (tmp_args_element_value_8 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 43;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        tmp_expression_value_18 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[31]);
+
+        if (unlikely(tmp_expression_value_18 == NULL)) {
+            tmp_expression_value_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[31]);
+        }
+
+        if (tmp_expression_value_18 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_args_element_value_8);
+
+            exception_lineno = 43;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        tmp_args_element_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_18, mod_consts[33]);
+        if (tmp_args_element_value_9 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_args_element_value_8);
+
+            exception_lineno = 43;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 43;
+        {
+            PyObject *call_args[] = {tmp_args_element_value_6, tmp_args_element_value_7, tmp_args_element_value_8, tmp_args_element_value_9};
+            tmp_assattr_value_5 = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_8, call_args);
+        }
+
+        Py_DECREF(tmp_args_element_value_8);
+        Py_DECREF(tmp_args_element_value_9);
+        if (tmp_assattr_value_5 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 43;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_assattr_target_6 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_6, mod_consts[29], tmp_assattr_value_6);
-        Py_DECREF(tmp_assattr_value_6);
+        tmp_assattr_target_5 = par_self;
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_5, mod_consts[34], tmp_assattr_value_5);
+        Py_DECREF(tmp_assattr_value_5);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 44;
+            exception_lineno = 43;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-    }
-    {
-        PyObject *tmp_called_instance_10;
-        PyObject *tmp_expression_value_15;
-        PyObject *tmp_call_result_11;
-        CHECK_OBJECT(par_self);
-        tmp_expression_value_15 = par_self;
-        tmp_called_instance_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_15, mod_consts[29]);
-        if (tmp_called_instance_10 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 45;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 45;
-        tmp_call_result_11 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_10,
-            mod_consts[1],
-            PyTuple_GET_ITEM(mod_consts[30], 0)
-        );
-
-        Py_DECREF(tmp_called_instance_10);
-        if (tmp_call_result_11 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 45;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        Py_DECREF(tmp_call_result_11);
     }
     {
         PyObject *tmp_called_value_9;
-        PyObject *tmp_expression_value_16;
-        PyObject *tmp_expression_value_17;
-        PyObject *tmp_call_result_12;
+        PyObject *tmp_expression_value_19;
+        PyObject *tmp_expression_value_20;
+        PyObject *tmp_call_result_13;
         PyObject *tmp_args_element_value_10;
-        PyObject *tmp_expression_value_18;
+        PyObject *tmp_expression_value_21;
         CHECK_OBJECT(par_self);
-        tmp_expression_value_17 = par_self;
-        tmp_expression_value_16 = LOOKUP_ATTRIBUTE(tmp_expression_value_17, mod_consts[17]);
-        if (tmp_expression_value_16 == NULL) {
+        tmp_expression_value_20 = par_self;
+        tmp_expression_value_19 = LOOKUP_ATTRIBUTE(tmp_expression_value_20, mod_consts[25]);
+        if (tmp_expression_value_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 47;
+            exception_lineno = 45;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[15]);
-        Py_DECREF(tmp_expression_value_16);
+        tmp_called_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_19, mod_consts[35]);
+        Py_DECREF(tmp_expression_value_19);
         if (tmp_called_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 47;
+            exception_lineno = 45;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_value_18 = par_self;
-        tmp_args_element_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_18, mod_consts[29]);
+        tmp_expression_value_21 = par_self;
+        tmp_args_element_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_21, mod_consts[34]);
         if (tmp_args_element_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_9);
 
-            exception_lineno = 47;
+            exception_lineno = 45;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 47;
-        tmp_call_result_12 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_9, tmp_args_element_value_10);
+        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 45;
+        tmp_call_result_13 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_9, tmp_args_element_value_10);
         Py_DECREF(tmp_called_value_9);
         Py_DECREF(tmp_args_element_value_10);
-        if (tmp_call_result_12 == NULL) {
+        if (tmp_call_result_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 47;
+            exception_lineno = 45;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        Py_DECREF(tmp_call_result_12);
+        Py_DECREF(tmp_call_result_13);
     }
     {
-        PyObject *tmp_assattr_value_7;
+        PyObject *tmp_assattr_value_6;
         PyObject *tmp_called_value_10;
         PyObject *tmp_args_element_value_11;
-        PyObject *tmp_assattr_target_7;
-        tmp_called_value_10 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_assattr_target_6;
+        tmp_called_value_10 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[36]);
 
         if (unlikely(tmp_called_value_10 == NULL)) {
-            tmp_called_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+            tmp_called_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[36]);
         }
 
         if (tmp_called_value_10 == NULL) {
@@ -1057,27 +1096,175 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__1_se
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 49;
+            exception_lineno = 47;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_Dialog);
         tmp_args_element_value_11 = par_Dialog;
-        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 49;
-        tmp_assattr_value_7 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_10, tmp_args_element_value_11);
+        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 47;
+        tmp_assattr_value_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_10, tmp_args_element_value_11);
+        if (tmp_assattr_value_6 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 47;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        CHECK_OBJECT(par_self);
+        tmp_assattr_target_6 = par_self;
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_6, mod_consts[37], tmp_assattr_value_6);
+        Py_DECREF(tmp_assattr_value_6);
+        if (tmp_result == false) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 47;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+    }
+    {
+        PyObject *tmp_called_instance_11;
+        PyObject *tmp_expression_value_22;
+        PyObject *tmp_call_result_14;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_22 = par_self;
+        tmp_called_instance_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_22, mod_consts[37]);
+        if (tmp_called_instance_11 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 48;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 48;
+        tmp_call_result_14 = CALL_METHOD_WITH_SINGLE_ARG(
+            tmp_called_instance_11,
+            mod_consts[1],
+            PyTuple_GET_ITEM(mod_consts[38], 0)
+        );
+
+        Py_DECREF(tmp_called_instance_11);
+        if (tmp_call_result_14 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 48;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        Py_DECREF(tmp_call_result_14);
+    }
+    {
+        PyObject *tmp_called_value_11;
+        PyObject *tmp_expression_value_23;
+        PyObject *tmp_expression_value_24;
+        PyObject *tmp_call_result_15;
+        PyObject *tmp_args_element_value_12;
+        PyObject *tmp_expression_value_25;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_24 = par_self;
+        tmp_expression_value_23 = LOOKUP_ATTRIBUTE(tmp_expression_value_24, mod_consts[25]);
+        if (tmp_expression_value_23 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 50;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        tmp_called_value_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_23, mod_consts[23]);
+        Py_DECREF(tmp_expression_value_23);
+        if (tmp_called_value_11 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 50;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_25 = par_self;
+        tmp_args_element_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_25, mod_consts[37]);
+        if (tmp_args_element_value_12 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_11);
+
+            exception_lineno = 50;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 50;
+        tmp_call_result_15 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_11, tmp_args_element_value_12);
+        Py_DECREF(tmp_called_value_11);
+        Py_DECREF(tmp_args_element_value_12);
+        if (tmp_call_result_15 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 50;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        Py_DECREF(tmp_call_result_15);
+    }
+    {
+        PyObject *tmp_assattr_value_7;
+        PyObject *tmp_called_value_12;
+        PyObject *tmp_args_element_value_13;
+        PyObject *tmp_assattr_target_7;
+        tmp_called_value_12 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[36]);
+
+        if (unlikely(tmp_called_value_12 == NULL)) {
+            tmp_called_value_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[36]);
+        }
+
+        if (tmp_called_value_12 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 52;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        CHECK_OBJECT(par_Dialog);
+        tmp_args_element_value_13 = par_Dialog;
+        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 52;
+        tmp_assattr_value_7 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_12, tmp_args_element_value_13);
         if (tmp_assattr_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 49;
+            exception_lineno = 52;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_7 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_7, mod_consts[31], tmp_assattr_value_7);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_7, mod_consts[39], tmp_assattr_value_7);
         Py_DECREF(tmp_assattr_value_7);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -1085,399 +1272,176 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__1_se
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 49;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-    }
-    {
-        PyObject *tmp_called_instance_11;
-        PyObject *tmp_expression_value_19;
-        PyObject *tmp_call_result_13;
-        CHECK_OBJECT(par_self);
-        tmp_expression_value_19 = par_self;
-        tmp_called_instance_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_19, mod_consts[31]);
-        if (tmp_called_instance_11 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 50;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 50;
-        tmp_call_result_13 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_11,
-            mod_consts[1],
-            PyTuple_GET_ITEM(mod_consts[32], 0)
-        );
-
-        Py_DECREF(tmp_called_instance_11);
-        if (tmp_call_result_13 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 50;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        Py_DECREF(tmp_call_result_13);
-    }
-    {
-        PyObject *tmp_called_value_11;
-        PyObject *tmp_expression_value_20;
-        PyObject *tmp_expression_value_21;
-        PyObject *tmp_call_result_14;
-        PyObject *tmp_args_element_value_12;
-        PyObject *tmp_expression_value_22;
-        CHECK_OBJECT(par_self);
-        tmp_expression_value_21 = par_self;
-        tmp_expression_value_20 = LOOKUP_ATTRIBUTE(tmp_expression_value_21, mod_consts[17]);
-        if (tmp_expression_value_20 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
             exception_lineno = 52;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_value_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_20, mod_consts[15]);
-        Py_DECREF(tmp_expression_value_20);
-        if (tmp_called_value_11 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 52;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        CHECK_OBJECT(par_self);
-        tmp_expression_value_22 = par_self;
-        tmp_args_element_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_22, mod_consts[31]);
-        if (tmp_args_element_value_12 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_value_11);
-
-            exception_lineno = 52;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 52;
-        tmp_call_result_14 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_11, tmp_args_element_value_12);
-        Py_DECREF(tmp_called_value_11);
-        Py_DECREF(tmp_args_element_value_12);
-        if (tmp_call_result_14 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 52;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        Py_DECREF(tmp_call_result_14);
-    }
-    {
-        PyObject *tmp_called_value_12;
-        PyObject *tmp_expression_value_23;
-        PyObject *tmp_expression_value_24;
-        PyObject *tmp_call_result_15;
-        PyObject *tmp_args_element_value_13;
-        PyObject *tmp_expression_value_25;
-        CHECK_OBJECT(par_self);
-        tmp_expression_value_24 = par_self;
-        tmp_expression_value_23 = LOOKUP_ATTRIBUTE(tmp_expression_value_24, mod_consts[8]);
-        if (tmp_expression_value_23 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 55;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_23, mod_consts[33]);
-        Py_DECREF(tmp_expression_value_23);
-        if (tmp_called_value_12 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 55;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        CHECK_OBJECT(par_self);
-        tmp_expression_value_25 = par_self;
-        tmp_args_element_value_13 = LOOKUP_ATTRIBUTE(tmp_expression_value_25, mod_consts[17]);
-        if (tmp_args_element_value_13 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_value_12);
-
-            exception_lineno = 55;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 55;
-        tmp_call_result_15 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_12, tmp_args_element_value_13);
-        Py_DECREF(tmp_called_value_12);
-        Py_DECREF(tmp_args_element_value_13);
-        if (tmp_call_result_15 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 55;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        Py_DECREF(tmp_call_result_15);
-    }
-    {
-        PyObject *tmp_called_value_13;
-        PyObject *tmp_expression_value_26;
-        PyObject *tmp_expression_value_27;
-        PyObject *tmp_call_result_16;
-        PyObject *tmp_args_element_value_14;
-        PyObject *tmp_expression_value_28;
-        CHECK_OBJECT(par_self);
-        tmp_expression_value_27 = par_self;
-        tmp_expression_value_26 = LOOKUP_ATTRIBUTE(tmp_expression_value_27, mod_consts[6]);
-        if (tmp_expression_value_26 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 58;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_value_13 = LOOKUP_ATTRIBUTE(tmp_expression_value_26, mod_consts[33]);
-        Py_DECREF(tmp_expression_value_26);
-        if (tmp_called_value_13 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 58;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        CHECK_OBJECT(par_self);
-        tmp_expression_value_28 = par_self;
-        tmp_args_element_value_14 = LOOKUP_ATTRIBUTE(tmp_expression_value_28, mod_consts[8]);
-        if (tmp_args_element_value_14 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_value_13);
-
-            exception_lineno = 58;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 58;
-        tmp_call_result_16 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_13, tmp_args_element_value_14);
-        Py_DECREF(tmp_called_value_13);
-        Py_DECREF(tmp_args_element_value_14);
-        if (tmp_call_result_16 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 58;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        Py_DECREF(tmp_call_result_16);
-    }
-    {
-        PyObject *tmp_assattr_value_8;
-        PyObject *tmp_called_value_14;
-        PyObject *tmp_args_element_value_15;
-        PyObject *tmp_assattr_target_8;
-        tmp_called_value_14 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[34]);
-
-        if (unlikely(tmp_called_value_14 == NULL)) {
-            tmp_called_value_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[34]);
-        }
-
-        if (tmp_called_value_14 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 60;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        CHECK_OBJECT(par_Dialog);
-        tmp_args_element_value_15 = par_Dialog;
-        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 60;
-        tmp_assattr_value_8 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_14, tmp_args_element_value_15);
-        if (tmp_assattr_value_8 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 60;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        CHECK_OBJECT(par_self);
-        tmp_assattr_target_8 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_8, mod_consts[35], tmp_assattr_value_8);
-        Py_DECREF(tmp_assattr_value_8);
-        if (tmp_result == false) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 60;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
     }
     {
         PyObject *tmp_called_instance_12;
-        PyObject *tmp_expression_value_29;
-        PyObject *tmp_call_result_17;
+        PyObject *tmp_expression_value_26;
+        PyObject *tmp_call_result_16;
         CHECK_OBJECT(par_self);
-        tmp_expression_value_29 = par_self;
-        tmp_called_instance_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_29, mod_consts[35]);
+        tmp_expression_value_26 = par_self;
+        tmp_called_instance_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_26, mod_consts[39]);
         if (tmp_called_instance_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 61;
+            exception_lineno = 53;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 61;
-        tmp_call_result_17 = CALL_METHOD_WITH_SINGLE_ARG(
+        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 53;
+        tmp_call_result_16 = CALL_METHOD_WITH_SINGLE_ARG(
             tmp_called_instance_12,
             mod_consts[1],
-            PyTuple_GET_ITEM(mod_consts[36], 0)
+            PyTuple_GET_ITEM(mod_consts[40], 0)
         );
 
         Py_DECREF(tmp_called_instance_12);
+        if (tmp_call_result_16 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 53;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        Py_DECREF(tmp_call_result_16);
+    }
+    {
+        PyObject *tmp_called_value_13;
+        PyObject *tmp_expression_value_27;
+        PyObject *tmp_expression_value_28;
+        PyObject *tmp_call_result_17;
+        PyObject *tmp_args_element_value_14;
+        PyObject *tmp_expression_value_29;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_28 = par_self;
+        tmp_expression_value_27 = LOOKUP_ATTRIBUTE(tmp_expression_value_28, mod_consts[25]);
+        if (tmp_expression_value_27 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 55;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        tmp_called_value_13 = LOOKUP_ATTRIBUTE(tmp_expression_value_27, mod_consts[23]);
+        Py_DECREF(tmp_expression_value_27);
+        if (tmp_called_value_13 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 55;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_29 = par_self;
+        tmp_args_element_value_14 = LOOKUP_ATTRIBUTE(tmp_expression_value_29, mod_consts[39]);
+        if (tmp_args_element_value_14 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_13);
+
+            exception_lineno = 55;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 55;
+        tmp_call_result_17 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_13, tmp_args_element_value_14);
+        Py_DECREF(tmp_called_value_13);
+        Py_DECREF(tmp_args_element_value_14);
         if (tmp_call_result_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 61;
+            exception_lineno = 55;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         Py_DECREF(tmp_call_result_17);
     }
     {
-        PyObject *tmp_called_value_15;
+        PyObject *tmp_called_value_14;
         PyObject *tmp_expression_value_30;
         PyObject *tmp_expression_value_31;
         PyObject *tmp_call_result_18;
-        PyObject *tmp_args_element_value_16;
+        PyObject *tmp_args_element_value_15;
         PyObject *tmp_expression_value_32;
         CHECK_OBJECT(par_self);
         tmp_expression_value_31 = par_self;
-        tmp_expression_value_30 = LOOKUP_ATTRIBUTE(tmp_expression_value_31, mod_consts[35]);
+        tmp_expression_value_30 = LOOKUP_ATTRIBUTE(tmp_expression_value_31, mod_consts[8]);
         if (tmp_expression_value_30 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 62;
+            exception_lineno = 58;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_value_15 = LOOKUP_ATTRIBUTE(tmp_expression_value_30, mod_consts[37]);
+        tmp_called_value_14 = LOOKUP_ATTRIBUTE(tmp_expression_value_30, mod_consts[41]);
         Py_DECREF(tmp_expression_value_30);
-        if (tmp_called_value_15 == NULL) {
+        if (tmp_called_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 62;
+            exception_lineno = 58;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_value_32 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[34]);
-
-        if (unlikely(tmp_expression_value_32 == NULL)) {
-            tmp_expression_value_32 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[34]);
-        }
-
-        if (tmp_expression_value_32 == NULL) {
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_32 = par_self;
+        tmp_args_element_value_15 = LOOKUP_ATTRIBUTE(tmp_expression_value_32, mod_consts[25]);
+        if (tmp_args_element_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_value_15);
+            Py_DECREF(tmp_called_value_14);
 
-            exception_lineno = 62;
+            exception_lineno = 58;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_value_16 = LOOKUP_ATTRIBUTE(tmp_expression_value_32, mod_consts[38]);
-        if (tmp_args_element_value_16 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_value_15);
-
-            exception_lineno = 62;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 62;
-        tmp_call_result_18 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_15, tmp_args_element_value_16);
-        Py_DECREF(tmp_called_value_15);
-        Py_DECREF(tmp_args_element_value_16);
+        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 58;
+        tmp_call_result_18 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_14, tmp_args_element_value_15);
+        Py_DECREF(tmp_called_value_14);
+        Py_DECREF(tmp_args_element_value_15);
         if (tmp_call_result_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 62;
+            exception_lineno = 58;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         Py_DECREF(tmp_call_result_18);
     }
     {
-        PyObject *tmp_called_value_16;
+        PyObject *tmp_called_value_15;
         PyObject *tmp_expression_value_33;
         PyObject *tmp_expression_value_34;
         PyObject *tmp_call_result_19;
-        PyObject *tmp_args_element_value_17;
+        PyObject *tmp_args_element_value_16;
         PyObject *tmp_expression_value_35;
         CHECK_OBJECT(par_self);
         tmp_expression_value_34 = par_self;
@@ -1488,62 +1452,224 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__1_se
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 64;
+            exception_lineno = 61;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_value_16 = LOOKUP_ATTRIBUTE(tmp_expression_value_33, mod_consts[15]);
+        tmp_called_value_15 = LOOKUP_ATTRIBUTE(tmp_expression_value_33, mod_consts[41]);
         Py_DECREF(tmp_expression_value_33);
-        if (tmp_called_value_16 == NULL) {
+        if (tmp_called_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 64;
+            exception_lineno = 61;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
         tmp_expression_value_35 = par_self;
-        tmp_args_element_value_17 = LOOKUP_ATTRIBUTE(tmp_expression_value_35, mod_consts[35]);
-        if (tmp_args_element_value_17 == NULL) {
+        tmp_args_element_value_16 = LOOKUP_ATTRIBUTE(tmp_expression_value_35, mod_consts[8]);
+        if (tmp_args_element_value_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_value_16);
+            Py_DECREF(tmp_called_value_15);
 
-            exception_lineno = 64;
+            exception_lineno = 61;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 64;
-        tmp_call_result_19 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_16, tmp_args_element_value_17);
-        Py_DECREF(tmp_called_value_16);
-        Py_DECREF(tmp_args_element_value_17);
+        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 61;
+        tmp_call_result_19 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_15, tmp_args_element_value_16);
+        Py_DECREF(tmp_called_value_15);
+        Py_DECREF(tmp_args_element_value_16);
         if (tmp_call_result_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 64;
+            exception_lineno = 61;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         Py_DECREF(tmp_call_result_19);
     }
     {
-        PyObject *tmp_called_instance_13;
-        PyObject *tmp_call_result_20;
-        PyObject *tmp_args_element_value_18;
-        CHECK_OBJECT(par_self);
-        tmp_called_instance_13 = par_self;
+        PyObject *tmp_assattr_value_8;
+        PyObject *tmp_called_value_16;
+        PyObject *tmp_args_element_value_17;
+        PyObject *tmp_assattr_target_8;
+        tmp_called_value_16 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[42]);
+
+        if (unlikely(tmp_called_value_16 == NULL)) {
+            tmp_called_value_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[42]);
+        }
+
+        if (tmp_called_value_16 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 63;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
         CHECK_OBJECT(par_Dialog);
-        tmp_args_element_value_18 = par_Dialog;
-        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 67;
-        tmp_call_result_20 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_13, mod_consts[39], tmp_args_element_value_18);
+        tmp_args_element_value_17 = par_Dialog;
+        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 63;
+        tmp_assattr_value_8 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_16, tmp_args_element_value_17);
+        if (tmp_assattr_value_8 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 63;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        CHECK_OBJECT(par_self);
+        tmp_assattr_target_8 = par_self;
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_8, mod_consts[43], tmp_assattr_value_8);
+        Py_DECREF(tmp_assattr_value_8);
+        if (tmp_result == false) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 63;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+    }
+    {
+        PyObject *tmp_called_instance_13;
+        PyObject *tmp_expression_value_36;
+        PyObject *tmp_call_result_20;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_36 = par_self;
+        tmp_called_instance_13 = LOOKUP_ATTRIBUTE(tmp_expression_value_36, mod_consts[43]);
+        if (tmp_called_instance_13 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 64;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 64;
+        tmp_call_result_20 = CALL_METHOD_WITH_SINGLE_ARG(
+            tmp_called_instance_13,
+            mod_consts[1],
+            PyTuple_GET_ITEM(mod_consts[44], 0)
+        );
+
+        Py_DECREF(tmp_called_instance_13);
         if (tmp_call_result_20 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 64;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        Py_DECREF(tmp_call_result_20);
+    }
+    {
+        PyObject *tmp_called_value_17;
+        PyObject *tmp_expression_value_37;
+        PyObject *tmp_expression_value_38;
+        PyObject *tmp_call_result_21;
+        PyObject *tmp_args_element_value_18;
+        PyObject *tmp_expression_value_39;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_38 = par_self;
+        tmp_expression_value_37 = LOOKUP_ATTRIBUTE(tmp_expression_value_38, mod_consts[43]);
+        if (tmp_expression_value_37 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 65;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        tmp_called_value_17 = LOOKUP_ATTRIBUTE(tmp_expression_value_37, mod_consts[45]);
+        Py_DECREF(tmp_expression_value_37);
+        if (tmp_called_value_17 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 65;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        tmp_expression_value_39 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[42]);
+
+        if (unlikely(tmp_expression_value_39 == NULL)) {
+            tmp_expression_value_39 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[42]);
+        }
+
+        if (tmp_expression_value_39 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_17);
+
+            exception_lineno = 65;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        tmp_args_element_value_18 = LOOKUP_ATTRIBUTE(tmp_expression_value_39, mod_consts[46]);
+        if (tmp_args_element_value_18 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_17);
+
+            exception_lineno = 65;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 65;
+        tmp_call_result_21 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_17, tmp_args_element_value_18);
+        Py_DECREF(tmp_called_value_17);
+        Py_DECREF(tmp_args_element_value_18);
+        if (tmp_call_result_21 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 65;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        Py_DECREF(tmp_call_result_21);
+    }
+    {
+        PyObject *tmp_called_value_18;
+        PyObject *tmp_expression_value_40;
+        PyObject *tmp_expression_value_41;
+        PyObject *tmp_call_result_22;
+        PyObject *tmp_args_element_value_19;
+        PyObject *tmp_expression_value_42;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_41 = par_self;
+        tmp_expression_value_40 = LOOKUP_ATTRIBUTE(tmp_expression_value_41, mod_consts[6]);
+        if (tmp_expression_value_40 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1553,43 +1679,104 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__1_se
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        Py_DECREF(tmp_call_result_20);
-    }
-    {
-        PyObject *tmp_called_instance_14;
-        PyObject *tmp_call_result_21;
-        PyObject *tmp_args_element_value_19;
-        tmp_called_instance_14 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[40]);
-
-        if (unlikely(tmp_called_instance_14 == NULL)) {
-            tmp_called_instance_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[40]);
-        }
-
-        if (tmp_called_instance_14 == NULL) {
+        tmp_called_value_18 = LOOKUP_ATTRIBUTE(tmp_expression_value_40, mod_consts[23]);
+        Py_DECREF(tmp_expression_value_40);
+        if (tmp_called_value_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 69;
+            exception_lineno = 67;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_42 = par_self;
+        tmp_args_element_value_19 = LOOKUP_ATTRIBUTE(tmp_expression_value_42, mod_consts[43]);
+        if (tmp_args_element_value_19 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_18);
+
+            exception_lineno = 67;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 67;
+        tmp_call_result_22 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_18, tmp_args_element_value_19);
+        Py_DECREF(tmp_called_value_18);
+        Py_DECREF(tmp_args_element_value_19);
+        if (tmp_call_result_22 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 67;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        Py_DECREF(tmp_call_result_22);
+    }
+    {
+        PyObject *tmp_called_instance_14;
+        PyObject *tmp_call_result_23;
+        PyObject *tmp_args_element_value_20;
+        CHECK_OBJECT(par_self);
+        tmp_called_instance_14 = par_self;
+        CHECK_OBJECT(par_Dialog);
+        tmp_args_element_value_20 = par_Dialog;
+        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 70;
+        tmp_call_result_23 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_14, mod_consts[47], tmp_args_element_value_20);
+        if (tmp_call_result_23 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 70;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        Py_DECREF(tmp_call_result_23);
+    }
+    {
+        PyObject *tmp_called_instance_15;
+        PyObject *tmp_call_result_24;
+        PyObject *tmp_args_element_value_21;
+        tmp_called_instance_15 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[48]);
+
+        if (unlikely(tmp_called_instance_15 == NULL)) {
+            tmp_called_instance_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[48]);
+        }
+
+        if (tmp_called_instance_15 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 72;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_Dialog);
-        tmp_args_element_value_19 = par_Dialog;
-        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 69;
-        tmp_call_result_21 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_14, mod_consts[41], tmp_args_element_value_19);
-        if (tmp_call_result_21 == NULL) {
+        tmp_args_element_value_21 = par_Dialog;
+        frame_263e3e6ab4cde3201a877fd1f0f3acdd->m_frame.f_lineno = 72;
+        tmp_call_result_24 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_15, mod_consts[49], tmp_args_element_value_21);
+        if (tmp_call_result_24 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 69;
+            exception_lineno = 72;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        Py_DECREF(tmp_call_result_21);
+        Py_DECREF(tmp_call_result_24);
     }
 
 #if 0
@@ -1685,43 +1872,43 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__2_re
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
     PyObject *par_Dialog = python_pars[1];
-    struct Nuitka_FrameObject *frame_9236db41f8590868019c9badd85d713e;
+    struct Nuitka_FrameObject *frame_fafad928f8ed73a8c4da7e4f7827b343;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_9236db41f8590868019c9badd85d713e = NULL;
+    static struct Nuitka_FrameObject *cache_frame_fafad928f8ed73a8c4da7e4f7827b343 = NULL;
     PyObject *tmp_return_value = NULL;
 
     // Actual function body.
-    if (isFrameUnusable(cache_frame_9236db41f8590868019c9badd85d713e)) {
-        Py_XDECREF(cache_frame_9236db41f8590868019c9badd85d713e);
+    if (isFrameUnusable(cache_frame_fafad928f8ed73a8c4da7e4f7827b343)) {
+        Py_XDECREF(cache_frame_fafad928f8ed73a8c4da7e4f7827b343);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_9236db41f8590868019c9badd85d713e == NULL) {
+        if (cache_frame_fafad928f8ed73a8c4da7e4f7827b343 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_9236db41f8590868019c9badd85d713e = MAKE_FUNCTION_FRAME(codeobj_9236db41f8590868019c9badd85d713e, module_weather_app$history_dialog$history_dialog, sizeof(void *)+sizeof(void *));
+        cache_frame_fafad928f8ed73a8c4da7e4f7827b343 = MAKE_FUNCTION_FRAME(codeobj_fafad928f8ed73a8c4da7e4f7827b343, module_weather_app$history_dialog$history_dialog, sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_9236db41f8590868019c9badd85d713e->m_type_description == NULL);
-    frame_9236db41f8590868019c9badd85d713e = cache_frame_9236db41f8590868019c9badd85d713e;
+    assert(cache_frame_fafad928f8ed73a8c4da7e4f7827b343->m_type_description == NULL);
+    frame_fafad928f8ed73a8c4da7e4f7827b343 = cache_frame_fafad928f8ed73a8c4da7e4f7827b343;
 
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_9236db41f8590868019c9badd85d713e);
+    pushFrameStack(frame_fafad928f8ed73a8c4da7e4f7827b343);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_9236db41f8590868019c9badd85d713e) == 2); // Frame stack
+    assert(Py_REFCNT(frame_fafad928f8ed73a8c4da7e4f7827b343) == 2); // Frame stack
 
     // Framed code:
     {
@@ -1733,21 +1920,21 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__2_re
         PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_Dialog);
         tmp_expression_value_1 = par_Dialog;
-        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[42]);
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[50]);
         if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 73;
+            exception_lineno = 76;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[43]);
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[51]);
 
         if (unlikely(tmp_expression_value_2 == NULL)) {
-            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[43]);
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[51]);
         }
 
         if (tmp_expression_value_2 == NULL) {
@@ -1756,23 +1943,23 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__2_re
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_1);
 
-            exception_lineno = 73;
+            exception_lineno = 76;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[44]);
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[52]);
         if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_1);
 
-            exception_lineno = 73;
+            exception_lineno = 76;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_9236db41f8590868019c9badd85d713e->m_frame.f_lineno = 73;
-        tmp_args_element_value_1 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_value_2, mod_consts[45]);
+        frame_fafad928f8ed73a8c4da7e4f7827b343->m_frame.f_lineno = 76;
+        tmp_args_element_value_1 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_value_2, mod_consts[53]);
 
         Py_DECREF(tmp_called_value_2);
         if (tmp_args_element_value_1 == NULL) {
@@ -1781,11 +1968,11 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__2_re
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_1);
 
-            exception_lineno = 73;
+            exception_lineno = 76;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_9236db41f8590868019c9badd85d713e->m_frame.f_lineno = 73;
+        frame_fafad928f8ed73a8c4da7e4f7827b343->m_frame.f_lineno = 76;
         tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
         Py_DECREF(tmp_called_value_1);
         Py_DECREF(tmp_args_element_value_1);
@@ -1795,7 +1982,7 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__2_re
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 73;
+            exception_lineno = 76;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -1811,18 +1998,18 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__2_re
         PyObject *tmp_expression_value_5;
         CHECK_OBJECT(par_self);
         tmp_expression_value_4 = par_self;
-        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[29]);
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[37]);
         if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 74;
+            exception_lineno = 77;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[46]);
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[54]);
         Py_DECREF(tmp_expression_value_3);
         if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -1830,14 +2017,14 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__2_re
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 74;
+            exception_lineno = 77;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[43]);
+        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[51]);
 
         if (unlikely(tmp_expression_value_5 == NULL)) {
-            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[43]);
+            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[51]);
         }
 
         if (tmp_expression_value_5 == NULL) {
@@ -1846,23 +2033,23 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__2_re
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_3);
 
-            exception_lineno = 74;
+            exception_lineno = 77;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[44]);
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[52]);
         if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_3);
 
-            exception_lineno = 74;
+            exception_lineno = 77;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_9236db41f8590868019c9badd85d713e->m_frame.f_lineno = 74;
-        tmp_args_element_value_2 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_value_4, mod_consts[47]);
+        frame_fafad928f8ed73a8c4da7e4f7827b343->m_frame.f_lineno = 77;
+        tmp_args_element_value_2 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_value_4, mod_consts[55]);
 
         Py_DECREF(tmp_called_value_4);
         if (tmp_args_element_value_2 == NULL) {
@@ -1871,11 +2058,11 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__2_re
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_3);
 
-            exception_lineno = 74;
+            exception_lineno = 77;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_9236db41f8590868019c9badd85d713e->m_frame.f_lineno = 74;
+        frame_fafad928f8ed73a8c4da7e4f7827b343->m_frame.f_lineno = 77;
         tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_2);
         Py_DECREF(tmp_called_value_3);
         Py_DECREF(tmp_args_element_value_2);
@@ -1885,7 +2072,7 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__2_re
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 74;
+            exception_lineno = 77;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -1901,18 +2088,18 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__2_re
         PyObject *tmp_expression_value_8;
         CHECK_OBJECT(par_self);
         tmp_expression_value_7 = par_self;
-        tmp_expression_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[31]);
+        tmp_expression_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[39]);
         if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 75;
+            exception_lineno = 78;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[46]);
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[54]);
         Py_DECREF(tmp_expression_value_6);
         if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -1920,14 +2107,14 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__2_re
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 75;
+            exception_lineno = 78;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[43]);
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[51]);
 
         if (unlikely(tmp_expression_value_8 == NULL)) {
-            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[43]);
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[51]);
         }
 
         if (tmp_expression_value_8 == NULL) {
@@ -1936,23 +2123,23 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__2_re
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_5);
 
-            exception_lineno = 75;
+            exception_lineno = 78;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[44]);
+        tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[52]);
         if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_5);
 
-            exception_lineno = 75;
+            exception_lineno = 78;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_9236db41f8590868019c9badd85d713e->m_frame.f_lineno = 75;
-        tmp_args_element_value_3 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_value_6, mod_consts[48]);
+        frame_fafad928f8ed73a8c4da7e4f7827b343->m_frame.f_lineno = 78;
+        tmp_args_element_value_3 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_value_6, mod_consts[56]);
 
         Py_DECREF(tmp_called_value_6);
         if (tmp_args_element_value_3 == NULL) {
@@ -1961,11 +2148,11 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__2_re
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_5);
 
-            exception_lineno = 75;
+            exception_lineno = 78;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_9236db41f8590868019c9badd85d713e->m_frame.f_lineno = 75;
+        frame_fafad928f8ed73a8c4da7e4f7827b343->m_frame.f_lineno = 78;
         tmp_call_result_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_5, tmp_args_element_value_3);
         Py_DECREF(tmp_called_value_5);
         Py_DECREF(tmp_args_element_value_3);
@@ -1975,7 +2162,7 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__2_re
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 75;
+            exception_lineno = 78;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -1983,7 +2170,7 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__2_re
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_9236db41f8590868019c9badd85d713e);
+    RESTORE_FRAME_EXCEPTION(frame_fafad928f8ed73a8c4da7e4f7827b343);
 #endif
 
     // Put the previous frame back on top.
@@ -1995,18 +2182,18 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__2_re
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_9236db41f8590868019c9badd85d713e);
+    RESTORE_FRAME_EXCEPTION(frame_fafad928f8ed73a8c4da7e4f7827b343);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_9236db41f8590868019c9badd85d713e, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_9236db41f8590868019c9badd85d713e->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_9236db41f8590868019c9badd85d713e, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_fafad928f8ed73a8c4da7e4f7827b343, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_fafad928f8ed73a8c4da7e4f7827b343->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_fafad928f8ed73a8c4da7e4f7827b343, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_9236db41f8590868019c9badd85d713e,
+        frame_fafad928f8ed73a8c4da7e4f7827b343,
         type_description_1,
         par_self,
         par_Dialog
@@ -2014,17 +2201,17 @@ static PyObject *impl_weather_app$history_dialog$history_dialog$$$function__2_re
 
 
     // Release cached frame if used for exception.
-    if (frame_9236db41f8590868019c9badd85d713e == cache_frame_9236db41f8590868019c9badd85d713e) {
+    if (frame_fafad928f8ed73a8c4da7e4f7827b343 == cache_frame_fafad928f8ed73a8c4da7e4f7827b343) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_9236db41f8590868019c9badd85d713e);
-        cache_frame_9236db41f8590868019c9badd85d713e = NULL;
+        Py_DECREF(cache_frame_fafad928f8ed73a8c4da7e4f7827b343);
+        cache_frame_fafad928f8ed73a8c4da7e4f7827b343 = NULL;
     }
 
-    assertFrameObject(frame_9236db41f8590868019c9badd85d713e);
+    assertFrameObject(frame_fafad928f8ed73a8c4da7e4f7827b343);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -2070,9 +2257,9 @@ function_return_exit:
 static PyObject *MAKE_FUNCTION_weather_app$history_dialog$history_dialog$$$function__1_setupUi() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_weather_app$history_dialog$history_dialog$$$function__1_setupUi,
-        mod_consts[103],
+        mod_consts[110],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[104],
+        mod_consts[111],
 #endif
         codeobj_263e3e6ab4cde3201a877fd1f0f3acdd,
         NULL,
@@ -2095,11 +2282,11 @@ static PyObject *MAKE_FUNCTION_weather_app$history_dialog$history_dialog$$$funct
 static PyObject *MAKE_FUNCTION_weather_app$history_dialog$history_dialog$$$function__2_retranslateUi() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_weather_app$history_dialog$history_dialog$$$function__2_retranslateUi,
-        mod_consts[39],
+        mod_consts[47],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[105],
+        mod_consts[112],
 #endif
-        codeobj_9236db41f8590868019c9badd85d713e,
+        codeobj_fafad928f8ed73a8c4da7e4f7827b343,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -2366,7 +2553,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
         UPDATE_STRING_DICT0(
             moduledict_weather_app$history_dialog$history_dialog,
             (Nuitka_StringObject *)const_str_plain___package__,
-            mod_consts[111]
+            mod_consts[118]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)const_str_plain___name__);
@@ -2514,12 +2701,12 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
     {
         PyObject *tmp_assign_source_1;
         tmp_assign_source_1 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[49], tmp_assign_source_1);
+        UPDATE_STRING_DICT0(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[57], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[50], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[58], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_b11233e36be069a59c51e5f5ab85364a = MAKE_MODULE_FRAME(codeobj_b11233e36be069a59c51e5f5ab85364a, module_weather_app$history_dialog$history_dialog);
@@ -2534,14 +2721,14 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         tmp_assattr_value_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[51]);
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[59]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[51]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[52], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[60], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -2557,14 +2744,14 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
         PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
         tmp_assattr_value_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[51]);
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[59]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[51]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[53], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[61], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -2579,7 +2766,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[54], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[62], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
@@ -2588,11 +2775,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
         PyObject *tmp_locals_arg_value_1;
         PyObject *tmp_fromlist_value_1;
         PyObject *tmp_level_value_1;
-        tmp_name_value_1 = mod_consts[55];
+        tmp_name_value_1 = mod_consts[63];
         tmp_globals_arg_value_1 = (PyObject *)moduledict_weather_app$history_dialog$history_dialog;
         tmp_locals_arg_value_1 = Py_None;
-        tmp_fromlist_value_1 = mod_consts[56];
-        tmp_level_value_1 = mod_consts[57];
+        tmp_fromlist_value_1 = mod_consts[64];
+        tmp_level_value_1 = mod_consts[65];
         frame_b11233e36be069a59c51e5f5ab85364a->m_frame.f_lineno = 11;
         tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_4 == NULL) {
@@ -2618,11 +2805,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_5 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[43],
-                mod_consts[57]
+                mod_consts[51],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[43]);
+            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[51]);
         }
 
         if (tmp_assign_source_5 == NULL) {
@@ -2635,7 +2822,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[43], tmp_assign_source_5);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[51], tmp_assign_source_5);
     }
     {
         PyObject *tmp_assign_source_6;
@@ -2646,11 +2833,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_6 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_2,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[58],
-                mod_consts[57]
+                mod_consts[66],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[58]);
+            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[66]);
         }
 
         if (tmp_assign_source_6 == NULL) {
@@ -2663,7 +2850,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[58], tmp_assign_source_6);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[66], tmp_assign_source_6);
     }
     {
         PyObject *tmp_assign_source_7;
@@ -2674,11 +2861,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_7 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_3,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[59],
-                mod_consts[57]
+                mod_consts[67],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[59]);
+            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[67]);
         }
 
         if (tmp_assign_source_7 == NULL) {
@@ -2691,7 +2878,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[59], tmp_assign_source_7);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[67], tmp_assign_source_7);
     }
     {
         PyObject *tmp_assign_source_8;
@@ -2702,11 +2889,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_8 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_4,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[60],
-                mod_consts[57]
+                mod_consts[68],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[60]);
+            tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[68]);
         }
 
         if (tmp_assign_source_8 == NULL) {
@@ -2719,7 +2906,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[60], tmp_assign_source_8);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[68], tmp_assign_source_8);
     }
     {
         PyObject *tmp_assign_source_9;
@@ -2730,11 +2917,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_9 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_5,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[40],
-                mod_consts[57]
+                mod_consts[48],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_9 = IMPORT_NAME(tmp_import_name_from_5, mod_consts[40]);
+            tmp_assign_source_9 = IMPORT_NAME(tmp_import_name_from_5, mod_consts[48]);
         }
 
         if (tmp_assign_source_9 == NULL) {
@@ -2747,7 +2934,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[40], tmp_assign_source_9);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[48], tmp_assign_source_9);
     }
     {
         PyObject *tmp_assign_source_10;
@@ -2758,11 +2945,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_10 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_6,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[61],
-                mod_consts[57]
+                mod_consts[69],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_10 = IMPORT_NAME(tmp_import_name_from_6, mod_consts[61]);
+            tmp_assign_source_10 = IMPORT_NAME(tmp_import_name_from_6, mod_consts[69]);
         }
 
         if (tmp_assign_source_10 == NULL) {
@@ -2775,7 +2962,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[61], tmp_assign_source_10);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[69], tmp_assign_source_10);
     }
     {
         PyObject *tmp_assign_source_11;
@@ -2786,11 +2973,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_11 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_7,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[62],
-                mod_consts[57]
+                mod_consts[70],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_11 = IMPORT_NAME(tmp_import_name_from_7, mod_consts[62]);
+            tmp_assign_source_11 = IMPORT_NAME(tmp_import_name_from_7, mod_consts[70]);
         }
 
         if (tmp_assign_source_11 == NULL) {
@@ -2803,7 +2990,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[62], tmp_assign_source_11);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[70], tmp_assign_source_11);
     }
     {
         PyObject *tmp_assign_source_12;
@@ -2814,11 +3001,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_12 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_8,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[63],
-                mod_consts[57]
+                mod_consts[71],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_12 = IMPORT_NAME(tmp_import_name_from_8, mod_consts[63]);
+            tmp_assign_source_12 = IMPORT_NAME(tmp_import_name_from_8, mod_consts[71]);
         }
 
         if (tmp_assign_source_12 == NULL) {
@@ -2831,7 +3018,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[63], tmp_assign_source_12);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[71], tmp_assign_source_12);
     }
     {
         PyObject *tmp_assign_source_13;
@@ -2842,11 +3029,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_13 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_9,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[64],
-                mod_consts[57]
+                mod_consts[72],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_13 = IMPORT_NAME(tmp_import_name_from_9, mod_consts[64]);
+            tmp_assign_source_13 = IMPORT_NAME(tmp_import_name_from_9, mod_consts[72]);
         }
 
         if (tmp_assign_source_13 == NULL) {
@@ -2859,7 +3046,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[64], tmp_assign_source_13);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[72], tmp_assign_source_13);
     }
     {
         PyObject *tmp_assign_source_14;
@@ -2870,11 +3057,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_14 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_10,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[65],
-                mod_consts[57]
+                mod_consts[73],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_14 = IMPORT_NAME(tmp_import_name_from_10, mod_consts[65]);
+            tmp_assign_source_14 = IMPORT_NAME(tmp_import_name_from_10, mod_consts[73]);
         }
 
         if (tmp_assign_source_14 == NULL) {
@@ -2887,7 +3074,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[65], tmp_assign_source_14);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[73], tmp_assign_source_14);
     }
     {
         PyObject *tmp_assign_source_15;
@@ -2898,11 +3085,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_15 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_11,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[66],
-                mod_consts[57]
+                mod_consts[74],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_15 = IMPORT_NAME(tmp_import_name_from_11, mod_consts[66]);
+            tmp_assign_source_15 = IMPORT_NAME(tmp_import_name_from_11, mod_consts[74]);
         }
 
         if (tmp_assign_source_15 == NULL) {
@@ -2915,7 +3102,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[66], tmp_assign_source_15);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[74], tmp_assign_source_15);
     }
     {
         PyObject *tmp_assign_source_16;
@@ -2926,11 +3113,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_16 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_12,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[67],
-                mod_consts[57]
+                mod_consts[21],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_16 = IMPORT_NAME(tmp_import_name_from_12, mod_consts[67]);
+            tmp_assign_source_16 = IMPORT_NAME(tmp_import_name_from_12, mod_consts[21]);
         }
 
         if (tmp_assign_source_16 == NULL) {
@@ -2943,7 +3130,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[67], tmp_assign_source_16);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[21], tmp_assign_source_16);
     }
     goto try_end_1;
     // Exception handler code:
@@ -2979,11 +3166,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
         PyObject *tmp_locals_arg_value_2;
         PyObject *tmp_fromlist_value_2;
         PyObject *tmp_level_value_2;
-        tmp_name_value_2 = mod_consts[68];
+        tmp_name_value_2 = mod_consts[75];
         tmp_globals_arg_value_2 = (PyObject *)moduledict_weather_app$history_dialog$history_dialog;
         tmp_locals_arg_value_2 = Py_None;
-        tmp_fromlist_value_2 = mod_consts[69];
-        tmp_level_value_2 = mod_consts[57];
+        tmp_fromlist_value_2 = mod_consts[76];
+        tmp_level_value_2 = mod_consts[65];
         frame_b11233e36be069a59c51e5f5ab85364a->m_frame.f_lineno = 14;
         tmp_assign_source_17 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_assign_source_17 == NULL) {
@@ -3009,11 +3196,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_18 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_13,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[70],
-                mod_consts[57]
+                mod_consts[77],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_18 = IMPORT_NAME(tmp_import_name_from_13, mod_consts[70]);
+            tmp_assign_source_18 = IMPORT_NAME(tmp_import_name_from_13, mod_consts[77]);
         }
 
         if (tmp_assign_source_18 == NULL) {
@@ -3026,7 +3213,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[70], tmp_assign_source_18);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[77], tmp_assign_source_18);
     }
     {
         PyObject *tmp_assign_source_19;
@@ -3037,11 +3224,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_19 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_14,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[71],
-                mod_consts[57]
+                mod_consts[78],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_19 = IMPORT_NAME(tmp_import_name_from_14, mod_consts[71]);
+            tmp_assign_source_19 = IMPORT_NAME(tmp_import_name_from_14, mod_consts[78]);
         }
 
         if (tmp_assign_source_19 == NULL) {
@@ -3054,7 +3241,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[71], tmp_assign_source_19);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[78], tmp_assign_source_19);
     }
     {
         PyObject *tmp_assign_source_20;
@@ -3065,11 +3252,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_20 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_15,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[72],
-                mod_consts[57]
+                mod_consts[79],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_20 = IMPORT_NAME(tmp_import_name_from_15, mod_consts[72]);
+            tmp_assign_source_20 = IMPORT_NAME(tmp_import_name_from_15, mod_consts[79]);
         }
 
         if (tmp_assign_source_20 == NULL) {
@@ -3082,7 +3269,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[72], tmp_assign_source_20);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[79], tmp_assign_source_20);
     }
     {
         PyObject *tmp_assign_source_21;
@@ -3093,11 +3280,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_21 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_16,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[73],
-                mod_consts[57]
+                mod_consts[80],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_21 = IMPORT_NAME(tmp_import_name_from_16, mod_consts[73]);
+            tmp_assign_source_21 = IMPORT_NAME(tmp_import_name_from_16, mod_consts[80]);
         }
 
         if (tmp_assign_source_21 == NULL) {
@@ -3110,7 +3297,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[73], tmp_assign_source_21);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[80], tmp_assign_source_21);
     }
     {
         PyObject *tmp_assign_source_22;
@@ -3121,11 +3308,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_22 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_17,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[74],
-                mod_consts[57]
+                mod_consts[81],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_22 = IMPORT_NAME(tmp_import_name_from_17, mod_consts[74]);
+            tmp_assign_source_22 = IMPORT_NAME(tmp_import_name_from_17, mod_consts[81]);
         }
 
         if (tmp_assign_source_22 == NULL) {
@@ -3138,7 +3325,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[74], tmp_assign_source_22);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[81], tmp_assign_source_22);
     }
     {
         PyObject *tmp_assign_source_23;
@@ -3149,11 +3336,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_23 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_18,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[75],
-                mod_consts[57]
+                mod_consts[82],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_23 = IMPORT_NAME(tmp_import_name_from_18, mod_consts[75]);
+            tmp_assign_source_23 = IMPORT_NAME(tmp_import_name_from_18, mod_consts[82]);
         }
 
         if (tmp_assign_source_23 == NULL) {
@@ -3166,7 +3353,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[75], tmp_assign_source_23);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[82], tmp_assign_source_23);
     }
     {
         PyObject *tmp_assign_source_24;
@@ -3177,11 +3364,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_24 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_19,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[76],
-                mod_consts[57]
+                mod_consts[83],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_24 = IMPORT_NAME(tmp_import_name_from_19, mod_consts[76]);
+            tmp_assign_source_24 = IMPORT_NAME(tmp_import_name_from_19, mod_consts[83]);
         }
 
         if (tmp_assign_source_24 == NULL) {
@@ -3194,7 +3381,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[76], tmp_assign_source_24);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[83], tmp_assign_source_24);
     }
     {
         PyObject *tmp_assign_source_25;
@@ -3205,11 +3392,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_25 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_20,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[77],
-                mod_consts[57]
+                mod_consts[84],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_25 = IMPORT_NAME(tmp_import_name_from_20, mod_consts[77]);
+            tmp_assign_source_25 = IMPORT_NAME(tmp_import_name_from_20, mod_consts[84]);
         }
 
         if (tmp_assign_source_25 == NULL) {
@@ -3222,7 +3409,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[77], tmp_assign_source_25);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[84], tmp_assign_source_25);
     }
     {
         PyObject *tmp_assign_source_26;
@@ -3233,11 +3420,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_26 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_21,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[78],
-                mod_consts[57]
+                mod_consts[85],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_26 = IMPORT_NAME(tmp_import_name_from_21, mod_consts[78]);
+            tmp_assign_source_26 = IMPORT_NAME(tmp_import_name_from_21, mod_consts[85]);
         }
 
         if (tmp_assign_source_26 == NULL) {
@@ -3250,7 +3437,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[78], tmp_assign_source_26);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[85], tmp_assign_source_26);
     }
     {
         PyObject *tmp_assign_source_27;
@@ -3261,11 +3448,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_27 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_22,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[79],
-                mod_consts[57]
+                mod_consts[86],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_27 = IMPORT_NAME(tmp_import_name_from_22, mod_consts[79]);
+            tmp_assign_source_27 = IMPORT_NAME(tmp_import_name_from_22, mod_consts[86]);
         }
 
         if (tmp_assign_source_27 == NULL) {
@@ -3278,7 +3465,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[79], tmp_assign_source_27);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[86], tmp_assign_source_27);
     }
     {
         PyObject *tmp_assign_source_28;
@@ -3289,11 +3476,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_28 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_23,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[80],
-                mod_consts[57]
+                mod_consts[87],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_28 = IMPORT_NAME(tmp_import_name_from_23, mod_consts[80]);
+            tmp_assign_source_28 = IMPORT_NAME(tmp_import_name_from_23, mod_consts[87]);
         }
 
         if (tmp_assign_source_28 == NULL) {
@@ -3306,7 +3493,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[80], tmp_assign_source_28);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[87], tmp_assign_source_28);
     }
     {
         PyObject *tmp_assign_source_29;
@@ -3317,11 +3504,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_29 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_24,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[81],
-                mod_consts[57]
+                mod_consts[88],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_29 = IMPORT_NAME(tmp_import_name_from_24, mod_consts[81]);
+            tmp_assign_source_29 = IMPORT_NAME(tmp_import_name_from_24, mod_consts[88]);
         }
 
         if (tmp_assign_source_29 == NULL) {
@@ -3334,7 +3521,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[81], tmp_assign_source_29);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[88], tmp_assign_source_29);
     }
     {
         PyObject *tmp_assign_source_30;
@@ -3345,11 +3532,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_30 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_25,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[82],
-                mod_consts[57]
+                mod_consts[89],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_30 = IMPORT_NAME(tmp_import_name_from_25, mod_consts[82]);
+            tmp_assign_source_30 = IMPORT_NAME(tmp_import_name_from_25, mod_consts[89]);
         }
 
         if (tmp_assign_source_30 == NULL) {
@@ -3362,7 +3549,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[82], tmp_assign_source_30);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[89], tmp_assign_source_30);
     }
     {
         PyObject *tmp_assign_source_31;
@@ -3373,11 +3560,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_31 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_26,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[83],
-                mod_consts[57]
+                mod_consts[90],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_31 = IMPORT_NAME(tmp_import_name_from_26, mod_consts[83]);
+            tmp_assign_source_31 = IMPORT_NAME(tmp_import_name_from_26, mod_consts[90]);
         }
 
         if (tmp_assign_source_31 == NULL) {
@@ -3390,7 +3577,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[83], tmp_assign_source_31);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[90], tmp_assign_source_31);
     }
     {
         PyObject *tmp_assign_source_32;
@@ -3401,11 +3588,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_32 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_27,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[84],
-                mod_consts[57]
+                mod_consts[91],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_32 = IMPORT_NAME(tmp_import_name_from_27, mod_consts[84]);
+            tmp_assign_source_32 = IMPORT_NAME(tmp_import_name_from_27, mod_consts[91]);
         }
 
         if (tmp_assign_source_32 == NULL) {
@@ -3418,7 +3605,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[84], tmp_assign_source_32);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[91], tmp_assign_source_32);
     }
     {
         PyObject *tmp_assign_source_33;
@@ -3429,11 +3616,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_33 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_28,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[85],
-                mod_consts[57]
+                mod_consts[92],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_33 = IMPORT_NAME(tmp_import_name_from_28, mod_consts[85]);
+            tmp_assign_source_33 = IMPORT_NAME(tmp_import_name_from_28, mod_consts[92]);
         }
 
         if (tmp_assign_source_33 == NULL) {
@@ -3446,7 +3633,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[85], tmp_assign_source_33);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[92], tmp_assign_source_33);
     }
     goto try_end_2;
     // Exception handler code:
@@ -3482,11 +3669,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
         PyObject *tmp_locals_arg_value_3;
         PyObject *tmp_fromlist_value_3;
         PyObject *tmp_level_value_3;
-        tmp_name_value_3 = mod_consts[86];
+        tmp_name_value_3 = mod_consts[93];
         tmp_globals_arg_value_3 = (PyObject *)moduledict_weather_app$history_dialog$history_dialog;
         tmp_locals_arg_value_3 = Py_None;
-        tmp_fromlist_value_3 = mod_consts[87];
-        tmp_level_value_3 = mod_consts[57];
+        tmp_fromlist_value_3 = mod_consts[94];
+        tmp_level_value_3 = mod_consts[65];
         frame_b11233e36be069a59c51e5f5ab85364a->m_frame.f_lineno = 18;
         tmp_assign_source_34 = IMPORT_MODULE5(tmp_name_value_3, tmp_globals_arg_value_3, tmp_locals_arg_value_3, tmp_fromlist_value_3, tmp_level_value_3);
         if (tmp_assign_source_34 == NULL) {
@@ -3512,11 +3699,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_35 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_29,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[88],
-                mod_consts[57]
+                mod_consts[95],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_35 = IMPORT_NAME(tmp_import_name_from_29, mod_consts[88]);
+            tmp_assign_source_35 = IMPORT_NAME(tmp_import_name_from_29, mod_consts[95]);
         }
 
         if (tmp_assign_source_35 == NULL) {
@@ -3529,7 +3716,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_3;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[88], tmp_assign_source_35);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[95], tmp_assign_source_35);
     }
     {
         PyObject *tmp_assign_source_36;
@@ -3540,11 +3727,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_36 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_30,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[89],
-                mod_consts[57]
+                mod_consts[16],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_36 = IMPORT_NAME(tmp_import_name_from_30, mod_consts[89]);
+            tmp_assign_source_36 = IMPORT_NAME(tmp_import_name_from_30, mod_consts[16]);
         }
 
         if (tmp_assign_source_36 == NULL) {
@@ -3557,7 +3744,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_3;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[89], tmp_assign_source_36);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[16], tmp_assign_source_36);
     }
     {
         PyObject *tmp_assign_source_37;
@@ -3568,11 +3755,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_37 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_31,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[90],
-                mod_consts[57]
+                mod_consts[96],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_37 = IMPORT_NAME(tmp_import_name_from_31, mod_consts[90]);
+            tmp_assign_source_37 = IMPORT_NAME(tmp_import_name_from_31, mod_consts[96]);
         }
 
         if (tmp_assign_source_37 == NULL) {
@@ -3585,7 +3772,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_3;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[90], tmp_assign_source_37);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[96], tmp_assign_source_37);
     }
     {
         PyObject *tmp_assign_source_38;
@@ -3596,11 +3783,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_38 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_32,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[34],
-                mod_consts[57]
+                mod_consts[97],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_38 = IMPORT_NAME(tmp_import_name_from_32, mod_consts[34]);
+            tmp_assign_source_38 = IMPORT_NAME(tmp_import_name_from_32, mod_consts[97]);
         }
 
         if (tmp_assign_source_38 == NULL) {
@@ -3613,7 +3800,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_3;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[34], tmp_assign_source_38);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[97], tmp_assign_source_38);
     }
     {
         PyObject *tmp_assign_source_39;
@@ -3624,11 +3811,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_39 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_33,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[16],
-                mod_consts[57]
+                mod_consts[42],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_39 = IMPORT_NAME(tmp_import_name_from_33, mod_consts[16]);
+            tmp_assign_source_39 = IMPORT_NAME(tmp_import_name_from_33, mod_consts[42]);
         }
 
         if (tmp_assign_source_39 == NULL) {
@@ -3641,7 +3828,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_3;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[16], tmp_assign_source_39);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[42], tmp_assign_source_39);
     }
     {
         PyObject *tmp_assign_source_40;
@@ -3652,11 +3839,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_40 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_34,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[12],
-                mod_consts[57]
+                mod_consts[24],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_40 = IMPORT_NAME(tmp_import_name_from_34, mod_consts[12]);
+            tmp_assign_source_40 = IMPORT_NAME(tmp_import_name_from_34, mod_consts[24]);
         }
 
         if (tmp_assign_source_40 == NULL) {
@@ -3669,7 +3856,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_3;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[12], tmp_assign_source_40);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[24], tmp_assign_source_40);
     }
     {
         PyObject *tmp_assign_source_41;
@@ -3680,11 +3867,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_41 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_35,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[28],
-                mod_consts[57]
+                mod_consts[12],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_41 = IMPORT_NAME(tmp_import_name_from_35, mod_consts[28]);
+            tmp_assign_source_41 = IMPORT_NAME(tmp_import_name_from_35, mod_consts[12]);
         }
 
         if (tmp_assign_source_41 == NULL) {
@@ -3697,7 +3884,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_3;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[28], tmp_assign_source_41);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[12], tmp_assign_source_41);
     }
     {
         PyObject *tmp_assign_source_42;
@@ -3708,11 +3895,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_42 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_36,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[23],
-                mod_consts[57]
+                mod_consts[36],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_42 = IMPORT_NAME(tmp_import_name_from_36, mod_consts[23]);
+            tmp_assign_source_42 = IMPORT_NAME(tmp_import_name_from_36, mod_consts[36]);
         }
 
         if (tmp_assign_source_42 == NULL) {
@@ -3725,7 +3912,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_3;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[23], tmp_assign_source_42);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[36], tmp_assign_source_42);
     }
     {
         PyObject *tmp_assign_source_43;
@@ -3736,11 +3923,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_43 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_37,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[20],
-                mod_consts[57]
+                mod_consts[31],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_43 = IMPORT_NAME(tmp_import_name_from_37, mod_consts[20]);
+            tmp_assign_source_43 = IMPORT_NAME(tmp_import_name_from_37, mod_consts[31]);
         }
 
         if (tmp_assign_source_43 == NULL) {
@@ -3753,7 +3940,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_3;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[20], tmp_assign_source_43);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[31], tmp_assign_source_43);
     }
     {
         PyObject *tmp_assign_source_44;
@@ -3764,11 +3951,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_44 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_38,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[5],
-                mod_consts[57]
+                mod_consts[28],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_44 = IMPORT_NAME(tmp_import_name_from_38, mod_consts[5]);
+            tmp_assign_source_44 = IMPORT_NAME(tmp_import_name_from_38, mod_consts[28]);
         }
 
         if (tmp_assign_source_44 == NULL) {
@@ -3781,7 +3968,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_3;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[5], tmp_assign_source_44);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[28], tmp_assign_source_44);
     }
     {
         PyObject *tmp_assign_source_45;
@@ -3792,11 +3979,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_assign_source_45 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_39,
                 (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
-                mod_consts[91],
-                mod_consts[57]
+                mod_consts[5],
+                mod_consts[65]
             );
         } else {
-            tmp_assign_source_45 = IMPORT_NAME(tmp_import_name_from_39, mod_consts[91]);
+            tmp_assign_source_45 = IMPORT_NAME(tmp_import_name_from_39, mod_consts[5]);
         }
 
         if (tmp_assign_source_45 == NULL) {
@@ -3809,7 +3996,35 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_3;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[91], tmp_assign_source_45);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[5], tmp_assign_source_45);
+    }
+    {
+        PyObject *tmp_assign_source_46;
+        PyObject *tmp_import_name_from_40;
+        CHECK_OBJECT(tmp_import_from_3__module);
+        tmp_import_name_from_40 = tmp_import_from_3__module;
+        if (PyModule_Check(tmp_import_name_from_40)) {
+            tmp_assign_source_46 = IMPORT_NAME_OR_MODULE(
+                tmp_import_name_from_40,
+                (PyObject *)moduledict_weather_app$history_dialog$history_dialog,
+                mod_consts[98],
+                mod_consts[65]
+            );
+        } else {
+            tmp_assign_source_46 = IMPORT_NAME(tmp_import_name_from_40, mod_consts[98]);
+        }
+
+        if (tmp_assign_source_46 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 18;
+
+            goto try_except_handler_3;
+        }
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[98], tmp_assign_source_46);
     }
     goto try_end_3;
     // Exception handler code:
@@ -3840,16 +4055,16 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
     tmp_import_from_3__module = NULL;
     // Tried code:
     {
-        PyObject *tmp_assign_source_46;
+        PyObject *tmp_assign_source_47;
         PyObject *tmp_dircall_arg1_1;
-        tmp_dircall_arg1_1 = mod_consts[92];
+        tmp_dircall_arg1_1 = mod_consts[99];
         Py_INCREF(tmp_dircall_arg1_1);
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_46 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_47 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
-        if (tmp_assign_source_46 == NULL) {
+        if (tmp_assign_source_47 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3860,16 +4075,16 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             goto try_except_handler_4;
         }
         assert(tmp_class_creation_1__bases == NULL);
-        tmp_class_creation_1__bases = tmp_assign_source_46;
-    }
-    {
-        PyObject *tmp_assign_source_47;
-        tmp_assign_source_47 = MAKE_DICT_EMPTY();
-        assert(tmp_class_creation_1__class_decl_dict == NULL);
-        tmp_class_creation_1__class_decl_dict = tmp_assign_source_47;
+        tmp_class_creation_1__bases = tmp_assign_source_47;
     }
     {
         PyObject *tmp_assign_source_48;
+        tmp_assign_source_48 = MAKE_DICT_EMPTY();
+        assert(tmp_class_creation_1__class_decl_dict == NULL);
+        tmp_class_creation_1__class_decl_dict = tmp_assign_source_48;
+    }
+    {
+        PyObject *tmp_assign_source_49;
         PyObject *tmp_metaclass_value_1;
         bool tmp_condition_result_1;
         PyObject *tmp_key_value_1;
@@ -3882,7 +4097,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
         PyObject *tmp_expression_value_1;
         PyObject *tmp_subscript_value_1;
         PyObject *tmp_bases_value_1;
-        tmp_key_value_1 = mod_consts[93];
+        tmp_key_value_1 = mod_consts[100];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_dict_arg_value_1 = tmp_class_creation_1__class_decl_dict;
         tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_1, tmp_key_value_1);
@@ -3896,7 +4111,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
         condexpr_true_1:;
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_dict_arg_value_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_value_2 = mod_consts[93];
+        tmp_key_value_2 = mod_consts[100];
         tmp_metaclass_value_1 = DICT_GET_ITEM0(tmp_dict_arg_value_2, tmp_key_value_2);
         if (tmp_metaclass_value_1 == NULL) {
             tmp_metaclass_value_1 = Py_None;
@@ -3926,7 +4141,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
         condexpr_true_2:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
         tmp_expression_value_1 = tmp_class_creation_1__bases;
-        tmp_subscript_value_1 = mod_consts[57];
+        tmp_subscript_value_1 = mod_consts[65];
         tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_1, tmp_subscript_value_1, 0);
         if (tmp_type_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -3958,9 +4173,9 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
         condexpr_end_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
         tmp_bases_value_1 = tmp_class_creation_1__bases;
-        tmp_assign_source_48 = SELECT_METACLASS(tmp_metaclass_value_1, tmp_bases_value_1);
+        tmp_assign_source_49 = SELECT_METACLASS(tmp_metaclass_value_1, tmp_bases_value_1);
         Py_DECREF(tmp_metaclass_value_1);
-        if (tmp_assign_source_48 == NULL) {
+        if (tmp_assign_source_49 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3971,13 +4186,13 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             goto try_except_handler_4;
         }
         assert(tmp_class_creation_1__metaclass == NULL);
-        tmp_class_creation_1__metaclass = tmp_assign_source_48;
+        tmp_class_creation_1__metaclass = tmp_assign_source_49;
     }
     {
         bool tmp_condition_result_3;
         PyObject *tmp_key_value_3;
         PyObject *tmp_dict_arg_value_3;
-        tmp_key_value_3 = mod_consts[93];
+        tmp_key_value_3 = mod_consts[100];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_dict_arg_value_3 = tmp_class_creation_1__class_decl_dict;
         tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_3, tmp_key_value_3);
@@ -3992,7 +4207,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
     branch_yes_1:;
     CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_1__class_decl_dict;
-    tmp_dictdel_key = mod_consts[93];
+    tmp_dictdel_key = mod_consts[100];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -4010,7 +4225,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
         PyObject *tmp_expression_value_2;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_expression_value_2 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_2, mod_consts[94]);
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_2, mod_consts[101]);
         tmp_condition_result_4 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
@@ -4020,7 +4235,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
     }
     branch_yes_2:;
     {
-        PyObject *tmp_assign_source_49;
+        PyObject *tmp_assign_source_50;
         PyObject *tmp_called_value_1;
         PyObject *tmp_expression_value_3;
         PyObject *tmp_args_value_1;
@@ -4028,7 +4243,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
         PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_expression_value_3 = tmp_class_creation_1__metaclass;
-        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[94]);
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[101]);
         if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4039,7 +4254,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_4;
         }
-        tmp_tuple_element_1 = mod_consts[95];
+        tmp_tuple_element_1 = mod_consts[102];
         tmp_args_value_1 = MAKE_TUPLE_EMPTY(2);
         PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(tmp_class_creation_1__bases);
@@ -4048,10 +4263,10 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_kwargs_value_1 = tmp_class_creation_1__class_decl_dict;
         frame_b11233e36be069a59c51e5f5ab85364a->m_frame.f_lineno = 22;
-        tmp_assign_source_49 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        tmp_assign_source_50 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
         Py_DECREF(tmp_called_value_1);
         Py_DECREF(tmp_args_value_1);
-        if (tmp_assign_source_49 == NULL) {
+        if (tmp_assign_source_50 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4062,7 +4277,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             goto try_except_handler_4;
         }
         assert(tmp_class_creation_1__prepared == NULL);
-        tmp_class_creation_1__prepared = tmp_assign_source_49;
+        tmp_class_creation_1__prepared = tmp_assign_source_50;
     }
     {
         bool tmp_condition_result_5;
@@ -4070,7 +4285,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
         PyObject *tmp_expression_value_4;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
         tmp_expression_value_4 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_4, mod_consts[96]);
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_4, mod_consts[103]);
         tmp_operand_value_1 = (tmp_result) ? Py_True : Py_False;
         tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
@@ -4101,11 +4316,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_mod_expr_left_1 = mod_consts[97];
+        tmp_mod_expr_left_1 = mod_consts[104];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
-        tmp_getattr_attr_1 = mod_consts[98];
-        tmp_getattr_default_1 = mod_consts[99];
+        tmp_getattr_attr_1 = mod_consts[105];
+        tmp_getattr_default_1 = mod_consts[106];
         tmp_tuple_element_2 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, tmp_getattr_default_1);
         if (tmp_tuple_element_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4126,7 +4341,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             tmp_type_arg_2 = tmp_class_creation_1__prepared;
             tmp_expression_value_5 = BUILTIN_TYPE1(tmp_type_arg_2);
             assert(!(tmp_expression_value_5 == NULL));
-            tmp_tuple_element_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[98]);
+            tmp_tuple_element_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[105]);
             Py_DECREF(tmp_expression_value_5);
             if (tmp_tuple_element_2 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -4171,14 +4386,14 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
     goto branch_end_2;
     branch_no_2:;
     {
-        PyObject *tmp_assign_source_50;
-        tmp_assign_source_50 = MAKE_DICT_EMPTY();
+        PyObject *tmp_assign_source_51;
+        tmp_assign_source_51 = MAKE_DICT_EMPTY();
         assert(tmp_class_creation_1__prepared == NULL);
-        tmp_class_creation_1__prepared = tmp_assign_source_50;
+        tmp_class_creation_1__prepared = tmp_assign_source_51;
     }
     branch_end_2:;
     {
-        PyObject *tmp_assign_source_51;
+        PyObject *tmp_assign_source_52;
         {
             PyObject *tmp_set_locals_1;
             CHECK_OBJECT(tmp_class_creation_1__prepared);
@@ -4188,8 +4403,8 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[100];
-        tmp_res = PyObject_SetItem(locals_weather_app$history_dialog$history_dialog$$$class__1_Ui_Dialog_22, mod_consts[101], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[107];
+        tmp_res = PyObject_SetItem(locals_weather_app$history_dialog$history_dialog$$$class__1_Ui_Dialog_22, mod_consts[108], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -4200,8 +4415,8 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
             goto try_except_handler_6;
         }
-        tmp_dictset_value = mod_consts[95];
-        tmp_res = PyObject_SetItem(locals_weather_app$history_dialog$history_dialog$$$class__1_Ui_Dialog_22, mod_consts[102], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[102];
+        tmp_res = PyObject_SetItem(locals_weather_app$history_dialog$history_dialog$$$class__1_Ui_Dialog_22, mod_consts[109], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -4244,7 +4459,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
         tmp_dictset_value = MAKE_FUNCTION_weather_app$history_dialog$history_dialog$$$function__1_setupUi();
 
-        tmp_res = PyObject_SetItem(locals_weather_app$history_dialog$history_dialog$$$class__1_Ui_Dialog_22, mod_consts[103], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_weather_app$history_dialog$history_dialog$$$class__1_Ui_Dialog_22, mod_consts[110], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -4260,7 +4475,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
 
         tmp_dictset_value = MAKE_FUNCTION_weather_app$history_dialog$history_dialog$$$function__2_retranslateUi();
 
-        tmp_res = PyObject_SetItem(locals_weather_app$history_dialog$history_dialog$$$class__1_Ui_Dialog_22, mod_consts[39], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_weather_app$history_dialog$history_dialog$$$class__1_Ui_Dialog_22, mod_consts[47], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -4268,7 +4483,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 72;
+            exception_lineno = 75;
             type_description_2 = "o";
             goto frame_exception_exit_2;
         }
@@ -4335,7 +4550,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             PyObject *tmp_cmp_expr_right_1;
             CHECK_OBJECT(tmp_class_creation_1__bases);
             tmp_cmp_expr_left_1 = tmp_class_creation_1__bases;
-            tmp_cmp_expr_right_1 = mod_consts[92];
+            tmp_cmp_expr_right_1 = mod_consts[99];
             tmp_condition_result_6 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
             if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
                 assert(ERROR_OCCURRED());
@@ -4354,8 +4569,8 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             }
         }
         branch_yes_4:;
-        tmp_dictset_value = mod_consts[92];
-        tmp_res = PyObject_SetItem(locals_weather_app$history_dialog$history_dialog$$$class__1_Ui_Dialog_22, mod_consts[106], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[99];
+        tmp_res = PyObject_SetItem(locals_weather_app$history_dialog$history_dialog$$$class__1_Ui_Dialog_22, mod_consts[113], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -4368,14 +4583,14 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
         }
         branch_no_4:;
         {
-            PyObject *tmp_assign_source_52;
+            PyObject *tmp_assign_source_53;
             PyObject *tmp_called_value_2;
             PyObject *tmp_args_value_2;
             PyObject *tmp_tuple_element_3;
             PyObject *tmp_kwargs_value_2;
             CHECK_OBJECT(tmp_class_creation_1__metaclass);
             tmp_called_value_2 = tmp_class_creation_1__metaclass;
-            tmp_tuple_element_3 = mod_consts[95];
+            tmp_tuple_element_3 = mod_consts[102];
             tmp_args_value_2 = MAKE_TUPLE_EMPTY(3);
             PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_3);
             CHECK_OBJECT(tmp_class_creation_1__bases);
@@ -4386,9 +4601,9 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
             CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
             tmp_kwargs_value_2 = tmp_class_creation_1__class_decl_dict;
             frame_b11233e36be069a59c51e5f5ab85364a->m_frame.f_lineno = 22;
-            tmp_assign_source_52 = CALL_FUNCTION(tmp_called_value_2, tmp_args_value_2, tmp_kwargs_value_2);
+            tmp_assign_source_53 = CALL_FUNCTION(tmp_called_value_2, tmp_args_value_2, tmp_kwargs_value_2);
             Py_DECREF(tmp_args_value_2);
-            if (tmp_assign_source_52 == NULL) {
+            if (tmp_assign_source_53 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4399,11 +4614,11 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
                 goto try_except_handler_6;
             }
             assert(outline_0_var___class__ == NULL);
-            outline_0_var___class__ = tmp_assign_source_52;
+            outline_0_var___class__ = tmp_assign_source_53;
         }
         CHECK_OBJECT(outline_0_var___class__);
-        tmp_assign_source_51 = outline_0_var___class__;
-        Py_INCREF(tmp_assign_source_51);
+        tmp_assign_source_52 = outline_0_var___class__;
+        Py_INCREF(tmp_assign_source_52);
         goto try_return_handler_6;
         NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
         return NULL;
@@ -4466,7 +4681,7 @@ PyObject *modulecode_weather_app$history_dialog$history_dialog(PyObject *module,
         exception_lineno = 22;
         goto try_except_handler_4;
         outline_result_1:;
-        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[95], tmp_assign_source_51);
+        UPDATE_STRING_DICT1(moduledict_weather_app$history_dialog$history_dialog, (Nuitka_StringObject *)mod_consts[102], tmp_assign_source_52);
     }
     goto try_end_4;
     // Exception handler code:

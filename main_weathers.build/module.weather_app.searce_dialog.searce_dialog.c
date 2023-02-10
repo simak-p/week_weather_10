@@ -33,9 +33,9 @@ PyObject *module_weather_app$searce_dialog$searce_dialog;
 PyDictObject *moduledict_weather_app$searce_dialog$searce_dialog;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[131];
+static PyObject *mod_consts[133];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[131];
+static Py_hash_t mod_consts_hash[133];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,7 +50,7 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for (int i = 0; i < 131; i++) {
+        for (int i = 0; i < 133; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
@@ -70,7 +70,7 @@ void checkModuleConstants_weather_app$searce_dialog$searce_dialog(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for (int i = 0; i < 131; i++) {
+    for (int i = 0; i < 133; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -80,15 +80,15 @@ void checkModuleConstants_weather_app$searce_dialog$searce_dialog(void) {
 // The module code objects.
 static PyCodeObject *codeobj_68359dbcc9da40bbc53f7008ee31f709;
 static PyCodeObject *codeobj_b9d654de9ce299eff58ca8d32d9c43af;
-static PyCodeObject *codeobj_67df9414393da6b9acbf868c890d17a5;
+static PyCodeObject *codeobj_26c0f5fa9b2e8aa9e9552b2d1805abec;
 static PyCodeObject *codeobj_ca18fcc8f743e9fbc203aa79605afe0a;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[125]); CHECK_OBJECT(module_filename_obj);
-    codeobj_68359dbcc9da40bbc53f7008ee31f709 = MAKE_CODE_OBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[126], mod_consts[126], NULL, NULL, 0, 0, 0);
-    codeobj_b9d654de9ce299eff58ca8d32d9c43af = MAKE_CODE_OBJECT(module_filename_obj, 22, CO_NOFREE, mod_consts[113], mod_consts[113], mod_consts[127], NULL, 0, 0, 0);
-    codeobj_67df9414393da6b9acbf868c890d17a5 = MAKE_CODE_OBJECT(module_filename_obj, 84, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[52], mod_consts[52], mod_consts[128], NULL, 2, 0, 0);
-    codeobj_ca18fcc8f743e9fbc203aa79605afe0a = MAKE_CODE_OBJECT(module_filename_obj, 23, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[121], mod_consts[121], mod_consts[129], NULL, 2, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[127]); CHECK_OBJECT(module_filename_obj);
+    codeobj_68359dbcc9da40bbc53f7008ee31f709 = MAKE_CODE_OBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[128], mod_consts[128], NULL, NULL, 0, 0, 0);
+    codeobj_b9d654de9ce299eff58ca8d32d9c43af = MAKE_CODE_OBJECT(module_filename_obj, 22, CO_NOFREE, mod_consts[115], mod_consts[115], mod_consts[129], NULL, 0, 0, 0);
+    codeobj_26c0f5fa9b2e8aa9e9552b2d1805abec = MAKE_CODE_OBJECT(module_filename_obj, 86, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[54], mod_consts[54], mod_consts[130], NULL, 2, 0, 0);
+    codeobj_ca18fcc8f743e9fbc203aa79605afe0a = MAKE_CODE_OBJECT(module_filename_obj, 23, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[123], mod_consts[123], mod_consts[131], NULL, 2, 0, 0);
 }
 
 // The module function declarations.
@@ -1779,16 +1779,53 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__1_setu
         Py_DECREF(tmp_call_result_25);
     }
     {
-        PyObject *tmp_called_value_18;
+        PyObject *tmp_called_instance_23;
         PyObject *tmp_expression_value_35;
-        PyObject *tmp_expression_value_36;
         PyObject *tmp_call_result_26;
-        PyObject *tmp_args_element_value_21;
-        PyObject *tmp_expression_value_37;
         CHECK_OBJECT(par_self);
-        tmp_expression_value_36 = par_self;
-        tmp_expression_value_35 = LOOKUP_ATTRIBUTE(tmp_expression_value_36, mod_consts[12]);
-        if (tmp_expression_value_35 == NULL) {
+        tmp_expression_value_35 = par_self;
+        tmp_called_instance_23 = LOOKUP_ATTRIBUTE(tmp_expression_value_35, mod_consts[42]);
+        if (tmp_called_instance_23 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 67;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
+        frame_ca18fcc8f743e9fbc203aa79605afe0a->m_frame.f_lineno = 67;
+        tmp_call_result_26 = CALL_METHOD_WITH_SINGLE_ARG(
+            tmp_called_instance_23,
+            mod_consts[46],
+            PyTuple_GET_ITEM(mod_consts[9], 0)
+        );
+
+        Py_DECREF(tmp_called_instance_23);
+        if (tmp_call_result_26 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 67;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
+        Py_DECREF(tmp_call_result_26);
+    }
+    {
+        PyObject *tmp_called_value_18;
+        PyObject *tmp_expression_value_36;
+        PyObject *tmp_expression_value_37;
+        PyObject *tmp_call_result_27;
+        PyObject *tmp_args_element_value_21;
+        PyObject *tmp_expression_value_38;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_37 = par_self;
+        tmp_expression_value_36 = LOOKUP_ATTRIBUTE(tmp_expression_value_37, mod_consts[42]);
+        if (tmp_expression_value_36 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1798,8 +1835,8 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__1_setu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_value_18 = LOOKUP_ATTRIBUTE(tmp_expression_value_35, mod_consts[20]);
-        Py_DECREF(tmp_expression_value_35);
+        tmp_called_value_18 = LOOKUP_ATTRIBUTE(tmp_expression_value_36, mod_consts[47]);
+        Py_DECREF(tmp_expression_value_36);
         if (tmp_called_value_18 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1810,9 +1847,23 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__1_setu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        CHECK_OBJECT(par_self);
-        tmp_expression_value_37 = par_self;
-        tmp_args_element_value_21 = LOOKUP_ATTRIBUTE(tmp_expression_value_37, mod_consts[42]);
+        tmp_expression_value_38 = GET_STRING_DICT_VALUE(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[25]);
+
+        if (unlikely(tmp_expression_value_38 == NULL)) {
+            tmp_expression_value_38 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[25]);
+        }
+
+        if (tmp_expression_value_38 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_18);
+
+            exception_lineno = 68;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
+        tmp_args_element_value_21 = LOOKUP_ATTRIBUTE(tmp_expression_value_38, mod_consts[26]);
         if (tmp_args_element_value_21 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1824,10 +1875,10 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__1_setu
             goto frame_exception_exit_1;
         }
         frame_ca18fcc8f743e9fbc203aa79605afe0a->m_frame.f_lineno = 68;
-        tmp_call_result_26 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_18, tmp_args_element_value_21);
+        tmp_call_result_27 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_18, tmp_args_element_value_21);
         Py_DECREF(tmp_called_value_18);
         Py_DECREF(tmp_args_element_value_21);
-        if (tmp_call_result_26 == NULL) {
+        if (tmp_call_result_27 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1837,19 +1888,30 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__1_setu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        Py_DECREF(tmp_call_result_26);
+        Py_DECREF(tmp_call_result_27);
     }
     {
-        PyObject *tmp_assattr_value_7;
         PyObject *tmp_called_value_19;
+        PyObject *tmp_expression_value_39;
+        PyObject *tmp_expression_value_40;
+        PyObject *tmp_call_result_28;
         PyObject *tmp_args_element_value_22;
-        PyObject *tmp_assattr_target_7;
-        tmp_called_value_19 = GET_STRING_DICT_VALUE(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[46]);
+        PyObject *tmp_expression_value_41;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_40 = par_self;
+        tmp_expression_value_39 = LOOKUP_ATTRIBUTE(tmp_expression_value_40, mod_consts[12]);
+        if (tmp_expression_value_39 == NULL) {
+            assert(ERROR_OCCURRED());
 
-        if (unlikely(tmp_called_value_19 == NULL)) {
-            tmp_called_value_19 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[46]);
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 70;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
         }
-
+        tmp_called_value_19 = LOOKUP_ATTRIBUTE(tmp_expression_value_39, mod_consts[20]);
+        Py_DECREF(tmp_expression_value_39);
         if (tmp_called_value_19 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1860,11 +1922,24 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__1_setu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        CHECK_OBJECT(par_Dialog_searce);
-        tmp_args_element_value_22 = par_Dialog_searce;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_41 = par_self;
+        tmp_args_element_value_22 = LOOKUP_ATTRIBUTE(tmp_expression_value_41, mod_consts[42]);
+        if (tmp_args_element_value_22 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_19);
+
+            exception_lineno = 70;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
         frame_ca18fcc8f743e9fbc203aa79605afe0a->m_frame.f_lineno = 70;
-        tmp_assattr_value_7 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_19, tmp_args_element_value_22);
-        if (tmp_assattr_value_7 == NULL) {
+        tmp_call_result_28 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_19, tmp_args_element_value_22);
+        Py_DECREF(tmp_called_value_19);
+        Py_DECREF(tmp_args_element_value_22);
+        if (tmp_call_result_28 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1874,83 +1949,19 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__1_setu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        CHECK_OBJECT(par_self);
-        tmp_assattr_target_7 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_7, mod_consts[47], tmp_assattr_value_7);
-        Py_DECREF(tmp_assattr_value_7);
-        if (tmp_result == false) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 70;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
+        Py_DECREF(tmp_call_result_28);
     }
     {
-        PyObject *tmp_called_instance_23;
-        PyObject *tmp_expression_value_38;
-        PyObject *tmp_call_result_27;
-        CHECK_OBJECT(par_self);
-        tmp_expression_value_38 = par_self;
-        tmp_called_instance_23 = LOOKUP_ATTRIBUTE(tmp_expression_value_38, mod_consts[47]);
-        if (tmp_called_instance_23 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 71;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-        frame_ca18fcc8f743e9fbc203aa79605afe0a->m_frame.f_lineno = 71;
-        tmp_call_result_27 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_23,
-            mod_consts[1],
-            PyTuple_GET_ITEM(mod_consts[48], 0)
-        );
-
-        Py_DECREF(tmp_called_instance_23);
-        if (tmp_call_result_27 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 71;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-        Py_DECREF(tmp_call_result_27);
-    }
-    {
+        PyObject *tmp_assattr_value_7;
         PyObject *tmp_called_value_20;
-        PyObject *tmp_expression_value_39;
-        PyObject *tmp_expression_value_40;
-        PyObject *tmp_call_result_28;
         PyObject *tmp_args_element_value_23;
-        PyObject *tmp_bitor_expr_left_1;
-        PyObject *tmp_bitor_expr_right_1;
-        PyObject *tmp_expression_value_41;
-        PyObject *tmp_expression_value_42;
-        CHECK_OBJECT(par_self);
-        tmp_expression_value_40 = par_self;
-        tmp_expression_value_39 = LOOKUP_ATTRIBUTE(tmp_expression_value_40, mod_consts[47]);
-        if (tmp_expression_value_39 == NULL) {
-            assert(ERROR_OCCURRED());
+        PyObject *tmp_assattr_target_7;
+        tmp_called_value_20 = GET_STRING_DICT_VALUE(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[48]);
 
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 72;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
+        if (unlikely(tmp_called_value_20 == NULL)) {
+            tmp_called_value_20 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[48]);
         }
-        tmp_called_value_20 = LOOKUP_ATTRIBUTE(tmp_expression_value_39, mod_consts[49]);
-        Py_DECREF(tmp_expression_value_39);
+
         if (tmp_called_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1961,80 +1972,11 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__1_setu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_value_41 = GET_STRING_DICT_VALUE(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[46]);
-
-        if (unlikely(tmp_expression_value_41 == NULL)) {
-            tmp_expression_value_41 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[46]);
-        }
-
-        if (tmp_expression_value_41 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_value_20);
-
-            exception_lineno = 72;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_bitor_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_41, mod_consts[50]);
-        if (tmp_bitor_expr_left_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_value_20);
-
-            exception_lineno = 72;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_expression_value_42 = GET_STRING_DICT_VALUE(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[46]);
-
-        if (unlikely(tmp_expression_value_42 == NULL)) {
-            tmp_expression_value_42 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[46]);
-        }
-
-        if (tmp_expression_value_42 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_value_20);
-            Py_DECREF(tmp_bitor_expr_left_1);
-
-            exception_lineno = 72;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_bitor_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_42, mod_consts[51]);
-        if (tmp_bitor_expr_right_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_value_20);
-            Py_DECREF(tmp_bitor_expr_left_1);
-
-            exception_lineno = 72;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_value_23 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_bitor_expr_left_1, tmp_bitor_expr_right_1);
-        Py_DECREF(tmp_bitor_expr_left_1);
-        Py_DECREF(tmp_bitor_expr_right_1);
-        if (tmp_args_element_value_23 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_value_20);
-
-            exception_lineno = 72;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
+        CHECK_OBJECT(par_Dialog_searce);
+        tmp_args_element_value_23 = par_Dialog_searce;
         frame_ca18fcc8f743e9fbc203aa79605afe0a->m_frame.f_lineno = 72;
-        tmp_call_result_28 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_20, tmp_args_element_value_23);
-        Py_DECREF(tmp_called_value_20);
-        Py_DECREF(tmp_args_element_value_23);
-        if (tmp_call_result_28 == NULL) {
+        tmp_assattr_value_7 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_20, tmp_args_element_value_23);
+        if (tmp_assattr_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2044,18 +1986,71 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__1_setu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        Py_DECREF(tmp_call_result_28);
+        CHECK_OBJECT(par_self);
+        tmp_assattr_target_7 = par_self;
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_7, mod_consts[49], tmp_assattr_value_7);
+        Py_DECREF(tmp_assattr_value_7);
+        if (tmp_result == false) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 72;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
+    }
+    {
+        PyObject *tmp_called_instance_24;
+        PyObject *tmp_expression_value_42;
+        PyObject *tmp_call_result_29;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_42 = par_self;
+        tmp_called_instance_24 = LOOKUP_ATTRIBUTE(tmp_expression_value_42, mod_consts[49]);
+        if (tmp_called_instance_24 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 73;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
+        frame_ca18fcc8f743e9fbc203aa79605afe0a->m_frame.f_lineno = 73;
+        tmp_call_result_29 = CALL_METHOD_WITH_SINGLE_ARG(
+            tmp_called_instance_24,
+            mod_consts[1],
+            PyTuple_GET_ITEM(mod_consts[50], 0)
+        );
+
+        Py_DECREF(tmp_called_instance_24);
+        if (tmp_call_result_29 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 73;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
+        Py_DECREF(tmp_call_result_29);
     }
     {
         PyObject *tmp_called_value_21;
         PyObject *tmp_expression_value_43;
         PyObject *tmp_expression_value_44;
-        PyObject *tmp_call_result_29;
+        PyObject *tmp_call_result_30;
         PyObject *tmp_args_element_value_24;
+        PyObject *tmp_bitor_expr_left_1;
+        PyObject *tmp_bitor_expr_right_1;
         PyObject *tmp_expression_value_45;
+        PyObject *tmp_expression_value_46;
         CHECK_OBJECT(par_self);
         tmp_expression_value_44 = par_self;
-        tmp_expression_value_43 = LOOKUP_ATTRIBUTE(tmp_expression_value_44, mod_consts[12]);
+        tmp_expression_value_43 = LOOKUP_ATTRIBUTE(tmp_expression_value_44, mod_consts[49]);
         if (tmp_expression_value_43 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2066,7 +2061,7 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__1_setu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_value_21 = LOOKUP_ATTRIBUTE(tmp_expression_value_43, mod_consts[20]);
+        tmp_called_value_21 = LOOKUP_ATTRIBUTE(tmp_expression_value_43, mod_consts[51]);
         Py_DECREF(tmp_expression_value_43);
         if (tmp_called_value_21 == NULL) {
             assert(ERROR_OCCURRED());
@@ -2078,9 +2073,65 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__1_setu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        CHECK_OBJECT(par_self);
-        tmp_expression_value_45 = par_self;
-        tmp_args_element_value_24 = LOOKUP_ATTRIBUTE(tmp_expression_value_45, mod_consts[47]);
+        tmp_expression_value_45 = GET_STRING_DICT_VALUE(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[48]);
+
+        if (unlikely(tmp_expression_value_45 == NULL)) {
+            tmp_expression_value_45 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[48]);
+        }
+
+        if (tmp_expression_value_45 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_21);
+
+            exception_lineno = 74;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
+        tmp_bitor_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_45, mod_consts[52]);
+        if (tmp_bitor_expr_left_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_21);
+
+            exception_lineno = 74;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
+        tmp_expression_value_46 = GET_STRING_DICT_VALUE(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[48]);
+
+        if (unlikely(tmp_expression_value_46 == NULL)) {
+            tmp_expression_value_46 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[48]);
+        }
+
+        if (tmp_expression_value_46 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_21);
+            Py_DECREF(tmp_bitor_expr_left_1);
+
+            exception_lineno = 74;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
+        tmp_bitor_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_46, mod_consts[53]);
+        if (tmp_bitor_expr_right_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_21);
+            Py_DECREF(tmp_bitor_expr_left_1);
+
+            exception_lineno = 74;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
+        tmp_args_element_value_24 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_bitor_expr_left_1, tmp_bitor_expr_right_1);
+        Py_DECREF(tmp_bitor_expr_left_1);
+        Py_DECREF(tmp_bitor_expr_right_1);
         if (tmp_args_element_value_24 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2092,10 +2143,10 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__1_setu
             goto frame_exception_exit_1;
         }
         frame_ca18fcc8f743e9fbc203aa79605afe0a->m_frame.f_lineno = 74;
-        tmp_call_result_29 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_21, tmp_args_element_value_24);
+        tmp_call_result_30 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_21, tmp_args_element_value_24);
         Py_DECREF(tmp_called_value_21);
         Py_DECREF(tmp_args_element_value_24);
-        if (tmp_call_result_29 == NULL) {
+        if (tmp_call_result_30 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2105,166 +2156,79 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__1_setu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        Py_DECREF(tmp_call_result_29);
-    }
-    {
-        PyObject *tmp_called_instance_24;
-        PyObject *tmp_call_result_30;
-        PyObject *tmp_args_element_value_25;
-        CHECK_OBJECT(par_self);
-        tmp_called_instance_24 = par_self;
-        CHECK_OBJECT(par_Dialog_searce);
-        tmp_args_element_value_25 = par_Dialog_searce;
-        frame_ca18fcc8f743e9fbc203aa79605afe0a->m_frame.f_lineno = 77;
-        tmp_call_result_30 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_24, mod_consts[52], tmp_args_element_value_25);
-        if (tmp_call_result_30 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 77;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
         Py_DECREF(tmp_call_result_30);
     }
     {
         PyObject *tmp_called_value_22;
-        PyObject *tmp_expression_value_46;
         PyObject *tmp_expression_value_47;
         PyObject *tmp_expression_value_48;
         PyObject *tmp_call_result_31;
-        PyObject *tmp_args_element_value_26;
+        PyObject *tmp_args_element_value_25;
         PyObject *tmp_expression_value_49;
         CHECK_OBJECT(par_self);
         tmp_expression_value_48 = par_self;
-        tmp_expression_value_47 = LOOKUP_ATTRIBUTE(tmp_expression_value_48, mod_consts[47]);
+        tmp_expression_value_47 = LOOKUP_ATTRIBUTE(tmp_expression_value_48, mod_consts[12]);
         if (tmp_expression_value_47 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 78;
+            exception_lineno = 76;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_value_46 = LOOKUP_ATTRIBUTE(tmp_expression_value_47, mod_consts[53]);
+        tmp_called_value_22 = LOOKUP_ATTRIBUTE(tmp_expression_value_47, mod_consts[20]);
         Py_DECREF(tmp_expression_value_47);
-        if (tmp_expression_value_46 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 78;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_value_22 = LOOKUP_ATTRIBUTE(tmp_expression_value_46, mod_consts[54]);
-        Py_DECREF(tmp_expression_value_46);
         if (tmp_called_value_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 78;
+            exception_lineno = 76;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        CHECK_OBJECT(par_Dialog_searce);
-        tmp_expression_value_49 = par_Dialog_searce;
-        tmp_args_element_value_26 = LOOKUP_ATTRIBUTE(tmp_expression_value_49, mod_consts[55]);
-        if (tmp_args_element_value_26 == NULL) {
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_49 = par_self;
+        tmp_args_element_value_25 = LOOKUP_ATTRIBUTE(tmp_expression_value_49, mod_consts[49]);
+        if (tmp_args_element_value_25 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_22);
 
-            exception_lineno = 78;
+            exception_lineno = 76;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        frame_ca18fcc8f743e9fbc203aa79605afe0a->m_frame.f_lineno = 78;
-        tmp_call_result_31 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_22, tmp_args_element_value_26);
+        frame_ca18fcc8f743e9fbc203aa79605afe0a->m_frame.f_lineno = 76;
+        tmp_call_result_31 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_22, tmp_args_element_value_25);
         Py_DECREF(tmp_called_value_22);
-        Py_DECREF(tmp_args_element_value_26);
+        Py_DECREF(tmp_args_element_value_25);
         if (tmp_call_result_31 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 78;
+            exception_lineno = 76;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
         Py_DECREF(tmp_call_result_31);
     }
     {
-        PyObject *tmp_called_value_23;
-        PyObject *tmp_expression_value_50;
-        PyObject *tmp_expression_value_51;
-        PyObject *tmp_expression_value_52;
+        PyObject *tmp_called_instance_25;
         PyObject *tmp_call_result_32;
-        PyObject *tmp_args_element_value_27;
-        PyObject *tmp_expression_value_53;
+        PyObject *tmp_args_element_value_26;
         CHECK_OBJECT(par_self);
-        tmp_expression_value_52 = par_self;
-        tmp_expression_value_51 = LOOKUP_ATTRIBUTE(tmp_expression_value_52, mod_consts[47]);
-        if (tmp_expression_value_51 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 79;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_expression_value_50 = LOOKUP_ATTRIBUTE(tmp_expression_value_51, mod_consts[56]);
-        Py_DECREF(tmp_expression_value_51);
-        if (tmp_expression_value_50 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 79;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_value_23 = LOOKUP_ATTRIBUTE(tmp_expression_value_50, mod_consts[54]);
-        Py_DECREF(tmp_expression_value_50);
-        if (tmp_called_value_23 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 79;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
+        tmp_called_instance_25 = par_self;
         CHECK_OBJECT(par_Dialog_searce);
-        tmp_expression_value_53 = par_Dialog_searce;
-        tmp_args_element_value_27 = LOOKUP_ATTRIBUTE(tmp_expression_value_53, mod_consts[57]);
-        if (tmp_args_element_value_27 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_value_23);
-
-            exception_lineno = 79;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
+        tmp_args_element_value_26 = par_Dialog_searce;
         frame_ca18fcc8f743e9fbc203aa79605afe0a->m_frame.f_lineno = 79;
-        tmp_call_result_32 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_23, tmp_args_element_value_27);
-        Py_DECREF(tmp_called_value_23);
-        Py_DECREF(tmp_args_element_value_27);
+        tmp_call_result_32 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_25, mod_consts[54], tmp_args_element_value_26);
         if (tmp_call_result_32 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2278,16 +2242,115 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__1_setu
         Py_DECREF(tmp_call_result_32);
     }
     {
-        PyObject *tmp_called_instance_25;
+        PyObject *tmp_called_value_23;
+        PyObject *tmp_expression_value_50;
+        PyObject *tmp_expression_value_51;
+        PyObject *tmp_expression_value_52;
         PyObject *tmp_call_result_33;
-        PyObject *tmp_args_element_value_28;
-        tmp_called_instance_25 = GET_STRING_DICT_VALUE(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[58]);
+        PyObject *tmp_args_element_value_27;
+        PyObject *tmp_expression_value_53;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_52 = par_self;
+        tmp_expression_value_51 = LOOKUP_ATTRIBUTE(tmp_expression_value_52, mod_consts[49]);
+        if (tmp_expression_value_51 == NULL) {
+            assert(ERROR_OCCURRED());
 
-        if (unlikely(tmp_called_instance_25 == NULL)) {
-            tmp_called_instance_25 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[58]);
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 80;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
         }
+        tmp_expression_value_50 = LOOKUP_ATTRIBUTE(tmp_expression_value_51, mod_consts[55]);
+        Py_DECREF(tmp_expression_value_51);
+        if (tmp_expression_value_50 == NULL) {
+            assert(ERROR_OCCURRED());
 
-        if (tmp_called_instance_25 == NULL) {
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 80;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
+        tmp_called_value_23 = LOOKUP_ATTRIBUTE(tmp_expression_value_50, mod_consts[56]);
+        Py_DECREF(tmp_expression_value_50);
+        if (tmp_called_value_23 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 80;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
+        CHECK_OBJECT(par_Dialog_searce);
+        tmp_expression_value_53 = par_Dialog_searce;
+        tmp_args_element_value_27 = LOOKUP_ATTRIBUTE(tmp_expression_value_53, mod_consts[57]);
+        if (tmp_args_element_value_27 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_23);
+
+            exception_lineno = 80;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
+        frame_ca18fcc8f743e9fbc203aa79605afe0a->m_frame.f_lineno = 80;
+        tmp_call_result_33 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_23, tmp_args_element_value_27);
+        Py_DECREF(tmp_called_value_23);
+        Py_DECREF(tmp_args_element_value_27);
+        if (tmp_call_result_33 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 80;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
+        Py_DECREF(tmp_call_result_33);
+    }
+    {
+        PyObject *tmp_called_value_24;
+        PyObject *tmp_expression_value_54;
+        PyObject *tmp_expression_value_55;
+        PyObject *tmp_expression_value_56;
+        PyObject *tmp_call_result_34;
+        PyObject *tmp_args_element_value_28;
+        PyObject *tmp_expression_value_57;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_56 = par_self;
+        tmp_expression_value_55 = LOOKUP_ATTRIBUTE(tmp_expression_value_56, mod_consts[49]);
+        if (tmp_expression_value_55 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 81;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
+        tmp_expression_value_54 = LOOKUP_ATTRIBUTE(tmp_expression_value_55, mod_consts[58]);
+        Py_DECREF(tmp_expression_value_55);
+        if (tmp_expression_value_54 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 81;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
+        tmp_called_value_24 = LOOKUP_ATTRIBUTE(tmp_expression_value_54, mod_consts[56]);
+        Py_DECREF(tmp_expression_value_54);
+        if (tmp_called_value_24 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2298,10 +2361,23 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__1_setu
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_Dialog_searce);
-        tmp_args_element_value_28 = par_Dialog_searce;
+        tmp_expression_value_57 = par_Dialog_searce;
+        tmp_args_element_value_28 = LOOKUP_ATTRIBUTE(tmp_expression_value_57, mod_consts[59]);
+        if (tmp_args_element_value_28 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_24);
+
+            exception_lineno = 81;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
         frame_ca18fcc8f743e9fbc203aa79605afe0a->m_frame.f_lineno = 81;
-        tmp_call_result_33 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_25, mod_consts[59], tmp_args_element_value_28);
-        if (tmp_call_result_33 == NULL) {
+        tmp_call_result_34 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_24, tmp_args_element_value_28);
+        Py_DECREF(tmp_called_value_24);
+        Py_DECREF(tmp_args_element_value_28);
+        if (tmp_call_result_34 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2311,7 +2387,43 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__1_setu
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        Py_DECREF(tmp_call_result_33);
+        Py_DECREF(tmp_call_result_34);
+    }
+    {
+        PyObject *tmp_called_instance_26;
+        PyObject *tmp_call_result_35;
+        PyObject *tmp_args_element_value_29;
+        tmp_called_instance_26 = GET_STRING_DICT_VALUE(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[60]);
+
+        if (unlikely(tmp_called_instance_26 == NULL)) {
+            tmp_called_instance_26 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[60]);
+        }
+
+        if (tmp_called_instance_26 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 83;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
+        CHECK_OBJECT(par_Dialog_searce);
+        tmp_args_element_value_29 = par_Dialog_searce;
+        frame_ca18fcc8f743e9fbc203aa79605afe0a->m_frame.f_lineno = 83;
+        tmp_call_result_35 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_26, mod_consts[61], tmp_args_element_value_29);
+        if (tmp_call_result_35 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 83;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
+        Py_DECREF(tmp_call_result_35);
     }
 
 #if 0
@@ -2449,43 +2561,43 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__2_retr
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
     PyObject *par_Dialog_searce = python_pars[1];
-    struct Nuitka_FrameObject *frame_67df9414393da6b9acbf868c890d17a5;
+    struct Nuitka_FrameObject *frame_26c0f5fa9b2e8aa9e9552b2d1805abec;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_67df9414393da6b9acbf868c890d17a5 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_26c0f5fa9b2e8aa9e9552b2d1805abec = NULL;
     PyObject *tmp_return_value = NULL;
 
     // Actual function body.
-    if (isFrameUnusable(cache_frame_67df9414393da6b9acbf868c890d17a5)) {
-        Py_XDECREF(cache_frame_67df9414393da6b9acbf868c890d17a5);
+    if (isFrameUnusable(cache_frame_26c0f5fa9b2e8aa9e9552b2d1805abec)) {
+        Py_XDECREF(cache_frame_26c0f5fa9b2e8aa9e9552b2d1805abec);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_67df9414393da6b9acbf868c890d17a5 == NULL) {
+        if (cache_frame_26c0f5fa9b2e8aa9e9552b2d1805abec == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_67df9414393da6b9acbf868c890d17a5 = MAKE_FUNCTION_FRAME(codeobj_67df9414393da6b9acbf868c890d17a5, module_weather_app$searce_dialog$searce_dialog, sizeof(void *)+sizeof(void *));
+        cache_frame_26c0f5fa9b2e8aa9e9552b2d1805abec = MAKE_FUNCTION_FRAME(codeobj_26c0f5fa9b2e8aa9e9552b2d1805abec, module_weather_app$searce_dialog$searce_dialog, sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_67df9414393da6b9acbf868c890d17a5->m_type_description == NULL);
-    frame_67df9414393da6b9acbf868c890d17a5 = cache_frame_67df9414393da6b9acbf868c890d17a5;
+    assert(cache_frame_26c0f5fa9b2e8aa9e9552b2d1805abec->m_type_description == NULL);
+    frame_26c0f5fa9b2e8aa9e9552b2d1805abec = cache_frame_26c0f5fa9b2e8aa9e9552b2d1805abec;
 
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_67df9414393da6b9acbf868c890d17a5);
+    pushFrameStack(frame_26c0f5fa9b2e8aa9e9552b2d1805abec);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_67df9414393da6b9acbf868c890d17a5) == 2); // Frame stack
+    assert(Py_REFCNT(frame_26c0f5fa9b2e8aa9e9552b2d1805abec) == 2); // Frame stack
 
     // Framed code:
     {
@@ -2497,21 +2609,21 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__2_retr
         PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_Dialog_searce);
         tmp_expression_value_1 = par_Dialog_searce;
-        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[60]);
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[62]);
         if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 85;
+            exception_lineno = 87;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[61]);
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[63]);
 
         if (unlikely(tmp_expression_value_2 == NULL)) {
-            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[61]);
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[63]);
         }
 
         if (tmp_expression_value_2 == NULL) {
@@ -2520,23 +2632,23 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__2_retr
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_1);
 
-            exception_lineno = 85;
+            exception_lineno = 87;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[62]);
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[64]);
         if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_1);
 
-            exception_lineno = 85;
+            exception_lineno = 87;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_67df9414393da6b9acbf868c890d17a5->m_frame.f_lineno = 85;
-        tmp_args_element_value_1 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_value_2, mod_consts[63]);
+        frame_26c0f5fa9b2e8aa9e9552b2d1805abec->m_frame.f_lineno = 87;
+        tmp_args_element_value_1 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_value_2, mod_consts[65]);
 
         Py_DECREF(tmp_called_value_2);
         if (tmp_args_element_value_1 == NULL) {
@@ -2545,11 +2657,11 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__2_retr
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_1);
 
-            exception_lineno = 85;
+            exception_lineno = 87;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_67df9414393da6b9acbf868c890d17a5->m_frame.f_lineno = 85;
+        frame_26c0f5fa9b2e8aa9e9552b2d1805abec->m_frame.f_lineno = 87;
         tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
         Py_DECREF(tmp_called_value_1);
         Py_DECREF(tmp_args_element_value_1);
@@ -2559,7 +2671,7 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__2_retr
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 85;
+            exception_lineno = 87;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -2582,11 +2694,11 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__2_retr
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 86;
+            exception_lineno = 88;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[64]);
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[66]);
         Py_DECREF(tmp_expression_value_3);
         if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -2594,14 +2706,14 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__2_retr
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 86;
+            exception_lineno = 88;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[61]);
+        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[63]);
 
         if (unlikely(tmp_expression_value_5 == NULL)) {
-            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[61]);
+            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[63]);
         }
 
         if (tmp_expression_value_5 == NULL) {
@@ -2610,23 +2722,23 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__2_retr
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_3);
 
-            exception_lineno = 86;
+            exception_lineno = 88;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[62]);
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[64]);
         if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_3);
 
-            exception_lineno = 86;
+            exception_lineno = 88;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_67df9414393da6b9acbf868c890d17a5->m_frame.f_lineno = 86;
-        tmp_args_element_value_2 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_value_4, mod_consts[65]);
+        frame_26c0f5fa9b2e8aa9e9552b2d1805abec->m_frame.f_lineno = 88;
+        tmp_args_element_value_2 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_value_4, mod_consts[67]);
 
         Py_DECREF(tmp_called_value_4);
         if (tmp_args_element_value_2 == NULL) {
@@ -2635,11 +2747,11 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__2_retr
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_3);
 
-            exception_lineno = 86;
+            exception_lineno = 88;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_67df9414393da6b9acbf868c890d17a5->m_frame.f_lineno = 86;
+        frame_26c0f5fa9b2e8aa9e9552b2d1805abec->m_frame.f_lineno = 88;
         tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_2);
         Py_DECREF(tmp_called_value_3);
         Py_DECREF(tmp_args_element_value_2);
@@ -2649,7 +2761,7 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__2_retr
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 86;
+            exception_lineno = 88;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -2668,15 +2780,15 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__2_retr
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 87;
+            exception_lineno = 89;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_67df9414393da6b9acbf868c890d17a5->m_frame.f_lineno = 87;
+        frame_26c0f5fa9b2e8aa9e9552b2d1805abec->m_frame.f_lineno = 89;
         tmp_call_result_3 = CALL_METHOD_WITH_SINGLE_ARG(
             tmp_called_instance_1,
-            mod_consts[64],
-            PyTuple_GET_ITEM(mod_consts[66], 0)
+            mod_consts[66],
+            PyTuple_GET_ITEM(mod_consts[68], 0)
         );
 
         Py_DECREF(tmp_called_instance_1);
@@ -2686,7 +2798,7 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__2_retr
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 87;
+            exception_lineno = 89;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -2705,15 +2817,15 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__2_retr
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 88;
+            exception_lineno = 90;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_67df9414393da6b9acbf868c890d17a5->m_frame.f_lineno = 88;
+        frame_26c0f5fa9b2e8aa9e9552b2d1805abec->m_frame.f_lineno = 90;
         tmp_call_result_4 = CALL_METHOD_WITH_SINGLE_ARG(
             tmp_called_instance_2,
-            mod_consts[67],
-            PyTuple_GET_ITEM(mod_consts[66], 0)
+            mod_consts[69],
+            PyTuple_GET_ITEM(mod_consts[68], 0)
         );
 
         Py_DECREF(tmp_called_instance_2);
@@ -2723,7 +2835,7 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__2_retr
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 88;
+            exception_lineno = 90;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -2746,11 +2858,11 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__2_retr
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 89;
+            exception_lineno = 91;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[64]);
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[66]);
         Py_DECREF(tmp_expression_value_8);
         if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -2758,14 +2870,14 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__2_retr
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 89;
+            exception_lineno = 91;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_value_10 = GET_STRING_DICT_VALUE(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[61]);
+        tmp_expression_value_10 = GET_STRING_DICT_VALUE(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[63]);
 
         if (unlikely(tmp_expression_value_10 == NULL)) {
-            tmp_expression_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[61]);
+            tmp_expression_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[63]);
         }
 
         if (tmp_expression_value_10 == NULL) {
@@ -2774,23 +2886,23 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__2_retr
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_5);
 
-            exception_lineno = 89;
+            exception_lineno = 91;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[62]);
+        tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[64]);
         if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_5);
 
-            exception_lineno = 89;
+            exception_lineno = 91;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_67df9414393da6b9acbf868c890d17a5->m_frame.f_lineno = 89;
-        tmp_args_element_value_3 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_value_6, mod_consts[68]);
+        frame_26c0f5fa9b2e8aa9e9552b2d1805abec->m_frame.f_lineno = 91;
+        tmp_args_element_value_3 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_value_6, mod_consts[70]);
 
         Py_DECREF(tmp_called_value_6);
         if (tmp_args_element_value_3 == NULL) {
@@ -2799,11 +2911,11 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__2_retr
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_5);
 
-            exception_lineno = 89;
+            exception_lineno = 91;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_67df9414393da6b9acbf868c890d17a5->m_frame.f_lineno = 89;
+        frame_26c0f5fa9b2e8aa9e9552b2d1805abec->m_frame.f_lineno = 91;
         tmp_call_result_5 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_5, tmp_args_element_value_3);
         Py_DECREF(tmp_called_value_5);
         Py_DECREF(tmp_args_element_value_3);
@@ -2813,7 +2925,7 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__2_retr
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 89;
+            exception_lineno = 91;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -2821,7 +2933,7 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__2_retr
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_67df9414393da6b9acbf868c890d17a5);
+    RESTORE_FRAME_EXCEPTION(frame_26c0f5fa9b2e8aa9e9552b2d1805abec);
 #endif
 
     // Put the previous frame back on top.
@@ -2833,18 +2945,18 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__2_retr
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_67df9414393da6b9acbf868c890d17a5);
+    RESTORE_FRAME_EXCEPTION(frame_26c0f5fa9b2e8aa9e9552b2d1805abec);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_67df9414393da6b9acbf868c890d17a5, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_67df9414393da6b9acbf868c890d17a5->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_67df9414393da6b9acbf868c890d17a5, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_26c0f5fa9b2e8aa9e9552b2d1805abec, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_26c0f5fa9b2e8aa9e9552b2d1805abec->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_26c0f5fa9b2e8aa9e9552b2d1805abec, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_67df9414393da6b9acbf868c890d17a5,
+        frame_26c0f5fa9b2e8aa9e9552b2d1805abec,
         type_description_1,
         par_self,
         par_Dialog_searce
@@ -2852,17 +2964,17 @@ static PyObject *impl_weather_app$searce_dialog$searce_dialog$$$function__2_retr
 
 
     // Release cached frame if used for exception.
-    if (frame_67df9414393da6b9acbf868c890d17a5 == cache_frame_67df9414393da6b9acbf868c890d17a5) {
+    if (frame_26c0f5fa9b2e8aa9e9552b2d1805abec == cache_frame_26c0f5fa9b2e8aa9e9552b2d1805abec) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_67df9414393da6b9acbf868c890d17a5);
-        cache_frame_67df9414393da6b9acbf868c890d17a5 = NULL;
+        Py_DECREF(cache_frame_26c0f5fa9b2e8aa9e9552b2d1805abec);
+        cache_frame_26c0f5fa9b2e8aa9e9552b2d1805abec = NULL;
     }
 
-    assertFrameObject(frame_67df9414393da6b9acbf868c890d17a5);
+    assertFrameObject(frame_26c0f5fa9b2e8aa9e9552b2d1805abec);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -2908,9 +3020,9 @@ function_return_exit:
 static PyObject *MAKE_FUNCTION_weather_app$searce_dialog$searce_dialog$$$function__1_setupUi() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_weather_app$searce_dialog$searce_dialog$$$function__1_setupUi,
-        mod_consts[121],
+        mod_consts[123],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[122],
+        mod_consts[124],
 #endif
         codeobj_ca18fcc8f743e9fbc203aa79605afe0a,
         NULL,
@@ -2933,11 +3045,11 @@ static PyObject *MAKE_FUNCTION_weather_app$searce_dialog$searce_dialog$$$functio
 static PyObject *MAKE_FUNCTION_weather_app$searce_dialog$searce_dialog$$$function__2_retranslateUi() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_weather_app$searce_dialog$searce_dialog$$$function__2_retranslateUi,
-        mod_consts[52],
+        mod_consts[54],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[123],
+        mod_consts[125],
 #endif
-        codeobj_67df9414393da6b9acbf868c890d17a5,
+        codeobj_26c0f5fa9b2e8aa9e9552b2d1805abec,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -3204,7 +3316,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
         UPDATE_STRING_DICT0(
             moduledict_weather_app$searce_dialog$searce_dialog,
             (Nuitka_StringObject *)const_str_plain___package__,
-            mod_consts[130]
+            mod_consts[132]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)const_str_plain___name__);
@@ -3352,12 +3464,12 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
     {
         PyObject *tmp_assign_source_1;
         tmp_assign_source_1 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[69], tmp_assign_source_1);
+        UPDATE_STRING_DICT0(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[71], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[70], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[72], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_68359dbcc9da40bbc53f7008ee31f709 = MAKE_MODULE_FRAME(codeobj_68359dbcc9da40bbc53f7008ee31f709, module_weather_app$searce_dialog$searce_dialog);
@@ -3372,14 +3484,14 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         tmp_assattr_value_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[71]);
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[73]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[71]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[73]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[72], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[74], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -3395,14 +3507,14 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
         PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
         tmp_assattr_value_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[71]);
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[73]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[71]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[73]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[73], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[75], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -3417,7 +3529,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[74], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[76], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
@@ -3426,11 +3538,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
         PyObject *tmp_locals_arg_value_1;
         PyObject *tmp_fromlist_value_1;
         PyObject *tmp_level_value_1;
-        tmp_name_value_1 = mod_consts[75];
+        tmp_name_value_1 = mod_consts[77];
         tmp_globals_arg_value_1 = (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog;
         tmp_locals_arg_value_1 = Py_None;
-        tmp_fromlist_value_1 = mod_consts[76];
-        tmp_level_value_1 = mod_consts[77];
+        tmp_fromlist_value_1 = mod_consts[78];
+        tmp_level_value_1 = mod_consts[79];
         frame_68359dbcc9da40bbc53f7008ee31f709->m_frame.f_lineno = 11;
         tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_4 == NULL) {
@@ -3456,11 +3568,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_5 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[61],
-                mod_consts[77]
+                mod_consts[63],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[61]);
+            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[63]);
         }
 
         if (tmp_assign_source_5 == NULL) {
@@ -3473,7 +3585,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[61], tmp_assign_source_5);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[63], tmp_assign_source_5);
     }
     {
         PyObject *tmp_assign_source_6;
@@ -3484,11 +3596,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_6 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_2,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[78],
-                mod_consts[77]
+                mod_consts[80],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[78]);
+            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[80]);
         }
 
         if (tmp_assign_source_6 == NULL) {
@@ -3501,7 +3613,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[78], tmp_assign_source_6);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[80], tmp_assign_source_6);
     }
     {
         PyObject *tmp_assign_source_7;
@@ -3512,11 +3624,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_7 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_3,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[79],
-                mod_consts[77]
+                mod_consts[81],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[79]);
+            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[81]);
         }
 
         if (tmp_assign_source_7 == NULL) {
@@ -3529,7 +3641,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[79], tmp_assign_source_7);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[81], tmp_assign_source_7);
     }
     {
         PyObject *tmp_assign_source_8;
@@ -3540,11 +3652,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_8 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_4,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[80],
-                mod_consts[77]
+                mod_consts[82],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[80]);
+            tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[82]);
         }
 
         if (tmp_assign_source_8 == NULL) {
@@ -3557,7 +3669,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[80], tmp_assign_source_8);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[82], tmp_assign_source_8);
     }
     {
         PyObject *tmp_assign_source_9;
@@ -3568,11 +3680,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_9 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_5,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[58],
-                mod_consts[77]
+                mod_consts[60],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_9 = IMPORT_NAME(tmp_import_name_from_5, mod_consts[58]);
+            tmp_assign_source_9 = IMPORT_NAME(tmp_import_name_from_5, mod_consts[60]);
         }
 
         if (tmp_assign_source_9 == NULL) {
@@ -3585,7 +3697,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[58], tmp_assign_source_9);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[60], tmp_assign_source_9);
     }
     {
         PyObject *tmp_assign_source_10;
@@ -3596,11 +3708,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_10 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_6,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[81],
-                mod_consts[77]
+                mod_consts[83],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_10 = IMPORT_NAME(tmp_import_name_from_6, mod_consts[81]);
+            tmp_assign_source_10 = IMPORT_NAME(tmp_import_name_from_6, mod_consts[83]);
         }
 
         if (tmp_assign_source_10 == NULL) {
@@ -3613,7 +3725,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[81], tmp_assign_source_10);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[83], tmp_assign_source_10);
     }
     {
         PyObject *tmp_assign_source_11;
@@ -3624,11 +3736,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_11 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_7,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[82],
-                mod_consts[77]
+                mod_consts[84],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_11 = IMPORT_NAME(tmp_import_name_from_7, mod_consts[82]);
+            tmp_assign_source_11 = IMPORT_NAME(tmp_import_name_from_7, mod_consts[84]);
         }
 
         if (tmp_assign_source_11 == NULL) {
@@ -3641,7 +3753,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[82], tmp_assign_source_11);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[84], tmp_assign_source_11);
     }
     {
         PyObject *tmp_assign_source_12;
@@ -3652,11 +3764,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_12 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_8,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[83],
-                mod_consts[77]
+                mod_consts[85],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_12 = IMPORT_NAME(tmp_import_name_from_8, mod_consts[83]);
+            tmp_assign_source_12 = IMPORT_NAME(tmp_import_name_from_8, mod_consts[85]);
         }
 
         if (tmp_assign_source_12 == NULL) {
@@ -3669,7 +3781,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[83], tmp_assign_source_12);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[85], tmp_assign_source_12);
     }
     {
         PyObject *tmp_assign_source_13;
@@ -3680,11 +3792,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_13 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_9,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[84],
-                mod_consts[77]
+                mod_consts[86],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_13 = IMPORT_NAME(tmp_import_name_from_9, mod_consts[84]);
+            tmp_assign_source_13 = IMPORT_NAME(tmp_import_name_from_9, mod_consts[86]);
         }
 
         if (tmp_assign_source_13 == NULL) {
@@ -3697,7 +3809,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[84], tmp_assign_source_13);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[86], tmp_assign_source_13);
     }
     {
         PyObject *tmp_assign_source_14;
@@ -3708,11 +3820,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_14 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_10,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[85],
-                mod_consts[77]
+                mod_consts[87],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_14 = IMPORT_NAME(tmp_import_name_from_10, mod_consts[85]);
+            tmp_assign_source_14 = IMPORT_NAME(tmp_import_name_from_10, mod_consts[87]);
         }
 
         if (tmp_assign_source_14 == NULL) {
@@ -3725,7 +3837,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[85], tmp_assign_source_14);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[87], tmp_assign_source_14);
     }
     {
         PyObject *tmp_assign_source_15;
@@ -3736,11 +3848,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_15 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_11,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[86],
-                mod_consts[77]
+                mod_consts[88],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_15 = IMPORT_NAME(tmp_import_name_from_11, mod_consts[86]);
+            tmp_assign_source_15 = IMPORT_NAME(tmp_import_name_from_11, mod_consts[88]);
         }
 
         if (tmp_assign_source_15 == NULL) {
@@ -3753,7 +3865,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[86], tmp_assign_source_15);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[88], tmp_assign_source_15);
     }
     {
         PyObject *tmp_assign_source_16;
@@ -3765,7 +3877,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
                 tmp_import_name_from_12,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
                 mod_consts[25],
-                mod_consts[77]
+                mod_consts[79]
             );
         } else {
             tmp_assign_source_16 = IMPORT_NAME(tmp_import_name_from_12, mod_consts[25]);
@@ -3817,11 +3929,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
         PyObject *tmp_locals_arg_value_2;
         PyObject *tmp_fromlist_value_2;
         PyObject *tmp_level_value_2;
-        tmp_name_value_2 = mod_consts[87];
+        tmp_name_value_2 = mod_consts[89];
         tmp_globals_arg_value_2 = (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog;
         tmp_locals_arg_value_2 = Py_None;
-        tmp_fromlist_value_2 = mod_consts[88];
-        tmp_level_value_2 = mod_consts[77];
+        tmp_fromlist_value_2 = mod_consts[90];
+        tmp_level_value_2 = mod_consts[79];
         frame_68359dbcc9da40bbc53f7008ee31f709->m_frame.f_lineno = 14;
         tmp_assign_source_17 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_assign_source_17 == NULL) {
@@ -3847,11 +3959,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_18 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_13,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[89],
-                mod_consts[77]
+                mod_consts[91],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_18 = IMPORT_NAME(tmp_import_name_from_13, mod_consts[89]);
+            tmp_assign_source_18 = IMPORT_NAME(tmp_import_name_from_13, mod_consts[91]);
         }
 
         if (tmp_assign_source_18 == NULL) {
@@ -3864,7 +3976,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[89], tmp_assign_source_18);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[91], tmp_assign_source_18);
     }
     {
         PyObject *tmp_assign_source_19;
@@ -3875,11 +3987,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_19 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_14,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[90],
-                mod_consts[77]
+                mod_consts[92],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_19 = IMPORT_NAME(tmp_import_name_from_14, mod_consts[90]);
+            tmp_assign_source_19 = IMPORT_NAME(tmp_import_name_from_14, mod_consts[92]);
         }
 
         if (tmp_assign_source_19 == NULL) {
@@ -3892,7 +4004,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[90], tmp_assign_source_19);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[92], tmp_assign_source_19);
     }
     {
         PyObject *tmp_assign_source_20;
@@ -3903,11 +4015,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_20 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_15,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[91],
-                mod_consts[77]
+                mod_consts[93],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_20 = IMPORT_NAME(tmp_import_name_from_15, mod_consts[91]);
+            tmp_assign_source_20 = IMPORT_NAME(tmp_import_name_from_15, mod_consts[93]);
         }
 
         if (tmp_assign_source_20 == NULL) {
@@ -3920,7 +4032,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[91], tmp_assign_source_20);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[93], tmp_assign_source_20);
     }
     {
         PyObject *tmp_assign_source_21;
@@ -3931,11 +4043,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_21 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_16,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[92],
-                mod_consts[77]
+                mod_consts[94],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_21 = IMPORT_NAME(tmp_import_name_from_16, mod_consts[92]);
+            tmp_assign_source_21 = IMPORT_NAME(tmp_import_name_from_16, mod_consts[94]);
         }
 
         if (tmp_assign_source_21 == NULL) {
@@ -3948,7 +4060,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[92], tmp_assign_source_21);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[94], tmp_assign_source_21);
     }
     {
         PyObject *tmp_assign_source_22;
@@ -3960,7 +4072,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
                 tmp_import_name_from_17,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
                 mod_consts[5],
-                mod_consts[77]
+                mod_consts[79]
             );
         } else {
             tmp_assign_source_22 = IMPORT_NAME(tmp_import_name_from_17, mod_consts[5]);
@@ -3987,11 +4099,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_23 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_18,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[93],
-                mod_consts[77]
+                mod_consts[95],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_23 = IMPORT_NAME(tmp_import_name_from_18, mod_consts[93]);
+            tmp_assign_source_23 = IMPORT_NAME(tmp_import_name_from_18, mod_consts[95]);
         }
 
         if (tmp_assign_source_23 == NULL) {
@@ -4004,7 +4116,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[93], tmp_assign_source_23);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[95], tmp_assign_source_23);
     }
     {
         PyObject *tmp_assign_source_24;
@@ -4015,11 +4127,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_24 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_19,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[94],
-                mod_consts[77]
+                mod_consts[96],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_24 = IMPORT_NAME(tmp_import_name_from_19, mod_consts[94]);
+            tmp_assign_source_24 = IMPORT_NAME(tmp_import_name_from_19, mod_consts[96]);
         }
 
         if (tmp_assign_source_24 == NULL) {
@@ -4032,7 +4144,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[94], tmp_assign_source_24);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[96], tmp_assign_source_24);
     }
     {
         PyObject *tmp_assign_source_25;
@@ -4043,11 +4155,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_25 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_20,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[95],
-                mod_consts[77]
+                mod_consts[97],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_25 = IMPORT_NAME(tmp_import_name_from_20, mod_consts[95]);
+            tmp_assign_source_25 = IMPORT_NAME(tmp_import_name_from_20, mod_consts[97]);
         }
 
         if (tmp_assign_source_25 == NULL) {
@@ -4060,7 +4172,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[95], tmp_assign_source_25);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[97], tmp_assign_source_25);
     }
     {
         PyObject *tmp_assign_source_26;
@@ -4071,11 +4183,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_26 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_21,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[96],
-                mod_consts[77]
+                mod_consts[98],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_26 = IMPORT_NAME(tmp_import_name_from_21, mod_consts[96]);
+            tmp_assign_source_26 = IMPORT_NAME(tmp_import_name_from_21, mod_consts[98]);
         }
 
         if (tmp_assign_source_26 == NULL) {
@@ -4088,7 +4200,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[96], tmp_assign_source_26);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[98], tmp_assign_source_26);
     }
     {
         PyObject *tmp_assign_source_27;
@@ -4099,11 +4211,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_27 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_22,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[97],
-                mod_consts[77]
+                mod_consts[99],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_27 = IMPORT_NAME(tmp_import_name_from_22, mod_consts[97]);
+            tmp_assign_source_27 = IMPORT_NAME(tmp_import_name_from_22, mod_consts[99]);
         }
 
         if (tmp_assign_source_27 == NULL) {
@@ -4116,7 +4228,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[97], tmp_assign_source_27);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[99], tmp_assign_source_27);
     }
     {
         PyObject *tmp_assign_source_28;
@@ -4127,11 +4239,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_28 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_23,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[98],
-                mod_consts[77]
+                mod_consts[100],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_28 = IMPORT_NAME(tmp_import_name_from_23, mod_consts[98]);
+            tmp_assign_source_28 = IMPORT_NAME(tmp_import_name_from_23, mod_consts[100]);
         }
 
         if (tmp_assign_source_28 == NULL) {
@@ -4144,7 +4256,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[98], tmp_assign_source_28);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[100], tmp_assign_source_28);
     }
     {
         PyObject *tmp_assign_source_29;
@@ -4155,11 +4267,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_29 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_24,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[99],
-                mod_consts[77]
+                mod_consts[101],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_29 = IMPORT_NAME(tmp_import_name_from_24, mod_consts[99]);
+            tmp_assign_source_29 = IMPORT_NAME(tmp_import_name_from_24, mod_consts[101]);
         }
 
         if (tmp_assign_source_29 == NULL) {
@@ -4172,7 +4284,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[99], tmp_assign_source_29);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[101], tmp_assign_source_29);
     }
     {
         PyObject *tmp_assign_source_30;
@@ -4183,11 +4295,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_30 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_25,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[100],
-                mod_consts[77]
+                mod_consts[102],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_30 = IMPORT_NAME(tmp_import_name_from_25, mod_consts[100]);
+            tmp_assign_source_30 = IMPORT_NAME(tmp_import_name_from_25, mod_consts[102]);
         }
 
         if (tmp_assign_source_30 == NULL) {
@@ -4200,7 +4312,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[100], tmp_assign_source_30);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[102], tmp_assign_source_30);
     }
     {
         PyObject *tmp_assign_source_31;
@@ -4211,11 +4323,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_31 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_26,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[101],
-                mod_consts[77]
+                mod_consts[103],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_31 = IMPORT_NAME(tmp_import_name_from_26, mod_consts[101]);
+            tmp_assign_source_31 = IMPORT_NAME(tmp_import_name_from_26, mod_consts[103]);
         }
 
         if (tmp_assign_source_31 == NULL) {
@@ -4228,7 +4340,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[101], tmp_assign_source_31);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[103], tmp_assign_source_31);
     }
     {
         PyObject *tmp_assign_source_32;
@@ -4239,11 +4351,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_32 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_27,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[102],
-                mod_consts[77]
+                mod_consts[104],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_32 = IMPORT_NAME(tmp_import_name_from_27, mod_consts[102]);
+            tmp_assign_source_32 = IMPORT_NAME(tmp_import_name_from_27, mod_consts[104]);
         }
 
         if (tmp_assign_source_32 == NULL) {
@@ -4256,7 +4368,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[102], tmp_assign_source_32);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[104], tmp_assign_source_32);
     }
     {
         PyObject *tmp_assign_source_33;
@@ -4267,11 +4379,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_33 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_28,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[103],
-                mod_consts[77]
+                mod_consts[105],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_33 = IMPORT_NAME(tmp_import_name_from_28, mod_consts[103]);
+            tmp_assign_source_33 = IMPORT_NAME(tmp_import_name_from_28, mod_consts[105]);
         }
 
         if (tmp_assign_source_33 == NULL) {
@@ -4284,7 +4396,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[103], tmp_assign_source_33);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[105], tmp_assign_source_33);
     }
     goto try_end_2;
     // Exception handler code:
@@ -4320,11 +4432,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
         PyObject *tmp_locals_arg_value_3;
         PyObject *tmp_fromlist_value_3;
         PyObject *tmp_level_value_3;
-        tmp_name_value_3 = mod_consts[104];
+        tmp_name_value_3 = mod_consts[106];
         tmp_globals_arg_value_3 = (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog;
         tmp_locals_arg_value_3 = Py_None;
-        tmp_fromlist_value_3 = mod_consts[105];
-        tmp_level_value_3 = mod_consts[77];
+        tmp_fromlist_value_3 = mod_consts[107];
+        tmp_level_value_3 = mod_consts[79];
         frame_68359dbcc9da40bbc53f7008ee31f709->m_frame.f_lineno = 18;
         tmp_assign_source_34 = IMPORT_MODULE5(tmp_name_value_3, tmp_globals_arg_value_3, tmp_locals_arg_value_3, tmp_fromlist_value_3, tmp_level_value_3);
         if (tmp_assign_source_34 == NULL) {
@@ -4350,11 +4462,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_35 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_29,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[106],
-                mod_consts[77]
+                mod_consts[108],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_35 = IMPORT_NAME(tmp_import_name_from_29, mod_consts[106]);
+            tmp_assign_source_35 = IMPORT_NAME(tmp_import_name_from_29, mod_consts[108]);
         }
 
         if (tmp_assign_source_35 == NULL) {
@@ -4367,7 +4479,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_3;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[106], tmp_assign_source_35);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[108], tmp_assign_source_35);
     }
     {
         PyObject *tmp_assign_source_36;
@@ -4378,11 +4490,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_36 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_30,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[107],
-                mod_consts[77]
+                mod_consts[109],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_36 = IMPORT_NAME(tmp_import_name_from_30, mod_consts[107]);
+            tmp_assign_source_36 = IMPORT_NAME(tmp_import_name_from_30, mod_consts[109]);
         }
 
         if (tmp_assign_source_36 == NULL) {
@@ -4395,7 +4507,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_3;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[107], tmp_assign_source_36);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[109], tmp_assign_source_36);
     }
     {
         PyObject *tmp_assign_source_37;
@@ -4406,11 +4518,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_37 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_31,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[108],
-                mod_consts[77]
+                mod_consts[110],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_37 = IMPORT_NAME(tmp_import_name_from_31, mod_consts[108]);
+            tmp_assign_source_37 = IMPORT_NAME(tmp_import_name_from_31, mod_consts[110]);
         }
 
         if (tmp_assign_source_37 == NULL) {
@@ -4423,7 +4535,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_3;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[108], tmp_assign_source_37);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[110], tmp_assign_source_37);
     }
     {
         PyObject *tmp_assign_source_38;
@@ -4434,11 +4546,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_38 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_32,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[46],
-                mod_consts[77]
+                mod_consts[48],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_38 = IMPORT_NAME(tmp_import_name_from_32, mod_consts[46]);
+            tmp_assign_source_38 = IMPORT_NAME(tmp_import_name_from_32, mod_consts[48]);
         }
 
         if (tmp_assign_source_38 == NULL) {
@@ -4451,7 +4563,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_3;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[46], tmp_assign_source_38);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[48], tmp_assign_source_38);
     }
     {
         PyObject *tmp_assign_source_39;
@@ -4463,7 +4575,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
                 tmp_import_name_from_33,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
                 mod_consts[14],
-                mod_consts[77]
+                mod_consts[79]
             );
         } else {
             tmp_assign_source_39 = IMPORT_NAME(tmp_import_name_from_33, mod_consts[14]);
@@ -4491,7 +4603,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
                 tmp_import_name_from_34,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
                 mod_consts[17],
-                mod_consts[77]
+                mod_consts[79]
             );
         } else {
             tmp_assign_source_40 = IMPORT_NAME(tmp_import_name_from_34, mod_consts[17]);
@@ -4519,7 +4631,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
                 tmp_import_name_from_35,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
                 mod_consts[21],
-                mod_consts[77]
+                mod_consts[79]
             );
         } else {
             tmp_assign_source_41 = IMPORT_NAME(tmp_import_name_from_35, mod_consts[21]);
@@ -4547,7 +4659,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
                 tmp_import_name_from_36,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
                 mod_consts[41],
-                mod_consts[77]
+                mod_consts[79]
             );
         } else {
             tmp_assign_source_42 = IMPORT_NAME(tmp_import_name_from_36, mod_consts[41]);
@@ -4575,7 +4687,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
                 tmp_import_name_from_37,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
                 mod_consts[27],
-                mod_consts[77]
+                mod_consts[79]
             );
         } else {
             tmp_assign_source_43 = IMPORT_NAME(tmp_import_name_from_37, mod_consts[27]);
@@ -4603,7 +4715,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
                 tmp_import_name_from_38,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
                 mod_consts[30],
-                mod_consts[77]
+                mod_consts[79]
             );
         } else {
             tmp_assign_source_44 = IMPORT_NAME(tmp_import_name_from_38, mod_consts[30]);
@@ -4631,7 +4743,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
                 tmp_import_name_from_39,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
                 mod_consts[11],
-                mod_consts[77]
+                mod_consts[79]
             );
         } else {
             tmp_assign_source_45 = IMPORT_NAME(tmp_import_name_from_39, mod_consts[11]);
@@ -4658,11 +4770,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_assign_source_46 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_40,
                 (PyObject *)moduledict_weather_app$searce_dialog$searce_dialog,
-                mod_consts[109],
-                mod_consts[77]
+                mod_consts[111],
+                mod_consts[79]
             );
         } else {
-            tmp_assign_source_46 = IMPORT_NAME(tmp_import_name_from_40, mod_consts[109]);
+            tmp_assign_source_46 = IMPORT_NAME(tmp_import_name_from_40, mod_consts[111]);
         }
 
         if (tmp_assign_source_46 == NULL) {
@@ -4675,7 +4787,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_3;
         }
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[109], tmp_assign_source_46);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[111], tmp_assign_source_46);
     }
     goto try_end_3;
     // Exception handler code:
@@ -4708,7 +4820,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
     {
         PyObject *tmp_assign_source_47;
         PyObject *tmp_dircall_arg1_1;
-        tmp_dircall_arg1_1 = mod_consts[110];
+        tmp_dircall_arg1_1 = mod_consts[112];
         Py_INCREF(tmp_dircall_arg1_1);
 
         {
@@ -4748,7 +4860,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
         PyObject *tmp_expression_value_1;
         PyObject *tmp_subscript_value_1;
         PyObject *tmp_bases_value_1;
-        tmp_key_value_1 = mod_consts[111];
+        tmp_key_value_1 = mod_consts[113];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_dict_arg_value_1 = tmp_class_creation_1__class_decl_dict;
         tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_1, tmp_key_value_1);
@@ -4762,7 +4874,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
         condexpr_true_1:;
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_dict_arg_value_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_value_2 = mod_consts[111];
+        tmp_key_value_2 = mod_consts[113];
         tmp_metaclass_value_1 = DICT_GET_ITEM0(tmp_dict_arg_value_2, tmp_key_value_2);
         if (tmp_metaclass_value_1 == NULL) {
             tmp_metaclass_value_1 = Py_None;
@@ -4792,7 +4904,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
         condexpr_true_2:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
         tmp_expression_value_1 = tmp_class_creation_1__bases;
-        tmp_subscript_value_1 = mod_consts[77];
+        tmp_subscript_value_1 = mod_consts[79];
         tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_1, tmp_subscript_value_1, 0);
         if (tmp_type_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4843,7 +4955,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
         bool tmp_condition_result_3;
         PyObject *tmp_key_value_3;
         PyObject *tmp_dict_arg_value_3;
-        tmp_key_value_3 = mod_consts[111];
+        tmp_key_value_3 = mod_consts[113];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_dict_arg_value_3 = tmp_class_creation_1__class_decl_dict;
         tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_3, tmp_key_value_3);
@@ -4858,7 +4970,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
     branch_yes_1:;
     CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_1__class_decl_dict;
-    tmp_dictdel_key = mod_consts[111];
+    tmp_dictdel_key = mod_consts[113];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -4876,7 +4988,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
         PyObject *tmp_expression_value_2;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_expression_value_2 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_2, mod_consts[112]);
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_2, mod_consts[114]);
         tmp_condition_result_4 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
@@ -4894,7 +5006,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
         PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_expression_value_3 = tmp_class_creation_1__metaclass;
-        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[112]);
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[114]);
         if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4905,7 +5017,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_4;
         }
-        tmp_tuple_element_1 = mod_consts[113];
+        tmp_tuple_element_1 = mod_consts[115];
         tmp_args_value_1 = MAKE_TUPLE_EMPTY(2);
         PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(tmp_class_creation_1__bases);
@@ -4936,7 +5048,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
         PyObject *tmp_expression_value_4;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
         tmp_expression_value_4 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_4, mod_consts[114]);
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_4, mod_consts[116]);
         tmp_operand_value_1 = (tmp_result) ? Py_True : Py_False;
         tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
@@ -4967,11 +5079,11 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_mod_expr_left_1 = mod_consts[115];
+        tmp_mod_expr_left_1 = mod_consts[117];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
-        tmp_getattr_attr_1 = mod_consts[116];
-        tmp_getattr_default_1 = mod_consts[117];
+        tmp_getattr_attr_1 = mod_consts[118];
+        tmp_getattr_default_1 = mod_consts[119];
         tmp_tuple_element_2 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, tmp_getattr_default_1);
         if (tmp_tuple_element_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4992,7 +5104,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             tmp_type_arg_2 = tmp_class_creation_1__prepared;
             tmp_expression_value_5 = BUILTIN_TYPE1(tmp_type_arg_2);
             assert(!(tmp_expression_value_5 == NULL));
-            tmp_tuple_element_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[116]);
+            tmp_tuple_element_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[118]);
             Py_DECREF(tmp_expression_value_5);
             if (tmp_tuple_element_2 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -5054,8 +5166,8 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[118];
-        tmp_res = PyObject_SetItem(locals_weather_app$searce_dialog$searce_dialog$$$class__1_Ui_Dialog_searce_22, mod_consts[119], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[120];
+        tmp_res = PyObject_SetItem(locals_weather_app$searce_dialog$searce_dialog$$$class__1_Ui_Dialog_searce_22, mod_consts[121], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -5066,8 +5178,8 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
             goto try_except_handler_6;
         }
-        tmp_dictset_value = mod_consts[113];
-        tmp_res = PyObject_SetItem(locals_weather_app$searce_dialog$searce_dialog$$$class__1_Ui_Dialog_searce_22, mod_consts[120], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[115];
+        tmp_res = PyObject_SetItem(locals_weather_app$searce_dialog$searce_dialog$$$class__1_Ui_Dialog_searce_22, mod_consts[122], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -5110,7 +5222,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
         tmp_dictset_value = MAKE_FUNCTION_weather_app$searce_dialog$searce_dialog$$$function__1_setupUi();
 
-        tmp_res = PyObject_SetItem(locals_weather_app$searce_dialog$searce_dialog$$$class__1_Ui_Dialog_searce_22, mod_consts[121], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_weather_app$searce_dialog$searce_dialog$$$class__1_Ui_Dialog_searce_22, mod_consts[123], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -5126,7 +5238,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
 
         tmp_dictset_value = MAKE_FUNCTION_weather_app$searce_dialog$searce_dialog$$$function__2_retranslateUi();
 
-        tmp_res = PyObject_SetItem(locals_weather_app$searce_dialog$searce_dialog$$$class__1_Ui_Dialog_searce_22, mod_consts[52], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_weather_app$searce_dialog$searce_dialog$$$class__1_Ui_Dialog_searce_22, mod_consts[54], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -5134,7 +5246,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 84;
+            exception_lineno = 86;
             type_description_2 = "o";
             goto frame_exception_exit_2;
         }
@@ -5201,7 +5313,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             PyObject *tmp_cmp_expr_right_1;
             CHECK_OBJECT(tmp_class_creation_1__bases);
             tmp_cmp_expr_left_1 = tmp_class_creation_1__bases;
-            tmp_cmp_expr_right_1 = mod_consts[110];
+            tmp_cmp_expr_right_1 = mod_consts[112];
             tmp_condition_result_6 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
             if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
                 assert(ERROR_OCCURRED());
@@ -5220,8 +5332,8 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             }
         }
         branch_yes_4:;
-        tmp_dictset_value = mod_consts[110];
-        tmp_res = PyObject_SetItem(locals_weather_app$searce_dialog$searce_dialog$$$class__1_Ui_Dialog_searce_22, mod_consts[124], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[112];
+        tmp_res = PyObject_SetItem(locals_weather_app$searce_dialog$searce_dialog$$$class__1_Ui_Dialog_searce_22, mod_consts[126], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -5241,7 +5353,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
             PyObject *tmp_kwargs_value_2;
             CHECK_OBJECT(tmp_class_creation_1__metaclass);
             tmp_called_value_2 = tmp_class_creation_1__metaclass;
-            tmp_tuple_element_3 = mod_consts[113];
+            tmp_tuple_element_3 = mod_consts[115];
             tmp_args_value_2 = MAKE_TUPLE_EMPTY(3);
             PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_3);
             CHECK_OBJECT(tmp_class_creation_1__bases);
@@ -5332,7 +5444,7 @@ PyObject *modulecode_weather_app$searce_dialog$searce_dialog(PyObject *module, s
         exception_lineno = 22;
         goto try_except_handler_4;
         outline_result_1:;
-        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[113], tmp_assign_source_52);
+        UPDATE_STRING_DICT1(moduledict_weather_app$searce_dialog$searce_dialog, (Nuitka_StringObject *)mod_consts[115], tmp_assign_source_52);
     }
     goto try_end_4;
     // Exception handler code:
