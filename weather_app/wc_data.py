@@ -1,8 +1,6 @@
-
 from datetime import datetime as dt
-import pytz
-from pprint import pprint
 
+import pytz
 from PySide6.QtCore import QPointF, QDateTime
 from PySide6.QtWidgets import QLabel
 
@@ -152,7 +150,7 @@ def create_data(hourly: dict):
                   'precipitation': hourly['precipitation'], 'shortwave_radiation': hourly['shortwave_radiation'],
                   'soil_temp_6': hourly['soil_temperature_6cm'], 'soil_temp_18': hourly['soil_temperature_18cm'],
                   'soil_moist': hourly['soil_moisture_3_9cm']}
-    # print(chart_data['soil_moist'])
+    print(chart_data['soil_moist'])
     return chart_data
 
 
@@ -201,8 +199,8 @@ class HourlyChartsData:
         self.y_radiationAxisMax = y_axis_range([chart_data['shortwave_radiation']])[1]
         self.y_soil_temp_AxisMin = y_axis_range([chart_data['soil_temp_6'], chart_data['soil_temp_18']])[0]
         self.y_soil_temp_AxisMax = y_axis_range([chart_data['soil_temp_6'], chart_data['soil_temp_18']])[1]
-        self.y_soil_moistAxisMin = y_axis_range([chart_data['soil_moist']])[0]
-        self.y_soil_moistAxisMax = y_axis_range([chart_data['soil_moist']])[1]
+        self.y_soil_moistAxisMin = min(chart_data['soil_moist']) - 0.05
+        self.y_soil_moistAxisMax = max(chart_data['soil_moist']) + 0.05
 
 
 def snow_dept_no_sm(qdata: list) -> list:
@@ -229,7 +227,7 @@ def y_axis_range(y_axes: list):
     :param y_axes:
     :return:
     """
-    n = int
+    n: int
     full_axes = sum(y_axes, [])
     for n in range(1, 5):
         if ((int(max(set(full_axes))) + 2) - (int(min(set(full_axes))) - n)) % 2 == 0:

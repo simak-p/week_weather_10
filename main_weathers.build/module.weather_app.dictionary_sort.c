@@ -1,5 +1,5 @@
 /* Generated code for Python module 'weather_app.dictionary_sort'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -140,12 +140,10 @@ static PyObject *impl_weather_app$dictionary_sort$$$function__1_abc_sorted_list(
     assert(cache_frame_83152ada1f55b525ab6c6e823f05373e->m_type_description == NULL);
     frame_83152ada1f55b525ab6c6e823f05373e = cache_frame_83152ada1f55b525ab6c6e823f05373e;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_83152ada1f55b525ab6c6e823f05373e);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_83152ada1f55b525ab6c6e823f05373e) == 2); // Frame stack
+    assert(Py_REFCNT(frame_83152ada1f55b525ab6c6e823f05373e) == 2);
 
     // Framed code:
     {
@@ -197,32 +195,19 @@ static PyObject *impl_weather_app$dictionary_sort$$$function__1_abc_sorted_list(
         goto frame_return_exit_1;
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_83152ada1f55b525ab6c6e823f05373e);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_83152ada1f55b525ab6c6e823f05373e);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto function_return_exit;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_83152ada1f55b525ab6c6e823f05373e);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_83152ada1f55b525ab6c6e823f05373e, exception_lineno);
@@ -244,7 +229,6 @@ static PyObject *impl_weather_app$dictionary_sort$$$function__1_abc_sorted_list(
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_83152ada1f55b525ab6c6e823f05373e);
         cache_frame_83152ada1f55b525ab6c6e823f05373e = NULL;
     }
@@ -254,10 +238,8 @@ static PyObject *impl_weather_app$dictionary_sort$$$function__1_abc_sorted_list(
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
@@ -322,12 +304,10 @@ static PyObject *impl_weather_app$dictionary_sort$$$function__2_count_sorted_lis
     assert(cache_frame_f9a328e974df44554a9b2fabd2cfe5e5->m_type_description == NULL);
     frame_f9a328e974df44554a9b2fabd2cfe5e5 = cache_frame_f9a328e974df44554a9b2fabd2cfe5e5;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_f9a328e974df44554a9b2fabd2cfe5e5);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_f9a328e974df44554a9b2fabd2cfe5e5) == 2); // Frame stack
+    assert(Py_REFCNT(frame_f9a328e974df44554a9b2fabd2cfe5e5) == 2);
 
     // Framed code:
     {
@@ -375,32 +355,19 @@ static PyObject *impl_weather_app$dictionary_sort$$$function__2_count_sorted_lis
         goto frame_return_exit_1;
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_f9a328e974df44554a9b2fabd2cfe5e5);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_f9a328e974df44554a9b2fabd2cfe5e5);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto function_return_exit;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_f9a328e974df44554a9b2fabd2cfe5e5);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_f9a328e974df44554a9b2fabd2cfe5e5, exception_lineno);
@@ -422,7 +389,6 @@ static PyObject *impl_weather_app$dictionary_sort$$$function__2_count_sorted_lis
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_f9a328e974df44554a9b2fabd2cfe5e5);
         cache_frame_f9a328e974df44554a9b2fabd2cfe5e5 = NULL;
     }
@@ -432,10 +398,8 @@ static PyObject *impl_weather_app$dictionary_sort$$$function__2_count_sorted_lis
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
@@ -903,7 +867,6 @@ PyObject *modulecode_weather_app$dictionary_sort(PyObject *module, struct Nuitka
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_weather_app$dictionary_sort, (Nuitka_StringObject *)mod_consts[5], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_f5d362c745d2b38ff17b0022a5f153da = MAKE_MODULE_FRAME(codeobj_f5d362c745d2b38ff17b0022a5f153da, module_weather_app$dictionary_sort);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -959,18 +922,13 @@ PyObject *modulecode_weather_app$dictionary_sort(PyObject *module, struct Nuitka
         }
     }
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_f5d362c745d2b38ff17b0022a5f153da);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_f5d362c745d2b38ff17b0022a5f153da);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_f5d362c745d2b38ff17b0022a5f153da, exception_lineno);
@@ -978,12 +936,15 @@ PyObject *modulecode_weather_app$dictionary_sort(PyObject *module, struct Nuitka
         exception_tb = ADD_TRACEBACK(exception_tb, frame_f5d362c745d2b38ff17b0022a5f153da, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_f5d362c745d2b38ff17b0022a5f153da);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_1:;
     {
         PyObject *tmp_assign_source_3;

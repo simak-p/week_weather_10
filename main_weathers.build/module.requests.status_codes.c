@@ -1,5 +1,5 @@
 /* Generated code for Python module 'requests.status_codes'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -180,12 +180,10 @@ static PyObject *impl_requests$status_codes$$$function__1__init(struct Nuitka_Fu
     assert(cache_frame_4b2dfd38973185dbef32d453c42d2afa->m_type_description == NULL);
     frame_4b2dfd38973185dbef32d453c42d2afa = cache_frame_4b2dfd38973185dbef32d453c42d2afa;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_4b2dfd38973185dbef32d453c42d2afa);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_4b2dfd38973185dbef32d453c42d2afa) == 2); // Frame stack
+    assert(Py_REFCNT(frame_4b2dfd38973185dbef32d453c42d2afa) == 2);
 
     // Framed code:
     {
@@ -960,21 +958,13 @@ static PyObject *impl_requests$status_codes$$$function__1__init(struct Nuitka_Fu
         UPDATE_STRING_DICT1(moduledict_requests$status_codes, (Nuitka_StringObject *)mod_consts[9], tmp_assign_source_12);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_4b2dfd38973185dbef32d453c42d2afa);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_4b2dfd38973185dbef32d453c42d2afa);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_4b2dfd38973185dbef32d453c42d2afa, exception_lineno);
@@ -999,7 +989,6 @@ static PyObject *impl_requests$status_codes$$$function__1__init(struct Nuitka_Fu
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_4b2dfd38973185dbef32d453c42d2afa);
         cache_frame_4b2dfd38973185dbef32d453c42d2afa = NULL;
     }
@@ -1009,10 +998,8 @@ static PyObject *impl_requests$status_codes$$$function__1__init(struct Nuitka_Fu
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -1127,12 +1114,10 @@ static PyObject *impl_requests$status_codes$$$function__1__init$$$function__1_do
     assert(cache_frame_0c165899d6320c75918d15902e43654a->m_type_description == NULL);
     frame_0c165899d6320c75918d15902e43654a = cache_frame_0c165899d6320c75918d15902e43654a;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_0c165899d6320c75918d15902e43654a);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_0c165899d6320c75918d15902e43654a) == 2); // Frame stack
+    assert(Py_REFCNT(frame_0c165899d6320c75918d15902e43654a) == 2);
 
     // Framed code:
     {
@@ -1253,32 +1238,19 @@ static PyObject *impl_requests$status_codes$$$function__1__init$$$function__1_do
         goto frame_return_exit_1;
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_0c165899d6320c75918d15902e43654a);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_0c165899d6320c75918d15902e43654a);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto try_return_handler_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_0c165899d6320c75918d15902e43654a);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_0c165899d6320c75918d15902e43654a, exception_lineno);
@@ -1301,7 +1273,6 @@ static PyObject *impl_requests$status_codes$$$function__1__init$$$function__1_do
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_0c165899d6320c75918d15902e43654a);
         cache_frame_0c165899d6320c75918d15902e43654a = NULL;
     }
@@ -1311,10 +1282,8 @@ static PyObject *impl_requests$status_codes$$$function__1__init$$$function__1_do
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
@@ -1451,24 +1420,9 @@ static PyObject *requests$status_codes$$$function__1__init$$$function__1_doc$$$g
     Py_INCREF(generator->m_frame->m_frame.f_back);
 
 #if PYTHON_VERSION >= 0x300
-    // Accept currently existing exception as the one to publish again when we
+    // Store currently existing exception as the one to publish again when we
     // yield or yield from.
-    {
-        PyThreadState *thread_state = PyThreadState_GET();
-
-#if PYTHON_VERSION < 0x3b0
-        EXC_TYPE_F(generator) = EXC_TYPE(thread_state);
-        if (EXC_TYPE_F(generator) == Py_None) EXC_TYPE_F(generator) = NULL;
-        Py_XINCREF(EXC_TYPE_F(generator));
-#endif
-        EXC_VALUE_F(generator) = EXC_VALUE(thread_state);
-        Py_XINCREF(EXC_VALUE_F(generator));
-#if PYTHON_VERSION < 0x3b0
-        ASSIGN_EXC_TRACEBACK_F(generator, EXC_TRACEBACK(thread_state));
-        Py_XINCREF(EXC_TRACEBACK_F(generator));
-#endif
-    }
-
+    STORE_GENERATOR_EXCEPTION(generator);
 #endif
 
     // Framed code:
@@ -1616,13 +1570,8 @@ static PyObject *requests$status_codes$$$function__1__init$$$function__1_doc$$$g
     Nuitka_Frame_MarkAsNotExecuting(generator->m_frame);
 
 #if PYTHON_VERSION >= 0x300
-#if PYTHON_VERSION < 0x3b0
-    Py_CLEAR(EXC_TYPE_F(generator));
-#endif
-    Py_CLEAR(EXC_VALUE_F(generator));
-#if PYTHON_VERSION < 0x3b0
-    Py_CLEAR(EXC_TRACEBACK_F(generator));
-#endif
+    // Release exception attached to the frame
+    DROP_GENERATOR_EXCEPTION(generator);
 #endif
 
     // Allow re-use of the frame again.
@@ -1814,24 +1763,9 @@ static PyObject *requests$status_codes$$$function__1__init$$$genexpr__1_genexpr_
     Py_INCREF(generator->m_frame->m_frame.f_back);
 
 #if PYTHON_VERSION >= 0x300
-    // Accept currently existing exception as the one to publish again when we
+    // Store currently existing exception as the one to publish again when we
     // yield or yield from.
-    {
-        PyThreadState *thread_state = PyThreadState_GET();
-
-#if PYTHON_VERSION < 0x3b0
-        EXC_TYPE_F(generator) = EXC_TYPE(thread_state);
-        if (EXC_TYPE_F(generator) == Py_None) EXC_TYPE_F(generator) = NULL;
-        Py_XINCREF(EXC_TYPE_F(generator));
-#endif
-        EXC_VALUE_F(generator) = EXC_VALUE(thread_state);
-        Py_XINCREF(EXC_VALUE_F(generator));
-#if PYTHON_VERSION < 0x3b0
-        ASSIGN_EXC_TRACEBACK_F(generator, EXC_TRACEBACK(thread_state));
-        Py_XINCREF(EXC_TRACEBACK_F(generator));
-#endif
-    }
-
+    STORE_GENERATOR_EXCEPTION(generator);
 #endif
 
     // Framed code:
@@ -1963,13 +1897,8 @@ static PyObject *requests$status_codes$$$function__1__init$$$genexpr__1_genexpr_
     Nuitka_Frame_MarkAsNotExecuting(generator->m_frame);
 
 #if PYTHON_VERSION >= 0x300
-#if PYTHON_VERSION < 0x3b0
-    Py_CLEAR(EXC_TYPE_F(generator));
-#endif
-    Py_CLEAR(EXC_VALUE_F(generator));
-#if PYTHON_VERSION < 0x3b0
-    Py_CLEAR(EXC_TRACEBACK_F(generator));
-#endif
+    // Release exception attached to the frame
+    DROP_GENERATOR_EXCEPTION(generator);
 #endif
 
     // Allow re-use of the frame again.
@@ -2497,7 +2426,6 @@ PyObject *modulecode_requests$status_codes(PyObject *module, struct Nuitka_MetaP
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_requests$status_codes, (Nuitka_StringObject *)mod_consts[20], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_e18be9cdfb55af249c482e05c6659c4a = MAKE_MODULE_FRAME(codeobj_e18be9cdfb55af249c482e05c6659c4a, module_requests$status_codes);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -2668,18 +2596,13 @@ PyObject *modulecode_requests$status_codes(PyObject *module, struct Nuitka_MetaP
         Py_DECREF(tmp_call_result_1);
     }
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_e18be9cdfb55af249c482e05c6659c4a);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_e18be9cdfb55af249c482e05c6659c4a);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_e18be9cdfb55af249c482e05c6659c4a, exception_lineno);
@@ -2687,12 +2610,15 @@ PyObject *modulecode_requests$status_codes(PyObject *module, struct Nuitka_MetaP
         exception_tb = ADD_TRACEBACK(exception_tb, frame_e18be9cdfb55af249c482e05c6659c4a, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_e18be9cdfb55af249c482e05c6659c4a);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_1:;
 
     // Report to PGO about leaving the module without error.

@@ -1,5 +1,5 @@
 /* Generated code for Python module 'requests.certs'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -455,7 +455,6 @@ PyObject *modulecode_requests$certs(PyObject *module, struct Nuitka_MetaPathBase
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_requests$certs, (Nuitka_StringObject *)mod_consts[2], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_e280c9b2ad3b0666ace12e2c7d66081f = MAKE_MODULE_FRAME(codeobj_e280c9b2ad3b0666ace12e2c7d66081f, module_requests$certs);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -565,18 +564,13 @@ PyObject *modulecode_requests$certs(PyObject *module, struct Nuitka_MetaPathBase
         UPDATE_STRING_DICT1(moduledict_requests$certs, (Nuitka_StringObject *)mod_consts[10], tmp_assign_source_4);
     }
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_e280c9b2ad3b0666ace12e2c7d66081f);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_e280c9b2ad3b0666ace12e2c7d66081f);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_e280c9b2ad3b0666ace12e2c7d66081f, exception_lineno);
@@ -584,12 +578,15 @@ PyObject *modulecode_requests$certs(PyObject *module, struct Nuitka_MetaPathBase
         exception_tb = ADD_TRACEBACK(exception_tb, frame_e280c9b2ad3b0666ace12e2c7d66081f, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_e280c9b2ad3b0666ace12e2c7d66081f);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_1:;
 
     // Report to PGO about leaving the module without error.

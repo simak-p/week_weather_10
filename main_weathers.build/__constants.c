@@ -3,7 +3,7 @@
 #include "structseq.h"
 
 // Global constants storage
-PyObject *global_constants[76];
+PyObject *global_constants[84];
 
 // Sentinel PyObject to be used for all our call iterator endings. It will
 // become a PyCObject pointing to NULL. It's address is unique, and that's
@@ -33,9 +33,9 @@ static void _createGlobalConstants(void) {
     Nuitka_SysSetObject(
         "executable",
 #ifndef _NUITKA_STANDALONE
-        global_constants[75]
+        global_constants[83]
 #else
-        getStandaloneSysExecutablePath(global_constants[75])
+        getStandaloneSysExecutablePath(global_constants[83])
 #endif
     );
 
@@ -96,8 +96,8 @@ static void _createGlobalConstants(void) {
     assert(Nuitka_dunder_compiled_value != NULL);
 
     PyStructSequence_SET_ITEM(Nuitka_dunder_compiled_value, 0, PyInt_FromLong(1));
-    PyStructSequence_SET_ITEM(Nuitka_dunder_compiled_value, 1, PyInt_FromLong(3));
-    PyStructSequence_SET_ITEM(Nuitka_dunder_compiled_value, 2, PyInt_FromLong(5));
+    PyStructSequence_SET_ITEM(Nuitka_dunder_compiled_value, 1, PyInt_FromLong(4));
+    PyStructSequence_SET_ITEM(Nuitka_dunder_compiled_value, 2, PyInt_FromLong(8));
 
     PyStructSequence_SET_ITEM(Nuitka_dunder_compiled_value, 3, Nuitka_String_FromString("release"));
 

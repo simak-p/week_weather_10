@@ -1,5 +1,5 @@
 /* Generated code for Python module 'requests.hooks'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -92,7 +92,7 @@ static void createModuleCodeObjects(void) {
 }
 
 // The module function declarations.
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_pos_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__8_complex_call_helper_pos_star_dict(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_requests$hooks$$$function__1_default_hooks();
@@ -155,12 +155,10 @@ static PyObject *impl_requests$hooks$$$function__1_default_hooks(struct Nuitka_F
     assert(cache_frame_994be9194e66749c848480a2aebcf534->m_type_description == NULL);
     frame_994be9194e66749c848480a2aebcf534 = cache_frame_994be9194e66749c848480a2aebcf534;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_994be9194e66749c848480a2aebcf534);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_994be9194e66749c848480a2aebcf534) == 2); // Frame stack
+    assert(Py_REFCNT(frame_994be9194e66749c848480a2aebcf534) == 2);
 
     // Framed code:
     // Tried code:
@@ -223,12 +221,10 @@ static PyObject *impl_requests$hooks$$$function__1_default_hooks(struct Nuitka_F
     assert(cache_frame_a4ef164db64f2b019d4f2afe3a08efab_2->m_type_description == NULL);
     frame_a4ef164db64f2b019d4f2afe3a08efab_2 = cache_frame_a4ef164db64f2b019d4f2afe3a08efab_2;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_a4ef164db64f2b019d4f2afe3a08efab_2);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_a4ef164db64f2b019d4f2afe3a08efab_2) == 2); // Frame stack
+    assert(Py_REFCNT(frame_a4ef164db64f2b019d4f2afe3a08efab_2) == 2);
 
     // Framed code:
     // Tried code:
@@ -352,32 +348,19 @@ static PyObject *impl_requests$hooks$$$function__1_default_hooks(struct Nuitka_F
     goto frame_exception_exit_2;
     // End of try:
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_a4ef164db64f2b019d4f2afe3a08efab_2);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_2:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_a4ef164db64f2b019d4f2afe3a08efab_2);
-#endif
+    frame_return_exit_2:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto try_return_handler_1;
+    frame_exception_exit_2:
 
-    frame_exception_exit_2:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_a4ef164db64f2b019d4f2afe3a08efab_2);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_a4ef164db64f2b019d4f2afe3a08efab_2, exception_lineno);
@@ -399,7 +382,6 @@ static PyObject *impl_requests$hooks$$$function__1_default_hooks(struct Nuitka_F
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_a4ef164db64f2b019d4f2afe3a08efab_2);
         cache_frame_a4ef164db64f2b019d4f2afe3a08efab_2 = NULL;
     }
@@ -409,10 +391,8 @@ static PyObject *impl_requests$hooks$$$function__1_default_hooks(struct Nuitka_F
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto nested_frame_exit_1;
-
     frame_no_exception_1:;
     goto skip_nested_handling_1;
     nested_frame_exit_1:;
@@ -455,32 +435,19 @@ static PyObject *impl_requests$hooks$$$function__1_default_hooks(struct Nuitka_F
     outline_result_1:;
     goto frame_return_exit_1;
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_994be9194e66749c848480a2aebcf534);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_2;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_994be9194e66749c848480a2aebcf534);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto function_return_exit;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_994be9194e66749c848480a2aebcf534);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_994be9194e66749c848480a2aebcf534, exception_lineno);
@@ -501,7 +468,6 @@ static PyObject *impl_requests$hooks$$$function__1_default_hooks(struct Nuitka_F
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_994be9194e66749c848480a2aebcf534);
         cache_frame_994be9194e66749c848480a2aebcf534 = NULL;
     }
@@ -511,10 +477,8 @@ static PyObject *impl_requests$hooks$$$function__1_default_hooks(struct Nuitka_F
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_2:;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
@@ -594,12 +558,10 @@ static PyObject *impl_requests$hooks$$$function__2_dispatch_hook(struct Nuitka_F
     assert(cache_frame_e370fce9d87130195089a0a3e368dec6->m_type_description == NULL);
     frame_e370fce9d87130195089a0a3e368dec6 = cache_frame_e370fce9d87130195089a0a3e368dec6;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_e370fce9d87130195089a0a3e368dec6);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_e370fce9d87130195089a0a3e368dec6) == 2); // Frame stack
+    assert(Py_REFCNT(frame_e370fce9d87130195089a0a3e368dec6) == 2);
 
     // Framed code:
     {
@@ -836,7 +798,7 @@ static PyObject *impl_requests$hooks$$$function__2_dispatch_hook(struct Nuitka_F
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_assign_source_7 = impl___main__$$$function__7_complex_call_helper_pos_star_dict(dir_call_args);
+            tmp_assign_source_7 = impl___main__$$$function__8_complex_call_helper_pos_star_dict(dir_call_args);
         }
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -943,32 +905,19 @@ static PyObject *impl_requests$hooks$$$function__2_dispatch_hook(struct Nuitka_F
     Py_INCREF(tmp_return_value);
     goto frame_return_exit_1;
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_e370fce9d87130195089a0a3e368dec6);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_e370fce9d87130195089a0a3e368dec6);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto try_return_handler_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_e370fce9d87130195089a0a3e368dec6);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_e370fce9d87130195089a0a3e368dec6, exception_lineno);
@@ -995,7 +944,6 @@ static PyObject *impl_requests$hooks$$$function__2_dispatch_hook(struct Nuitka_F
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_e370fce9d87130195089a0a3e368dec6);
         cache_frame_e370fce9d87130195089a0a3e368dec6 = NULL;
     }
@@ -1005,10 +953,8 @@ static PyObject *impl_requests$hooks$$$function__2_dispatch_hook(struct Nuitka_F
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
@@ -1494,7 +1440,6 @@ PyObject *modulecode_requests$hooks(PyObject *module, struct Nuitka_MetaPathBase
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_requests$hooks, (Nuitka_StringObject *)mod_consts[7], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_8fe23df2931fa581d13a1ae0424a00aa = MAKE_MODULE_FRAME(codeobj_8fe23df2931fa581d13a1ae0424a00aa, module_requests$hooks);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -1550,18 +1495,13 @@ PyObject *modulecode_requests$hooks(PyObject *module, struct Nuitka_MetaPathBase
         }
     }
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_8fe23df2931fa581d13a1ae0424a00aa);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_8fe23df2931fa581d13a1ae0424a00aa);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_8fe23df2931fa581d13a1ae0424a00aa, exception_lineno);
@@ -1569,12 +1509,15 @@ PyObject *modulecode_requests$hooks(PyObject *module, struct Nuitka_MetaPathBase
         exception_tb = ADD_TRACEBACK(exception_tb, frame_8fe23df2931fa581d13a1ae0424a00aa, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_8fe23df2931fa581d13a1ae0424a00aa);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_1:;
     {
         PyObject *tmp_assign_source_3;

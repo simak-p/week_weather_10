@@ -1,5 +1,5 @@
 /* Generated code for Python module 'weather_app.create_charts'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -215,12 +215,10 @@ static PyObject *impl_weather_app$create_charts$$$function__1___init__(struct Nu
     assert(cache_frame_4c95355a5acd2e24fe8b8ece5cdd1bd4->m_type_description == NULL);
     frame_4c95355a5acd2e24fe8b8ece5cdd1bd4 = cache_frame_4c95355a5acd2e24fe8b8ece5cdd1bd4;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_4c95355a5acd2e24fe8b8ece5cdd1bd4);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_4c95355a5acd2e24fe8b8ece5cdd1bd4) == 2); // Frame stack
+    assert(Py_REFCNT(frame_4c95355a5acd2e24fe8b8ece5cdd1bd4) == 2);
 
     // Framed code:
     {
@@ -487,21 +485,13 @@ static PyObject *impl_weather_app$create_charts$$$function__1___init__(struct Nu
         Py_DECREF(tmp_call_result_8);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_4c95355a5acd2e24fe8b8ece5cdd1bd4);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_4c95355a5acd2e24fe8b8ece5cdd1bd4);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_4c95355a5acd2e24fe8b8ece5cdd1bd4, exception_lineno);
@@ -526,7 +516,6 @@ static PyObject *impl_weather_app$create_charts$$$function__1___init__(struct Nu
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_4c95355a5acd2e24fe8b8ece5cdd1bd4);
         cache_frame_4c95355a5acd2e24fe8b8ece5cdd1bd4 = NULL;
     }
@@ -536,10 +525,8 @@ static PyObject *impl_weather_app$create_charts$$$function__1___init__(struct Nu
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -620,12 +607,10 @@ static PyObject *impl_weather_app$create_charts$$$function__2___init__(struct Nu
     assert(cache_frame_b45b5db61f4757874d8d52dc435919cf->m_type_description == NULL);
     frame_b45b5db61f4757874d8d52dc435919cf = cache_frame_b45b5db61f4757874d8d52dc435919cf;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_b45b5db61f4757874d8d52dc435919cf);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_b45b5db61f4757874d8d52dc435919cf) == 2); // Frame stack
+    assert(Py_REFCNT(frame_b45b5db61f4757874d8d52dc435919cf) == 2);
 
     // Framed code:
     {
@@ -812,21 +797,13 @@ static PyObject *impl_weather_app$create_charts$$$function__2___init__(struct Nu
         Py_DECREF(tmp_call_result_4);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_b45b5db61f4757874d8d52dc435919cf);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_b45b5db61f4757874d8d52dc435919cf);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_b45b5db61f4757874d8d52dc435919cf, exception_lineno);
@@ -853,7 +830,6 @@ static PyObject *impl_weather_app$create_charts$$$function__2___init__(struct Nu
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_b45b5db61f4757874d8d52dc435919cf);
         cache_frame_b45b5db61f4757874d8d52dc435919cf = NULL;
     }
@@ -863,10 +839,8 @@ static PyObject *impl_weather_app$create_charts$$$function__2___init__(struct Nu
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -954,12 +928,10 @@ static PyObject *impl_weather_app$create_charts$$$function__3___init__(struct Nu
     assert(cache_frame_773e3c666ad340194a7d12ff3881b4ff->m_type_description == NULL);
     frame_773e3c666ad340194a7d12ff3881b4ff = cache_frame_773e3c666ad340194a7d12ff3881b4ff;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_773e3c666ad340194a7d12ff3881b4ff);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_773e3c666ad340194a7d12ff3881b4ff) == 2); // Frame stack
+    assert(Py_REFCNT(frame_773e3c666ad340194a7d12ff3881b4ff) == 2);
 
     // Framed code:
     {
@@ -1031,15 +1003,28 @@ static PyObject *impl_weather_app$create_charts$$$function__3___init__(struct Nu
         Py_DECREF(tmp_call_result_2);
     }
     {
-        PyObject *tmp_called_instance_3;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_call_result_3;
         PyObject *tmp_args_element_value_2;
         CHECK_OBJECT(par_self);
-        tmp_called_instance_3 = par_self;
+        tmp_expression_value_1 = par_self;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[17]);
+        if (tmp_called_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 49;
+            type_description_1 = "ooooc";
+            goto frame_exception_exit_1;
+        }
         CHECK_OBJECT(par_list_series);
         tmp_args_element_value_2 = par_list_series;
         frame_773e3c666ad340194a7d12ff3881b4ff->m_frame.f_lineno = 49;
-        tmp_call_result_3 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[17], tmp_args_element_value_2);
+        tmp_call_result_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_2);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1053,17 +1038,17 @@ static PyObject *impl_weather_app$create_charts$$$function__3___init__(struct Nu
         Py_DECREF(tmp_call_result_3);
     }
     {
-        PyObject *tmp_called_value_1;
-        PyObject *tmp_expression_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_call_result_4;
         PyObject *tmp_args_element_value_3;
-        PyObject *tmp_called_value_2;
+        PyObject *tmp_called_value_3;
         PyObject *tmp_args_element_value_4;
         PyObject *tmp_args_element_value_5;
         CHECK_OBJECT(par_self);
-        tmp_expression_value_1 = par_self;
-        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[18]);
-        if (tmp_called_value_1 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[18]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1073,17 +1058,17 @@ static PyObject *impl_weather_app$create_charts$$$function__3___init__(struct Nu
             type_description_1 = "ooooc";
             goto frame_exception_exit_1;
         }
-        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_weather_app$create_charts, (Nuitka_StringObject *)mod_consts[19]);
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_weather_app$create_charts, (Nuitka_StringObject *)mod_consts[19]);
 
-        if (unlikely(tmp_called_value_2 == NULL)) {
-            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[19]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[19]);
         }
 
-        if (tmp_called_value_2 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 50;
             type_description_1 = "ooooc";
@@ -1095,22 +1080,22 @@ static PyObject *impl_weather_app$create_charts$$$function__3___init__(struct Nu
         frame_773e3c666ad340194a7d12ff3881b4ff->m_frame.f_lineno = 50;
         {
             PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5};
-            tmp_args_element_value_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
+            tmp_args_element_value_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_3, call_args);
         }
 
         if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 50;
             type_description_1 = "ooooc";
             goto frame_exception_exit_1;
         }
         frame_773e3c666ad340194a7d12ff3881b4ff->m_frame.f_lineno = 50;
-        tmp_call_result_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_3);
-        Py_DECREF(tmp_called_value_1);
+        tmp_call_result_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_3);
+        Py_DECREF(tmp_called_value_2);
         Py_DECREF(tmp_args_element_value_3);
         if (tmp_call_result_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -1125,21 +1110,13 @@ static PyObject *impl_weather_app$create_charts$$$function__3___init__(struct Nu
         Py_DECREF(tmp_call_result_4);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_773e3c666ad340194a7d12ff3881b4ff);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_773e3c666ad340194a7d12ff3881b4ff);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_773e3c666ad340194a7d12ff3881b4ff, exception_lineno);
@@ -1165,7 +1142,6 @@ static PyObject *impl_weather_app$create_charts$$$function__3___init__(struct Nu
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_773e3c666ad340194a7d12ff3881b4ff);
         cache_frame_773e3c666ad340194a7d12ff3881b4ff = NULL;
     }
@@ -1175,10 +1151,8 @@ static PyObject *impl_weather_app$create_charts$$$function__3___init__(struct Nu
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -1267,12 +1241,10 @@ static PyObject *impl_weather_app$create_charts$$$function__4___init__(struct Nu
     assert(cache_frame_eceeeba59e51bebbe764f01a147153c3->m_type_description == NULL);
     frame_eceeeba59e51bebbe764f01a147153c3 = cache_frame_eceeeba59e51bebbe764f01a147153c3;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_eceeeba59e51bebbe764f01a147153c3);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_eceeeba59e51bebbe764f01a147153c3) == 2); // Frame stack
+    assert(Py_REFCNT(frame_eceeeba59e51bebbe764f01a147153c3) == 2);
 
     // Framed code:
     {
@@ -2214,21 +2186,13 @@ static PyObject *impl_weather_app$create_charts$$$function__4___init__(struct Nu
         Py_DECREF(tmp_call_result_9);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_eceeeba59e51bebbe764f01a147153c3);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_eceeeba59e51bebbe764f01a147153c3);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_eceeeba59e51bebbe764f01a147153c3, exception_lineno);
@@ -2253,7 +2217,6 @@ static PyObject *impl_weather_app$create_charts$$$function__4___init__(struct Nu
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_eceeeba59e51bebbe764f01a147153c3);
         cache_frame_eceeeba59e51bebbe764f01a147153c3 = NULL;
     }
@@ -2263,10 +2226,8 @@ static PyObject *impl_weather_app$create_charts$$$function__4___init__(struct Nu
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -2376,12 +2337,10 @@ static PyObject *impl_weather_app$create_charts$$$function__5___init__(struct Nu
     assert(cache_frame_621a92a8e6e9495e5aeaea38b5386bfa->m_type_description == NULL);
     frame_621a92a8e6e9495e5aeaea38b5386bfa = cache_frame_621a92a8e6e9495e5aeaea38b5386bfa;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_621a92a8e6e9495e5aeaea38b5386bfa);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_621a92a8e6e9495e5aeaea38b5386bfa) == 2); // Frame stack
+    assert(Py_REFCNT(frame_621a92a8e6e9495e5aeaea38b5386bfa) == 2);
 
     // Framed code:
     {
@@ -3089,21 +3048,13 @@ static PyObject *impl_weather_app$create_charts$$$function__5___init__(struct Nu
         Py_DECREF(tmp_call_result_6);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_621a92a8e6e9495e5aeaea38b5386bfa);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_621a92a8e6e9495e5aeaea38b5386bfa);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_621a92a8e6e9495e5aeaea38b5386bfa, exception_lineno);
@@ -3128,7 +3079,6 @@ static PyObject *impl_weather_app$create_charts$$$function__5___init__(struct Nu
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_621a92a8e6e9495e5aeaea38b5386bfa);
         cache_frame_621a92a8e6e9495e5aeaea38b5386bfa = NULL;
     }
@@ -3138,10 +3088,8 @@ static PyObject *impl_weather_app$create_charts$$$function__5___init__(struct Nu
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -3251,12 +3199,10 @@ static PyObject *impl_weather_app$create_charts$$$function__6___init__(struct Nu
     assert(cache_frame_171d3b679c2c053aabfea7ba80436dfc->m_type_description == NULL);
     frame_171d3b679c2c053aabfea7ba80436dfc = cache_frame_171d3b679c2c053aabfea7ba80436dfc;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_171d3b679c2c053aabfea7ba80436dfc);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_171d3b679c2c053aabfea7ba80436dfc) == 2); // Frame stack
+    assert(Py_REFCNT(frame_171d3b679c2c053aabfea7ba80436dfc) == 2);
 
     // Framed code:
     {
@@ -3966,21 +3912,13 @@ static PyObject *impl_weather_app$create_charts$$$function__6___init__(struct Nu
         Py_DECREF(tmp_call_result_6);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_171d3b679c2c053aabfea7ba80436dfc);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_171d3b679c2c053aabfea7ba80436dfc);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_171d3b679c2c053aabfea7ba80436dfc, exception_lineno);
@@ -4005,7 +3943,6 @@ static PyObject *impl_weather_app$create_charts$$$function__6___init__(struct Nu
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_171d3b679c2c053aabfea7ba80436dfc);
         cache_frame_171d3b679c2c053aabfea7ba80436dfc = NULL;
     }
@@ -4015,10 +3952,8 @@ static PyObject *impl_weather_app$create_charts$$$function__6___init__(struct Nu
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -4128,12 +4063,10 @@ static PyObject *impl_weather_app$create_charts$$$function__7___init__(struct Nu
     assert(cache_frame_fbdfbfad90d8e45dd4df5f54c936251f->m_type_description == NULL);
     frame_fbdfbfad90d8e45dd4df5f54c936251f = cache_frame_fbdfbfad90d8e45dd4df5f54c936251f;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_fbdfbfad90d8e45dd4df5f54c936251f);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_fbdfbfad90d8e45dd4df5f54c936251f) == 2); // Frame stack
+    assert(Py_REFCNT(frame_fbdfbfad90d8e45dd4df5f54c936251f) == 2);
 
     // Framed code:
     {
@@ -5053,21 +4986,13 @@ static PyObject *impl_weather_app$create_charts$$$function__7___init__(struct Nu
         Py_DECREF(tmp_call_result_8);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_fbdfbfad90d8e45dd4df5f54c936251f);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_fbdfbfad90d8e45dd4df5f54c936251f);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_fbdfbfad90d8e45dd4df5f54c936251f, exception_lineno);
@@ -5092,7 +5017,6 @@ static PyObject *impl_weather_app$create_charts$$$function__7___init__(struct Nu
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_fbdfbfad90d8e45dd4df5f54c936251f);
         cache_frame_fbdfbfad90d8e45dd4df5f54c936251f = NULL;
     }
@@ -5102,10 +5026,8 @@ static PyObject *impl_weather_app$create_charts$$$function__7___init__(struct Nu
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -5215,12 +5137,10 @@ static PyObject *impl_weather_app$create_charts$$$function__8___init__(struct Nu
     assert(cache_frame_90274ab9158bb28454e2deb234a20b2d->m_type_description == NULL);
     frame_90274ab9158bb28454e2deb234a20b2d = cache_frame_90274ab9158bb28454e2deb234a20b2d;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_90274ab9158bb28454e2deb234a20b2d);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_90274ab9158bb28454e2deb234a20b2d) == 2); // Frame stack
+    assert(Py_REFCNT(frame_90274ab9158bb28454e2deb234a20b2d) == 2);
 
     // Framed code:
     {
@@ -5930,21 +5850,13 @@ static PyObject *impl_weather_app$create_charts$$$function__8___init__(struct Nu
         Py_DECREF(tmp_call_result_6);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_90274ab9158bb28454e2deb234a20b2d);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_90274ab9158bb28454e2deb234a20b2d);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_90274ab9158bb28454e2deb234a20b2d, exception_lineno);
@@ -5969,7 +5881,6 @@ static PyObject *impl_weather_app$create_charts$$$function__8___init__(struct Nu
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_90274ab9158bb28454e2deb234a20b2d);
         cache_frame_90274ab9158bb28454e2deb234a20b2d = NULL;
     }
@@ -5979,10 +5890,8 @@ static PyObject *impl_weather_app$create_charts$$$function__8___init__(struct Nu
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -6092,12 +6001,10 @@ static PyObject *impl_weather_app$create_charts$$$function__9___init__(struct Nu
     assert(cache_frame_e86fc416d949085ec775b28e930037aa->m_type_description == NULL);
     frame_e86fc416d949085ec775b28e930037aa = cache_frame_e86fc416d949085ec775b28e930037aa;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_e86fc416d949085ec775b28e930037aa);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_e86fc416d949085ec775b28e930037aa) == 2); // Frame stack
+    assert(Py_REFCNT(frame_e86fc416d949085ec775b28e930037aa) == 2);
 
     // Framed code:
     {
@@ -6807,21 +6714,13 @@ static PyObject *impl_weather_app$create_charts$$$function__9___init__(struct Nu
         Py_DECREF(tmp_call_result_6);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_e86fc416d949085ec775b28e930037aa);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_e86fc416d949085ec775b28e930037aa);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_e86fc416d949085ec775b28e930037aa, exception_lineno);
@@ -6846,7 +6745,6 @@ static PyObject *impl_weather_app$create_charts$$$function__9___init__(struct Nu
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_e86fc416d949085ec775b28e930037aa);
         cache_frame_e86fc416d949085ec775b28e930037aa = NULL;
     }
@@ -6856,10 +6754,8 @@ static PyObject *impl_weather_app$create_charts$$$function__9___init__(struct Nu
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -6969,12 +6865,10 @@ static PyObject *impl_weather_app$create_charts$$$function__10___init__(struct N
     assert(cache_frame_3be55777f44c3a27e00df58a978e9428->m_type_description == NULL);
     frame_3be55777f44c3a27e00df58a978e9428 = cache_frame_3be55777f44c3a27e00df58a978e9428;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_3be55777f44c3a27e00df58a978e9428);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_3be55777f44c3a27e00df58a978e9428) == 2); // Frame stack
+    assert(Py_REFCNT(frame_3be55777f44c3a27e00df58a978e9428) == 2);
 
     // Framed code:
     {
@@ -7684,21 +7578,13 @@ static PyObject *impl_weather_app$create_charts$$$function__10___init__(struct N
         Py_DECREF(tmp_call_result_6);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_3be55777f44c3a27e00df58a978e9428);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_3be55777f44c3a27e00df58a978e9428);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_3be55777f44c3a27e00df58a978e9428, exception_lineno);
@@ -7723,7 +7609,6 @@ static PyObject *impl_weather_app$create_charts$$$function__10___init__(struct N
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_3be55777f44c3a27e00df58a978e9428);
         cache_frame_3be55777f44c3a27e00df58a978e9428 = NULL;
     }
@@ -7733,10 +7618,8 @@ static PyObject *impl_weather_app$create_charts$$$function__10___init__(struct N
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -7846,12 +7729,10 @@ static PyObject *impl_weather_app$create_charts$$$function__11___init__(struct N
     assert(cache_frame_ed948dc6c636c00fa9cf553d03033d58->m_type_description == NULL);
     frame_ed948dc6c636c00fa9cf553d03033d58 = cache_frame_ed948dc6c636c00fa9cf553d03033d58;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_ed948dc6c636c00fa9cf553d03033d58);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_ed948dc6c636c00fa9cf553d03033d58) == 2); // Frame stack
+    assert(Py_REFCNT(frame_ed948dc6c636c00fa9cf553d03033d58) == 2);
 
     // Framed code:
     {
@@ -8561,21 +8442,13 @@ static PyObject *impl_weather_app$create_charts$$$function__11___init__(struct N
         Py_DECREF(tmp_call_result_6);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_ed948dc6c636c00fa9cf553d03033d58);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_ed948dc6c636c00fa9cf553d03033d58);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_ed948dc6c636c00fa9cf553d03033d58, exception_lineno);
@@ -8600,7 +8473,6 @@ static PyObject *impl_weather_app$create_charts$$$function__11___init__(struct N
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_ed948dc6c636c00fa9cf553d03033d58);
         cache_frame_ed948dc6c636c00fa9cf553d03033d58 = NULL;
     }
@@ -8610,10 +8482,8 @@ static PyObject *impl_weather_app$create_charts$$$function__11___init__(struct N
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -8723,12 +8593,10 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
     assert(cache_frame_2cf4532176dc63bb817aec1b1db91683->m_type_description == NULL);
     frame_2cf4532176dc63bb817aec1b1db91683 = cache_frame_2cf4532176dc63bb817aec1b1db91683;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_2cf4532176dc63bb817aec1b1db91683);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_2cf4532176dc63bb817aec1b1db91683) == 2); // Frame stack
+    assert(Py_REFCNT(frame_2cf4532176dc63bb817aec1b1db91683) == 2);
 
     // Framed code:
     {
@@ -9063,10 +8931,9 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
         PyObject *tmp_assattr_value_3;
         PyObject *tmp_called_value_5;
         PyObject *tmp_args_element_value_9;
-        PyObject *tmp_args_element_value_10;
-        PyObject *tmp_sub_expr_left_1;
-        PyObject *tmp_sub_expr_right_1;
         PyObject *tmp_expression_value_8;
+        PyObject *tmp_args_element_value_10;
+        PyObject *tmp_expression_value_9;
         PyObject *tmp_args_element_value_11;
         PyObject *tmp_args_element_value_12;
         PyObject *tmp_assattr_target_3;
@@ -9086,11 +8953,10 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             type_description_1 = "oooc";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_value_9 = mod_consts[111];
         CHECK_OBJECT(var_hd);
         tmp_expression_value_8 = var_hd;
-        tmp_sub_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[112]);
-        if (tmp_sub_expr_left_1 == NULL) {
+        tmp_args_element_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[111]);
+        if (tmp_args_element_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9100,27 +8966,28 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             type_description_1 = "oooc";
             goto frame_exception_exit_1;
         }
-        tmp_sub_expr_right_1 = mod_consts[113];
-        tmp_args_element_value_10 = BINARY_OPERATION_SUB_OBJECT_OBJECT_FLOAT(tmp_sub_expr_left_1, tmp_sub_expr_right_1);
-        Py_DECREF(tmp_sub_expr_left_1);
+        CHECK_OBJECT(var_hd);
+        tmp_expression_value_9 = var_hd;
+        tmp_args_element_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[112]);
         if (tmp_args_element_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
+            Py_DECREF(tmp_args_element_value_9);
 
             exception_lineno = 259;
             type_description_1 = "oooc";
             goto frame_exception_exit_1;
         }
         tmp_args_element_value_11 = mod_consts[31];
-        tmp_args_element_value_12 = mod_consts[114];
+        tmp_args_element_value_12 = mod_consts[113];
         frame_2cf4532176dc63bb817aec1b1db91683->m_frame.f_lineno = 259;
         {
             PyObject *call_args[] = {tmp_args_element_value_9, tmp_args_element_value_10, tmp_args_element_value_11, tmp_args_element_value_12};
             tmp_assattr_value_3 = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_5, call_args);
         }
 
+        Py_DECREF(tmp_args_element_value_9);
         Py_DECREF(tmp_args_element_value_10);
         if (tmp_assattr_value_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9134,7 +9001,7 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_3 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[115], tmp_assattr_value_3);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[114], tmp_assattr_value_3);
         Py_DECREF(tmp_assattr_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -9152,7 +9019,7 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
         PyObject *tmp_called_value_6;
         PyObject *tmp_args_element_value_13;
         PyObject *tmp_args_element_value_14;
-        PyObject *tmp_expression_value_9;
+        PyObject *tmp_expression_value_10;
         PyObject *tmp_args_element_value_15;
         PyObject *tmp_called_value_7;
         PyObject *tmp_assattr_target_4;
@@ -9172,10 +9039,10 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             type_description_1 = "oooc";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_value_13 = mod_consts[116];
+        tmp_args_element_value_13 = mod_consts[115];
         CHECK_OBJECT(var_hd);
-        tmp_expression_value_9 = var_hd;
-        tmp_args_element_value_14 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[117]);
+        tmp_expression_value_10 = var_hd;
+        tmp_args_element_value_14 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[116]);
         if (tmp_args_element_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9235,7 +9102,7 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_4 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[118], tmp_assattr_value_4);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[117], tmp_assattr_value_4);
         Py_DECREF(tmp_assattr_value_4);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -9253,7 +9120,7 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
         PyObject *tmp_called_value_8;
         PyObject *tmp_args_element_value_16;
         PyObject *tmp_args_element_value_17;
-        PyObject *tmp_expression_value_10;
+        PyObject *tmp_expression_value_11;
         PyObject *tmp_args_element_value_18;
         PyObject *tmp_called_value_9;
         PyObject *tmp_assattr_target_5;
@@ -9273,10 +9140,10 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             type_description_1 = "oooc";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_value_16 = mod_consts[119];
+        tmp_args_element_value_16 = mod_consts[118];
         CHECK_OBJECT(var_hd);
-        tmp_expression_value_10 = var_hd;
-        tmp_args_element_value_17 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[120]);
+        tmp_expression_value_11 = var_hd;
+        tmp_args_element_value_17 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[119]);
         if (tmp_args_element_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9336,7 +9203,7 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_5 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_5, mod_consts[121], tmp_assattr_value_5);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_5, mod_consts[120], tmp_assattr_value_5);
         Py_DECREF(tmp_assattr_value_5);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -9354,7 +9221,7 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
         PyObject *tmp_called_value_10;
         PyObject *tmp_args_element_value_19;
         PyObject *tmp_args_element_value_20;
-        PyObject *tmp_expression_value_11;
+        PyObject *tmp_expression_value_12;
         PyObject *tmp_args_element_value_21;
         PyObject *tmp_called_value_11;
         PyObject *tmp_assattr_target_6;
@@ -9374,10 +9241,10 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             type_description_1 = "oooc";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_value_19 = mod_consts[122];
+        tmp_args_element_value_19 = mod_consts[121];
         CHECK_OBJECT(var_hd);
-        tmp_expression_value_11 = var_hd;
-        tmp_args_element_value_20 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[123]);
+        tmp_expression_value_12 = var_hd;
+        tmp_args_element_value_20 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[122]);
         if (tmp_args_element_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9437,7 +9304,7 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_6 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_6, mod_consts[124], tmp_assattr_value_6);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_6, mod_consts[123], tmp_assattr_value_6);
         Py_DECREF(tmp_assattr_value_6);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -9452,15 +9319,15 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
     }
     {
         PyObject *tmp_called_value_12;
-        PyObject *tmp_expression_value_12;
+        PyObject *tmp_expression_value_13;
         PyObject *tmp_call_result_3;
         PyObject *tmp_args_element_value_22;
-        PyObject *tmp_expression_value_13;
-        PyObject *tmp_args_element_value_23;
         PyObject *tmp_expression_value_14;
+        PyObject *tmp_args_element_value_23;
+        PyObject *tmp_expression_value_15;
         CHECK_OBJECT(par_self);
-        tmp_expression_value_12 = par_self;
-        tmp_called_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[48]);
+        tmp_expression_value_13 = par_self;
+        tmp_called_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[48]);
         if (tmp_called_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9472,8 +9339,8 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_value_13 = par_self;
-        tmp_args_element_value_22 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[37]);
+        tmp_expression_value_14 = par_self;
+        tmp_args_element_value_22 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[37]);
         if (tmp_args_element_value_22 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9484,13 +9351,13 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             type_description_1 = "oooc";
             goto frame_exception_exit_1;
         }
-        tmp_expression_value_14 = GET_STRING_DICT_VALUE(moduledict_weather_app$create_charts, (Nuitka_StringObject *)mod_consts[41]);
+        tmp_expression_value_15 = GET_STRING_DICT_VALUE(moduledict_weather_app$create_charts, (Nuitka_StringObject *)mod_consts[41]);
 
-        if (unlikely(tmp_expression_value_14 == NULL)) {
-            tmp_expression_value_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[41]);
+        if (unlikely(tmp_expression_value_15 == NULL)) {
+            tmp_expression_value_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[41]);
         }
 
-        if (tmp_expression_value_14 == NULL) {
+        if (tmp_expression_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9501,7 +9368,7 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             type_description_1 = "oooc";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_value_23 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[50]);
+        tmp_args_element_value_23 = LOOKUP_ATTRIBUTE(tmp_expression_value_15, mod_consts[50]);
         if (tmp_args_element_value_23 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9536,15 +9403,15 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
     }
     {
         PyObject *tmp_called_value_13;
-        PyObject *tmp_expression_value_15;
+        PyObject *tmp_expression_value_16;
         PyObject *tmp_call_result_4;
         PyObject *tmp_args_element_value_24;
-        PyObject *tmp_expression_value_16;
-        PyObject *tmp_args_element_value_25;
         PyObject *tmp_expression_value_17;
+        PyObject *tmp_args_element_value_25;
+        PyObject *tmp_expression_value_18;
         CHECK_OBJECT(par_self);
-        tmp_expression_value_15 = par_self;
-        tmp_called_value_13 = LOOKUP_ATTRIBUTE(tmp_expression_value_15, mod_consts[48]);
+        tmp_expression_value_16 = par_self;
+        tmp_called_value_13 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[48]);
         if (tmp_called_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9556,8 +9423,8 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_value_16 = par_self;
-        tmp_args_element_value_24 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[110]);
+        tmp_expression_value_17 = par_self;
+        tmp_args_element_value_24 = LOOKUP_ATTRIBUTE(tmp_expression_value_17, mod_consts[110]);
         if (tmp_args_element_value_24 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9568,13 +9435,13 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             type_description_1 = "oooc";
             goto frame_exception_exit_1;
         }
-        tmp_expression_value_17 = GET_STRING_DICT_VALUE(moduledict_weather_app$create_charts, (Nuitka_StringObject *)mod_consts[41]);
+        tmp_expression_value_18 = GET_STRING_DICT_VALUE(moduledict_weather_app$create_charts, (Nuitka_StringObject *)mod_consts[41]);
 
-        if (unlikely(tmp_expression_value_17 == NULL)) {
-            tmp_expression_value_17 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[41]);
+        if (unlikely(tmp_expression_value_18 == NULL)) {
+            tmp_expression_value_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[41]);
         }
 
-        if (tmp_expression_value_17 == NULL) {
+        if (tmp_expression_value_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9585,7 +9452,7 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             type_description_1 = "oooc";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_value_25 = LOOKUP_ATTRIBUTE(tmp_expression_value_17, mod_consts[49]);
+        tmp_args_element_value_25 = LOOKUP_ATTRIBUTE(tmp_expression_value_18, mod_consts[49]);
         if (tmp_args_element_value_25 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9620,15 +9487,15 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
     }
     {
         PyObject *tmp_called_value_14;
-        PyObject *tmp_expression_value_18;
+        PyObject *tmp_expression_value_19;
         PyObject *tmp_call_result_5;
         PyObject *tmp_args_element_value_26;
-        PyObject *tmp_expression_value_19;
-        PyObject *tmp_args_element_value_27;
         PyObject *tmp_expression_value_20;
+        PyObject *tmp_args_element_value_27;
+        PyObject *tmp_expression_value_21;
         CHECK_OBJECT(par_self);
-        tmp_expression_value_18 = par_self;
-        tmp_called_value_14 = LOOKUP_ATTRIBUTE(tmp_expression_value_18, mod_consts[48]);
+        tmp_expression_value_19 = par_self;
+        tmp_called_value_14 = LOOKUP_ATTRIBUTE(tmp_expression_value_19, mod_consts[48]);
         if (tmp_called_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9640,8 +9507,8 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_value_19 = par_self;
-        tmp_args_element_value_26 = LOOKUP_ATTRIBUTE(tmp_expression_value_19, mod_consts[115]);
+        tmp_expression_value_20 = par_self;
+        tmp_args_element_value_26 = LOOKUP_ATTRIBUTE(tmp_expression_value_20, mod_consts[114]);
         if (tmp_args_element_value_26 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9652,13 +9519,13 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             type_description_1 = "oooc";
             goto frame_exception_exit_1;
         }
-        tmp_expression_value_20 = GET_STRING_DICT_VALUE(moduledict_weather_app$create_charts, (Nuitka_StringObject *)mod_consts[41]);
+        tmp_expression_value_21 = GET_STRING_DICT_VALUE(moduledict_weather_app$create_charts, (Nuitka_StringObject *)mod_consts[41]);
 
-        if (unlikely(tmp_expression_value_20 == NULL)) {
-            tmp_expression_value_20 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[41]);
+        if (unlikely(tmp_expression_value_21 == NULL)) {
+            tmp_expression_value_21 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[41]);
         }
 
-        if (tmp_expression_value_20 == NULL) {
+        if (tmp_expression_value_21 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9669,7 +9536,7 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             type_description_1 = "oooc";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_value_27 = LOOKUP_ATTRIBUTE(tmp_expression_value_20, mod_consts[125]);
+        tmp_args_element_value_27 = LOOKUP_ATTRIBUTE(tmp_expression_value_21, mod_consts[124]);
         if (tmp_args_element_value_27 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9704,13 +9571,13 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
     }
     {
         PyObject *tmp_called_value_15;
-        PyObject *tmp_expression_value_21;
+        PyObject *tmp_expression_value_22;
         PyObject *tmp_call_result_6;
         PyObject *tmp_args_element_value_28;
-        PyObject *tmp_expression_value_22;
+        PyObject *tmp_expression_value_23;
         CHECK_OBJECT(par_self);
-        tmp_expression_value_21 = par_self;
-        tmp_called_value_15 = LOOKUP_ATTRIBUTE(tmp_expression_value_21, mod_consts[51]);
+        tmp_expression_value_22 = par_self;
+        tmp_called_value_15 = LOOKUP_ATTRIBUTE(tmp_expression_value_22, mod_consts[51]);
         if (tmp_called_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9722,8 +9589,8 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_value_22 = par_self;
-        tmp_args_element_value_28 = LOOKUP_ATTRIBUTE(tmp_expression_value_22, mod_consts[118]);
+        tmp_expression_value_23 = par_self;
+        tmp_args_element_value_28 = LOOKUP_ATTRIBUTE(tmp_expression_value_23, mod_consts[117]);
         if (tmp_args_element_value_28 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9752,13 +9619,13 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
     }
     {
         PyObject *tmp_called_value_16;
-        PyObject *tmp_expression_value_23;
+        PyObject *tmp_expression_value_24;
         PyObject *tmp_call_result_7;
         PyObject *tmp_args_element_value_29;
-        PyObject *tmp_expression_value_24;
+        PyObject *tmp_expression_value_25;
         CHECK_OBJECT(par_self);
-        tmp_expression_value_23 = par_self;
-        tmp_called_value_16 = LOOKUP_ATTRIBUTE(tmp_expression_value_23, mod_consts[51]);
+        tmp_expression_value_24 = par_self;
+        tmp_called_value_16 = LOOKUP_ATTRIBUTE(tmp_expression_value_24, mod_consts[51]);
         if (tmp_called_value_16 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9770,8 +9637,8 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_value_24 = par_self;
-        tmp_args_element_value_29 = LOOKUP_ATTRIBUTE(tmp_expression_value_24, mod_consts[121]);
+        tmp_expression_value_25 = par_self;
+        tmp_args_element_value_29 = LOOKUP_ATTRIBUTE(tmp_expression_value_25, mod_consts[120]);
         if (tmp_args_element_value_29 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9800,13 +9667,13 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
     }
     {
         PyObject *tmp_called_value_17;
-        PyObject *tmp_expression_value_25;
+        PyObject *tmp_expression_value_26;
         PyObject *tmp_call_result_8;
         PyObject *tmp_args_element_value_30;
-        PyObject *tmp_expression_value_26;
+        PyObject *tmp_expression_value_27;
         CHECK_OBJECT(par_self);
-        tmp_expression_value_25 = par_self;
-        tmp_called_value_17 = LOOKUP_ATTRIBUTE(tmp_expression_value_25, mod_consts[51]);
+        tmp_expression_value_26 = par_self;
+        tmp_called_value_17 = LOOKUP_ATTRIBUTE(tmp_expression_value_26, mod_consts[51]);
         if (tmp_called_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9818,8 +9685,8 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_value_26 = par_self;
-        tmp_args_element_value_30 = LOOKUP_ATTRIBUTE(tmp_expression_value_26, mod_consts[124]);
+        tmp_expression_value_27 = par_self;
+        tmp_args_element_value_30 = LOOKUP_ATTRIBUTE(tmp_expression_value_27, mod_consts[123]);
         if (tmp_args_element_value_30 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9848,15 +9715,15 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
     }
     {
         PyObject *tmp_called_value_18;
-        PyObject *tmp_expression_value_27;
         PyObject *tmp_expression_value_28;
+        PyObject *tmp_expression_value_29;
         PyObject *tmp_call_result_9;
         PyObject *tmp_args_element_value_31;
-        PyObject *tmp_expression_value_29;
+        PyObject *tmp_expression_value_30;
         CHECK_OBJECT(par_self);
-        tmp_expression_value_28 = par_self;
-        tmp_expression_value_27 = LOOKUP_ATTRIBUTE(tmp_expression_value_28, mod_consts[118]);
-        if (tmp_expression_value_27 == NULL) {
+        tmp_expression_value_29 = par_self;
+        tmp_expression_value_28 = LOOKUP_ATTRIBUTE(tmp_expression_value_29, mod_consts[117]);
+        if (tmp_expression_value_28 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9866,8 +9733,8 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             type_description_1 = "oooc";
             goto frame_exception_exit_1;
         }
-        tmp_called_value_18 = LOOKUP_ATTRIBUTE(tmp_expression_value_27, mod_consts[52]);
-        Py_DECREF(tmp_expression_value_27);
+        tmp_called_value_18 = LOOKUP_ATTRIBUTE(tmp_expression_value_28, mod_consts[52]);
+        Py_DECREF(tmp_expression_value_28);
         if (tmp_called_value_18 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9879,8 +9746,8 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_value_29 = par_self;
-        tmp_args_element_value_31 = LOOKUP_ATTRIBUTE(tmp_expression_value_29, mod_consts[110]);
+        tmp_expression_value_30 = par_self;
+        tmp_args_element_value_31 = LOOKUP_ATTRIBUTE(tmp_expression_value_30, mod_consts[110]);
         if (tmp_args_element_value_31 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9909,15 +9776,15 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
     }
     {
         PyObject *tmp_called_value_19;
-        PyObject *tmp_expression_value_30;
         PyObject *tmp_expression_value_31;
+        PyObject *tmp_expression_value_32;
         PyObject *tmp_call_result_10;
         PyObject *tmp_args_element_value_32;
-        PyObject *tmp_expression_value_32;
+        PyObject *tmp_expression_value_33;
         CHECK_OBJECT(par_self);
-        tmp_expression_value_31 = par_self;
-        tmp_expression_value_30 = LOOKUP_ATTRIBUTE(tmp_expression_value_31, mod_consts[121]);
-        if (tmp_expression_value_30 == NULL) {
+        tmp_expression_value_32 = par_self;
+        tmp_expression_value_31 = LOOKUP_ATTRIBUTE(tmp_expression_value_32, mod_consts[120]);
+        if (tmp_expression_value_31 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9927,8 +9794,8 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             type_description_1 = "oooc";
             goto frame_exception_exit_1;
         }
-        tmp_called_value_19 = LOOKUP_ATTRIBUTE(tmp_expression_value_30, mod_consts[52]);
-        Py_DECREF(tmp_expression_value_30);
+        tmp_called_value_19 = LOOKUP_ATTRIBUTE(tmp_expression_value_31, mod_consts[52]);
+        Py_DECREF(tmp_expression_value_31);
         if (tmp_called_value_19 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9940,8 +9807,8 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_value_32 = par_self;
-        tmp_args_element_value_32 = LOOKUP_ATTRIBUTE(tmp_expression_value_32, mod_consts[110]);
+        tmp_expression_value_33 = par_self;
+        tmp_args_element_value_32 = LOOKUP_ATTRIBUTE(tmp_expression_value_33, mod_consts[110]);
         if (tmp_args_element_value_32 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9970,15 +9837,15 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
     }
     {
         PyObject *tmp_called_value_20;
-        PyObject *tmp_expression_value_33;
         PyObject *tmp_expression_value_34;
+        PyObject *tmp_expression_value_35;
         PyObject *tmp_call_result_11;
         PyObject *tmp_args_element_value_33;
-        PyObject *tmp_expression_value_35;
+        PyObject *tmp_expression_value_36;
         CHECK_OBJECT(par_self);
-        tmp_expression_value_34 = par_self;
-        tmp_expression_value_33 = LOOKUP_ATTRIBUTE(tmp_expression_value_34, mod_consts[124]);
-        if (tmp_expression_value_33 == NULL) {
+        tmp_expression_value_35 = par_self;
+        tmp_expression_value_34 = LOOKUP_ATTRIBUTE(tmp_expression_value_35, mod_consts[123]);
+        if (tmp_expression_value_34 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9988,8 +9855,8 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             type_description_1 = "oooc";
             goto frame_exception_exit_1;
         }
-        tmp_called_value_20 = LOOKUP_ATTRIBUTE(tmp_expression_value_33, mod_consts[52]);
-        Py_DECREF(tmp_expression_value_33);
+        tmp_called_value_20 = LOOKUP_ATTRIBUTE(tmp_expression_value_34, mod_consts[52]);
+        Py_DECREF(tmp_expression_value_34);
         if (tmp_called_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10001,8 +9868,8 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_value_35 = par_self;
-        tmp_args_element_value_33 = LOOKUP_ATTRIBUTE(tmp_expression_value_35, mod_consts[115]);
+        tmp_expression_value_36 = par_self;
+        tmp_args_element_value_33 = LOOKUP_ATTRIBUTE(tmp_expression_value_36, mod_consts[114]);
         if (tmp_args_element_value_33 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10030,21 +9897,13 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
         Py_DECREF(tmp_call_result_11);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_2cf4532176dc63bb817aec1b1db91683);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_2cf4532176dc63bb817aec1b1db91683);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_2cf4532176dc63bb817aec1b1db91683, exception_lineno);
@@ -10069,7 +9928,6 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_2cf4532176dc63bb817aec1b1db91683);
         cache_frame_2cf4532176dc63bb817aec1b1db91683 = NULL;
     }
@@ -10079,10 +9937,8 @@ static PyObject *impl_weather_app$create_charts$$$function__12___init__(struct N
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -10902,7 +10758,6 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
     PyObject *tmp_dictset_value;
     struct Nuitka_FrameObject *frame_829ab471b55bdff766ff217cfcb732fe_2;
     NUITKA_MAY_BE_UNUSED char const *type_description_2 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_829ab471b55bdff766ff217cfcb732fe_2 = NULL;
     PyObject *exception_keeper_type_4;
     PyObject *exception_keeper_value_4;
     PyTracebackObject *exception_keeper_tb_4;
@@ -10918,7 +10773,6 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
     PyObject *locals_weather_app$create_charts$$$class__2_MyYAxis_24 = NULL;
     struct Nuitka_FrameObject *frame_04239ceb00d7bb39730775c3ce65dc85_3;
     NUITKA_MAY_BE_UNUSED char const *type_description_3 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_04239ceb00d7bb39730775c3ce65dc85_3 = NULL;
     PyObject *exception_keeper_type_7;
     PyObject *exception_keeper_value_7;
     PyTracebackObject *exception_keeper_tb_7;
@@ -10934,7 +10788,6 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
     PyObject *locals_weather_app$create_charts$$$class__3_MySplineSeries_36 = NULL;
     struct Nuitka_FrameObject *frame_89863d7a53310da5ba58cc293bb9c0d7_4;
     NUITKA_MAY_BE_UNUSED char const *type_description_4 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_89863d7a53310da5ba58cc293bb9c0d7_4 = NULL;
     PyObject *exception_keeper_type_10;
     PyObject *exception_keeper_value_10;
     PyTracebackObject *exception_keeper_tb_10;
@@ -10950,7 +10803,6 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
     PyObject *locals_weather_app$create_charts$$$class__4_TempChart_53 = NULL;
     struct Nuitka_FrameObject *frame_791eae94f95e23cf35746c763c9a3c98_5;
     NUITKA_MAY_BE_UNUSED char const *type_description_5 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_791eae94f95e23cf35746c763c9a3c98_5 = NULL;
     PyObject *exception_keeper_type_13;
     PyObject *exception_keeper_value_13;
     PyTracebackObject *exception_keeper_tb_13;
@@ -10966,7 +10818,6 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
     PyObject *locals_weather_app$create_charts$$$class__5_PressChart_81 = NULL;
     struct Nuitka_FrameObject *frame_2728d1fa2712011791e935febcde2be9_6;
     NUITKA_MAY_BE_UNUSED char const *type_description_6 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_2728d1fa2712011791e935febcde2be9_6 = NULL;
     PyObject *exception_keeper_type_16;
     PyObject *exception_keeper_value_16;
     PyTracebackObject *exception_keeper_tb_16;
@@ -10982,7 +10833,6 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
     PyObject *locals_weather_app$create_charts$$$class__6_HumidityChart_107 = NULL;
     struct Nuitka_FrameObject *frame_dfef22a2ad9c2f90b0a1e6f09e3e61af_7;
     NUITKA_MAY_BE_UNUSED char const *type_description_7 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_dfef22a2ad9c2f90b0a1e6f09e3e61af_7 = NULL;
     PyObject *exception_keeper_type_19;
     PyObject *exception_keeper_value_19;
     PyTracebackObject *exception_keeper_tb_19;
@@ -10998,7 +10848,6 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
     PyObject *locals_weather_app$create_charts$$$class__7_WindChart_132 = NULL;
     struct Nuitka_FrameObject *frame_0dab6063e20db4d5c103fa24ccc33c3c_8;
     NUITKA_MAY_BE_UNUSED char const *type_description_8 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_0dab6063e20db4d5c103fa24ccc33c3c_8 = NULL;
     PyObject *exception_keeper_type_22;
     PyObject *exception_keeper_value_22;
     PyTracebackObject *exception_keeper_tb_22;
@@ -11014,7 +10863,6 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
     PyObject *locals_weather_app$create_charts$$$class__8_PrecipChart_157 = NULL;
     struct Nuitka_FrameObject *frame_9d0ee7314d834e231f3f36ef1ac0dc4b_9;
     NUITKA_MAY_BE_UNUSED char const *type_description_9 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_9d0ee7314d834e231f3f36ef1ac0dc4b_9 = NULL;
     PyObject *exception_keeper_type_25;
     PyObject *exception_keeper_value_25;
     PyTracebackObject *exception_keeper_tb_25;
@@ -11030,7 +10878,6 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
     PyObject *locals_weather_app$create_charts$$$class__9_DewPointChart_179 = NULL;
     struct Nuitka_FrameObject *frame_d0b4ecabd85f496dd9ec02329e0ecda2_10;
     NUITKA_MAY_BE_UNUSED char const *type_description_10 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_d0b4ecabd85f496dd9ec02329e0ecda2_10 = NULL;
     PyObject *exception_keeper_type_28;
     PyObject *exception_keeper_value_28;
     PyTracebackObject *exception_keeper_tb_28;
@@ -11046,7 +10893,6 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
     PyObject *locals_weather_app$create_charts$$$class__10_SunRadChart_201 = NULL;
     struct Nuitka_FrameObject *frame_f26f16d8c6319cad229b2d35d3fe6278_11;
     NUITKA_MAY_BE_UNUSED char const *type_description_11 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_f26f16d8c6319cad229b2d35d3fe6278_11 = NULL;
     PyObject *exception_keeper_type_31;
     PyObject *exception_keeper_value_31;
     PyTracebackObject *exception_keeper_tb_31;
@@ -11062,7 +10908,6 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
     PyObject *locals_weather_app$create_charts$$$class__11_SnowDepthChart_223 = NULL;
     struct Nuitka_FrameObject *frame_63de51a90f0c34ad4210e7c00cfc0558_12;
     NUITKA_MAY_BE_UNUSED char const *type_description_12 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_63de51a90f0c34ad4210e7c00cfc0558_12 = NULL;
     PyObject *exception_keeper_type_34;
     PyObject *exception_keeper_value_34;
     PyTracebackObject *exception_keeper_tb_34;
@@ -11078,7 +10923,6 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
     PyObject *locals_weather_app$create_charts$$$class__12_SoilChart_245 = NULL;
     struct Nuitka_FrameObject *frame_d62e6ea29028c4dfcb65d55a9d150e36_13;
     NUITKA_MAY_BE_UNUSED char const *type_description_13 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_d62e6ea29028c4dfcb65d55a9d150e36_13 = NULL;
     PyObject *exception_keeper_type_37;
     PyObject *exception_keeper_value_37;
     PyTracebackObject *exception_keeper_tb_37;
@@ -11096,14 +10940,13 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
     {
         PyObject *tmp_assign_source_1;
         tmp_assign_source_1 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_weather_app$create_charts, (Nuitka_StringObject *)mod_consts[126], tmp_assign_source_1);
+        UPDATE_STRING_DICT0(moduledict_weather_app$create_charts, (Nuitka_StringObject *)mod_consts[125], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_weather_app$create_charts, (Nuitka_StringObject *)mod_consts[127], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_weather_app$create_charts, (Nuitka_StringObject *)mod_consts[126], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_94c4b48944e488468e9fabceb0242b5d = MAKE_MODULE_FRAME(codeobj_94c4b48944e488468e9fabceb0242b5d, module_weather_app$create_charts);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -11116,14 +10959,14 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         tmp_assattr_value_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_weather_app$create_charts, (Nuitka_StringObject *)mod_consts[128]);
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_weather_app$create_charts, (Nuitka_StringObject *)mod_consts[127]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[128]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[127]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[129], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[128], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -11139,14 +10982,14 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
         tmp_assattr_value_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_weather_app$create_charts, (Nuitka_StringObject *)mod_consts[128]);
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_weather_app$create_charts, (Nuitka_StringObject *)mod_consts[127]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[128]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[127]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[130], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[129], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -11161,7 +11004,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_weather_app$create_charts, (Nuitka_StringObject *)mod_consts[131], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_weather_app$create_charts, (Nuitka_StringObject *)mod_consts[130], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
@@ -11170,11 +11013,11 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         PyObject *tmp_locals_arg_value_1;
         PyObject *tmp_fromlist_value_1;
         PyObject *tmp_level_value_1;
-        tmp_name_value_1 = mod_consts[132];
+        tmp_name_value_1 = mod_consts[131];
         tmp_globals_arg_value_1 = (PyObject *)moduledict_weather_app$create_charts;
         tmp_locals_arg_value_1 = Py_None;
-        tmp_fromlist_value_1 = mod_consts[133];
-        tmp_level_value_1 = mod_consts[111];
+        tmp_fromlist_value_1 = mod_consts[132];
+        tmp_level_value_1 = mod_consts[133];
         frame_94c4b48944e488468e9fabceb0242b5d->m_frame.f_lineno = 1;
         tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_4 == NULL) {
@@ -11201,7 +11044,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_weather_app$create_charts,
                 mod_consts[24],
-                mod_consts[111]
+                mod_consts[133]
             );
         } else {
             tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[24]);
@@ -11229,7 +11072,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
                 tmp_import_name_from_2,
                 (PyObject *)moduledict_weather_app$create_charts,
                 mod_consts[134],
-                mod_consts[111]
+                mod_consts[133]
             );
         } else {
             tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[134]);
@@ -11257,7 +11100,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
                 tmp_import_name_from_3,
                 (PyObject *)moduledict_weather_app$create_charts,
                 mod_consts[135],
-                mod_consts[111]
+                mod_consts[133]
             );
         } else {
             tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[135]);
@@ -11285,7 +11128,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
                 tmp_import_name_from_4,
                 (PyObject *)moduledict_weather_app$create_charts,
                 mod_consts[136],
-                mod_consts[111]
+                mod_consts[133]
             );
         } else {
             tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[136]);
@@ -11341,7 +11184,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         tmp_globals_arg_value_2 = (PyObject *)moduledict_weather_app$create_charts;
         tmp_locals_arg_value_2 = Py_None;
         tmp_fromlist_value_2 = mod_consts[138];
-        tmp_level_value_2 = mod_consts[111];
+        tmp_level_value_2 = mod_consts[133];
         frame_94c4b48944e488468e9fabceb0242b5d->m_frame.f_lineno = 2;
         tmp_assign_source_9 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_assign_source_9 == NULL) {
@@ -11368,7 +11211,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
                 tmp_import_name_from_5,
                 (PyObject *)moduledict_weather_app$create_charts,
                 mod_consts[41],
-                mod_consts[111]
+                mod_consts[133]
             );
         } else {
             tmp_assign_source_10 = IMPORT_NAME(tmp_import_name_from_5, mod_consts[41]);
@@ -11396,7 +11239,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
                 tmp_import_name_from_6,
                 (PyObject *)moduledict_weather_app$create_charts,
                 mod_consts[139],
-                mod_consts[111]
+                mod_consts[133]
             );
         } else {
             tmp_assign_source_11 = IMPORT_NAME(tmp_import_name_from_6, mod_consts[139]);
@@ -11452,7 +11295,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         tmp_globals_arg_value_3 = (PyObject *)moduledict_weather_app$create_charts;
         tmp_locals_arg_value_3 = Py_None;
         tmp_fromlist_value_3 = mod_consts[141];
-        tmp_level_value_3 = mod_consts[111];
+        tmp_level_value_3 = mod_consts[133];
         frame_94c4b48944e488468e9fabceb0242b5d->m_frame.f_lineno = 3;
         tmp_assign_source_12 = IMPORT_MODULE5(tmp_name_value_3, tmp_globals_arg_value_3, tmp_locals_arg_value_3, tmp_fromlist_value_3, tmp_level_value_3);
         if (tmp_assign_source_12 == NULL) {
@@ -11479,7 +11322,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
                 tmp_import_name_from_7,
                 (PyObject *)moduledict_weather_app$create_charts,
                 mod_consts[19],
-                mod_consts[111]
+                mod_consts[133]
             );
         } else {
             tmp_assign_source_13 = IMPORT_NAME(tmp_import_name_from_7, mod_consts[19]);
@@ -11507,7 +11350,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
                 tmp_import_name_from_8,
                 (PyObject *)moduledict_weather_app$create_charts,
                 mod_consts[13],
-                mod_consts[111]
+                mod_consts[133]
             );
         } else {
             tmp_assign_source_14 = IMPORT_NAME(tmp_import_name_from_8, mod_consts[13]);
@@ -11564,7 +11407,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         tmp_globals_arg_value_4 = (PyObject *)moduledict_weather_app$create_charts;
         tmp_locals_arg_value_4 = Py_None;
         tmp_fromlist_value_4 = mod_consts[143];
-        tmp_level_value_4 = mod_consts[111];
+        tmp_level_value_4 = mod_consts[133];
         frame_94c4b48944e488468e9fabceb0242b5d->m_frame.f_lineno = 5;
         tmp_import_name_from_9 = IMPORT_MODULE5(tmp_name_value_4, tmp_globals_arg_value_4, tmp_locals_arg_value_4, tmp_fromlist_value_4, tmp_level_value_4);
         if (tmp_import_name_from_9 == NULL) {
@@ -11582,7 +11425,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
                 tmp_import_name_from_9,
                 (PyObject *)moduledict_weather_app$create_charts,
                 mod_consts[27],
-                mod_consts[111]
+                mod_consts[133]
             );
         } else {
             tmp_assign_source_15 = IMPORT_NAME(tmp_import_name_from_9, mod_consts[27]);
@@ -11714,7 +11557,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         condexpr_true_2:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
         tmp_expression_value_1 = tmp_class_creation_1__bases;
-        tmp_subscript_value_1 = mod_consts[111];
+        tmp_subscript_value_1 = mod_consts[133];
         tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_1, tmp_subscript_value_1, 0);
         if (tmp_type_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -11989,7 +11832,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             goto try_except_handler_6;
         }
         tmp_dictset_value = mod_consts[152];
-        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__1_MyXAxis_8, mod_consts[126], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__1_MyXAxis_8, mod_consts[125], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -12012,32 +11855,12 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_6;
         }
-        if (isFrameUnusable(cache_frame_829ab471b55bdff766ff217cfcb732fe_2)) {
-            Py_XDECREF(cache_frame_829ab471b55bdff766ff217cfcb732fe_2);
+        frame_829ab471b55bdff766ff217cfcb732fe_2 = MAKE_CLASS_FRAME(codeobj_829ab471b55bdff766ff217cfcb732fe, module_weather_app$create_charts, NULL, sizeof(void *));
 
-#if _DEBUG_REFCOUNTS
-            if (cache_frame_829ab471b55bdff766ff217cfcb732fe_2 == NULL) {
-                count_active_frame_cache_instances += 1;
-            } else {
-                count_released_frame_cache_instances += 1;
-            }
-            count_allocated_frame_cache_instances += 1;
-#endif
-            cache_frame_829ab471b55bdff766ff217cfcb732fe_2 = MAKE_CLASS_FRAME(codeobj_829ab471b55bdff766ff217cfcb732fe, module_weather_app$create_charts, NULL, sizeof(void *));
-#if _DEBUG_REFCOUNTS
-        } else {
-            count_hit_frame_cache_instances += 1;
-#endif
-        }
-        assert(cache_frame_829ab471b55bdff766ff217cfcb732fe_2->m_type_description == NULL);
-        frame_829ab471b55bdff766ff217cfcb732fe_2 = cache_frame_829ab471b55bdff766ff217cfcb732fe_2;
-
-
-        // Push the new frame as the currently active one.
+        // Push the new frame as the currently active one, and we should be exclusively
+        // owning it.
         pushFrameStack(frame_829ab471b55bdff766ff217cfcb732fe_2);
-
-        // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_829ab471b55bdff766ff217cfcb732fe_2) == 2); // Frame stack
+        assert(Py_REFCNT(frame_829ab471b55bdff766ff217cfcb732fe_2) == 2);
 
         // Framed code:
         {
@@ -12133,21 +11956,13 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             }
         }
 
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_829ab471b55bdff766ff217cfcb732fe_2);
-#endif
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         goto frame_no_exception_1;
+        frame_exception_exit_2:
 
-        frame_exception_exit_2:;
-
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_829ab471b55bdff766ff217cfcb732fe_2);
-#endif
 
         if (exception_tb == NULL) {
             exception_tb = MAKE_TRACEBACK(frame_829ab471b55bdff766ff217cfcb732fe_2, exception_lineno);
@@ -12163,26 +11978,14 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         );
 
 
-        // Release cached frame if used for exception.
-        if (frame_829ab471b55bdff766ff217cfcb732fe_2 == cache_frame_829ab471b55bdff766ff217cfcb732fe_2) {
-#if _DEBUG_REFCOUNTS
-            count_active_frame_cache_instances -= 1;
-            count_released_frame_cache_instances += 1;
-#endif
-
-            Py_DECREF(cache_frame_829ab471b55bdff766ff217cfcb732fe_2);
-            cache_frame_829ab471b55bdff766ff217cfcb732fe_2 = NULL;
-        }
 
         assertFrameObject(frame_829ab471b55bdff766ff217cfcb732fe_2);
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         // Return the error.
         goto nested_frame_exit_1;
-
         frame_no_exception_1:;
         goto skip_nested_handling_1;
         nested_frame_exit_1:;
@@ -12490,7 +12293,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         condexpr_true_4:;
         CHECK_OBJECT(tmp_class_creation_2__bases);
         tmp_expression_value_6 = tmp_class_creation_2__bases;
-        tmp_subscript_value_2 = mod_consts[111];
+        tmp_subscript_value_2 = mod_consts[133];
         tmp_type_arg_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_6, tmp_subscript_value_2, 0);
         if (tmp_type_arg_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -12765,7 +12568,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             goto try_except_handler_9;
         }
         tmp_dictset_value = mod_consts[152];
-        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__2_MyYAxis_24, mod_consts[126], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__2_MyYAxis_24, mod_consts[125], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -12788,32 +12591,12 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_9;
         }
-        if (isFrameUnusable(cache_frame_04239ceb00d7bb39730775c3ce65dc85_3)) {
-            Py_XDECREF(cache_frame_04239ceb00d7bb39730775c3ce65dc85_3);
+        frame_04239ceb00d7bb39730775c3ce65dc85_3 = MAKE_CLASS_FRAME(codeobj_04239ceb00d7bb39730775c3ce65dc85, module_weather_app$create_charts, NULL, sizeof(void *));
 
-#if _DEBUG_REFCOUNTS
-            if (cache_frame_04239ceb00d7bb39730775c3ce65dc85_3 == NULL) {
-                count_active_frame_cache_instances += 1;
-            } else {
-                count_released_frame_cache_instances += 1;
-            }
-            count_allocated_frame_cache_instances += 1;
-#endif
-            cache_frame_04239ceb00d7bb39730775c3ce65dc85_3 = MAKE_CLASS_FRAME(codeobj_04239ceb00d7bb39730775c3ce65dc85, module_weather_app$create_charts, NULL, sizeof(void *));
-#if _DEBUG_REFCOUNTS
-        } else {
-            count_hit_frame_cache_instances += 1;
-#endif
-        }
-        assert(cache_frame_04239ceb00d7bb39730775c3ce65dc85_3->m_type_description == NULL);
-        frame_04239ceb00d7bb39730775c3ce65dc85_3 = cache_frame_04239ceb00d7bb39730775c3ce65dc85_3;
-
-
-        // Push the new frame as the currently active one.
+        // Push the new frame as the currently active one, and we should be exclusively
+        // owning it.
         pushFrameStack(frame_04239ceb00d7bb39730775c3ce65dc85_3);
-
-        // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_04239ceb00d7bb39730775c3ce65dc85_3) == 2); // Frame stack
+        assert(Py_REFCNT(frame_04239ceb00d7bb39730775c3ce65dc85_3) == 2);
 
         // Framed code:
         {
@@ -12902,21 +12685,13 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             }
         }
 
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_04239ceb00d7bb39730775c3ce65dc85_3);
-#endif
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         goto frame_no_exception_2;
+        frame_exception_exit_3:
 
-        frame_exception_exit_3:;
-
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_04239ceb00d7bb39730775c3ce65dc85_3);
-#endif
 
         if (exception_tb == NULL) {
             exception_tb = MAKE_TRACEBACK(frame_04239ceb00d7bb39730775c3ce65dc85_3, exception_lineno);
@@ -12932,26 +12707,14 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         );
 
 
-        // Release cached frame if used for exception.
-        if (frame_04239ceb00d7bb39730775c3ce65dc85_3 == cache_frame_04239ceb00d7bb39730775c3ce65dc85_3) {
-#if _DEBUG_REFCOUNTS
-            count_active_frame_cache_instances -= 1;
-            count_released_frame_cache_instances += 1;
-#endif
-
-            Py_DECREF(cache_frame_04239ceb00d7bb39730775c3ce65dc85_3);
-            cache_frame_04239ceb00d7bb39730775c3ce65dc85_3 = NULL;
-        }
 
         assertFrameObject(frame_04239ceb00d7bb39730775c3ce65dc85_3);
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         // Return the error.
         goto nested_frame_exit_2;
-
         frame_no_exception_2:;
         goto skip_nested_handling_2;
         nested_frame_exit_2:;
@@ -13259,7 +13022,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         condexpr_true_6:;
         CHECK_OBJECT(tmp_class_creation_3__bases);
         tmp_expression_value_11 = tmp_class_creation_3__bases;
-        tmp_subscript_value_3 = mod_consts[111];
+        tmp_subscript_value_3 = mod_consts[133];
         tmp_type_arg_5 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_11, tmp_subscript_value_3, 0);
         if (tmp_type_arg_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -13534,7 +13297,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             goto try_except_handler_12;
         }
         tmp_dictset_value = mod_consts[152];
-        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__3_MySplineSeries_36, mod_consts[126], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__3_MySplineSeries_36, mod_consts[125], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -13557,32 +13320,12 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_12;
         }
-        if (isFrameUnusable(cache_frame_89863d7a53310da5ba58cc293bb9c0d7_4)) {
-            Py_XDECREF(cache_frame_89863d7a53310da5ba58cc293bb9c0d7_4);
+        frame_89863d7a53310da5ba58cc293bb9c0d7_4 = MAKE_CLASS_FRAME(codeobj_89863d7a53310da5ba58cc293bb9c0d7, module_weather_app$create_charts, NULL, sizeof(void *));
 
-#if _DEBUG_REFCOUNTS
-            if (cache_frame_89863d7a53310da5ba58cc293bb9c0d7_4 == NULL) {
-                count_active_frame_cache_instances += 1;
-            } else {
-                count_released_frame_cache_instances += 1;
-            }
-            count_allocated_frame_cache_instances += 1;
-#endif
-            cache_frame_89863d7a53310da5ba58cc293bb9c0d7_4 = MAKE_CLASS_FRAME(codeobj_89863d7a53310da5ba58cc293bb9c0d7, module_weather_app$create_charts, NULL, sizeof(void *));
-#if _DEBUG_REFCOUNTS
-        } else {
-            count_hit_frame_cache_instances += 1;
-#endif
-        }
-        assert(cache_frame_89863d7a53310da5ba58cc293bb9c0d7_4->m_type_description == NULL);
-        frame_89863d7a53310da5ba58cc293bb9c0d7_4 = cache_frame_89863d7a53310da5ba58cc293bb9c0d7_4;
-
-
-        // Push the new frame as the currently active one.
+        // Push the new frame as the currently active one, and we should be exclusively
+        // owning it.
         pushFrameStack(frame_89863d7a53310da5ba58cc293bb9c0d7_4);
-
-        // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_89863d7a53310da5ba58cc293bb9c0d7_4) == 2); // Frame stack
+        assert(Py_REFCNT(frame_89863d7a53310da5ba58cc293bb9c0d7_4) == 2);
 
         // Framed code:
         {
@@ -13641,21 +13384,13 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             }
         }
 
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_89863d7a53310da5ba58cc293bb9c0d7_4);
-#endif
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         goto frame_no_exception_3;
+        frame_exception_exit_4:
 
-        frame_exception_exit_4:;
-
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_89863d7a53310da5ba58cc293bb9c0d7_4);
-#endif
 
         if (exception_tb == NULL) {
             exception_tb = MAKE_TRACEBACK(frame_89863d7a53310da5ba58cc293bb9c0d7_4, exception_lineno);
@@ -13671,26 +13406,14 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         );
 
 
-        // Release cached frame if used for exception.
-        if (frame_89863d7a53310da5ba58cc293bb9c0d7_4 == cache_frame_89863d7a53310da5ba58cc293bb9c0d7_4) {
-#if _DEBUG_REFCOUNTS
-            count_active_frame_cache_instances -= 1;
-            count_released_frame_cache_instances += 1;
-#endif
-
-            Py_DECREF(cache_frame_89863d7a53310da5ba58cc293bb9c0d7_4);
-            cache_frame_89863d7a53310da5ba58cc293bb9c0d7_4 = NULL;
-        }
 
         assertFrameObject(frame_89863d7a53310da5ba58cc293bb9c0d7_4);
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         // Return the error.
         goto nested_frame_exit_3;
-
         frame_no_exception_3:;
         goto skip_nested_handling_3;
         nested_frame_exit_3:;
@@ -13998,7 +13721,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         condexpr_true_8:;
         CHECK_OBJECT(tmp_class_creation_4__bases);
         tmp_expression_value_16 = tmp_class_creation_4__bases;
-        tmp_subscript_value_4 = mod_consts[111];
+        tmp_subscript_value_4 = mod_consts[133];
         tmp_type_arg_7 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_16, tmp_subscript_value_4, 0);
         if (tmp_type_arg_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -14273,7 +13996,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             goto try_except_handler_15;
         }
         tmp_dictset_value = mod_consts[152];
-        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__4_TempChart_53, mod_consts[126], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__4_TempChart_53, mod_consts[125], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -14296,32 +14019,12 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_15;
         }
-        if (isFrameUnusable(cache_frame_791eae94f95e23cf35746c763c9a3c98_5)) {
-            Py_XDECREF(cache_frame_791eae94f95e23cf35746c763c9a3c98_5);
+        frame_791eae94f95e23cf35746c763c9a3c98_5 = MAKE_CLASS_FRAME(codeobj_791eae94f95e23cf35746c763c9a3c98, module_weather_app$create_charts, NULL, sizeof(void *));
 
-#if _DEBUG_REFCOUNTS
-            if (cache_frame_791eae94f95e23cf35746c763c9a3c98_5 == NULL) {
-                count_active_frame_cache_instances += 1;
-            } else {
-                count_released_frame_cache_instances += 1;
-            }
-            count_allocated_frame_cache_instances += 1;
-#endif
-            cache_frame_791eae94f95e23cf35746c763c9a3c98_5 = MAKE_CLASS_FRAME(codeobj_791eae94f95e23cf35746c763c9a3c98, module_weather_app$create_charts, NULL, sizeof(void *));
-#if _DEBUG_REFCOUNTS
-        } else {
-            count_hit_frame_cache_instances += 1;
-#endif
-        }
-        assert(cache_frame_791eae94f95e23cf35746c763c9a3c98_5->m_type_description == NULL);
-        frame_791eae94f95e23cf35746c763c9a3c98_5 = cache_frame_791eae94f95e23cf35746c763c9a3c98_5;
-
-
-        // Push the new frame as the currently active one.
+        // Push the new frame as the currently active one, and we should be exclusively
+        // owning it.
         pushFrameStack(frame_791eae94f95e23cf35746c763c9a3c98_5);
-
-        // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_791eae94f95e23cf35746c763c9a3c98_5) == 2); // Frame stack
+        assert(Py_REFCNT(frame_791eae94f95e23cf35746c763c9a3c98_5) == 2);
 
         // Framed code:
         {
@@ -14346,21 +14049,13 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             }
         }
 
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_791eae94f95e23cf35746c763c9a3c98_5);
-#endif
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         goto frame_no_exception_4;
+        frame_exception_exit_5:
 
-        frame_exception_exit_5:;
-
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_791eae94f95e23cf35746c763c9a3c98_5);
-#endif
 
         if (exception_tb == NULL) {
             exception_tb = MAKE_TRACEBACK(frame_791eae94f95e23cf35746c763c9a3c98_5, exception_lineno);
@@ -14376,26 +14071,14 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         );
 
 
-        // Release cached frame if used for exception.
-        if (frame_791eae94f95e23cf35746c763c9a3c98_5 == cache_frame_791eae94f95e23cf35746c763c9a3c98_5) {
-#if _DEBUG_REFCOUNTS
-            count_active_frame_cache_instances -= 1;
-            count_released_frame_cache_instances += 1;
-#endif
-
-            Py_DECREF(cache_frame_791eae94f95e23cf35746c763c9a3c98_5);
-            cache_frame_791eae94f95e23cf35746c763c9a3c98_5 = NULL;
-        }
 
         assertFrameObject(frame_791eae94f95e23cf35746c763c9a3c98_5);
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         // Return the error.
         goto nested_frame_exit_4;
-
         frame_no_exception_4:;
         goto skip_nested_handling_4;
         nested_frame_exit_4:;
@@ -14703,7 +14386,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         condexpr_true_10:;
         CHECK_OBJECT(tmp_class_creation_5__bases);
         tmp_expression_value_21 = tmp_class_creation_5__bases;
-        tmp_subscript_value_5 = mod_consts[111];
+        tmp_subscript_value_5 = mod_consts[133];
         tmp_type_arg_9 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_21, tmp_subscript_value_5, 0);
         if (tmp_type_arg_9 == NULL) {
             assert(ERROR_OCCURRED());
@@ -14978,7 +14661,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             goto try_except_handler_18;
         }
         tmp_dictset_value = mod_consts[152];
-        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__5_PressChart_81, mod_consts[126], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__5_PressChart_81, mod_consts[125], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -15001,32 +14684,12 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_18;
         }
-        if (isFrameUnusable(cache_frame_2728d1fa2712011791e935febcde2be9_6)) {
-            Py_XDECREF(cache_frame_2728d1fa2712011791e935febcde2be9_6);
+        frame_2728d1fa2712011791e935febcde2be9_6 = MAKE_CLASS_FRAME(codeobj_2728d1fa2712011791e935febcde2be9, module_weather_app$create_charts, NULL, sizeof(void *));
 
-#if _DEBUG_REFCOUNTS
-            if (cache_frame_2728d1fa2712011791e935febcde2be9_6 == NULL) {
-                count_active_frame_cache_instances += 1;
-            } else {
-                count_released_frame_cache_instances += 1;
-            }
-            count_allocated_frame_cache_instances += 1;
-#endif
-            cache_frame_2728d1fa2712011791e935febcde2be9_6 = MAKE_CLASS_FRAME(codeobj_2728d1fa2712011791e935febcde2be9, module_weather_app$create_charts, NULL, sizeof(void *));
-#if _DEBUG_REFCOUNTS
-        } else {
-            count_hit_frame_cache_instances += 1;
-#endif
-        }
-        assert(cache_frame_2728d1fa2712011791e935febcde2be9_6->m_type_description == NULL);
-        frame_2728d1fa2712011791e935febcde2be9_6 = cache_frame_2728d1fa2712011791e935febcde2be9_6;
-
-
-        // Push the new frame as the currently active one.
+        // Push the new frame as the currently active one, and we should be exclusively
+        // owning it.
         pushFrameStack(frame_2728d1fa2712011791e935febcde2be9_6);
-
-        // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_2728d1fa2712011791e935febcde2be9_6) == 2); // Frame stack
+        assert(Py_REFCNT(frame_2728d1fa2712011791e935febcde2be9_6) == 2);
 
         // Framed code:
         {
@@ -15051,21 +14714,13 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             }
         }
 
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_2728d1fa2712011791e935febcde2be9_6);
-#endif
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         goto frame_no_exception_5;
+        frame_exception_exit_6:
 
-        frame_exception_exit_6:;
-
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_2728d1fa2712011791e935febcde2be9_6);
-#endif
 
         if (exception_tb == NULL) {
             exception_tb = MAKE_TRACEBACK(frame_2728d1fa2712011791e935febcde2be9_6, exception_lineno);
@@ -15081,26 +14736,14 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         );
 
 
-        // Release cached frame if used for exception.
-        if (frame_2728d1fa2712011791e935febcde2be9_6 == cache_frame_2728d1fa2712011791e935febcde2be9_6) {
-#if _DEBUG_REFCOUNTS
-            count_active_frame_cache_instances -= 1;
-            count_released_frame_cache_instances += 1;
-#endif
-
-            Py_DECREF(cache_frame_2728d1fa2712011791e935febcde2be9_6);
-            cache_frame_2728d1fa2712011791e935febcde2be9_6 = NULL;
-        }
 
         assertFrameObject(frame_2728d1fa2712011791e935febcde2be9_6);
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         // Return the error.
         goto nested_frame_exit_5;
-
         frame_no_exception_5:;
         goto skip_nested_handling_5;
         nested_frame_exit_5:;
@@ -15408,7 +15051,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         condexpr_true_12:;
         CHECK_OBJECT(tmp_class_creation_6__bases);
         tmp_expression_value_26 = tmp_class_creation_6__bases;
-        tmp_subscript_value_6 = mod_consts[111];
+        tmp_subscript_value_6 = mod_consts[133];
         tmp_type_arg_11 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_26, tmp_subscript_value_6, 0);
         if (tmp_type_arg_11 == NULL) {
             assert(ERROR_OCCURRED());
@@ -15683,7 +15326,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             goto try_except_handler_21;
         }
         tmp_dictset_value = mod_consts[152];
-        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__6_HumidityChart_107, mod_consts[126], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__6_HumidityChart_107, mod_consts[125], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -15706,32 +15349,12 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_21;
         }
-        if (isFrameUnusable(cache_frame_dfef22a2ad9c2f90b0a1e6f09e3e61af_7)) {
-            Py_XDECREF(cache_frame_dfef22a2ad9c2f90b0a1e6f09e3e61af_7);
+        frame_dfef22a2ad9c2f90b0a1e6f09e3e61af_7 = MAKE_CLASS_FRAME(codeobj_dfef22a2ad9c2f90b0a1e6f09e3e61af, module_weather_app$create_charts, NULL, sizeof(void *));
 
-#if _DEBUG_REFCOUNTS
-            if (cache_frame_dfef22a2ad9c2f90b0a1e6f09e3e61af_7 == NULL) {
-                count_active_frame_cache_instances += 1;
-            } else {
-                count_released_frame_cache_instances += 1;
-            }
-            count_allocated_frame_cache_instances += 1;
-#endif
-            cache_frame_dfef22a2ad9c2f90b0a1e6f09e3e61af_7 = MAKE_CLASS_FRAME(codeobj_dfef22a2ad9c2f90b0a1e6f09e3e61af, module_weather_app$create_charts, NULL, sizeof(void *));
-#if _DEBUG_REFCOUNTS
-        } else {
-            count_hit_frame_cache_instances += 1;
-#endif
-        }
-        assert(cache_frame_dfef22a2ad9c2f90b0a1e6f09e3e61af_7->m_type_description == NULL);
-        frame_dfef22a2ad9c2f90b0a1e6f09e3e61af_7 = cache_frame_dfef22a2ad9c2f90b0a1e6f09e3e61af_7;
-
-
-        // Push the new frame as the currently active one.
+        // Push the new frame as the currently active one, and we should be exclusively
+        // owning it.
         pushFrameStack(frame_dfef22a2ad9c2f90b0a1e6f09e3e61af_7);
-
-        // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_dfef22a2ad9c2f90b0a1e6f09e3e61af_7) == 2); // Frame stack
+        assert(Py_REFCNT(frame_dfef22a2ad9c2f90b0a1e6f09e3e61af_7) == 2);
 
         // Framed code:
         {
@@ -15756,21 +15379,13 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             }
         }
 
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_dfef22a2ad9c2f90b0a1e6f09e3e61af_7);
-#endif
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         goto frame_no_exception_6;
+        frame_exception_exit_7:
 
-        frame_exception_exit_7:;
-
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_dfef22a2ad9c2f90b0a1e6f09e3e61af_7);
-#endif
 
         if (exception_tb == NULL) {
             exception_tb = MAKE_TRACEBACK(frame_dfef22a2ad9c2f90b0a1e6f09e3e61af_7, exception_lineno);
@@ -15786,26 +15401,14 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         );
 
 
-        // Release cached frame if used for exception.
-        if (frame_dfef22a2ad9c2f90b0a1e6f09e3e61af_7 == cache_frame_dfef22a2ad9c2f90b0a1e6f09e3e61af_7) {
-#if _DEBUG_REFCOUNTS
-            count_active_frame_cache_instances -= 1;
-            count_released_frame_cache_instances += 1;
-#endif
-
-            Py_DECREF(cache_frame_dfef22a2ad9c2f90b0a1e6f09e3e61af_7);
-            cache_frame_dfef22a2ad9c2f90b0a1e6f09e3e61af_7 = NULL;
-        }
 
         assertFrameObject(frame_dfef22a2ad9c2f90b0a1e6f09e3e61af_7);
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         // Return the error.
         goto nested_frame_exit_6;
-
         frame_no_exception_6:;
         goto skip_nested_handling_6;
         nested_frame_exit_6:;
@@ -16113,7 +15716,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         condexpr_true_14:;
         CHECK_OBJECT(tmp_class_creation_7__bases);
         tmp_expression_value_31 = tmp_class_creation_7__bases;
-        tmp_subscript_value_7 = mod_consts[111];
+        tmp_subscript_value_7 = mod_consts[133];
         tmp_type_arg_13 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_31, tmp_subscript_value_7, 0);
         if (tmp_type_arg_13 == NULL) {
             assert(ERROR_OCCURRED());
@@ -16388,7 +15991,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             goto try_except_handler_24;
         }
         tmp_dictset_value = mod_consts[152];
-        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__7_WindChart_132, mod_consts[126], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__7_WindChart_132, mod_consts[125], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -16411,32 +16014,12 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_24;
         }
-        if (isFrameUnusable(cache_frame_0dab6063e20db4d5c103fa24ccc33c3c_8)) {
-            Py_XDECREF(cache_frame_0dab6063e20db4d5c103fa24ccc33c3c_8);
+        frame_0dab6063e20db4d5c103fa24ccc33c3c_8 = MAKE_CLASS_FRAME(codeobj_0dab6063e20db4d5c103fa24ccc33c3c, module_weather_app$create_charts, NULL, sizeof(void *));
 
-#if _DEBUG_REFCOUNTS
-            if (cache_frame_0dab6063e20db4d5c103fa24ccc33c3c_8 == NULL) {
-                count_active_frame_cache_instances += 1;
-            } else {
-                count_released_frame_cache_instances += 1;
-            }
-            count_allocated_frame_cache_instances += 1;
-#endif
-            cache_frame_0dab6063e20db4d5c103fa24ccc33c3c_8 = MAKE_CLASS_FRAME(codeobj_0dab6063e20db4d5c103fa24ccc33c3c, module_weather_app$create_charts, NULL, sizeof(void *));
-#if _DEBUG_REFCOUNTS
-        } else {
-            count_hit_frame_cache_instances += 1;
-#endif
-        }
-        assert(cache_frame_0dab6063e20db4d5c103fa24ccc33c3c_8->m_type_description == NULL);
-        frame_0dab6063e20db4d5c103fa24ccc33c3c_8 = cache_frame_0dab6063e20db4d5c103fa24ccc33c3c_8;
-
-
-        // Push the new frame as the currently active one.
+        // Push the new frame as the currently active one, and we should be exclusively
+        // owning it.
         pushFrameStack(frame_0dab6063e20db4d5c103fa24ccc33c3c_8);
-
-        // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_0dab6063e20db4d5c103fa24ccc33c3c_8) == 2); // Frame stack
+        assert(Py_REFCNT(frame_0dab6063e20db4d5c103fa24ccc33c3c_8) == 2);
 
         // Framed code:
         {
@@ -16461,21 +16044,13 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             }
         }
 
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_0dab6063e20db4d5c103fa24ccc33c3c_8);
-#endif
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         goto frame_no_exception_7;
+        frame_exception_exit_8:
 
-        frame_exception_exit_8:;
-
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_0dab6063e20db4d5c103fa24ccc33c3c_8);
-#endif
 
         if (exception_tb == NULL) {
             exception_tb = MAKE_TRACEBACK(frame_0dab6063e20db4d5c103fa24ccc33c3c_8, exception_lineno);
@@ -16491,26 +16066,14 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         );
 
 
-        // Release cached frame if used for exception.
-        if (frame_0dab6063e20db4d5c103fa24ccc33c3c_8 == cache_frame_0dab6063e20db4d5c103fa24ccc33c3c_8) {
-#if _DEBUG_REFCOUNTS
-            count_active_frame_cache_instances -= 1;
-            count_released_frame_cache_instances += 1;
-#endif
-
-            Py_DECREF(cache_frame_0dab6063e20db4d5c103fa24ccc33c3c_8);
-            cache_frame_0dab6063e20db4d5c103fa24ccc33c3c_8 = NULL;
-        }
 
         assertFrameObject(frame_0dab6063e20db4d5c103fa24ccc33c3c_8);
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         // Return the error.
         goto nested_frame_exit_7;
-
         frame_no_exception_7:;
         goto skip_nested_handling_7;
         nested_frame_exit_7:;
@@ -16818,7 +16381,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         condexpr_true_16:;
         CHECK_OBJECT(tmp_class_creation_8__bases);
         tmp_expression_value_36 = tmp_class_creation_8__bases;
-        tmp_subscript_value_8 = mod_consts[111];
+        tmp_subscript_value_8 = mod_consts[133];
         tmp_type_arg_15 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_36, tmp_subscript_value_8, 0);
         if (tmp_type_arg_15 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17093,7 +16656,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             goto try_except_handler_27;
         }
         tmp_dictset_value = mod_consts[152];
-        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__8_PrecipChart_157, mod_consts[126], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__8_PrecipChart_157, mod_consts[125], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -17116,32 +16679,12 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_27;
         }
-        if (isFrameUnusable(cache_frame_9d0ee7314d834e231f3f36ef1ac0dc4b_9)) {
-            Py_XDECREF(cache_frame_9d0ee7314d834e231f3f36ef1ac0dc4b_9);
+        frame_9d0ee7314d834e231f3f36ef1ac0dc4b_9 = MAKE_CLASS_FRAME(codeobj_9d0ee7314d834e231f3f36ef1ac0dc4b, module_weather_app$create_charts, NULL, sizeof(void *));
 
-#if _DEBUG_REFCOUNTS
-            if (cache_frame_9d0ee7314d834e231f3f36ef1ac0dc4b_9 == NULL) {
-                count_active_frame_cache_instances += 1;
-            } else {
-                count_released_frame_cache_instances += 1;
-            }
-            count_allocated_frame_cache_instances += 1;
-#endif
-            cache_frame_9d0ee7314d834e231f3f36ef1ac0dc4b_9 = MAKE_CLASS_FRAME(codeobj_9d0ee7314d834e231f3f36ef1ac0dc4b, module_weather_app$create_charts, NULL, sizeof(void *));
-#if _DEBUG_REFCOUNTS
-        } else {
-            count_hit_frame_cache_instances += 1;
-#endif
-        }
-        assert(cache_frame_9d0ee7314d834e231f3f36ef1ac0dc4b_9->m_type_description == NULL);
-        frame_9d0ee7314d834e231f3f36ef1ac0dc4b_9 = cache_frame_9d0ee7314d834e231f3f36ef1ac0dc4b_9;
-
-
-        // Push the new frame as the currently active one.
+        // Push the new frame as the currently active one, and we should be exclusively
+        // owning it.
         pushFrameStack(frame_9d0ee7314d834e231f3f36ef1ac0dc4b_9);
-
-        // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_9d0ee7314d834e231f3f36ef1ac0dc4b_9) == 2); // Frame stack
+        assert(Py_REFCNT(frame_9d0ee7314d834e231f3f36ef1ac0dc4b_9) == 2);
 
         // Framed code:
         {
@@ -17166,21 +16709,13 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             }
         }
 
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_9d0ee7314d834e231f3f36ef1ac0dc4b_9);
-#endif
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         goto frame_no_exception_8;
+        frame_exception_exit_9:
 
-        frame_exception_exit_9:;
-
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_9d0ee7314d834e231f3f36ef1ac0dc4b_9);
-#endif
 
         if (exception_tb == NULL) {
             exception_tb = MAKE_TRACEBACK(frame_9d0ee7314d834e231f3f36ef1ac0dc4b_9, exception_lineno);
@@ -17196,26 +16731,14 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         );
 
 
-        // Release cached frame if used for exception.
-        if (frame_9d0ee7314d834e231f3f36ef1ac0dc4b_9 == cache_frame_9d0ee7314d834e231f3f36ef1ac0dc4b_9) {
-#if _DEBUG_REFCOUNTS
-            count_active_frame_cache_instances -= 1;
-            count_released_frame_cache_instances += 1;
-#endif
-
-            Py_DECREF(cache_frame_9d0ee7314d834e231f3f36ef1ac0dc4b_9);
-            cache_frame_9d0ee7314d834e231f3f36ef1ac0dc4b_9 = NULL;
-        }
 
         assertFrameObject(frame_9d0ee7314d834e231f3f36ef1ac0dc4b_9);
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         // Return the error.
         goto nested_frame_exit_8;
-
         frame_no_exception_8:;
         goto skip_nested_handling_8;
         nested_frame_exit_8:;
@@ -17523,7 +17046,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         condexpr_true_18:;
         CHECK_OBJECT(tmp_class_creation_9__bases);
         tmp_expression_value_41 = tmp_class_creation_9__bases;
-        tmp_subscript_value_9 = mod_consts[111];
+        tmp_subscript_value_9 = mod_consts[133];
         tmp_type_arg_17 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_41, tmp_subscript_value_9, 0);
         if (tmp_type_arg_17 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17798,7 +17321,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             goto try_except_handler_30;
         }
         tmp_dictset_value = mod_consts[152];
-        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__9_DewPointChart_179, mod_consts[126], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__9_DewPointChart_179, mod_consts[125], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -17821,32 +17344,12 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_30;
         }
-        if (isFrameUnusable(cache_frame_d0b4ecabd85f496dd9ec02329e0ecda2_10)) {
-            Py_XDECREF(cache_frame_d0b4ecabd85f496dd9ec02329e0ecda2_10);
+        frame_d0b4ecabd85f496dd9ec02329e0ecda2_10 = MAKE_CLASS_FRAME(codeobj_d0b4ecabd85f496dd9ec02329e0ecda2, module_weather_app$create_charts, NULL, sizeof(void *));
 
-#if _DEBUG_REFCOUNTS
-            if (cache_frame_d0b4ecabd85f496dd9ec02329e0ecda2_10 == NULL) {
-                count_active_frame_cache_instances += 1;
-            } else {
-                count_released_frame_cache_instances += 1;
-            }
-            count_allocated_frame_cache_instances += 1;
-#endif
-            cache_frame_d0b4ecabd85f496dd9ec02329e0ecda2_10 = MAKE_CLASS_FRAME(codeobj_d0b4ecabd85f496dd9ec02329e0ecda2, module_weather_app$create_charts, NULL, sizeof(void *));
-#if _DEBUG_REFCOUNTS
-        } else {
-            count_hit_frame_cache_instances += 1;
-#endif
-        }
-        assert(cache_frame_d0b4ecabd85f496dd9ec02329e0ecda2_10->m_type_description == NULL);
-        frame_d0b4ecabd85f496dd9ec02329e0ecda2_10 = cache_frame_d0b4ecabd85f496dd9ec02329e0ecda2_10;
-
-
-        // Push the new frame as the currently active one.
+        // Push the new frame as the currently active one, and we should be exclusively
+        // owning it.
         pushFrameStack(frame_d0b4ecabd85f496dd9ec02329e0ecda2_10);
-
-        // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_d0b4ecabd85f496dd9ec02329e0ecda2_10) == 2); // Frame stack
+        assert(Py_REFCNT(frame_d0b4ecabd85f496dd9ec02329e0ecda2_10) == 2);
 
         // Framed code:
         {
@@ -17871,21 +17374,13 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             }
         }
 
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_d0b4ecabd85f496dd9ec02329e0ecda2_10);
-#endif
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         goto frame_no_exception_9;
+        frame_exception_exit_10:
 
-        frame_exception_exit_10:;
-
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_d0b4ecabd85f496dd9ec02329e0ecda2_10);
-#endif
 
         if (exception_tb == NULL) {
             exception_tb = MAKE_TRACEBACK(frame_d0b4ecabd85f496dd9ec02329e0ecda2_10, exception_lineno);
@@ -17901,26 +17396,14 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         );
 
 
-        // Release cached frame if used for exception.
-        if (frame_d0b4ecabd85f496dd9ec02329e0ecda2_10 == cache_frame_d0b4ecabd85f496dd9ec02329e0ecda2_10) {
-#if _DEBUG_REFCOUNTS
-            count_active_frame_cache_instances -= 1;
-            count_released_frame_cache_instances += 1;
-#endif
-
-            Py_DECREF(cache_frame_d0b4ecabd85f496dd9ec02329e0ecda2_10);
-            cache_frame_d0b4ecabd85f496dd9ec02329e0ecda2_10 = NULL;
-        }
 
         assertFrameObject(frame_d0b4ecabd85f496dd9ec02329e0ecda2_10);
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         // Return the error.
         goto nested_frame_exit_9;
-
         frame_no_exception_9:;
         goto skip_nested_handling_9;
         nested_frame_exit_9:;
@@ -18228,7 +17711,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         condexpr_true_20:;
         CHECK_OBJECT(tmp_class_creation_10__bases);
         tmp_expression_value_46 = tmp_class_creation_10__bases;
-        tmp_subscript_value_10 = mod_consts[111];
+        tmp_subscript_value_10 = mod_consts[133];
         tmp_type_arg_19 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_46, tmp_subscript_value_10, 0);
         if (tmp_type_arg_19 == NULL) {
             assert(ERROR_OCCURRED());
@@ -18503,7 +17986,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             goto try_except_handler_33;
         }
         tmp_dictset_value = mod_consts[152];
-        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__10_SunRadChart_201, mod_consts[126], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__10_SunRadChart_201, mod_consts[125], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -18526,32 +18009,12 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_33;
         }
-        if (isFrameUnusable(cache_frame_f26f16d8c6319cad229b2d35d3fe6278_11)) {
-            Py_XDECREF(cache_frame_f26f16d8c6319cad229b2d35d3fe6278_11);
+        frame_f26f16d8c6319cad229b2d35d3fe6278_11 = MAKE_CLASS_FRAME(codeobj_f26f16d8c6319cad229b2d35d3fe6278, module_weather_app$create_charts, NULL, sizeof(void *));
 
-#if _DEBUG_REFCOUNTS
-            if (cache_frame_f26f16d8c6319cad229b2d35d3fe6278_11 == NULL) {
-                count_active_frame_cache_instances += 1;
-            } else {
-                count_released_frame_cache_instances += 1;
-            }
-            count_allocated_frame_cache_instances += 1;
-#endif
-            cache_frame_f26f16d8c6319cad229b2d35d3fe6278_11 = MAKE_CLASS_FRAME(codeobj_f26f16d8c6319cad229b2d35d3fe6278, module_weather_app$create_charts, NULL, sizeof(void *));
-#if _DEBUG_REFCOUNTS
-        } else {
-            count_hit_frame_cache_instances += 1;
-#endif
-        }
-        assert(cache_frame_f26f16d8c6319cad229b2d35d3fe6278_11->m_type_description == NULL);
-        frame_f26f16d8c6319cad229b2d35d3fe6278_11 = cache_frame_f26f16d8c6319cad229b2d35d3fe6278_11;
-
-
-        // Push the new frame as the currently active one.
+        // Push the new frame as the currently active one, and we should be exclusively
+        // owning it.
         pushFrameStack(frame_f26f16d8c6319cad229b2d35d3fe6278_11);
-
-        // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_f26f16d8c6319cad229b2d35d3fe6278_11) == 2); // Frame stack
+        assert(Py_REFCNT(frame_f26f16d8c6319cad229b2d35d3fe6278_11) == 2);
 
         // Framed code:
         {
@@ -18576,21 +18039,13 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             }
         }
 
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_f26f16d8c6319cad229b2d35d3fe6278_11);
-#endif
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         goto frame_no_exception_10;
+        frame_exception_exit_11:
 
-        frame_exception_exit_11:;
-
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_f26f16d8c6319cad229b2d35d3fe6278_11);
-#endif
 
         if (exception_tb == NULL) {
             exception_tb = MAKE_TRACEBACK(frame_f26f16d8c6319cad229b2d35d3fe6278_11, exception_lineno);
@@ -18606,26 +18061,14 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         );
 
 
-        // Release cached frame if used for exception.
-        if (frame_f26f16d8c6319cad229b2d35d3fe6278_11 == cache_frame_f26f16d8c6319cad229b2d35d3fe6278_11) {
-#if _DEBUG_REFCOUNTS
-            count_active_frame_cache_instances -= 1;
-            count_released_frame_cache_instances += 1;
-#endif
-
-            Py_DECREF(cache_frame_f26f16d8c6319cad229b2d35d3fe6278_11);
-            cache_frame_f26f16d8c6319cad229b2d35d3fe6278_11 = NULL;
-        }
 
         assertFrameObject(frame_f26f16d8c6319cad229b2d35d3fe6278_11);
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         // Return the error.
         goto nested_frame_exit_10;
-
         frame_no_exception_10:;
         goto skip_nested_handling_10;
         nested_frame_exit_10:;
@@ -18933,7 +18376,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         condexpr_true_22:;
         CHECK_OBJECT(tmp_class_creation_11__bases);
         tmp_expression_value_51 = tmp_class_creation_11__bases;
-        tmp_subscript_value_11 = mod_consts[111];
+        tmp_subscript_value_11 = mod_consts[133];
         tmp_type_arg_21 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_51, tmp_subscript_value_11, 0);
         if (tmp_type_arg_21 == NULL) {
             assert(ERROR_OCCURRED());
@@ -19208,7 +18651,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             goto try_except_handler_36;
         }
         tmp_dictset_value = mod_consts[152];
-        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__11_SnowDepthChart_223, mod_consts[126], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__11_SnowDepthChart_223, mod_consts[125], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -19231,32 +18674,12 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_36;
         }
-        if (isFrameUnusable(cache_frame_63de51a90f0c34ad4210e7c00cfc0558_12)) {
-            Py_XDECREF(cache_frame_63de51a90f0c34ad4210e7c00cfc0558_12);
+        frame_63de51a90f0c34ad4210e7c00cfc0558_12 = MAKE_CLASS_FRAME(codeobj_63de51a90f0c34ad4210e7c00cfc0558, module_weather_app$create_charts, NULL, sizeof(void *));
 
-#if _DEBUG_REFCOUNTS
-            if (cache_frame_63de51a90f0c34ad4210e7c00cfc0558_12 == NULL) {
-                count_active_frame_cache_instances += 1;
-            } else {
-                count_released_frame_cache_instances += 1;
-            }
-            count_allocated_frame_cache_instances += 1;
-#endif
-            cache_frame_63de51a90f0c34ad4210e7c00cfc0558_12 = MAKE_CLASS_FRAME(codeobj_63de51a90f0c34ad4210e7c00cfc0558, module_weather_app$create_charts, NULL, sizeof(void *));
-#if _DEBUG_REFCOUNTS
-        } else {
-            count_hit_frame_cache_instances += 1;
-#endif
-        }
-        assert(cache_frame_63de51a90f0c34ad4210e7c00cfc0558_12->m_type_description == NULL);
-        frame_63de51a90f0c34ad4210e7c00cfc0558_12 = cache_frame_63de51a90f0c34ad4210e7c00cfc0558_12;
-
-
-        // Push the new frame as the currently active one.
+        // Push the new frame as the currently active one, and we should be exclusively
+        // owning it.
         pushFrameStack(frame_63de51a90f0c34ad4210e7c00cfc0558_12);
-
-        // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_63de51a90f0c34ad4210e7c00cfc0558_12) == 2); // Frame stack
+        assert(Py_REFCNT(frame_63de51a90f0c34ad4210e7c00cfc0558_12) == 2);
 
         // Framed code:
         {
@@ -19281,21 +18704,13 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             }
         }
 
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_63de51a90f0c34ad4210e7c00cfc0558_12);
-#endif
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         goto frame_no_exception_11;
+        frame_exception_exit_12:
 
-        frame_exception_exit_12:;
-
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_63de51a90f0c34ad4210e7c00cfc0558_12);
-#endif
 
         if (exception_tb == NULL) {
             exception_tb = MAKE_TRACEBACK(frame_63de51a90f0c34ad4210e7c00cfc0558_12, exception_lineno);
@@ -19311,26 +18726,14 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         );
 
 
-        // Release cached frame if used for exception.
-        if (frame_63de51a90f0c34ad4210e7c00cfc0558_12 == cache_frame_63de51a90f0c34ad4210e7c00cfc0558_12) {
-#if _DEBUG_REFCOUNTS
-            count_active_frame_cache_instances -= 1;
-            count_released_frame_cache_instances += 1;
-#endif
-
-            Py_DECREF(cache_frame_63de51a90f0c34ad4210e7c00cfc0558_12);
-            cache_frame_63de51a90f0c34ad4210e7c00cfc0558_12 = NULL;
-        }
 
         assertFrameObject(frame_63de51a90f0c34ad4210e7c00cfc0558_12);
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         // Return the error.
         goto nested_frame_exit_11;
-
         frame_no_exception_11:;
         goto skip_nested_handling_11;
         nested_frame_exit_11:;
@@ -19638,7 +19041,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         condexpr_true_24:;
         CHECK_OBJECT(tmp_class_creation_12__bases);
         tmp_expression_value_56 = tmp_class_creation_12__bases;
-        tmp_subscript_value_12 = mod_consts[111];
+        tmp_subscript_value_12 = mod_consts[133];
         tmp_type_arg_23 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_56, tmp_subscript_value_12, 0);
         if (tmp_type_arg_23 == NULL) {
             assert(ERROR_OCCURRED());
@@ -19913,7 +19316,7 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             goto try_except_handler_39;
         }
         tmp_dictset_value = mod_consts[152];
-        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__12_SoilChart_245, mod_consts[126], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_weather_app$create_charts$$$class__12_SoilChart_245, mod_consts[125], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -19936,32 +19339,12 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_39;
         }
-        if (isFrameUnusable(cache_frame_d62e6ea29028c4dfcb65d55a9d150e36_13)) {
-            Py_XDECREF(cache_frame_d62e6ea29028c4dfcb65d55a9d150e36_13);
+        frame_d62e6ea29028c4dfcb65d55a9d150e36_13 = MAKE_CLASS_FRAME(codeobj_d62e6ea29028c4dfcb65d55a9d150e36, module_weather_app$create_charts, NULL, sizeof(void *));
 
-#if _DEBUG_REFCOUNTS
-            if (cache_frame_d62e6ea29028c4dfcb65d55a9d150e36_13 == NULL) {
-                count_active_frame_cache_instances += 1;
-            } else {
-                count_released_frame_cache_instances += 1;
-            }
-            count_allocated_frame_cache_instances += 1;
-#endif
-            cache_frame_d62e6ea29028c4dfcb65d55a9d150e36_13 = MAKE_CLASS_FRAME(codeobj_d62e6ea29028c4dfcb65d55a9d150e36, module_weather_app$create_charts, NULL, sizeof(void *));
-#if _DEBUG_REFCOUNTS
-        } else {
-            count_hit_frame_cache_instances += 1;
-#endif
-        }
-        assert(cache_frame_d62e6ea29028c4dfcb65d55a9d150e36_13->m_type_description == NULL);
-        frame_d62e6ea29028c4dfcb65d55a9d150e36_13 = cache_frame_d62e6ea29028c4dfcb65d55a9d150e36_13;
-
-
-        // Push the new frame as the currently active one.
+        // Push the new frame as the currently active one, and we should be exclusively
+        // owning it.
         pushFrameStack(frame_d62e6ea29028c4dfcb65d55a9d150e36_13);
-
-        // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_d62e6ea29028c4dfcb65d55a9d150e36_13) == 2); // Frame stack
+        assert(Py_REFCNT(frame_d62e6ea29028c4dfcb65d55a9d150e36_13) == 2);
 
         // Framed code:
         {
@@ -19986,21 +19369,13 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
             }
         }
 
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_d62e6ea29028c4dfcb65d55a9d150e36_13);
-#endif
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         goto frame_no_exception_12;
+        frame_exception_exit_13:
 
-        frame_exception_exit_13:;
-
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_d62e6ea29028c4dfcb65d55a9d150e36_13);
-#endif
 
         if (exception_tb == NULL) {
             exception_tb = MAKE_TRACEBACK(frame_d62e6ea29028c4dfcb65d55a9d150e36_13, exception_lineno);
@@ -20016,26 +19391,14 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         );
 
 
-        // Release cached frame if used for exception.
-        if (frame_d62e6ea29028c4dfcb65d55a9d150e36_13 == cache_frame_d62e6ea29028c4dfcb65d55a9d150e36_13) {
-#if _DEBUG_REFCOUNTS
-            count_active_frame_cache_instances -= 1;
-            count_released_frame_cache_instances += 1;
-#endif
-
-            Py_DECREF(cache_frame_d62e6ea29028c4dfcb65d55a9d150e36_13);
-            cache_frame_d62e6ea29028c4dfcb65d55a9d150e36_13 = NULL;
-        }
 
         assertFrameObject(frame_d62e6ea29028c4dfcb65d55a9d150e36_13);
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         // Return the error.
         goto nested_frame_exit_12;
-
         frame_no_exception_12:;
         goto skip_nested_handling_12;
         nested_frame_exit_12:;
@@ -20216,18 +19579,13 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
     // End of try:
     try_end_15:;
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_94c4b48944e488468e9fabceb0242b5d);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_13;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_94c4b48944e488468e9fabceb0242b5d);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_94c4b48944e488468e9fabceb0242b5d, exception_lineno);
@@ -20235,12 +19593,15 @@ PyObject *modulecode_weather_app$create_charts(PyObject *module, struct Nuitka_M
         exception_tb = ADD_TRACEBACK(exception_tb, frame_94c4b48944e488468e9fabceb0242b5d, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_94c4b48944e488468e9fabceb0242b5d);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_13:;
     CHECK_OBJECT(tmp_class_creation_12__bases_orig);
     Py_DECREF(tmp_class_creation_12__bases_orig);

@@ -1,5 +1,5 @@
 /* Generated code for Python module 'requests.compat'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -489,7 +489,6 @@ PyObject *modulecode_requests$compat(PyObject *module, struct Nuitka_MetaPathBas
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_requests$compat, (Nuitka_StringObject *)mod_consts[2], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_fb66120f9c6fbf235bdc1e42e7903d5c = MAKE_MODULE_FRAME(codeobj_fb66120f9c6fbf235bdc1e42e7903d5c, module_requests$compat);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -2001,18 +2000,13 @@ PyObject *modulecode_requests$compat(PyObject *module, struct Nuitka_MetaPathBas
         UPDATE_STRING_DICT1(moduledict_requests$compat, (Nuitka_StringObject *)mod_consts[59], tmp_assign_source_44);
     }
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_fb66120f9c6fbf235bdc1e42e7903d5c);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_fb66120f9c6fbf235bdc1e42e7903d5c);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_fb66120f9c6fbf235bdc1e42e7903d5c, exception_lineno);
@@ -2020,12 +2014,15 @@ PyObject *modulecode_requests$compat(PyObject *module, struct Nuitka_MetaPathBas
         exception_tb = ADD_TRACEBACK(exception_tb, frame_fb66120f9c6fbf235bdc1e42e7903d5c, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_fb66120f9c6fbf235bdc1e42e7903d5c);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_1:;
     {
         PyObject *tmp_assign_source_45;

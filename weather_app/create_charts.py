@@ -234,7 +234,7 @@ class SnowDepthChart(QChart):
         hd = HourlyChartsData(hourly)
         self._x_axis = MyXAxis(hd.x_axisMin, hd.x_axsMax)
         self._y_axis = MyYAxis(hd.y_snowAxisMin, hd.y_snowAxisMax, 100, 'Высота снежного\nпокрова см.')
-        self.snow_depth_series = MySplineSeries('Количество снега', hd.snowSeries, QColor('#1432FF'))
+        self.snow_depth_series = MySplineSeries('Количество снега', hd.snowSeries, QColor('#FFFFFF'))
 
         self.addAxis(self._x_axis, Qt.AlignBottom)
         self.addAxis(self._y_axis, Qt.AlignLeft)
@@ -256,7 +256,7 @@ class SoilChart(QChart):
         hd = HourlyChartsData(hourly)
         self._x_axis = MyXAxis(hd.x_axisMin, hd.x_axsMax)
         self._y_temp_axis = MyYAxis(hd.y_soil_temp_AxisMin, hd.y_soil_temp_AxisMax, 2, 'Температура почвы °C')
-        self._y_moist_axis = MyYAxis(0, hd.y_soil_moistAxisMax - 1.5, 2, 'Влажность почвы м.м')
+        self._y_moist_axis = MyYAxis(hd.y_soil_moistAxisMin, hd.y_soil_moistAxisMax, 2, 'Влажность почвы м.м')
         self.soil_temp6_series = MySplineSeries('Температура почвы на 6см', hd.soil_temp_6Series, QColor('#FF1432'))
         self.soil_temp18_series = MySplineSeries('Температура почвы на 6=18см', hd.soil_temp_18Series,
                                                  QColor('#FF14A8'))

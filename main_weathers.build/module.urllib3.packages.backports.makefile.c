@@ -1,5 +1,5 @@
 /* Generated code for Python module 'urllib3.packages.backports.makefile'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -154,12 +154,10 @@ static PyObject *impl_urllib3$packages$backports$makefile$$$function__1_backport
     assert(cache_frame_4395a0b60848ca5c19927c4d469ae66f->m_type_description == NULL);
     frame_4395a0b60848ca5c19927c4d469ae66f = cache_frame_4395a0b60848ca5c19927c4d469ae66f;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_4395a0b60848ca5c19927c4d469ae66f);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_4395a0b60848ca5c19927c4d469ae66f) == 2); // Frame stack
+    assert(Py_REFCNT(frame_4395a0b60848ca5c19927c4d469ae66f) == 2);
 
     // Framed code:
     {
@@ -1082,32 +1080,19 @@ static PyObject *impl_urllib3$packages$backports$makefile$$$function__1_backport
         }
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_4395a0b60848ca5c19927c4d469ae66f);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_4395a0b60848ca5c19927c4d469ae66f);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto try_return_handler_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_4395a0b60848ca5c19927c4d469ae66f);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_4395a0b60848ca5c19927c4d469ae66f, exception_lineno);
@@ -1141,7 +1126,6 @@ static PyObject *impl_urllib3$packages$backports$makefile$$$function__1_backport
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_4395a0b60848ca5c19927c4d469ae66f);
         cache_frame_4395a0b60848ca5c19927c4d469ae66f = NULL;
     }
@@ -1151,10 +1135,8 @@ static PyObject *impl_urllib3$packages$backports$makefile$$$function__1_backport
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     CHECK_OBJECT(var_text);
     tmp_return_value = var_text;
@@ -1646,7 +1628,6 @@ PyObject *modulecode_urllib3$packages$backports$makefile(PyObject *module, struc
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_urllib3$packages$backports$makefile, (Nuitka_StringObject *)mod_consts[22], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_ec1fbde94b58da14f7826c901946514f = MAKE_MODULE_FRAME(codeobj_ec1fbde94b58da14f7826c901946514f, module_urllib3$packages$backports$makefile);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -1762,18 +1743,13 @@ PyObject *modulecode_urllib3$packages$backports$makefile(PyObject *module, struc
         UPDATE_STRING_DICT1(moduledict_urllib3$packages$backports$makefile, (Nuitka_StringObject *)mod_consts[6], tmp_assign_source_5);
     }
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_ec1fbde94b58da14f7826c901946514f);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_ec1fbde94b58da14f7826c901946514f);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_ec1fbde94b58da14f7826c901946514f, exception_lineno);
@@ -1781,12 +1757,15 @@ PyObject *modulecode_urllib3$packages$backports$makefile(PyObject *module, struc
         exception_tb = ADD_TRACEBACK(exception_tb, frame_ec1fbde94b58da14f7826c901946514f, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_ec1fbde94b58da14f7826c901946514f);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_1:;
     {
         PyObject *tmp_assign_source_6;

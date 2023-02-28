@@ -1,5 +1,5 @@
 /* Generated code for Python module 'charset_normalizer.assets'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -464,7 +464,6 @@ PyObject *modulecode_charset_normalizer$assets(PyObject *module, struct Nuitka_M
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_charset_normalizer$assets, (Nuitka_StringObject *)mod_consts[1], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_eaf2a93fea51440120f4ef63ba771789 = MAKE_MODULE_FRAME(codeobj_eaf2a93fea51440120f4ef63ba771789, module_charset_normalizer$assets);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -963,7 +962,7 @@ PyObject *modulecode_charset_normalizer$assets(PyObject *module, struct Nuitka_M
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 4;
+                exception_lineno = 6;
 
                 goto tuple_build_exception_1;
             }
@@ -984,7 +983,7 @@ PyObject *modulecode_charset_normalizer$assets(PyObject *module, struct Nuitka_M
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 4;
+            exception_lineno = 6;
 
             goto frame_exception_exit_1;
         }
@@ -1000,7 +999,7 @@ PyObject *modulecode_charset_normalizer$assets(PyObject *module, struct Nuitka_M
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_ass_subvalue_1);
 
-            exception_lineno = 4;
+            exception_lineno = 6;
 
             goto frame_exception_exit_1;
         }
@@ -1013,24 +1012,19 @@ PyObject *modulecode_charset_normalizer$assets(PyObject *module, struct Nuitka_M
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 4;
+            exception_lineno = 6;
 
             goto frame_exception_exit_1;
         }
     }
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_eaf2a93fea51440120f4ef63ba771789);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_eaf2a93fea51440120f4ef63ba771789);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_eaf2a93fea51440120f4ef63ba771789, exception_lineno);
@@ -1038,12 +1032,15 @@ PyObject *modulecode_charset_normalizer$assets(PyObject *module, struct Nuitka_M
         exception_tb = ADD_TRACEBACK(exception_tb, frame_eaf2a93fea51440120f4ef63ba771789, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_eaf2a93fea51440120f4ef63ba771789);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_1:;
 
     // Report to PGO about leaving the module without error.

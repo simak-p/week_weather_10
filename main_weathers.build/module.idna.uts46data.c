@@ -1,5 +1,5 @@
 /* Generated code for Python module 'idna.uts46data'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -5376,7 +5376,6 @@ PyObject *modulecode_idna$uts46data(PyObject *module, struct Nuitka_MetaPathBase
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_idna$uts46data, (Nuitka_StringObject *)mod_consts[83], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_fa4f66aca789f478bf7f164a7df1fb60 = MAKE_MODULE_FRAME(codeobj_fa4f66aca789f478bf7f164a7df1fb60, module_idna$uts46data);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -21363,18 +21362,13 @@ PyObject *modulecode_idna$uts46data(PyObject *module, struct Nuitka_MetaPathBase
         UPDATE_STRING_DICT1(moduledict_idna$uts46data, (Nuitka_StringObject *)mod_consts[179], tmp_assign_source_91);
     }
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_fa4f66aca789f478bf7f164a7df1fb60);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_fa4f66aca789f478bf7f164a7df1fb60);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_fa4f66aca789f478bf7f164a7df1fb60, exception_lineno);
@@ -21382,12 +21376,15 @@ PyObject *modulecode_idna$uts46data(PyObject *module, struct Nuitka_MetaPathBase
         exception_tb = ADD_TRACEBACK(exception_tb, frame_fa4f66aca789f478bf7f164a7df1fb60, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_fa4f66aca789f478bf7f164a7df1fb60);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_1:;
 
     // Report to PGO about leaving the module without error.

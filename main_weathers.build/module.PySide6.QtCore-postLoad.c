@@ -1,5 +1,5 @@
 /* Generated code for Python module 'PySide6.QtCore-postLoad'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -456,7 +456,6 @@ PyObject *modulecode_PySide6$QtCore$$45$postLoad(PyObject *module, struct Nuitka
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_PySide6$QtCore$$45$postLoad, (Nuitka_StringObject *)mod_consts[1], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_51357802aba3ff0aa952671ffe2b579e = MAKE_MODULE_FRAME(codeobj_51357802aba3ff0aa952671ffe2b579e, module_PySide6$QtCore$$45$postLoad);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -828,18 +827,13 @@ PyObject *modulecode_PySide6$QtCore$$45$postLoad(PyObject *module, struct Nuitka
         }
     }
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_51357802aba3ff0aa952671ffe2b579e);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_51357802aba3ff0aa952671ffe2b579e);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_51357802aba3ff0aa952671ffe2b579e, exception_lineno);
@@ -847,12 +841,15 @@ PyObject *modulecode_PySide6$QtCore$$45$postLoad(PyObject *module, struct Nuitka
         exception_tb = ADD_TRACEBACK(exception_tb, frame_51357802aba3ff0aa952671ffe2b579e, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_51357802aba3ff0aa952671ffe2b579e);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_1:;
 
     // Report to PGO about leaving the module without error.

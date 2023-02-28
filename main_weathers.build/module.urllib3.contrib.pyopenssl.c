@@ -1,5 +1,5 @@
 /* Generated code for Python module 'urllib3.contrib.pyopenssl'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -379,24 +379,9 @@ static PyObject *urllib3$contrib$pyopenssl$$$genexpr__1_genexpr_context(struct N
     Py_INCREF(generator->m_frame->m_frame.f_back);
 
 #if PYTHON_VERSION >= 0x300
-    // Accept currently existing exception as the one to publish again when we
+    // Store currently existing exception as the one to publish again when we
     // yield or yield from.
-    {
-        PyThreadState *thread_state = PyThreadState_GET();
-
-#if PYTHON_VERSION < 0x3b0
-        EXC_TYPE_F(generator) = EXC_TYPE(thread_state);
-        if (EXC_TYPE_F(generator) == Py_None) EXC_TYPE_F(generator) = NULL;
-        Py_XINCREF(EXC_TYPE_F(generator));
-#endif
-        EXC_VALUE_F(generator) = EXC_VALUE(thread_state);
-        Py_XINCREF(EXC_VALUE_F(generator));
-#if PYTHON_VERSION < 0x3b0
-        ASSIGN_EXC_TRACEBACK_F(generator, EXC_TRACEBACK(thread_state));
-        Py_XINCREF(EXC_TRACEBACK_F(generator));
-#endif
-    }
-
+    STORE_GENERATOR_EXCEPTION(generator);
 #endif
 
     // Framed code:
@@ -695,13 +680,8 @@ static PyObject *urllib3$contrib$pyopenssl$$$genexpr__1_genexpr_context(struct N
     Nuitka_Frame_MarkAsNotExecuting(generator->m_frame);
 
 #if PYTHON_VERSION >= 0x300
-#if PYTHON_VERSION < 0x3b0
-    Py_CLEAR(EXC_TYPE_F(generator));
-#endif
-    Py_CLEAR(EXC_VALUE_F(generator));
-#if PYTHON_VERSION < 0x3b0
-    Py_CLEAR(EXC_TRACEBACK_F(generator));
-#endif
+    // Release exception attached to the frame
+    DROP_GENERATOR_EXCEPTION(generator);
 #endif
 
     // Allow re-use of the frame again.
@@ -856,12 +836,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__1_inject_into_urllib
     assert(cache_frame_3133cfb313a3ffec8962e8f91ebfb2a4->m_type_description == NULL);
     frame_3133cfb313a3ffec8962e8f91ebfb2a4 = cache_frame_3133cfb313a3ffec8962e8f91ebfb2a4;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_3133cfb313a3ffec8962e8f91ebfb2a4);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_3133cfb313a3ffec8962e8f91ebfb2a4) == 2); // Frame stack
+    assert(Py_REFCNT(frame_3133cfb313a3ffec8962e8f91ebfb2a4) == 2);
 
     // Framed code:
     {
@@ -1189,21 +1167,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__1_inject_into_urllib
         }
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_3133cfb313a3ffec8962e8f91ebfb2a4);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_3133cfb313a3ffec8962e8f91ebfb2a4);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_3133cfb313a3ffec8962e8f91ebfb2a4, exception_lineno);
@@ -1224,7 +1194,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__1_inject_into_urllib
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_3133cfb313a3ffec8962e8f91ebfb2a4);
         cache_frame_3133cfb313a3ffec8962e8f91ebfb2a4 = NULL;
     }
@@ -1234,10 +1203,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__1_inject_into_urllib
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -1303,12 +1270,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__2_extract_from_urlli
     assert(cache_frame_958677bb394fb0261a12d8f0d63b4408->m_type_description == NULL);
     frame_958677bb394fb0261a12d8f0d63b4408 = cache_frame_958677bb394fb0261a12d8f0d63b4408;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_958677bb394fb0261a12d8f0d63b4408);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_958677bb394fb0261a12d8f0d63b4408) == 2); // Frame stack
+    assert(Py_REFCNT(frame_958677bb394fb0261a12d8f0d63b4408) == 2);
 
     // Framed code:
     {
@@ -1603,21 +1568,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__2_extract_from_urlli
         }
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_958677bb394fb0261a12d8f0d63b4408);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_958677bb394fb0261a12d8f0d63b4408);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_958677bb394fb0261a12d8f0d63b4408, exception_lineno);
@@ -1638,7 +1595,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__2_extract_from_urlli
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_958677bb394fb0261a12d8f0d63b4408);
         cache_frame_958677bb394fb0261a12d8f0d63b4408 = NULL;
     }
@@ -1648,10 +1604,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__2_extract_from_urlli
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -1724,12 +1678,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__3__validate_dependen
     assert(cache_frame_89a65eb26a6d9ab9dc06ab6772804316->m_type_description == NULL);
     frame_89a65eb26a6d9ab9dc06ab6772804316 = cache_frame_89a65eb26a6d9ab9dc06ab6772804316;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_89a65eb26a6d9ab9dc06ab6772804316);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_89a65eb26a6d9ab9dc06ab6772804316) == 2); // Frame stack
+    assert(Py_REFCNT(frame_89a65eb26a6d9ab9dc06ab6772804316) == 2);
 
     // Framed code:
     {
@@ -1945,21 +1897,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__3__validate_dependen
     }
     branch_no_2:;
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_89a65eb26a6d9ab9dc06ab6772804316);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_89a65eb26a6d9ab9dc06ab6772804316);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_89a65eb26a6d9ab9dc06ab6772804316, exception_lineno);
@@ -1983,7 +1927,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__3__validate_dependen
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_89a65eb26a6d9ab9dc06ab6772804316);
         cache_frame_89a65eb26a6d9ab9dc06ab6772804316 = NULL;
     }
@@ -1993,10 +1936,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__3__validate_dependen
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -2117,12 +2058,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
     assert(cache_frame_3995f4a55e6d6b9530686cf5d8a45c09->m_type_description == NULL);
     frame_3995f4a55e6d6b9530686cf5d8a45c09 = cache_frame_3995f4a55e6d6b9530686cf5d8a45c09;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_3995f4a55e6d6b9530686cf5d8a45c09);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_3995f4a55e6d6b9530686cf5d8a45c09) == 2); // Frame stack
+    assert(Py_REFCNT(frame_3995f4a55e6d6b9530686cf5d8a45c09) == 2);
 
     // Framed code:
     {
@@ -2245,32 +2184,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
     }
     branch_end_2:;
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_3995f4a55e6d6b9530686cf5d8a45c09);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_3995f4a55e6d6b9530686cf5d8a45c09);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto try_return_handler_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_3995f4a55e6d6b9530686cf5d8a45c09);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_3995f4a55e6d6b9530686cf5d8a45c09, exception_lineno);
@@ -2293,7 +2219,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_3995f4a55e6d6b9530686cf5d8a45c09);
         cache_frame_3995f4a55e6d6b9530686cf5d8a45c09 = NULL;
     }
@@ -2303,10 +2228,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     CHECK_OBJECT(par_name);
     tmp_return_value = par_name;
@@ -2432,12 +2355,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
     assert(cache_frame_c2470b49b537e72327706b229199e597->m_type_description == NULL);
     frame_c2470b49b537e72327706b229199e597 = cache_frame_c2470b49b537e72327706b229199e597;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_c2470b49b537e72327706b229199e597);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_c2470b49b537e72327706b229199e597) == 2); // Frame stack
+    assert(Py_REFCNT(frame_c2470b49b537e72327706b229199e597) == 2);
 
     // Framed code:
     {
@@ -2617,7 +2538,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
             goto try_except_handler_3;
         }
         tmp_stop_value_1 = Py_None;
-        tmp_subscript_value_1 = MAKE_SLICEOBJ2(tmp_start_value_1, tmp_stop_value_1);
+        tmp_subscript_value_1 = MAKE_SLICE_OBJECT2(tmp_start_value_1, tmp_stop_value_1);
         Py_DECREF(tmp_start_value_1);
         assert(!(tmp_subscript_value_1 == NULL));
         tmp_assign_source_5 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_1);
@@ -2948,32 +2869,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
     // End of try:
     // End of try:
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_c2470b49b537e72327706b229199e597);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_c2470b49b537e72327706b229199e597);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto try_return_handler_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_c2470b49b537e72327706b229199e597);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_c2470b49b537e72327706b229199e597, exception_lineno);
@@ -2997,7 +2905,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_c2470b49b537e72327706b229199e597);
         cache_frame_c2470b49b537e72327706b229199e597 = NULL;
     }
@@ -3007,10 +2914,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
@@ -3151,12 +3056,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
     assert(cache_frame_cd07e5521f7a0158444b94f68b82a578->m_type_description == NULL);
     frame_cd07e5521f7a0158444b94f68b82a578 = cache_frame_cd07e5521f7a0158444b94f68b82a578;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_cd07e5521f7a0158444b94f68b82a578);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_cd07e5521f7a0158444b94f68b82a578) == 2); // Frame stack
+    assert(Py_REFCNT(frame_cd07e5521f7a0158444b94f68b82a578) == 2);
 
     // Framed code:
     {
@@ -3944,12 +3847,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
         assert(cache_frame_01672ba29b418c016fed0373e6d3b2ab_2->m_type_description == NULL);
         frame_01672ba29b418c016fed0373e6d3b2ab_2 = cache_frame_01672ba29b418c016fed0373e6d3b2ab_2;
 
-
-        // Push the new frame as the currently active one.
+        // Push the new frame as the currently active one, and we should be exclusively
+        // owning it.
         pushFrameStack(frame_01672ba29b418c016fed0373e6d3b2ab_2);
-
-        // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_01672ba29b418c016fed0373e6d3b2ab_2) == 2); // Frame stack
+        assert(Py_REFCNT(frame_01672ba29b418c016fed0373e6d3b2ab_2) == 2);
 
         // Framed code:
         // Tried code:
@@ -4090,32 +3991,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
         goto frame_exception_exit_2;
         // End of try:
 
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_01672ba29b418c016fed0373e6d3b2ab_2);
-#endif
 
         // Put the previous frame back on top.
         popFrameStack();
-
 
         goto frame_no_exception_1;
-
-        frame_return_exit_2:;
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_01672ba29b418c016fed0373e6d3b2ab_2);
-#endif
+        frame_return_exit_2:
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         goto try_return_handler_5;
+        frame_exception_exit_2:
 
-        frame_exception_exit_2:;
-
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_01672ba29b418c016fed0373e6d3b2ab_2);
-#endif
 
         if (exception_tb == NULL) {
             exception_tb = MAKE_TRACEBACK(frame_01672ba29b418c016fed0373e6d3b2ab_2, exception_lineno);
@@ -4137,7 +4025,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
             count_active_frame_cache_instances -= 1;
             count_released_frame_cache_instances += 1;
 #endif
-
             Py_DECREF(cache_frame_01672ba29b418c016fed0373e6d3b2ab_2);
             cache_frame_01672ba29b418c016fed0373e6d3b2ab_2 = NULL;
         }
@@ -4147,10 +4034,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
         // Put the previous frame back on top.
         popFrameStack();
 
-
         // Return the error.
         goto nested_frame_exit_1;
-
         frame_no_exception_1:;
         goto skip_nested_handling_1;
         nested_frame_exit_1:;
@@ -4327,32 +4212,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
         Py_DECREF(tmp_call_result_2);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_cd07e5521f7a0158444b94f68b82a578);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_2;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_cd07e5521f7a0158444b94f68b82a578);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto try_return_handler_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_cd07e5521f7a0158444b94f68b82a578);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_cd07e5521f7a0158444b94f68b82a578, exception_lineno);
@@ -4379,7 +4251,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_cd07e5521f7a0158444b94f68b82a578);
         cache_frame_cd07e5521f7a0158444b94f68b82a578 = NULL;
     }
@@ -4389,10 +4260,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_2:;
     CHECK_OBJECT(var_names);
     tmp_return_value = var_names;
@@ -4545,24 +4414,9 @@ static PyObject *urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name$$$gen
     Py_INCREF(generator->m_frame->m_frame.f_back);
 
 #if PYTHON_VERSION >= 0x300
-    // Accept currently existing exception as the one to publish again when we
+    // Store currently existing exception as the one to publish again when we
     // yield or yield from.
-    {
-        PyThreadState *thread_state = PyThreadState_GET();
-
-#if PYTHON_VERSION < 0x3b0
-        EXC_TYPE_F(generator) = EXC_TYPE(thread_state);
-        if (EXC_TYPE_F(generator) == Py_None) EXC_TYPE_F(generator) = NULL;
-        Py_XINCREF(EXC_TYPE_F(generator));
-#endif
-        EXC_VALUE_F(generator) = EXC_VALUE(thread_state);
-        Py_XINCREF(EXC_VALUE_F(generator));
-#if PYTHON_VERSION < 0x3b0
-        ASSIGN_EXC_TRACEBACK_F(generator, EXC_TRACEBACK(thread_state));
-        Py_XINCREF(EXC_TRACEBACK_F(generator));
-#endif
-    }
-
+    STORE_GENERATOR_EXCEPTION(generator);
 #endif
 
     // Framed code:
@@ -4617,7 +4471,7 @@ static PyObject *urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name$$$gen
             PyTuple_SET_ITEM0(tmp_expression_value_1, 0, tmp_tuple_element_1);
             CHECK_OBJECT(generator_heap->var_name);
             tmp_unicode_arg_1 = generator_heap->var_name;
-            tmp_tuple_element_1 = PyObject_Unicode(tmp_unicode_arg_1);
+            tmp_tuple_element_1 = BUILTIN_UNICODE1(tmp_unicode_arg_1);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -4693,13 +4547,8 @@ static PyObject *urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name$$$gen
     Nuitka_Frame_MarkAsNotExecuting(generator->m_frame);
 
 #if PYTHON_VERSION >= 0x300
-#if PYTHON_VERSION < 0x3b0
-    Py_CLEAR(EXC_TYPE_F(generator));
-#endif
-    Py_CLEAR(EXC_VALUE_F(generator));
-#if PYTHON_VERSION < 0x3b0
-    Py_CLEAR(EXC_TRACEBACK_F(generator));
-#endif
+    // Release exception attached to the frame
+    DROP_GENERATOR_EXCEPTION(generator);
 #endif
 
     // Allow re-use of the frame again.
@@ -4852,12 +4701,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__6___init__(struct Nu
     assert(cache_frame_3857cf8633edbd87edf14c397f37fd68->m_type_description == NULL);
     frame_3857cf8633edbd87edf14c397f37fd68 = cache_frame_3857cf8633edbd87edf14c397f37fd68;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_3857cf8633edbd87edf14c397f37fd68);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_3857cf8633edbd87edf14c397f37fd68) == 2); // Frame stack
+    assert(Py_REFCNT(frame_3857cf8633edbd87edf14c397f37fd68) == 2);
 
     // Framed code:
     {
@@ -4954,21 +4801,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__6___init__(struct Nu
         }
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_3857cf8633edbd87edf14c397f37fd68);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_3857cf8633edbd87edf14c397f37fd68);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_3857cf8633edbd87edf14c397f37fd68, exception_lineno);
@@ -4993,7 +4832,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__6___init__(struct Nu
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_3857cf8633edbd87edf14c397f37fd68);
         cache_frame_3857cf8633edbd87edf14c397f37fd68 = NULL;
     }
@@ -5003,10 +4841,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__6___init__(struct Nu
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -5086,12 +4922,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__7_fileno(struct Nuit
     assert(cache_frame_b9d1bffa1123ce0e38e1241aa1d5a898->m_type_description == NULL);
     frame_b9d1bffa1123ce0e38e1241aa1d5a898 = cache_frame_b9d1bffa1123ce0e38e1241aa1d5a898;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_b9d1bffa1123ce0e38e1241aa1d5a898);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_b9d1bffa1123ce0e38e1241aa1d5a898) == 2); // Frame stack
+    assert(Py_REFCNT(frame_b9d1bffa1123ce0e38e1241aa1d5a898) == 2);
 
     // Framed code:
     {
@@ -5126,32 +4960,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__7_fileno(struct Nuit
         goto frame_return_exit_1;
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_b9d1bffa1123ce0e38e1241aa1d5a898);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_b9d1bffa1123ce0e38e1241aa1d5a898);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto function_return_exit;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_b9d1bffa1123ce0e38e1241aa1d5a898);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_b9d1bffa1123ce0e38e1241aa1d5a898, exception_lineno);
@@ -5173,7 +4994,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__7_fileno(struct Nuit
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_b9d1bffa1123ce0e38e1241aa1d5a898);
         cache_frame_b9d1bffa1123ce0e38e1241aa1d5a898 = NULL;
     }
@@ -5183,10 +5003,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__7_fileno(struct Nuit
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
@@ -5258,12 +5076,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__8__decref_socketios(
     assert(cache_frame_89cec72b6623b9deef5adbfbb5f1c3b6->m_type_description == NULL);
     frame_89cec72b6623b9deef5adbfbb5f1c3b6 = cache_frame_89cec72b6623b9deef5adbfbb5f1c3b6;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_89cec72b6623b9deef5adbfbb5f1c3b6);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_89cec72b6623b9deef5adbfbb5f1c3b6) == 2); // Frame stack
+    assert(Py_REFCNT(frame_89cec72b6623b9deef5adbfbb5f1c3b6) == 2);
 
     // Framed code:
     {
@@ -5452,21 +5268,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__8__decref_socketios(
     }
     branch_no_2:;
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_89cec72b6623b9deef5adbfbb5f1c3b6);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_89cec72b6623b9deef5adbfbb5f1c3b6);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_89cec72b6623b9deef5adbfbb5f1c3b6, exception_lineno);
@@ -5488,7 +5296,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__8__decref_socketios(
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_89cec72b6623b9deef5adbfbb5f1c3b6);
         cache_frame_89cec72b6623b9deef5adbfbb5f1c3b6 = NULL;
     }
@@ -5498,10 +5305,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__8__decref_socketios(
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -5597,12 +5402,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
     assert(cache_frame_f5a289e9004df82bfb1ea6f089510921->m_type_description == NULL);
     frame_f5a289e9004df82bfb1ea6f089510921 = cache_frame_f5a289e9004df82bfb1ea6f089510921;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_f5a289e9004df82bfb1ea6f089510921);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_f5a289e9004df82bfb1ea6f089510921) == 2); // Frame stack
+    assert(Py_REFCNT(frame_f5a289e9004df82bfb1ea6f089510921) == 2);
 
     // Framed code:
     // Tried code:
@@ -5890,7 +5693,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
         }
 
         tmp_unicode_arg_1 = var_e;
-        tmp_args_element_value_1 = PyObject_Unicode(tmp_unicode_arg_1);
+        tmp_args_element_value_1 = BUILTIN_UNICODE1(tmp_unicode_arg_1);
         if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6608,32 +6411,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
     // End of try:
     try_end_1:;
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_f5a289e9004df82bfb1ea6f089510921);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_f5a289e9004df82bfb1ea6f089510921);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto try_return_handler_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_f5a289e9004df82bfb1ea6f089510921);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_f5a289e9004df82bfb1ea6f089510921, exception_lineno);
@@ -6659,7 +6449,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_f5a289e9004df82bfb1ea6f089510921);
         cache_frame_f5a289e9004df82bfb1ea6f089510921 = NULL;
     }
@@ -6669,10 +6458,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     CHECK_OBJECT(var_data);
     tmp_return_value = var_data;
@@ -6797,12 +6584,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
     assert(cache_frame_037949187448721975fa542ce7e00743->m_type_description == NULL);
     frame_037949187448721975fa542ce7e00743 = cache_frame_037949187448721975fa542ce7e00743;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_037949187448721975fa542ce7e00743);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_037949187448721975fa542ce7e00743) == 2); // Frame stack
+    assert(Py_REFCNT(frame_037949187448721975fa542ce7e00743) == 2);
 
     // Framed code:
     // Tried code:
@@ -7089,7 +6874,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
         }
 
         tmp_unicode_arg_1 = var_e;
-        tmp_args_element_value_1 = PyObject_Unicode(tmp_unicode_arg_1);
+        tmp_args_element_value_1 = BUILTIN_UNICODE1(tmp_unicode_arg_1);
         if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7806,32 +7591,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
     // End of try:
     // End of try:
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_037949187448721975fa542ce7e00743);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_037949187448721975fa542ce7e00743);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto function_return_exit;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_037949187448721975fa542ce7e00743);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_037949187448721975fa542ce7e00743, exception_lineno);
@@ -7856,7 +7628,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_037949187448721975fa542ce7e00743);
         cache_frame_037949187448721975fa542ce7e00743 = NULL;
     }
@@ -7866,10 +7637,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
@@ -7943,12 +7712,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__11_settimeout(struct
     assert(cache_frame_fcadc7a3956336ad93400dbb98aa1ebf->m_type_description == NULL);
     frame_fcadc7a3956336ad93400dbb98aa1ebf = cache_frame_fcadc7a3956336ad93400dbb98aa1ebf;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_fcadc7a3956336ad93400dbb98aa1ebf);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_fcadc7a3956336ad93400dbb98aa1ebf) == 2); // Frame stack
+    assert(Py_REFCNT(frame_fcadc7a3956336ad93400dbb98aa1ebf) == 2);
 
     // Framed code:
     {
@@ -7986,32 +7753,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__11_settimeout(struct
         goto frame_return_exit_1;
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_fcadc7a3956336ad93400dbb98aa1ebf);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_fcadc7a3956336ad93400dbb98aa1ebf);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto function_return_exit;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_fcadc7a3956336ad93400dbb98aa1ebf);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_fcadc7a3956336ad93400dbb98aa1ebf, exception_lineno);
@@ -8034,7 +7788,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__11_settimeout(struct
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_fcadc7a3956336ad93400dbb98aa1ebf);
         cache_frame_fcadc7a3956336ad93400dbb98aa1ebf = NULL;
     }
@@ -8044,10 +7797,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__11_settimeout(struct
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
@@ -8133,12 +7884,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
     assert(cache_frame_8dda38648a08135cc37918df27dbe79f->m_type_description == NULL);
     frame_8dda38648a08135cc37918df27dbe79f = cache_frame_8dda38648a08135cc37918df27dbe79f;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_8dda38648a08135cc37918df27dbe79f);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_8dda38648a08135cc37918df27dbe79f) == 2); // Frame stack
+    assert(Py_REFCNT(frame_8dda38648a08135cc37918df27dbe79f) == 2);
 
     // Framed code:
     loop_start_1:;
@@ -8580,7 +8329,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
         }
         CHECK_OBJECT(var_e);
         tmp_unicode_arg_1 = var_e;
-        tmp_args_element_value_4 = PyObject_Unicode(tmp_unicode_arg_1);
+        tmp_args_element_value_4 = BUILTIN_UNICODE1(tmp_unicode_arg_1);
         if (tmp_args_element_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8689,32 +8438,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
     }
     goto loop_start_1;
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_8dda38648a08135cc37918df27dbe79f);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_8dda38648a08135cc37918df27dbe79f);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto function_return_exit;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_8dda38648a08135cc37918df27dbe79f);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_8dda38648a08135cc37918df27dbe79f, exception_lineno);
@@ -8738,7 +8474,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_8dda38648a08135cc37918df27dbe79f);
         cache_frame_8dda38648a08135cc37918df27dbe79f = NULL;
     }
@@ -8748,10 +8483,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
@@ -8837,12 +8570,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__13_sendall(struct Nu
     assert(cache_frame_207829a50950937c8c3589b0e2358322->m_type_description == NULL);
     frame_207829a50950937c8c3589b0e2358322 = cache_frame_207829a50950937c8c3589b0e2358322;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_207829a50950937c8c3589b0e2358322);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_207829a50950937c8c3589b0e2358322) == 2); // Frame stack
+    assert(Py_REFCNT(frame_207829a50950937c8c3589b0e2358322) == 2);
 
     // Framed code:
     loop_start_1:;
@@ -9002,7 +8733,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__13_sendall(struct Nu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_value_1 = MAKE_SLICEOBJ2(tmp_start_value_1, tmp_stop_value_1);
+        tmp_subscript_value_1 = MAKE_SLICE_OBJECT2(tmp_start_value_1, tmp_stop_value_1);
         Py_DECREF(tmp_stop_value_1);
         assert(!(tmp_subscript_value_1 == NULL));
         tmp_args_element_value_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_1);
@@ -9085,21 +8816,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__13_sendall(struct Nu
     goto loop_start_1;
     loop_end_1:;
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_207829a50950937c8c3589b0e2358322);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_207829a50950937c8c3589b0e2358322);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_207829a50950937c8c3589b0e2358322, exception_lineno);
@@ -9124,7 +8847,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__13_sendall(struct Nu
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_207829a50950937c8c3589b0e2358322);
         cache_frame_207829a50950937c8c3589b0e2358322 = NULL;
     }
@@ -9134,10 +8856,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__13_sendall(struct Nu
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -9242,12 +8962,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__14_shutdown(struct N
     assert(cache_frame_c417a1f8b14add26a56291c43b485c5c->m_type_description == NULL);
     frame_c417a1f8b14add26a56291c43b485c5c = cache_frame_c417a1f8b14add26a56291c43b485c5c;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_c417a1f8b14add26a56291c43b485c5c);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_c417a1f8b14add26a56291c43b485c5c) == 2); // Frame stack
+    assert(Py_REFCNT(frame_c417a1f8b14add26a56291c43b485c5c) == 2);
 
     // Framed code:
     {
@@ -9283,21 +9001,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__14_shutdown(struct N
         Py_DECREF(tmp_call_result_1);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_c417a1f8b14add26a56291c43b485c5c);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_c417a1f8b14add26a56291c43b485c5c);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_c417a1f8b14add26a56291c43b485c5c, exception_lineno);
@@ -9319,7 +9029,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__14_shutdown(struct N
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_c417a1f8b14add26a56291c43b485c5c);
         cache_frame_c417a1f8b14add26a56291c43b485c5c = NULL;
     }
@@ -9329,10 +9038,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__14_shutdown(struct N
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -9416,12 +9123,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__15_close(struct Nuit
     assert(cache_frame_4b49cc435a68dac67779f59e7123c72e->m_type_description == NULL);
     frame_4b49cc435a68dac67779f59e7123c72e = cache_frame_4b49cc435a68dac67779f59e7123c72e;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_4b49cc435a68dac67779f59e7123c72e);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_4b49cc435a68dac67779f59e7123c72e) == 2); // Frame stack
+    assert(Py_REFCNT(frame_4b49cc435a68dac67779f59e7123c72e) == 2);
 
     // Framed code:
     {
@@ -9739,32 +9444,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__15_close(struct Nuit
     tmp_inplace_assign_1__value = NULL;
     branch_end_1:;
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_4b49cc435a68dac67779f59e7123c72e);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_4b49cc435a68dac67779f59e7123c72e);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto function_return_exit;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_4b49cc435a68dac67779f59e7123c72e);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_4b49cc435a68dac67779f59e7123c72e, exception_lineno);
@@ -9786,7 +9478,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__15_close(struct Nuit
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_4b49cc435a68dac67779f59e7123c72e);
         cache_frame_4b49cc435a68dac67779f59e7123c72e = NULL;
     }
@@ -9796,10 +9487,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__15_close(struct Nuit
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -9875,12 +9564,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__16_getpeercert(struc
     assert(cache_frame_05fc4e60284ed4b306146e47efe048cb->m_type_description == NULL);
     frame_05fc4e60284ed4b306146e47efe048cb = cache_frame_05fc4e60284ed4b306146e47efe048cb;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_05fc4e60284ed4b306146e47efe048cb);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_05fc4e60284ed4b306146e47efe048cb) == 2); // Frame stack
+    assert(Py_REFCNT(frame_05fc4e60284ed4b306146e47efe048cb) == 2);
 
     // Framed code:
     {
@@ -10181,32 +9868,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__16_getpeercert(struc
         goto frame_return_exit_1;
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_05fc4e60284ed4b306146e47efe048cb);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_05fc4e60284ed4b306146e47efe048cb);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto try_return_handler_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_05fc4e60284ed4b306146e47efe048cb);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_05fc4e60284ed4b306146e47efe048cb, exception_lineno);
@@ -10230,7 +9904,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__16_getpeercert(struc
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_05fc4e60284ed4b306146e47efe048cb);
         cache_frame_05fc4e60284ed4b306146e47efe048cb = NULL;
     }
@@ -10240,10 +9913,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__16_getpeercert(struc
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
@@ -10340,12 +10011,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__17_version(struct Nu
     assert(cache_frame_1a4fcba4a85e1ac98ebeb61cba5f5b8c->m_type_description == NULL);
     frame_1a4fcba4a85e1ac98ebeb61cba5f5b8c = cache_frame_1a4fcba4a85e1ac98ebeb61cba5f5b8c;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_1a4fcba4a85e1ac98ebeb61cba5f5b8c);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_1a4fcba4a85e1ac98ebeb61cba5f5b8c) == 2); // Frame stack
+    assert(Py_REFCNT(frame_1a4fcba4a85e1ac98ebeb61cba5f5b8c) == 2);
 
     // Framed code:
     {
@@ -10380,32 +10049,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__17_version(struct Nu
         goto frame_return_exit_1;
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_1a4fcba4a85e1ac98ebeb61cba5f5b8c);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_1a4fcba4a85e1ac98ebeb61cba5f5b8c);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto function_return_exit;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_1a4fcba4a85e1ac98ebeb61cba5f5b8c);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_1a4fcba4a85e1ac98ebeb61cba5f5b8c, exception_lineno);
@@ -10427,7 +10083,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__17_version(struct Nu
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_1a4fcba4a85e1ac98ebeb61cba5f5b8c);
         cache_frame_1a4fcba4a85e1ac98ebeb61cba5f5b8c = NULL;
     }
@@ -10437,10 +10092,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__17_version(struct Nu
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
@@ -10511,12 +10164,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__18__reuse(struct Nui
     assert(cache_frame_95df7265a70be77319075086629c1605->m_type_description == NULL);
     frame_95df7265a70be77319075086629c1605 = cache_frame_95df7265a70be77319075086629c1605;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_95df7265a70be77319075086629c1605);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_95df7265a70be77319075086629c1605) == 2); // Frame stack
+    assert(Py_REFCNT(frame_95df7265a70be77319075086629c1605) == 2);
 
     // Framed code:
     {
@@ -10605,21 +10256,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__18__reuse(struct Nui
     // End of try:
     try_end_1:;
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_95df7265a70be77319075086629c1605);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_95df7265a70be77319075086629c1605);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_95df7265a70be77319075086629c1605, exception_lineno);
@@ -10641,7 +10284,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__18__reuse(struct Nui
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_95df7265a70be77319075086629c1605);
         cache_frame_95df7265a70be77319075086629c1605 = NULL;
     }
@@ -10651,10 +10293,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__18__reuse(struct Nui
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     CHECK_OBJECT(tmp_inplace_assign_1__value);
     Py_DECREF(tmp_inplace_assign_1__value);
@@ -10732,12 +10372,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__19__drop(struct Nuit
     assert(cache_frame_0ff968304ce904c99149d2c67140be19->m_type_description == NULL);
     frame_0ff968304ce904c99149d2c67140be19 = cache_frame_0ff968304ce904c99149d2c67140be19;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_0ff968304ce904c99149d2c67140be19);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_0ff968304ce904c99149d2c67140be19) == 2); // Frame stack
+    assert(Py_REFCNT(frame_0ff968304ce904c99149d2c67140be19) == 2);
 
     // Framed code:
     {
@@ -10889,21 +10527,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__19__drop(struct Nuit
     tmp_inplace_assign_1__value = NULL;
     branch_end_1:;
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_0ff968304ce904c99149d2c67140be19);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_0ff968304ce904c99149d2c67140be19);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_0ff968304ce904c99149d2c67140be19, exception_lineno);
@@ -10925,7 +10555,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__19__drop(struct Nuit
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_0ff968304ce904c99149d2c67140be19);
         cache_frame_0ff968304ce904c99149d2c67140be19 = NULL;
     }
@@ -10935,10 +10564,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__19__drop(struct Nuit
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -11014,12 +10641,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__20_makefile(struct N
     assert(cache_frame_8f6ff094817a373b5ada9efb88bc6d07->m_type_description == NULL);
     frame_8f6ff094817a373b5ada9efb88bc6d07 = cache_frame_8f6ff094817a373b5ada9efb88bc6d07;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_8f6ff094817a373b5ada9efb88bc6d07);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_8f6ff094817a373b5ada9efb88bc6d07) == 2); // Frame stack
+    assert(Py_REFCNT(frame_8f6ff094817a373b5ada9efb88bc6d07) == 2);
 
     // Framed code:
     {
@@ -11159,32 +10784,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__20_makefile(struct N
         goto frame_return_exit_1;
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_8f6ff094817a373b5ada9efb88bc6d07);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_8f6ff094817a373b5ada9efb88bc6d07);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto function_return_exit;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_8f6ff094817a373b5ada9efb88bc6d07);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_8f6ff094817a373b5ada9efb88bc6d07, exception_lineno);
@@ -11208,7 +10820,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__20_makefile(struct N
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_8f6ff094817a373b5ada9efb88bc6d07);
         cache_frame_8f6ff094817a373b5ada9efb88bc6d07 = NULL;
     }
@@ -11218,10 +10829,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__20_makefile(struct N
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
@@ -11296,12 +10905,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__21___init__(struct N
     assert(cache_frame_a36608d628ea07cab044ad3609896e12->m_type_description == NULL);
     frame_a36608d628ea07cab044ad3609896e12 = cache_frame_a36608d628ea07cab044ad3609896e12;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_a36608d628ea07cab044ad3609896e12);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_a36608d628ea07cab044ad3609896e12) == 2); // Frame stack
+    assert(Py_REFCNT(frame_a36608d628ea07cab044ad3609896e12) == 2);
 
     // Framed code:
     {
@@ -11479,21 +11086,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__21___init__(struct N
         }
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_a36608d628ea07cab044ad3609896e12);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_a36608d628ea07cab044ad3609896e12);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_a36608d628ea07cab044ad3609896e12, exception_lineno);
@@ -11516,7 +11115,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__21___init__(struct N
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_a36608d628ea07cab044ad3609896e12);
         cache_frame_a36608d628ea07cab044ad3609896e12 = NULL;
     }
@@ -11526,10 +11124,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__21___init__(struct N
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -11601,12 +11197,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__22_options(struct Nu
     assert(cache_frame_6adec4c3f35607264fcd2b5c6b62a719->m_type_description == NULL);
     frame_6adec4c3f35607264fcd2b5c6b62a719 = cache_frame_6adec4c3f35607264fcd2b5c6b62a719;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_6adec4c3f35607264fcd2b5c6b62a719);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_6adec4c3f35607264fcd2b5c6b62a719) == 2); // Frame stack
+    assert(Py_REFCNT(frame_6adec4c3f35607264fcd2b5c6b62a719) == 2);
 
     // Framed code:
     {
@@ -11627,32 +11221,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__22_options(struct Nu
         goto frame_return_exit_1;
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_6adec4c3f35607264fcd2b5c6b62a719);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_6adec4c3f35607264fcd2b5c6b62a719);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto function_return_exit;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_6adec4c3f35607264fcd2b5c6b62a719);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_6adec4c3f35607264fcd2b5c6b62a719, exception_lineno);
@@ -11674,7 +11255,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__22_options(struct Nu
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_6adec4c3f35607264fcd2b5c6b62a719);
         cache_frame_6adec4c3f35607264fcd2b5c6b62a719 = NULL;
     }
@@ -11684,10 +11264,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__22_options(struct Nu
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
@@ -11755,12 +11333,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__23_options(struct Nu
     assert(cache_frame_e452b5eedc074dffe15f6a387c447b21->m_type_description == NULL);
     frame_e452b5eedc074dffe15f6a387c447b21 = cache_frame_e452b5eedc074dffe15f6a387c447b21;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_e452b5eedc074dffe15f6a387c447b21);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_e452b5eedc074dffe15f6a387c447b21) == 2); // Frame stack
+    assert(Py_REFCNT(frame_e452b5eedc074dffe15f6a387c447b21) == 2);
 
     // Framed code:
     {
@@ -11818,21 +11394,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__23_options(struct Nu
         Py_DECREF(tmp_call_result_1);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_e452b5eedc074dffe15f6a387c447b21);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_e452b5eedc074dffe15f6a387c447b21);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_e452b5eedc074dffe15f6a387c447b21, exception_lineno);
@@ -11855,7 +11423,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__23_options(struct Nu
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_e452b5eedc074dffe15f6a387c447b21);
         cache_frame_e452b5eedc074dffe15f6a387c447b21 = NULL;
     }
@@ -11865,10 +11432,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__23_options(struct Nu
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -11940,12 +11505,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__24_verify_mode(struc
     assert(cache_frame_92499db4fbb8d7e01e35c30cd6e0c3d9->m_type_description == NULL);
     frame_92499db4fbb8d7e01e35c30cd6e0c3d9 = cache_frame_92499db4fbb8d7e01e35c30cd6e0c3d9;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_92499db4fbb8d7e01e35c30cd6e0c3d9);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_92499db4fbb8d7e01e35c30cd6e0c3d9) == 2); // Frame stack
+    assert(Py_REFCNT(frame_92499db4fbb8d7e01e35c30cd6e0c3d9) == 2);
 
     // Framed code:
     {
@@ -12010,32 +11573,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__24_verify_mode(struc
         goto frame_return_exit_1;
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_92499db4fbb8d7e01e35c30cd6e0c3d9);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_92499db4fbb8d7e01e35c30cd6e0c3d9);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto function_return_exit;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_92499db4fbb8d7e01e35c30cd6e0c3d9);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_92499db4fbb8d7e01e35c30cd6e0c3d9, exception_lineno);
@@ -12057,7 +11607,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__24_verify_mode(struc
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_92499db4fbb8d7e01e35c30cd6e0c3d9);
         cache_frame_92499db4fbb8d7e01e35c30cd6e0c3d9 = NULL;
     }
@@ -12067,10 +11616,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__24_verify_mode(struc
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
@@ -12137,12 +11684,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__25_verify_mode(struc
     assert(cache_frame_6066e710ba7fd3e3306e5eb2e64edaf5->m_type_description == NULL);
     frame_6066e710ba7fd3e3306e5eb2e64edaf5 = cache_frame_6066e710ba7fd3e3306e5eb2e64edaf5;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_6066e710ba7fd3e3306e5eb2e64edaf5);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_6066e710ba7fd3e3306e5eb2e64edaf5) == 2); // Frame stack
+    assert(Py_REFCNT(frame_6066e710ba7fd3e3306e5eb2e64edaf5) == 2);
 
     // Framed code:
     {
@@ -12246,21 +11791,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__25_verify_mode(struc
         Py_DECREF(tmp_call_result_1);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_6066e710ba7fd3e3306e5eb2e64edaf5);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_6066e710ba7fd3e3306e5eb2e64edaf5);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_6066e710ba7fd3e3306e5eb2e64edaf5, exception_lineno);
@@ -12283,7 +11820,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__25_verify_mode(struc
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_6066e710ba7fd3e3306e5eb2e64edaf5);
         cache_frame_6066e710ba7fd3e3306e5eb2e64edaf5 = NULL;
     }
@@ -12293,10 +11829,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__25_verify_mode(struc
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -12369,12 +11903,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__26_set_default_verif
     assert(cache_frame_cd5097936f442c171db497d8cfb5b110->m_type_description == NULL);
     frame_cd5097936f442c171db497d8cfb5b110 = cache_frame_cd5097936f442c171db497d8cfb5b110;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_cd5097936f442c171db497d8cfb5b110);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_cd5097936f442c171db497d8cfb5b110) == 2); // Frame stack
+    assert(Py_REFCNT(frame_cd5097936f442c171db497d8cfb5b110) == 2);
 
     // Framed code:
     {
@@ -12410,21 +11942,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__26_set_default_verif
         Py_DECREF(tmp_call_result_1);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_cd5097936f442c171db497d8cfb5b110);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_cd5097936f442c171db497d8cfb5b110);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_cd5097936f442c171db497d8cfb5b110, exception_lineno);
@@ -12446,7 +11970,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__26_set_default_verif
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_cd5097936f442c171db497d8cfb5b110);
         cache_frame_cd5097936f442c171db497d8cfb5b110 = NULL;
     }
@@ -12456,10 +11979,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__26_set_default_verif
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -12535,12 +12056,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__27_set_ciphers(struc
     assert(cache_frame_59b668941f7dc93c7a0bb66f3b64d74a->m_type_description == NULL);
     frame_59b668941f7dc93c7a0bb66f3b64d74a = cache_frame_59b668941f7dc93c7a0bb66f3b64d74a;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_59b668941f7dc93c7a0bb66f3b64d74a);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_59b668941f7dc93c7a0bb66f3b64d74a) == 2); // Frame stack
+    assert(Py_REFCNT(frame_59b668941f7dc93c7a0bb66f3b64d74a) == 2);
 
     // Framed code:
     {
@@ -12673,21 +12192,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__27_set_ciphers(struc
         Py_DECREF(tmp_call_result_1);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_59b668941f7dc93c7a0bb66f3b64d74a);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_59b668941f7dc93c7a0bb66f3b64d74a);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_59b668941f7dc93c7a0bb66f3b64d74a, exception_lineno);
@@ -12710,7 +12221,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__27_set_ciphers(struc
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_59b668941f7dc93c7a0bb66f3b64d74a);
         cache_frame_59b668941f7dc93c7a0bb66f3b64d74a = NULL;
     }
@@ -12720,10 +12230,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__27_set_ciphers(struc
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -12845,12 +12353,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__28_load_verify_locat
     assert(cache_frame_8881576ce23144b9a3cc40007d1010bd->m_type_description == NULL);
     frame_8881576ce23144b9a3cc40007d1010bd = cache_frame_8881576ce23144b9a3cc40007d1010bd;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_8881576ce23144b9a3cc40007d1010bd);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_8881576ce23144b9a3cc40007d1010bd) == 2); // Frame stack
+    assert(Py_REFCNT(frame_8881576ce23144b9a3cc40007d1010bd) == 2);
 
     // Framed code:
     {
@@ -13323,21 +12829,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__28_load_verify_locat
     // End of try:
     try_end_1:;
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_8881576ce23144b9a3cc40007d1010bd);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_8881576ce23144b9a3cc40007d1010bd);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_8881576ce23144b9a3cc40007d1010bd, exception_lineno);
@@ -13363,7 +12861,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__28_load_verify_locat
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_8881576ce23144b9a3cc40007d1010bd);
         cache_frame_8881576ce23144b9a3cc40007d1010bd = NULL;
     }
@@ -13373,10 +12870,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__28_load_verify_locat
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -13492,12 +12987,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain(s
     assert(cache_frame_7cc6e87c07b27cc0595830fbe10e8868->m_type_description == NULL);
     frame_7cc6e87c07b27cc0595830fbe10e8868 = cache_frame_7cc6e87c07b27cc0595830fbe10e8868;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_7cc6e87c07b27cc0595830fbe10e8868);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_7cc6e87c07b27cc0595830fbe10e8868) == 2); // Frame stack
+    assert(Py_REFCNT(frame_7cc6e87c07b27cc0595830fbe10e8868) == 2);
 
     // Framed code:
     {
@@ -13774,21 +13267,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain(s
         Py_DECREF(tmp_call_result_3);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_7cc6e87c07b27cc0595830fbe10e8868);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_7cc6e87c07b27cc0595830fbe10e8868);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_7cc6e87c07b27cc0595830fbe10e8868, exception_lineno);
@@ -13813,7 +13298,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain(s
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_7cc6e87c07b27cc0595830fbe10e8868);
         cache_frame_7cc6e87c07b27cc0595830fbe10e8868 = NULL;
     }
@@ -13823,10 +13307,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain(s
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -13932,12 +13414,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain$$
     assert(cache_frame_6914a5683407340ad164c0f2cb383c10->m_type_description == NULL);
     frame_6914a5683407340ad164c0f2cb383c10 = cache_frame_6914a5683407340ad164c0f2cb383c10;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_6914a5683407340ad164c0f2cb383c10);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_6914a5683407340ad164c0f2cb383c10) == 2); // Frame stack
+    assert(Py_REFCNT(frame_6914a5683407340ad164c0f2cb383c10) == 2);
 
     // Framed code:
     if (Nuitka_Cell_GET(self->m_closure[0]) == NULL) {
@@ -13956,32 +13436,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain$$
     Py_INCREF(tmp_return_value);
     goto frame_return_exit_1;
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_6914a5683407340ad164c0f2cb383c10);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_6914a5683407340ad164c0f2cb383c10);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto function_return_exit;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_6914a5683407340ad164c0f2cb383c10);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_6914a5683407340ad164c0f2cb383c10, exception_lineno);
@@ -14004,7 +13471,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain$$
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_6914a5683407340ad164c0f2cb383c10);
         cache_frame_6914a5683407340ad164c0f2cb383c10 = NULL;
     }
@@ -14014,10 +13480,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain$$
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
@@ -14104,12 +13568,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__30_set_alpn_protocol
     assert(cache_frame_d09144d2bf71d1e949da6b5e38704a72->m_type_description == NULL);
     frame_d09144d2bf71d1e949da6b5e38704a72 = cache_frame_d09144d2bf71d1e949da6b5e38704a72;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_d09144d2bf71d1e949da6b5e38704a72);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_d09144d2bf71d1e949da6b5e38704a72) == 2); // Frame stack
+    assert(Py_REFCNT(frame_d09144d2bf71d1e949da6b5e38704a72) == 2);
 
     // Framed code:
     {
@@ -14160,12 +13622,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__30_set_alpn_protocol
         assert(cache_frame_79f1de514351d5b12de3c61a995a7a7d_2->m_type_description == NULL);
         frame_79f1de514351d5b12de3c61a995a7a7d_2 = cache_frame_79f1de514351d5b12de3c61a995a7a7d_2;
 
-
-        // Push the new frame as the currently active one.
+        // Push the new frame as the currently active one, and we should be exclusively
+        // owning it.
         pushFrameStack(frame_79f1de514351d5b12de3c61a995a7a7d_2);
-
-        // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_79f1de514351d5b12de3c61a995a7a7d_2) == 2); // Frame stack
+        assert(Py_REFCNT(frame_79f1de514351d5b12de3c61a995a7a7d_2) == 2);
 
         // Framed code:
         // Tried code:
@@ -14315,32 +13775,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__30_set_alpn_protocol
         goto frame_exception_exit_2;
         // End of try:
 
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_79f1de514351d5b12de3c61a995a7a7d_2);
-#endif
 
         // Put the previous frame back on top.
         popFrameStack();
-
 
         goto frame_no_exception_1;
-
-        frame_return_exit_2:;
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_79f1de514351d5b12de3c61a995a7a7d_2);
-#endif
+        frame_return_exit_2:
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         goto try_return_handler_2;
+        frame_exception_exit_2:
 
-        frame_exception_exit_2:;
-
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_79f1de514351d5b12de3c61a995a7a7d_2);
-#endif
 
         if (exception_tb == NULL) {
             exception_tb = MAKE_TRACEBACK(frame_79f1de514351d5b12de3c61a995a7a7d_2, exception_lineno);
@@ -14362,7 +13809,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__30_set_alpn_protocol
             count_active_frame_cache_instances -= 1;
             count_released_frame_cache_instances += 1;
 #endif
-
             Py_DECREF(cache_frame_79f1de514351d5b12de3c61a995a7a7d_2);
             cache_frame_79f1de514351d5b12de3c61a995a7a7d_2 = NULL;
         }
@@ -14372,10 +13818,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__30_set_alpn_protocol
         // Put the previous frame back on top.
         popFrameStack();
 
-
         // Return the error.
         goto nested_frame_exit_1;
-
         frame_no_exception_1:;
         goto skip_nested_handling_1;
         nested_frame_exit_1:;
@@ -14459,32 +13903,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__30_set_alpn_protocol
         goto frame_return_exit_1;
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_d09144d2bf71d1e949da6b5e38704a72);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_2;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_d09144d2bf71d1e949da6b5e38704a72);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto try_return_handler_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_d09144d2bf71d1e949da6b5e38704a72);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_d09144d2bf71d1e949da6b5e38704a72, exception_lineno);
@@ -14507,7 +13938,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__30_set_alpn_protocol
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_d09144d2bf71d1e949da6b5e38704a72);
         cache_frame_d09144d2bf71d1e949da6b5e38704a72 = NULL;
     }
@@ -14517,10 +13947,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__30_set_alpn_protocol
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_2:;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
@@ -14642,12 +14070,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
     assert(cache_frame_c6598562b309b48180a4133a6fb99e2e->m_type_description == NULL);
     frame_c6598562b309b48180a4133a6fb99e2e = cache_frame_c6598562b309b48180a4133a6fb99e2e;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_c6598562b309b48180a4133a6fb99e2e);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_c6598562b309b48180a4133a6fb99e2e) == 2); // Frame stack
+    assert(Py_REFCNT(frame_c6598562b309b48180a4133a6fb99e2e) == 2);
 
     // Framed code:
     {
@@ -15457,32 +14883,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
         goto frame_return_exit_1;
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_c6598562b309b48180a4133a6fb99e2e);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_c6598562b309b48180a4133a6fb99e2e);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto try_return_handler_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_c6598562b309b48180a4133a6fb99e2e);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_c6598562b309b48180a4133a6fb99e2e, exception_lineno);
@@ -15511,7 +14924,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_c6598562b309b48180a4133a6fb99e2e);
         cache_frame_c6598562b309b48180a4133a6fb99e2e = NULL;
     }
@@ -15521,10 +14933,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
@@ -15641,12 +15051,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__32__verify_callback(
     assert(cache_frame_0318f46c9bdab62f9ff91c40a39549a3->m_type_description == NULL);
     frame_0318f46c9bdab62f9ff91c40a39549a3 = cache_frame_0318f46c9bdab62f9ff91c40a39549a3;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_0318f46c9bdab62f9ff91c40a39549a3);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_0318f46c9bdab62f9ff91c40a39549a3) == 2); // Frame stack
+    assert(Py_REFCNT(frame_0318f46c9bdab62f9ff91c40a39549a3) == 2);
 
     // Framed code:
     {
@@ -15669,32 +15077,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__32__verify_callback(
         goto frame_return_exit_1;
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_0318f46c9bdab62f9ff91c40a39549a3);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_0318f46c9bdab62f9ff91c40a39549a3);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto function_return_exit;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_0318f46c9bdab62f9ff91c40a39549a3);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_0318f46c9bdab62f9ff91c40a39549a3, exception_lineno);
@@ -15720,7 +15115,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__32__verify_callback(
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_0318f46c9bdab62f9ff91c40a39549a3);
         cache_frame_0318f46c9bdab62f9ff91c40a39549a3 = NULL;
     }
@@ -15730,10 +15124,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__32__verify_callback(
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
@@ -17066,7 +16458,6 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     PyObject *locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_276 = NULL;
     struct Nuitka_FrameObject *frame_abcabfaf34da17b79bdff3b6867c53a7_2;
     NUITKA_MAY_BE_UNUSED char const *type_description_2 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_abcabfaf34da17b79bdff3b6867c53a7_2 = NULL;
     PyObject *exception_keeper_type_8;
     PyObject *exception_keeper_value_8;
     PyTracebackObject *exception_keeper_tb_8;
@@ -17082,7 +16473,6 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     PyObject *locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_423 = NULL;
     struct Nuitka_FrameObject *frame_e3e602160bd13c355384d64193ec32a1_3;
     NUITKA_MAY_BE_UNUSED char const *type_description_3 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_e3e602160bd13c355384d64193ec32a1_3 = NULL;
     PyObject *exception_keeper_type_11;
     PyObject *exception_keeper_value_11;
     PyTracebackObject *exception_keeper_tb_11;
@@ -17107,7 +16497,6 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[155], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_b35d2dfc9f715066a24ba14ece3a0f97 = MAKE_MODULE_FRAME(codeobj_b35d2dfc9f715066a24ba14ece3a0f97, module_urllib3$contrib$pyopenssl);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -20437,32 +19826,12 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_11;
         }
-        if (isFrameUnusable(cache_frame_abcabfaf34da17b79bdff3b6867c53a7_2)) {
-            Py_XDECREF(cache_frame_abcabfaf34da17b79bdff3b6867c53a7_2);
+        frame_abcabfaf34da17b79bdff3b6867c53a7_2 = MAKE_CLASS_FRAME(codeobj_abcabfaf34da17b79bdff3b6867c53a7, module_urllib3$contrib$pyopenssl, NULL, sizeof(void *));
 
-#if _DEBUG_REFCOUNTS
-            if (cache_frame_abcabfaf34da17b79bdff3b6867c53a7_2 == NULL) {
-                count_active_frame_cache_instances += 1;
-            } else {
-                count_released_frame_cache_instances += 1;
-            }
-            count_allocated_frame_cache_instances += 1;
-#endif
-            cache_frame_abcabfaf34da17b79bdff3b6867c53a7_2 = MAKE_CLASS_FRAME(codeobj_abcabfaf34da17b79bdff3b6867c53a7, module_urllib3$contrib$pyopenssl, NULL, sizeof(void *));
-#if _DEBUG_REFCOUNTS
-        } else {
-            count_hit_frame_cache_instances += 1;
-#endif
-        }
-        assert(cache_frame_abcabfaf34da17b79bdff3b6867c53a7_2->m_type_description == NULL);
-        frame_abcabfaf34da17b79bdff3b6867c53a7_2 = cache_frame_abcabfaf34da17b79bdff3b6867c53a7_2;
-
-
-        // Push the new frame as the currently active one.
+        // Push the new frame as the currently active one, and we should be exclusively
+        // owning it.
         pushFrameStack(frame_abcabfaf34da17b79bdff3b6867c53a7_2);
-
-        // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_abcabfaf34da17b79bdff3b6867c53a7_2) == 2); // Frame stack
+        assert(Py_REFCNT(frame_abcabfaf34da17b79bdff3b6867c53a7_2) == 2);
 
         // Framed code:
         {
@@ -20700,21 +20069,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto frame_exception_exit_2;
         }
 
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_abcabfaf34da17b79bdff3b6867c53a7_2);
-#endif
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         goto frame_no_exception_1;
+        frame_exception_exit_2:
 
-        frame_exception_exit_2:;
-
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_abcabfaf34da17b79bdff3b6867c53a7_2);
-#endif
 
         if (exception_tb == NULL) {
             exception_tb = MAKE_TRACEBACK(frame_abcabfaf34da17b79bdff3b6867c53a7_2, exception_lineno);
@@ -20730,26 +20091,14 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         );
 
 
-        // Release cached frame if used for exception.
-        if (frame_abcabfaf34da17b79bdff3b6867c53a7_2 == cache_frame_abcabfaf34da17b79bdff3b6867c53a7_2) {
-#if _DEBUG_REFCOUNTS
-            count_active_frame_cache_instances -= 1;
-            count_released_frame_cache_instances += 1;
-#endif
-
-            Py_DECREF(cache_frame_abcabfaf34da17b79bdff3b6867c53a7_2);
-            cache_frame_abcabfaf34da17b79bdff3b6867c53a7_2 = NULL;
-        }
 
         assertFrameObject(frame_abcabfaf34da17b79bdff3b6867c53a7_2);
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         // Return the error.
         goto nested_frame_exit_1;
-
         frame_no_exception_1:;
         goto skip_nested_handling_1;
         nested_frame_exit_1:;
@@ -21433,32 +20782,12 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_14;
         }
-        if (isFrameUnusable(cache_frame_e3e602160bd13c355384d64193ec32a1_3)) {
-            Py_XDECREF(cache_frame_e3e602160bd13c355384d64193ec32a1_3);
+        frame_e3e602160bd13c355384d64193ec32a1_3 = MAKE_CLASS_FRAME(codeobj_e3e602160bd13c355384d64193ec32a1, module_urllib3$contrib$pyopenssl, NULL, sizeof(void *));
 
-#if _DEBUG_REFCOUNTS
-            if (cache_frame_e3e602160bd13c355384d64193ec32a1_3 == NULL) {
-                count_active_frame_cache_instances += 1;
-            } else {
-                count_released_frame_cache_instances += 1;
-            }
-            count_allocated_frame_cache_instances += 1;
-#endif
-            cache_frame_e3e602160bd13c355384d64193ec32a1_3 = MAKE_CLASS_FRAME(codeobj_e3e602160bd13c355384d64193ec32a1, module_urllib3$contrib$pyopenssl, NULL, sizeof(void *));
-#if _DEBUG_REFCOUNTS
-        } else {
-            count_hit_frame_cache_instances += 1;
-#endif
-        }
-        assert(cache_frame_e3e602160bd13c355384d64193ec32a1_3->m_type_description == NULL);
-        frame_e3e602160bd13c355384d64193ec32a1_3 = cache_frame_e3e602160bd13c355384d64193ec32a1_3;
-
-
-        // Push the new frame as the currently active one.
+        // Push the new frame as the currently active one, and we should be exclusively
+        // owning it.
         pushFrameStack(frame_e3e602160bd13c355384d64193ec32a1_3);
-
-        // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_e3e602160bd13c355384d64193ec32a1_3) == 2); // Frame stack
+        assert(Py_REFCNT(frame_e3e602160bd13c355384d64193ec32a1_3) == 2);
 
         // Framed code:
 
@@ -21903,21 +21232,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             }
         }
 
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_e3e602160bd13c355384d64193ec32a1_3);
-#endif
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         goto frame_no_exception_2;
+        frame_exception_exit_3:
 
-        frame_exception_exit_3:;
-
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_e3e602160bd13c355384d64193ec32a1_3);
-#endif
 
         if (exception_tb == NULL) {
             exception_tb = MAKE_TRACEBACK(frame_e3e602160bd13c355384d64193ec32a1_3, exception_lineno);
@@ -21933,26 +21254,14 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         );
 
 
-        // Release cached frame if used for exception.
-        if (frame_e3e602160bd13c355384d64193ec32a1_3 == cache_frame_e3e602160bd13c355384d64193ec32a1_3) {
-#if _DEBUG_REFCOUNTS
-            count_active_frame_cache_instances -= 1;
-            count_released_frame_cache_instances += 1;
-#endif
-
-            Py_DECREF(cache_frame_e3e602160bd13c355384d64193ec32a1_3);
-            cache_frame_e3e602160bd13c355384d64193ec32a1_3 = NULL;
-        }
 
         assertFrameObject(frame_e3e602160bd13c355384d64193ec32a1_3);
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         // Return the error.
         goto nested_frame_exit_2;
-
         frame_no_exception_2:;
         goto skip_nested_handling_2;
         nested_frame_exit_2:;
@@ -22128,18 +21437,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     // End of try:
     try_end_7:;
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_b35d2dfc9f715066a24ba14ece3a0f97);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_3;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_b35d2dfc9f715066a24ba14ece3a0f97);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_b35d2dfc9f715066a24ba14ece3a0f97, exception_lineno);
@@ -22147,12 +21451,15 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         exception_tb = ADD_TRACEBACK(exception_tb, frame_b35d2dfc9f715066a24ba14ece3a0f97, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_b35d2dfc9f715066a24ba14ece3a0f97);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_3:;
     CHECK_OBJECT(tmp_class_creation_3__bases);
     Py_DECREF(tmp_class_creation_3__bases);

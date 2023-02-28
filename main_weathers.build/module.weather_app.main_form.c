@@ -1,5 +1,5 @@
 /* Generated code for Python module 'weather_app.main_form'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -144,12 +144,10 @@ static PyObject *impl_weather_app$main_form$$$function__1_setupUi(struct Nuitka_
     assert(cache_frame_b62294c290e614d7243e06651b418a53->m_type_description == NULL);
     frame_b62294c290e614d7243e06651b418a53 = cache_frame_b62294c290e614d7243e06651b418a53;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_b62294c290e614d7243e06651b418a53);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_b62294c290e614d7243e06651b418a53) == 2); // Frame stack
+    assert(Py_REFCNT(frame_b62294c290e614d7243e06651b418a53) == 2);
 
     // Framed code:
     {
@@ -6567,21 +6565,13 @@ static PyObject *impl_weather_app$main_form$$$function__1_setupUi(struct Nuitka_
         Py_DECREF(tmp_call_result_84);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_b62294c290e614d7243e06651b418a53);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_b62294c290e614d7243e06651b418a53);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_b62294c290e614d7243e06651b418a53, exception_lineno);
@@ -6604,7 +6594,6 @@ static PyObject *impl_weather_app$main_form$$$function__1_setupUi(struct Nuitka_
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_b62294c290e614d7243e06651b418a53);
         cache_frame_b62294c290e614d7243e06651b418a53 = NULL;
     }
@@ -6614,10 +6603,8 @@ static PyObject *impl_weather_app$main_form$$$function__1_setupUi(struct Nuitka_
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -6691,12 +6678,10 @@ static PyObject *impl_weather_app$main_form$$$function__2_retranslateUi(struct N
     assert(cache_frame_1d9232dfab27090c838d60e0433912e9->m_type_description == NULL);
     frame_1d9232dfab27090c838d60e0433912e9 = cache_frame_1d9232dfab27090c838d60e0433912e9;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_1d9232dfab27090c838d60e0433912e9);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_1d9232dfab27090c838d60e0433912e9) == 2); // Frame stack
+    assert(Py_REFCNT(frame_1d9232dfab27090c838d60e0433912e9) == 2);
 
     // Framed code:
     {
@@ -9297,21 +9282,13 @@ static PyObject *impl_weather_app$main_form$$$function__2_retranslateUi(struct N
         Py_DECREF(tmp_call_result_29);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_1d9232dfab27090c838d60e0433912e9);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_1d9232dfab27090c838d60e0433912e9);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_1d9232dfab27090c838d60e0433912e9, exception_lineno);
@@ -9334,7 +9311,6 @@ static PyObject *impl_weather_app$main_form$$$function__2_retranslateUi(struct N
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_1d9232dfab27090c838d60e0433912e9);
         cache_frame_1d9232dfab27090c838d60e0433912e9 = NULL;
     }
@@ -9344,10 +9320,8 @@ static PyObject *impl_weather_app$main_form$$$function__2_retranslateUi(struct N
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -9811,7 +9785,6 @@ PyObject *modulecode_weather_app$main_form(PyObject *module, struct Nuitka_MetaP
     PyObject *tmp_dictset_value;
     struct Nuitka_FrameObject *frame_e88ff32c643be0b579f8acfad4763a5f_2;
     NUITKA_MAY_BE_UNUSED char const *type_description_2 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_e88ff32c643be0b579f8acfad4763a5f_2 = NULL;
     PyObject *exception_keeper_type_4;
     PyObject *exception_keeper_value_4;
     PyTracebackObject *exception_keeper_tb_4;
@@ -9836,7 +9809,6 @@ PyObject *modulecode_weather_app$main_form(PyObject *module, struct Nuitka_MetaP
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_weather_app$main_form, (Nuitka_StringObject *)mod_consts[126], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_c1493ab35e4c3800c220964f32dce57e = MAKE_MODULE_FRAME(codeobj_c1493ab35e4c3800c220964f32dce57e, module_weather_app$main_form);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -11499,32 +11471,12 @@ PyObject *modulecode_weather_app$main_form(PyObject *module, struct Nuitka_MetaP
 
             goto try_except_handler_6;
         }
-        if (isFrameUnusable(cache_frame_e88ff32c643be0b579f8acfad4763a5f_2)) {
-            Py_XDECREF(cache_frame_e88ff32c643be0b579f8acfad4763a5f_2);
+        frame_e88ff32c643be0b579f8acfad4763a5f_2 = MAKE_CLASS_FRAME(codeobj_e88ff32c643be0b579f8acfad4763a5f, module_weather_app$main_form, NULL, sizeof(void *));
 
-#if _DEBUG_REFCOUNTS
-            if (cache_frame_e88ff32c643be0b579f8acfad4763a5f_2 == NULL) {
-                count_active_frame_cache_instances += 1;
-            } else {
-                count_released_frame_cache_instances += 1;
-            }
-            count_allocated_frame_cache_instances += 1;
-#endif
-            cache_frame_e88ff32c643be0b579f8acfad4763a5f_2 = MAKE_CLASS_FRAME(codeobj_e88ff32c643be0b579f8acfad4763a5f, module_weather_app$main_form, NULL, sizeof(void *));
-#if _DEBUG_REFCOUNTS
-        } else {
-            count_hit_frame_cache_instances += 1;
-#endif
-        }
-        assert(cache_frame_e88ff32c643be0b579f8acfad4763a5f_2->m_type_description == NULL);
-        frame_e88ff32c643be0b579f8acfad4763a5f_2 = cache_frame_e88ff32c643be0b579f8acfad4763a5f_2;
-
-
-        // Push the new frame as the currently active one.
+        // Push the new frame as the currently active one, and we should be exclusively
+        // owning it.
         pushFrameStack(frame_e88ff32c643be0b579f8acfad4763a5f_2);
-
-        // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_e88ff32c643be0b579f8acfad4763a5f_2) == 2); // Frame stack
+        assert(Py_REFCNT(frame_e88ff32c643be0b579f8acfad4763a5f_2) == 2);
 
         // Framed code:
 
@@ -11560,21 +11512,13 @@ PyObject *modulecode_weather_app$main_form(PyObject *module, struct Nuitka_MetaP
             goto frame_exception_exit_2;
         }
 
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_e88ff32c643be0b579f8acfad4763a5f_2);
-#endif
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         goto frame_no_exception_1;
+        frame_exception_exit_2:
 
-        frame_exception_exit_2:;
-
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_e88ff32c643be0b579f8acfad4763a5f_2);
-#endif
 
         if (exception_tb == NULL) {
             exception_tb = MAKE_TRACEBACK(frame_e88ff32c643be0b579f8acfad4763a5f_2, exception_lineno);
@@ -11590,26 +11534,14 @@ PyObject *modulecode_weather_app$main_form(PyObject *module, struct Nuitka_MetaP
         );
 
 
-        // Release cached frame if used for exception.
-        if (frame_e88ff32c643be0b579f8acfad4763a5f_2 == cache_frame_e88ff32c643be0b579f8acfad4763a5f_2) {
-#if _DEBUG_REFCOUNTS
-            count_active_frame_cache_instances -= 1;
-            count_released_frame_cache_instances += 1;
-#endif
-
-            Py_DECREF(cache_frame_e88ff32c643be0b579f8acfad4763a5f_2);
-            cache_frame_e88ff32c643be0b579f8acfad4763a5f_2 = NULL;
-        }
 
         assertFrameObject(frame_e88ff32c643be0b579f8acfad4763a5f_2);
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         // Return the error.
         goto nested_frame_exit_1;
-
         frame_no_exception_1:;
         goto skip_nested_handling_1;
         nested_frame_exit_1:;
@@ -11785,18 +11717,13 @@ PyObject *modulecode_weather_app$main_form(PyObject *module, struct Nuitka_MetaP
     // End of try:
     try_end_4:;
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_c1493ab35e4c3800c220964f32dce57e);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_2;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_c1493ab35e4c3800c220964f32dce57e);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_c1493ab35e4c3800c220964f32dce57e, exception_lineno);
@@ -11804,12 +11731,15 @@ PyObject *modulecode_weather_app$main_form(PyObject *module, struct Nuitka_MetaP
         exception_tb = ADD_TRACEBACK(exception_tb, frame_c1493ab35e4c3800c220964f32dce57e, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_c1493ab35e4c3800c220964f32dce57e);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_2:;
     CHECK_OBJECT(tmp_class_creation_1__bases);
     Py_DECREF(tmp_class_creation_1__bases);

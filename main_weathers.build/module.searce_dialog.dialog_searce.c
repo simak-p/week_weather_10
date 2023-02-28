@@ -1,5 +1,5 @@
 /* Generated code for Python module 'searce_dialog.dialog_searce'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -142,12 +142,10 @@ static PyObject *impl_searce_dialog$dialog_searce$$$function__1___init__(struct 
     assert(cache_frame_ae05cc1013dc2ecdc016b5fa3c43121c->m_type_description == NULL);
     frame_ae05cc1013dc2ecdc016b5fa3c43121c = cache_frame_ae05cc1013dc2ecdc016b5fa3c43121c;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_ae05cc1013dc2ecdc016b5fa3c43121c);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_ae05cc1013dc2ecdc016b5fa3c43121c) == 2); // Frame stack
+    assert(Py_REFCNT(frame_ae05cc1013dc2ecdc016b5fa3c43121c) == 2);
 
     // Framed code:
     {
@@ -438,21 +436,13 @@ static PyObject *impl_searce_dialog$dialog_searce$$$function__1___init__(struct 
         Py_DECREF(tmp_call_result_4);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_ae05cc1013dc2ecdc016b5fa3c43121c);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_ae05cc1013dc2ecdc016b5fa3c43121c);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_ae05cc1013dc2ecdc016b5fa3c43121c, exception_lineno);
@@ -475,7 +465,6 @@ static PyObject *impl_searce_dialog$dialog_searce$$$function__1___init__(struct 
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_ae05cc1013dc2ecdc016b5fa3c43121c);
         cache_frame_ae05cc1013dc2ecdc016b5fa3c43121c = NULL;
     }
@@ -485,10 +474,8 @@ static PyObject *impl_searce_dialog$dialog_searce$$$function__1___init__(struct 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -582,12 +569,10 @@ static PyObject *impl_searce_dialog$dialog_searce$$$function__2_chose_list_from_
     assert(cache_frame_1adb313f695b9adeedcbe596e8b78507->m_type_description == NULL);
     frame_1adb313f695b9adeedcbe596e8b78507 = cache_frame_1adb313f695b9adeedcbe596e8b78507;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_1adb313f695b9adeedcbe596e8b78507);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_1adb313f695b9adeedcbe596e8b78507) == 2); // Frame stack
+    assert(Py_REFCNT(frame_1adb313f695b9adeedcbe596e8b78507) == 2);
 
     // Framed code:
     {
@@ -1552,21 +1537,13 @@ static PyObject *impl_searce_dialog$dialog_searce$$$function__2_chose_list_from_
         Py_DECREF(tmp_call_result_6);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_1adb313f695b9adeedcbe596e8b78507);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_1adb313f695b9adeedcbe596e8b78507);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_1adb313f695b9adeedcbe596e8b78507, exception_lineno);
@@ -1591,7 +1568,6 @@ static PyObject *impl_searce_dialog$dialog_searce$$$function__2_chose_list_from_
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_1adb313f695b9adeedcbe596e8b78507);
         cache_frame_1adb313f695b9adeedcbe596e8b78507 = NULL;
     }
@@ -1601,10 +1577,8 @@ static PyObject *impl_searce_dialog$dialog_searce$$$function__2_chose_list_from_
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -2092,7 +2066,6 @@ PyObject *modulecode_searce_dialog$dialog_searce(PyObject *module, struct Nuitka
     PyObject *tmp_dictset_value;
     struct Nuitka_FrameObject *frame_18f7660286e834bc508413be0c3c61e4_2;
     NUITKA_MAY_BE_UNUSED char const *type_description_2 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_18f7660286e834bc508413be0c3c61e4_2 = NULL;
     PyObject *exception_keeper_type_2;
     PyObject *exception_keeper_value_2;
     PyTracebackObject *exception_keeper_tb_2;
@@ -2117,7 +2090,6 @@ PyObject *modulecode_searce_dialog$dialog_searce(PyObject *module, struct Nuitka
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_searce_dialog$dialog_searce, (Nuitka_StringObject *)mod_consts[42], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_466cc8088bc8e615c67015a8f7b5ff82 = MAKE_MODULE_FRAME(codeobj_466cc8088bc8e615c67015a8f7b5ff82, module_searce_dialog$dialog_searce);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -2883,32 +2855,12 @@ PyObject *modulecode_searce_dialog$dialog_searce(PyObject *module, struct Nuitka
 
             goto try_except_handler_4;
         }
-        if (isFrameUnusable(cache_frame_18f7660286e834bc508413be0c3c61e4_2)) {
-            Py_XDECREF(cache_frame_18f7660286e834bc508413be0c3c61e4_2);
+        frame_18f7660286e834bc508413be0c3c61e4_2 = MAKE_CLASS_FRAME(codeobj_18f7660286e834bc508413be0c3c61e4, module_searce_dialog$dialog_searce, NULL, sizeof(void *));
 
-#if _DEBUG_REFCOUNTS
-            if (cache_frame_18f7660286e834bc508413be0c3c61e4_2 == NULL) {
-                count_active_frame_cache_instances += 1;
-            } else {
-                count_released_frame_cache_instances += 1;
-            }
-            count_allocated_frame_cache_instances += 1;
-#endif
-            cache_frame_18f7660286e834bc508413be0c3c61e4_2 = MAKE_CLASS_FRAME(codeobj_18f7660286e834bc508413be0c3c61e4, module_searce_dialog$dialog_searce, NULL, sizeof(void *));
-#if _DEBUG_REFCOUNTS
-        } else {
-            count_hit_frame_cache_instances += 1;
-#endif
-        }
-        assert(cache_frame_18f7660286e834bc508413be0c3c61e4_2->m_type_description == NULL);
-        frame_18f7660286e834bc508413be0c3c61e4_2 = cache_frame_18f7660286e834bc508413be0c3c61e4_2;
-
-
-        // Push the new frame as the currently active one.
+        // Push the new frame as the currently active one, and we should be exclusively
+        // owning it.
         pushFrameStack(frame_18f7660286e834bc508413be0c3c61e4_2);
-
-        // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_18f7660286e834bc508413be0c3c61e4_2) == 2); // Frame stack
+        assert(Py_REFCNT(frame_18f7660286e834bc508413be0c3c61e4_2) == 2);
 
         // Framed code:
 
@@ -2944,21 +2896,13 @@ PyObject *modulecode_searce_dialog$dialog_searce(PyObject *module, struct Nuitka
             goto frame_exception_exit_2;
         }
 
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_18f7660286e834bc508413be0c3c61e4_2);
-#endif
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         goto frame_no_exception_1;
+        frame_exception_exit_2:
 
-        frame_exception_exit_2:;
-
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_18f7660286e834bc508413be0c3c61e4_2);
-#endif
 
         if (exception_tb == NULL) {
             exception_tb = MAKE_TRACEBACK(frame_18f7660286e834bc508413be0c3c61e4_2, exception_lineno);
@@ -2974,26 +2918,14 @@ PyObject *modulecode_searce_dialog$dialog_searce(PyObject *module, struct Nuitka
         );
 
 
-        // Release cached frame if used for exception.
-        if (frame_18f7660286e834bc508413be0c3c61e4_2 == cache_frame_18f7660286e834bc508413be0c3c61e4_2) {
-#if _DEBUG_REFCOUNTS
-            count_active_frame_cache_instances -= 1;
-            count_released_frame_cache_instances += 1;
-#endif
-
-            Py_DECREF(cache_frame_18f7660286e834bc508413be0c3c61e4_2);
-            cache_frame_18f7660286e834bc508413be0c3c61e4_2 = NULL;
-        }
 
         assertFrameObject(frame_18f7660286e834bc508413be0c3c61e4_2);
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         // Return the error.
         goto nested_frame_exit_1;
-
         frame_no_exception_1:;
         goto skip_nested_handling_1;
         nested_frame_exit_1:;
@@ -3173,18 +3105,13 @@ PyObject *modulecode_searce_dialog$dialog_searce(PyObject *module, struct Nuitka
     // End of try:
     try_end_2:;
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_466cc8088bc8e615c67015a8f7b5ff82);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_2;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_466cc8088bc8e615c67015a8f7b5ff82);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_466cc8088bc8e615c67015a8f7b5ff82, exception_lineno);
@@ -3192,12 +3119,15 @@ PyObject *modulecode_searce_dialog$dialog_searce(PyObject *module, struct Nuitka
         exception_tb = ADD_TRACEBACK(exception_tb, frame_466cc8088bc8e615c67015a8f7b5ff82, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_466cc8088bc8e615c67015a8f7b5ff82);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_2:;
     CHECK_OBJECT(tmp_class_creation_1__bases_orig);
     Py_DECREF(tmp_class_creation_1__bases_orig);

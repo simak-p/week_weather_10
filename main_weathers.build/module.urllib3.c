@@ -1,5 +1,5 @@
 /* Generated code for Python module 'urllib3'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -143,12 +143,10 @@ static PyObject *impl_urllib3$$$function__1_add_stderr_logger(struct Nuitka_Func
     assert(cache_frame_f9092bd9f4c0039f831a068081261b1d->m_type_description == NULL);
     frame_f9092bd9f4c0039f831a068081261b1d = cache_frame_f9092bd9f4c0039f831a068081261b1d;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_f9092bd9f4c0039f831a068081261b1d);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_f9092bd9f4c0039f831a068081261b1d) == 2); // Frame stack
+    assert(Py_REFCNT(frame_f9092bd9f4c0039f831a068081261b1d) == 2);
 
     // Framed code:
     {
@@ -361,21 +359,13 @@ static PyObject *impl_urllib3$$$function__1_add_stderr_logger(struct Nuitka_Func
         Py_DECREF(tmp_call_result_4);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_f9092bd9f4c0039f831a068081261b1d);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_f9092bd9f4c0039f831a068081261b1d);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_f9092bd9f4c0039f831a068081261b1d, exception_lineno);
@@ -399,7 +389,6 @@ static PyObject *impl_urllib3$$$function__1_add_stderr_logger(struct Nuitka_Func
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_f9092bd9f4c0039f831a068081261b1d);
         cache_frame_f9092bd9f4c0039f831a068081261b1d = NULL;
     }
@@ -409,10 +398,8 @@ static PyObject *impl_urllib3$$$function__1_add_stderr_logger(struct Nuitka_Func
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     CHECK_OBJECT(var_handler);
     tmp_return_value = var_handler;
@@ -516,12 +503,10 @@ static PyObject *impl_urllib3$$$function__2_disable_warnings(struct Nuitka_Funct
     assert(cache_frame_c502fcde9911f484361da1c6d960b2cf->m_type_description == NULL);
     frame_c502fcde9911f484361da1c6d960b2cf = cache_frame_c502fcde9911f484361da1c6d960b2cf;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_c502fcde9911f484361da1c6d960b2cf);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_c502fcde9911f484361da1c6d960b2cf) == 2); // Frame stack
+    assert(Py_REFCNT(frame_c502fcde9911f484361da1c6d960b2cf) == 2);
 
     // Framed code:
     {
@@ -571,21 +556,13 @@ static PyObject *impl_urllib3$$$function__2_disable_warnings(struct Nuitka_Funct
         Py_DECREF(tmp_call_result_1);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_c502fcde9911f484361da1c6d960b2cf);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_c502fcde9911f484361da1c6d960b2cf);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_c502fcde9911f484361da1c6d960b2cf, exception_lineno);
@@ -607,7 +584,6 @@ static PyObject *impl_urllib3$$$function__2_disable_warnings(struct Nuitka_Funct
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_c502fcde9911f484361da1c6d960b2cf);
         cache_frame_c502fcde9911f484361da1c6d960b2cf = NULL;
     }
@@ -617,10 +593,8 @@ static PyObject *impl_urllib3$$$function__2_disable_warnings(struct Nuitka_Funct
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -1090,7 +1064,6 @@ PyObject *modulecode_urllib3(PyObject *module, struct Nuitka_MetaPathBasedLoader
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_urllib3, (Nuitka_StringObject *)mod_consts[18], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_b8c72d44b27d8df73f60a179712b7cc7 = MAKE_MODULE_FRAME(codeobj_b8c72d44b27d8df73f60a179712b7cc7, module_urllib3);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -2502,8 +2475,7 @@ PyObject *modulecode_urllib3(PyObject *module, struct Nuitka_MetaPathBasedLoader
 
         UPDATE_STRING_DICT1(moduledict_urllib3, (Nuitka_StringObject *)mod_consts[82], tmp_assign_source_32);
     }
-    tmp_res = PyDict_DelItem((PyObject *)moduledict_urllib3, mod_consts[33]);
-    tmp_result = tmp_res != -1;
+    tmp_result = DICT_REMOVE_ITEM((PyObject *)moduledict_urllib3, mod_consts[33]);
     if (tmp_result == false) CLEAR_ERROR_OCCURRED();
 
     if (unlikely(tmp_result == false)) {
@@ -2934,18 +2906,13 @@ PyObject *modulecode_urllib3(PyObject *module, struct Nuitka_MetaPathBasedLoader
         UPDATE_STRING_DICT1(moduledict_urllib3, (Nuitka_StringObject *)mod_consts[91], tmp_assign_source_33);
     }
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_b8c72d44b27d8df73f60a179712b7cc7);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_b8c72d44b27d8df73f60a179712b7cc7);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_b8c72d44b27d8df73f60a179712b7cc7, exception_lineno);
@@ -2953,12 +2920,15 @@ PyObject *modulecode_urllib3(PyObject *module, struct Nuitka_MetaPathBasedLoader
         exception_tb = ADD_TRACEBACK(exception_tb, frame_b8c72d44b27d8df73f60a179712b7cc7, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_b8c72d44b27d8df73f60a179712b7cc7);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_1:;
 
     // Report to PGO about leaving the module without error.

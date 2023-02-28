@@ -1,5 +1,5 @@
 /* Generated code for Python module 'urllib3.util.response'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -171,12 +171,10 @@ static PyObject *impl_urllib3$util$response$$$function__1_is_fp_closed(struct Nu
     assert(cache_frame_da46dec33b21e13e9d3a4792774018bb->m_type_description == NULL);
     frame_da46dec33b21e13e9d3a4792774018bb = cache_frame_da46dec33b21e13e9d3a4792774018bb;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_da46dec33b21e13e9d3a4792774018bb);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_da46dec33b21e13e9d3a4792774018bb) == 2); // Frame stack
+    assert(Py_REFCNT(frame_da46dec33b21e13e9d3a4792774018bb) == 2);
 
     // Framed code:
     // Tried code:
@@ -497,32 +495,19 @@ static PyObject *impl_urllib3$util$response$$$function__1_is_fp_closed(struct Nu
         goto frame_exception_exit_1;
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_da46dec33b21e13e9d3a4792774018bb);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_da46dec33b21e13e9d3a4792774018bb);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto function_return_exit;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_da46dec33b21e13e9d3a4792774018bb);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_da46dec33b21e13e9d3a4792774018bb, exception_lineno);
@@ -544,7 +529,6 @@ static PyObject *impl_urllib3$util$response$$$function__1_is_fp_closed(struct Nu
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_da46dec33b21e13e9d3a4792774018bb);
         cache_frame_da46dec33b21e13e9d3a4792774018bb = NULL;
     }
@@ -554,10 +538,8 @@ static PyObject *impl_urllib3$util$response$$$function__1_is_fp_closed(struct Nu
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
@@ -648,12 +630,10 @@ static PyObject *impl_urllib3$util$response$$$function__2_assert_header_parsing(
     assert(cache_frame_4a5525212dcef1ea9fbcdf7239175b7f->m_type_description == NULL);
     frame_4a5525212dcef1ea9fbcdf7239175b7f = cache_frame_4a5525212dcef1ea9fbcdf7239175b7f;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_4a5525212dcef1ea9fbcdf7239175b7f);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_4a5525212dcef1ea9fbcdf7239175b7f) == 2); // Frame stack
+    assert(Py_REFCNT(frame_4a5525212dcef1ea9fbcdf7239175b7f) == 2);
 
     // Framed code:
     {
@@ -1009,12 +989,10 @@ static PyObject *impl_urllib3$util$response$$$function__2_assert_header_parsing(
         assert(cache_frame_fdd11ce6c10ebe4a9f563e2c263432a2_2->m_type_description == NULL);
         frame_fdd11ce6c10ebe4a9f563e2c263432a2_2 = cache_frame_fdd11ce6c10ebe4a9f563e2c263432a2_2;
 
-
-        // Push the new frame as the currently active one.
+        // Push the new frame as the currently active one, and we should be exclusively
+        // owning it.
         pushFrameStack(frame_fdd11ce6c10ebe4a9f563e2c263432a2_2);
-
-        // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_fdd11ce6c10ebe4a9f563e2c263432a2_2) == 2); // Frame stack
+        assert(Py_REFCNT(frame_fdd11ce6c10ebe4a9f563e2c263432a2_2) == 2);
 
         // Framed code:
         // Tried code:
@@ -1217,32 +1195,19 @@ static PyObject *impl_urllib3$util$response$$$function__2_assert_header_parsing(
         goto frame_exception_exit_2;
         // End of try:
 
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_fdd11ce6c10ebe4a9f563e2c263432a2_2);
-#endif
 
         // Put the previous frame back on top.
         popFrameStack();
-
 
         goto frame_no_exception_1;
-
-        frame_return_exit_1:;
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_fdd11ce6c10ebe4a9f563e2c263432a2_2);
-#endif
+        frame_return_exit_1:
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         goto try_return_handler_2;
+        frame_exception_exit_2:
 
-        frame_exception_exit_2:;
-
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_fdd11ce6c10ebe4a9f563e2c263432a2_2);
-#endif
 
         if (exception_tb == NULL) {
             exception_tb = MAKE_TRACEBACK(frame_fdd11ce6c10ebe4a9f563e2c263432a2_2, exception_lineno);
@@ -1264,7 +1229,6 @@ static PyObject *impl_urllib3$util$response$$$function__2_assert_header_parsing(
             count_active_frame_cache_instances -= 1;
             count_released_frame_cache_instances += 1;
 #endif
-
             Py_DECREF(cache_frame_fdd11ce6c10ebe4a9f563e2c263432a2_2);
             cache_frame_fdd11ce6c10ebe4a9f563e2c263432a2_2 = NULL;
         }
@@ -1274,10 +1238,8 @@ static PyObject *impl_urllib3$util$response$$$function__2_assert_header_parsing(
         // Put the previous frame back on top.
         popFrameStack();
 
-
         // Return the error.
         goto nested_frame_exit_1;
-
         frame_no_exception_1:;
         goto skip_nested_handling_1;
         nested_frame_exit_1:;
@@ -1439,21 +1401,13 @@ static PyObject *impl_urllib3$util$response$$$function__2_assert_header_parsing(
     }
     branch_no_7:;
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_4a5525212dcef1ea9fbcdf7239175b7f);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_2;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_4a5525212dcef1ea9fbcdf7239175b7f);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_4a5525212dcef1ea9fbcdf7239175b7f, exception_lineno);
@@ -1479,7 +1433,6 @@ static PyObject *impl_urllib3$util$response$$$function__2_assert_header_parsing(
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_4a5525212dcef1ea9fbcdf7239175b7f);
         cache_frame_4a5525212dcef1ea9fbcdf7239175b7f = NULL;
     }
@@ -1489,10 +1442,8 @@ static PyObject *impl_urllib3$util$response$$$function__2_assert_header_parsing(
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_2:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -1609,12 +1560,10 @@ static PyObject *impl_urllib3$util$response$$$function__3_is_response_to_head(st
     assert(cache_frame_41c7e75bd08f88f55d9251704cdc1107->m_type_description == NULL);
     frame_41c7e75bd08f88f55d9251704cdc1107 = cache_frame_41c7e75bd08f88f55d9251704cdc1107;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_41c7e75bd08f88f55d9251704cdc1107);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_41c7e75bd08f88f55d9251704cdc1107) == 2); // Frame stack
+    assert(Py_REFCNT(frame_41c7e75bd08f88f55d9251704cdc1107) == 2);
 
     // Framed code:
     {
@@ -1729,32 +1678,19 @@ static PyObject *impl_urllib3$util$response$$$function__3_is_response_to_head(st
         goto frame_return_exit_1;
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_41c7e75bd08f88f55d9251704cdc1107);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_41c7e75bd08f88f55d9251704cdc1107);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto try_return_handler_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_41c7e75bd08f88f55d9251704cdc1107);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_41c7e75bd08f88f55d9251704cdc1107, exception_lineno);
@@ -1777,7 +1713,6 @@ static PyObject *impl_urllib3$util$response$$$function__3_is_response_to_head(st
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_41c7e75bd08f88f55d9251704cdc1107);
         cache_frame_41c7e75bd08f88f55d9251704cdc1107 = NULL;
     }
@@ -1787,10 +1722,8 @@ static PyObject *impl_urllib3$util$response$$$function__3_is_response_to_head(st
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
@@ -2291,7 +2224,6 @@ PyObject *modulecode_urllib3$util$response(PyObject *module, struct Nuitka_MetaP
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_urllib3$util$response, (Nuitka_StringObject *)mod_consts[23], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_add10d1c9b1f5c96a9e3100217350847 = MAKE_MODULE_FRAME(codeobj_add10d1c9b1f5c96a9e3100217350847, module_urllib3$util$response);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -2570,18 +2502,13 @@ PyObject *modulecode_urllib3$util$response(PyObject *module, struct Nuitka_MetaP
         UPDATE_STRING_DICT1(moduledict_urllib3$util$response, (Nuitka_StringObject *)mod_consts[5], tmp_assign_source_9);
     }
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_add10d1c9b1f5c96a9e3100217350847);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_add10d1c9b1f5c96a9e3100217350847);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_add10d1c9b1f5c96a9e3100217350847, exception_lineno);
@@ -2589,12 +2516,15 @@ PyObject *modulecode_urllib3$util$response(PyObject *module, struct Nuitka_MetaP
         exception_tb = ADD_TRACEBACK(exception_tb, frame_add10d1c9b1f5c96a9e3100217350847, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_add10d1c9b1f5c96a9e3100217350847);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_1:;
     {
         PyObject *tmp_assign_source_10;

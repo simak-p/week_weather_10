@@ -1,5 +1,5 @@
 /* Generated code for Python module 'urllib3.util.proxy'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -156,12 +156,10 @@ static PyObject *impl_urllib3$util$proxy$$$function__1_connection_requires_http_
     assert(cache_frame_da3e8f6d1ee34109da9c2bbeee6d8f93->m_type_description == NULL);
     frame_da3e8f6d1ee34109da9c2bbeee6d8f93 = cache_frame_da3e8f6d1ee34109da9c2bbeee6d8f93;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_da3e8f6d1ee34109da9c2bbeee6d8f93);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_da3e8f6d1ee34109da9c2bbeee6d8f93) == 2); // Frame stack
+    assert(Py_REFCNT(frame_da3e8f6d1ee34109da9c2bbeee6d8f93) == 2);
 
     // Framed code:
     {
@@ -329,32 +327,19 @@ static PyObject *impl_urllib3$util$proxy$$$function__1_connection_requires_http_
     goto frame_return_exit_1;
     branch_no_3:;
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_da3e8f6d1ee34109da9c2bbeee6d8f93);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_da3e8f6d1ee34109da9c2bbeee6d8f93);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto function_return_exit;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_da3e8f6d1ee34109da9c2bbeee6d8f93);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_da3e8f6d1ee34109da9c2bbeee6d8f93, exception_lineno);
@@ -378,7 +363,6 @@ static PyObject *impl_urllib3$util$proxy$$$function__1_connection_requires_http_
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_da3e8f6d1ee34109da9c2bbeee6d8f93);
         cache_frame_da3e8f6d1ee34109da9c2bbeee6d8f93 = NULL;
     }
@@ -388,10 +372,8 @@ static PyObject *impl_urllib3$util$proxy$$$function__1_connection_requires_http_
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_True;
     Py_INCREF(tmp_return_value);
@@ -479,12 +461,10 @@ static PyObject *impl_urllib3$util$proxy$$$function__2_create_proxy_ssl_context(
     assert(cache_frame_33c3fac3ab93ea678257bce303db3a01->m_type_description == NULL);
     frame_33c3fac3ab93ea678257bce303db3a01 = cache_frame_33c3fac3ab93ea678257bce303db3a01;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_33c3fac3ab93ea678257bce303db3a01);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_33c3fac3ab93ea678257bce303db3a01) == 2); // Frame stack
+    assert(Py_REFCNT(frame_33c3fac3ab93ea678257bce303db3a01) == 2);
 
     // Framed code:
     {
@@ -746,32 +726,19 @@ static PyObject *impl_urllib3$util$proxy$$$function__2_create_proxy_ssl_context(
     Py_INCREF(tmp_return_value);
     goto frame_return_exit_1;
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_33c3fac3ab93ea678257bce303db3a01);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_33c3fac3ab93ea678257bce303db3a01);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto try_return_handler_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_33c3fac3ab93ea678257bce303db3a01);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_33c3fac3ab93ea678257bce303db3a01, exception_lineno);
@@ -798,7 +765,6 @@ static PyObject *impl_urllib3$util$proxy$$$function__2_create_proxy_ssl_context(
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_33c3fac3ab93ea678257bce303db3a01);
         cache_frame_33c3fac3ab93ea678257bce303db3a01 = NULL;
     }
@@ -808,10 +774,8 @@ static PyObject *impl_urllib3$util$proxy$$$function__2_create_proxy_ssl_context(
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
@@ -1302,7 +1266,6 @@ PyObject *modulecode_urllib3$util$proxy(PyObject *module, struct Nuitka_MetaPath
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_urllib3$util$proxy, (Nuitka_StringObject *)mod_consts[13], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_09f2f326d343b78c3a6261d9f758985a = MAKE_MODULE_FRAME(codeobj_09f2f326d343b78c3a6261d9f758985a, module_urllib3$util$proxy);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -1499,18 +1462,13 @@ PyObject *modulecode_urllib3$util$proxy(PyObject *module, struct Nuitka_MetaPath
     // End of try:
     try_end_1:;
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_09f2f326d343b78c3a6261d9f758985a);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_09f2f326d343b78c3a6261d9f758985a);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_09f2f326d343b78c3a6261d9f758985a, exception_lineno);
@@ -1518,12 +1476,15 @@ PyObject *modulecode_urllib3$util$proxy(PyObject *module, struct Nuitka_MetaPath
         exception_tb = ADD_TRACEBACK(exception_tb, frame_09f2f326d343b78c3a6261d9f758985a, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_09f2f326d343b78c3a6261d9f758985a);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_1:;
     CHECK_OBJECT(tmp_import_from_1__module);
     Py_DECREF(tmp_import_from_1__module);

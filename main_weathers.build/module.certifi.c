@@ -1,5 +1,5 @@
 /* Generated code for Python module 'certifi'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -464,7 +464,6 @@ PyObject *modulecode_certifi(PyObject *module, struct Nuitka_MetaPathBasedLoader
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_certifi, (Nuitka_StringObject *)mod_consts[1], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_b9fde11101b1619df2d1bcf72987cfeb = MAKE_MODULE_FRAME(codeobj_b9fde11101b1619df2d1bcf72987cfeb, module_certifi);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -832,18 +831,13 @@ PyObject *modulecode_certifi(PyObject *module, struct Nuitka_MetaPathBasedLoader
     // End of try:
     try_end_1:;
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_b9fde11101b1619df2d1bcf72987cfeb);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_b9fde11101b1619df2d1bcf72987cfeb);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_b9fde11101b1619df2d1bcf72987cfeb, exception_lineno);
@@ -851,12 +845,15 @@ PyObject *modulecode_certifi(PyObject *module, struct Nuitka_MetaPathBasedLoader
         exception_tb = ADD_TRACEBACK(exception_tb, frame_b9fde11101b1619df2d1bcf72987cfeb, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_b9fde11101b1619df2d1bcf72987cfeb);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_1:;
     CHECK_OBJECT(tmp_import_from_1__module);
     Py_DECREF(tmp_import_from_1__module);

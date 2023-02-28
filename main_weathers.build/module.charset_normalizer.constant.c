@@ -1,5 +1,5 @@
 /* Generated code for Python module 'charset_normalizer.constant'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -33,9 +33,9 @@ PyObject *module_charset_normalizer$constant;
 PyDictObject *moduledict_charset_normalizer$constant;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[80];
+static PyObject *mod_consts[78];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[80];
+static Py_hash_t mod_consts_hash[78];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,7 +50,7 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for (int i = 0; i < 80; i++) {
+        for (int i = 0; i < 78; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
@@ -70,7 +70,7 @@ void checkModuleConstants_charset_normalizer$constant(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for (int i = 0; i < 80; i++) {
+    for (int i = 0; i < 78; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -82,9 +82,9 @@ static PyCodeObject *codeobj_c418d0de17e2b4a8bad380dba42ea912;
 static PyCodeObject *codeobj_013ae1466a92403482b982f98e8ffc90;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[76]); CHECK_OBJECT(module_filename_obj);
-    codeobj_c418d0de17e2b4a8bad380dba42ea912 = MAKE_CODE_OBJECT(module_filename_obj, 336, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[56], mod_consts[56], mod_consts[77], NULL, 1, 0, 0);
-    codeobj_013ae1466a92403482b982f98e8ffc90 = MAKE_CODE_OBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[78], mod_consts[78], NULL, NULL, 0, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[74]); CHECK_OBJECT(module_filename_obj);
+    codeobj_c418d0de17e2b4a8bad380dba42ea912 = MAKE_CODE_OBJECT(module_filename_obj, 336, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[56], mod_consts[56], mod_consts[75], NULL, 1, 0, 0);
+    codeobj_013ae1466a92403482b982f98e8ffc90 = MAKE_CODE_OBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[76], mod_consts[76], NULL, NULL, 0, 0, 0);
 }
 
 // The module function declarations.
@@ -131,12 +131,10 @@ static PyObject *impl_charset_normalizer$constant$$$function__1_lambda(struct Nu
     assert(cache_frame_c418d0de17e2b4a8bad380dba42ea912->m_type_description == NULL);
     frame_c418d0de17e2b4a8bad380dba42ea912 = cache_frame_c418d0de17e2b4a8bad380dba42ea912;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_c418d0de17e2b4a8bad380dba42ea912);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_c418d0de17e2b4a8bad380dba42ea912) == 2); // Frame stack
+    assert(Py_REFCNT(frame_c418d0de17e2b4a8bad380dba42ea912) == 2);
 
     // Framed code:
     {
@@ -211,32 +209,19 @@ static PyObject *impl_charset_normalizer$constant$$$function__1_lambda(struct Nu
         goto frame_return_exit_1;
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_c418d0de17e2b4a8bad380dba42ea912);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_c418d0de17e2b4a8bad380dba42ea912);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto function_return_exit;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_c418d0de17e2b4a8bad380dba42ea912);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_c418d0de17e2b4a8bad380dba42ea912, exception_lineno);
@@ -258,7 +243,6 @@ static PyObject *impl_charset_normalizer$constant$$$function__1_lambda(struct Nu
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_c418d0de17e2b4a8bad380dba42ea912);
         cache_frame_c418d0de17e2b4a8bad380dba42ea912 = NULL;
     }
@@ -268,10 +252,8 @@ static PyObject *impl_charset_normalizer$constant$$$function__1_lambda(struct Nu
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
@@ -572,7 +554,7 @@ PyObject *modulecode_charset_normalizer$constant(PyObject *module, struct Nuitka
         UPDATE_STRING_DICT0(
             moduledict_charset_normalizer$constant,
             (Nuitka_StringObject *)const_str_plain___package__,
-            mod_consts[79]
+            mod_consts[77]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_charset_normalizer$constant, (Nuitka_StringObject *)const_str_plain___name__);
@@ -703,7 +685,6 @@ PyObject *modulecode_charset_normalizer$constant(PyObject *module, struct Nuitka
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_charset_normalizer$constant, (Nuitka_StringObject *)mod_consts[4], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_013ae1466a92403482b982f98e8ffc90 = MAKE_MODULE_FRAME(codeobj_013ae1466a92403482b982f98e8ffc90, module_charset_normalizer$constant);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -2557,40 +2538,6 @@ PyObject *modulecode_charset_normalizer$constant(PyObject *module, struct Nuitka
     }
     {
         PyObject *tmp_assign_source_35;
-        PyObject *tmp_called_value_5;
-        tmp_called_value_5 = GET_STRING_DICT_VALUE(moduledict_charset_normalizer$constant, (Nuitka_StringObject *)mod_consts[25]);
-
-        if (unlikely(tmp_called_value_5 == NULL)) {
-            tmp_called_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[25]);
-        }
-
-        if (tmp_called_value_5 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 492;
-
-            goto frame_exception_exit_1;
-        }
-        frame_013ae1466a92403482b982f98e8ffc90->m_frame.f_lineno = 492;
-        tmp_assign_source_35 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_5, mod_consts[71]);
-
-        if (tmp_assign_source_35 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 492;
-
-            goto frame_exception_exit_1;
-        }
-        UPDATE_STRING_DICT1(moduledict_charset_normalizer$constant, (Nuitka_StringObject *)mod_consts[72], tmp_assign_source_35);
-    }
-    {
-        PyObject *tmp_assign_source_36;
         PyObject *tmp_len_arg_2;
         tmp_len_arg_2 = GET_STRING_DICT_VALUE(moduledict_charset_normalizer$constant, (Nuitka_StringObject *)mod_consts[33]);
 
@@ -2604,22 +2551,22 @@ PyObject *modulecode_charset_normalizer$constant(PyObject *module, struct Nuitka
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 494;
+            exception_lineno = 492;
 
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_36 = BUILTIN_LEN(tmp_len_arg_2);
-        if (tmp_assign_source_36 == NULL) {
+        tmp_assign_source_35 = BUILTIN_LEN(tmp_len_arg_2);
+        if (tmp_assign_source_35 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 494;
+            exception_lineno = 492;
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_charset_normalizer$constant, (Nuitka_StringObject *)mod_consts[73], tmp_assign_source_36);
+        UPDATE_STRING_DICT1(moduledict_charset_normalizer$constant, (Nuitka_StringObject *)mod_consts[71], tmp_assign_source_35);
     }
     {
         PyObject *tmp_ass_subvalue_14;
@@ -2638,11 +2585,11 @@ PyObject *modulecode_charset_normalizer$constant(PyObject *module, struct Nuitka
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 494;
+            exception_lineno = 492;
 
             goto frame_exception_exit_1;
         }
-        tmp_ass_subscript_14 = mod_consts[73];
+        tmp_ass_subscript_14 = mod_consts[71];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_14, tmp_ass_subscript_14, tmp_ass_subvalue_14);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -2650,15 +2597,15 @@ PyObject *modulecode_charset_normalizer$constant(PyObject *module, struct Nuitka
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 494;
+            exception_lineno = 492;
 
             goto frame_exception_exit_1;
         }
     }
     {
-        PyObject *tmp_assign_source_37;
-        tmp_assign_source_37 = mod_consts[74];
-        UPDATE_STRING_DICT0(moduledict_charset_normalizer$constant, (Nuitka_StringObject *)mod_consts[75], tmp_assign_source_37);
+        PyObject *tmp_assign_source_36;
+        tmp_assign_source_36 = mod_consts[72];
+        UPDATE_STRING_DICT0(moduledict_charset_normalizer$constant, (Nuitka_StringObject *)mod_consts[73], tmp_assign_source_36);
     }
     {
         PyObject *tmp_ass_subvalue_15;
@@ -2677,11 +2624,11 @@ PyObject *modulecode_charset_normalizer$constant(PyObject *module, struct Nuitka
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 497;
+            exception_lineno = 495;
 
             goto frame_exception_exit_1;
         }
-        tmp_ass_subscript_15 = mod_consts[75];
+        tmp_ass_subscript_15 = mod_consts[73];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_15, tmp_ass_subscript_15, tmp_ass_subvalue_15);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -2689,24 +2636,19 @@ PyObject *modulecode_charset_normalizer$constant(PyObject *module, struct Nuitka
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 497;
+            exception_lineno = 495;
 
             goto frame_exception_exit_1;
         }
     }
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_013ae1466a92403482b982f98e8ffc90);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_013ae1466a92403482b982f98e8ffc90);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_013ae1466a92403482b982f98e8ffc90, exception_lineno);
@@ -2714,12 +2656,15 @@ PyObject *modulecode_charset_normalizer$constant(PyObject *module, struct Nuitka
         exception_tb = ADD_TRACEBACK(exception_tb, frame_013ae1466a92403482b982f98e8ffc90, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_013ae1466a92403482b982f98e8ffc90);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_1:;
 
     // Report to PGO about leaving the module without error.

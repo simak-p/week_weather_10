@@ -1,7 +1,7 @@
 #ifndef __NUITKA_GLOBAL_CONSTANTS_H__
 #define __NUITKA_GLOBAL_CONSTANTS_H__
 
-extern PyObject *global_constants[76];
+extern PyObject *global_constants[84];
 // ()
 #define const_tuple_empty global_constants[0]
 // {}
@@ -106,56 +106,72 @@ extern PyObject *global_constants[76];
 #define const_str_slash global_constants[49]
 // '\\'
 #define const_str_backslash global_constants[50]
+// 'path'
+#define const_str_plain_path global_constants[51]
+// 'basename'
+#define const_str_plain_basename global_constants[52]
+// 'exists'
+#define const_str_plain_exists global_constants[53]
+// 'isdir'
+#define const_str_plain_isdir global_constants[54]
+// 'isfile'
+#define const_str_plain_isfile global_constants[55]
+// 'listdir'
+#define const_str_plain_listdir global_constants[56]
 // 'getattr'
-#define const_str_plain_getattr global_constants[51]
+#define const_str_plain_getattr global_constants[57]
 // '__cached__'
-#define const_str_plain___cached__ global_constants[52]
+#define const_str_plain___cached__ global_constants[58]
 // '__loader__'
-#define const_str_plain___loader__ global_constants[53]
+#define const_str_plain___loader__ global_constants[59]
 // 'print'
-#define const_str_plain_print global_constants[54]
+#define const_str_plain_print global_constants[60]
 // 'end'
-#define const_str_plain_end global_constants[55]
+#define const_str_plain_end global_constants[61]
 // 'file'
-#define const_str_plain_file global_constants[56]
+#define const_str_plain_file global_constants[62]
 // 'bytes'
-#define const_str_plain_bytes global_constants[57]
+#define const_str_plain_bytes global_constants[63]
 // '.'
-#define const_str_dot global_constants[58]
+#define const_str_dot global_constants[64]
 // '__loader__'
-#define const_str_plain___loader__ global_constants[53]
+#define const_str_plain___loader__ global_constants[59]
 // 'send'
-#define const_str_plain_send global_constants[59]
+#define const_str_plain_send global_constants[65]
 // 'throw'
-#define const_str_plain_throw global_constants[60]
+#define const_str_plain_throw global_constants[66]
 // 'close'
-#define const_str_plain_close global_constants[61]
+#define const_str_plain_close global_constants[67]
 // 'site'
-#define const_str_plain_site global_constants[62]
+#define const_str_plain_site global_constants[68]
 // 'type'
-#define const_str_plain_type global_constants[63]
+#define const_str_plain_type global_constants[69]
 // 'len'
-#define const_str_plain_len global_constants[64]
+#define const_str_plain_len global_constants[70]
 // 'range'
 #define const_str_plain_range global_constants[32]
 // 'repr'
-#define const_str_plain_repr global_constants[65]
+#define const_str_plain_repr global_constants[71]
 // 'int'
-#define const_str_plain_int global_constants[66]
+#define const_str_plain_int global_constants[72]
 // 'iter'
-#define const_str_plain_iter global_constants[67]
+#define const_str_plain_iter global_constants[73]
 // '__spec__'
-#define const_str_plain___spec__ global_constants[68]
+#define const_str_plain___spec__ global_constants[74]
 // '_initializing'
-#define const_str_plain__initializing global_constants[69]
+#define const_str_plain__initializing global_constants[75]
 // 'parent'
-#define const_str_plain_parent global_constants[70]
+#define const_str_plain_parent global_constants[76]
 // 'types'
-#define const_str_plain_types global_constants[71]
+#define const_str_plain_types global_constants[77]
 // '__main__'
-#define const_str_plain___main__ global_constants[72]
+#define const_str_plain___main__ global_constants[78]
+// 'as_file'
+#define const_str_plain_as_file global_constants[79]
+// 'register'
+#define const_str_plain_register global_constants[80]
 // '__class_getitem__'
-#define const_str_plain___class_getitem__ global_constants[73]
+#define const_str_plain___class_getitem__ global_constants[81]
 // '__match_args__'
-#define const_str_plain___match_args__ global_constants[74]
+#define const_str_plain___match_args__ global_constants[82]
 #endif

@@ -1,5 +1,5 @@
 /* Generated code for Python module 'urllib3.util'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -484,7 +484,6 @@ PyObject *modulecode_urllib3$util(PyObject *module, struct Nuitka_MetaPathBasedL
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_urllib3$util, (Nuitka_StringObject *)mod_consts[1], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_4fa768d13d8cc996ee73a4b62e7950cc = MAKE_MODULE_FRAME(codeobj_4fa768d13d8cc996ee73a4b62e7950cc, module_urllib3$util);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -1863,18 +1862,13 @@ PyObject *modulecode_urllib3$util(PyObject *module, struct Nuitka_MetaPathBasedL
     // End of try:
     try_end_5:;
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_4fa768d13d8cc996ee73a4b62e7950cc);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_4fa768d13d8cc996ee73a4b62e7950cc);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_4fa768d13d8cc996ee73a4b62e7950cc, exception_lineno);
@@ -1882,12 +1876,15 @@ PyObject *modulecode_urllib3$util(PyObject *module, struct Nuitka_MetaPathBasedL
         exception_tb = ADD_TRACEBACK(exception_tb, frame_4fa768d13d8cc996ee73a4b62e7950cc, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_4fa768d13d8cc996ee73a4b62e7950cc);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_1:;
     CHECK_OBJECT(tmp_import_from_5__module);
     Py_DECREF(tmp_import_from_5__module);

@@ -1,5 +1,5 @@
 /* Generated code for Python module 'shiboken6'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -459,7 +459,6 @@ PyObject *modulecode_shiboken6(PyObject *module, struct Nuitka_MetaPathBasedLoad
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_shiboken6, (Nuitka_StringObject *)mod_consts[1], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_8d46d50d4bd4f0cb7a032d848979463d = MAKE_MODULE_FRAME(codeobj_8d46d50d4bd4f0cb7a032d848979463d, module_shiboken6);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -1063,18 +1062,13 @@ PyObject *modulecode_shiboken6(PyObject *module, struct Nuitka_MetaPathBasedLoad
         }
     }
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_8d46d50d4bd4f0cb7a032d848979463d);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_8d46d50d4bd4f0cb7a032d848979463d);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_8d46d50d4bd4f0cb7a032d848979463d, exception_lineno);
@@ -1082,12 +1076,15 @@ PyObject *modulecode_shiboken6(PyObject *module, struct Nuitka_MetaPathBasedLoad
         exception_tb = ADD_TRACEBACK(exception_tb, frame_8d46d50d4bd4f0cb7a032d848979463d, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_8d46d50d4bd4f0cb7a032d848979463d);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_1:;
 
     // Report to PGO about leaving the module without error.

@@ -3,7 +3,7 @@ import sys
 from copy import copy
 
 from PySide6 import QtGui
-from PySide6.QtCore import QStringListModel
+import PySide6.QtCore
 from PySide6.QtGui import QScreen, QIcon, QAction, Qt
 from PySide6.QtWidgets import QMainWindow, QApplication, QToolBar, QMessageBox
 
@@ -61,10 +61,10 @@ class MainWeather(QMainWindow):
         except FileNotFoundError:
             pass
 
-        self.history_model = QStringListModel()
+        self.history_model = PySide6.QtCore.QStringListModel()
         self.history_model.setStringList(self.history_list)
 
-        self.favorites_model = QStringListModel()
+        self.favorites_model = PySide6.QtCore.QStringListModel()
         self.favorites_model.setStringList(list(self.by_popularity_dict.keys()))
 
         self.tool_bar = QToolBar('Окна')
@@ -285,7 +285,7 @@ if __name__ == '__main__':
     app = QApplication()
     QtGui.QFontDatabase.addApplicationFont('roboto/Roboto-BoldItalic.ttf')
     window = MainWeather()
-    window.resize(QScreen.availableGeometry(QApplication.primaryScreen()).width() / 1.5,
+    window.resize(QScreen.availableGeometry(QApplication.primaryScreen()).width() / 1.5,  # type: ignore
                   QScreen.availableGeometry(QApplication.primaryScreen()).height() / 1.5)
     window.setWindowIcon(QIcon('icon_files/program_icon.png'))
     window.setWindowTitle('Подробный прогноз погоды на неделю.')

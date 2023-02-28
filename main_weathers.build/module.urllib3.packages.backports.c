@@ -1,5 +1,5 @@
 /* Generated code for Python module 'urllib3.packages.backports'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -459,7 +459,6 @@ PyObject *modulecode_urllib3$packages$backports(PyObject *module, struct Nuitka_
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_urllib3$packages$backports, (Nuitka_StringObject *)mod_consts[1], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_de2ef068f1f8108adc730299d1e6d2b5 = MAKE_MODULE_FRAME(codeobj_de2ef068f1f8108adc730299d1e6d2b5, module_urllib3$packages$backports);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -920,18 +919,13 @@ PyObject *modulecode_urllib3$packages$backports(PyObject *module, struct Nuitka_
         }
     }
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_de2ef068f1f8108adc730299d1e6d2b5);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_de2ef068f1f8108adc730299d1e6d2b5);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_de2ef068f1f8108adc730299d1e6d2b5, exception_lineno);
@@ -939,12 +933,15 @@ PyObject *modulecode_urllib3$packages$backports(PyObject *module, struct Nuitka_
         exception_tb = ADD_TRACEBACK(exception_tb, frame_de2ef068f1f8108adc730299d1e6d2b5, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_de2ef068f1f8108adc730299d1e6d2b5);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_1:;
     {
         PyObject *tmp_assign_source_4;

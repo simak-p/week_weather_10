@@ -1,5 +1,5 @@
 /* Generated code for Python module 'my_dialog_charts'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -153,12 +153,10 @@ static PyObject *impl_my_dialog_charts$$$function__1___init__(struct Nuitka_Func
     assert(cache_frame_7dd273dc7f3ef6ca0dc4e1a55b74c2b5->m_type_description == NULL);
     frame_7dd273dc7f3ef6ca0dc4e1a55b74c2b5 = cache_frame_7dd273dc7f3ef6ca0dc4e1a55b74c2b5;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_7dd273dc7f3ef6ca0dc4e1a55b74c2b5);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_7dd273dc7f3ef6ca0dc4e1a55b74c2b5) == 2); // Frame stack
+    assert(Py_REFCNT(frame_7dd273dc7f3ef6ca0dc4e1a55b74c2b5) == 2);
 
     // Framed code:
     {
@@ -1768,21 +1766,13 @@ static PyObject *impl_my_dialog_charts$$$function__1___init__(struct Nuitka_Func
         Py_DECREF(tmp_call_result_13);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_7dd273dc7f3ef6ca0dc4e1a55b74c2b5);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_7dd273dc7f3ef6ca0dc4e1a55b74c2b5);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_7dd273dc7f3ef6ca0dc4e1a55b74c2b5, exception_lineno);
@@ -1806,7 +1796,6 @@ static PyObject *impl_my_dialog_charts$$$function__1___init__(struct Nuitka_Func
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_7dd273dc7f3ef6ca0dc4e1a55b74c2b5);
         cache_frame_7dd273dc7f3ef6ca0dc4e1a55b74c2b5 = NULL;
     }
@@ -1816,10 +1805,8 @@ static PyObject *impl_my_dialog_charts$$$function__1___init__(struct Nuitka_Func
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -1893,12 +1880,10 @@ static PyObject *impl_my_dialog_charts$$$function__2_set_chart(struct Nuitka_Fun
     assert(cache_frame_9416b5cef45621d222066aad2ea53302->m_type_description == NULL);
     frame_9416b5cef45621d222066aad2ea53302 = cache_frame_9416b5cef45621d222066aad2ea53302;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_9416b5cef45621d222066aad2ea53302);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_9416b5cef45621d222066aad2ea53302) == 2); // Frame stack
+    assert(Py_REFCNT(frame_9416b5cef45621d222066aad2ea53302) == 2);
 
     // Framed code:
     {
@@ -2701,21 +2686,13 @@ static PyObject *impl_my_dialog_charts$$$function__2_set_chart(struct Nuitka_Fun
     branch_end_2:;
     branch_end_1:;
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_9416b5cef45621d222066aad2ea53302);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_9416b5cef45621d222066aad2ea53302);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_9416b5cef45621d222066aad2ea53302, exception_lineno);
@@ -2738,7 +2715,6 @@ static PyObject *impl_my_dialog_charts$$$function__2_set_chart(struct Nuitka_Fun
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_9416b5cef45621d222066aad2ea53302);
         cache_frame_9416b5cef45621d222066aad2ea53302 = NULL;
     }
@@ -2748,10 +2724,8 @@ static PyObject *impl_my_dialog_charts$$$function__2_set_chart(struct Nuitka_Fun
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -2824,12 +2798,10 @@ static PyObject *impl_my_dialog_charts$$$function__3_chart_scaling(struct Nuitka
     assert(cache_frame_0ba8cfd5d769c2ce071761ecbdd9b74a->m_type_description == NULL);
     frame_0ba8cfd5d769c2ce071761ecbdd9b74a = cache_frame_0ba8cfd5d769c2ce071761ecbdd9b74a;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_0ba8cfd5d769c2ce071761ecbdd9b74a);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_0ba8cfd5d769c2ce071761ecbdd9b74a) == 2); // Frame stack
+    assert(Py_REFCNT(frame_0ba8cfd5d769c2ce071761ecbdd9b74a) == 2);
 
     // Framed code:
     {
@@ -3068,21 +3040,13 @@ static PyObject *impl_my_dialog_charts$$$function__3_chart_scaling(struct Nuitka
         Py_DECREF(tmp_call_result_3);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_0ba8cfd5d769c2ce071761ecbdd9b74a);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_0ba8cfd5d769c2ce071761ecbdd9b74a);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_0ba8cfd5d769c2ce071761ecbdd9b74a, exception_lineno);
@@ -3104,7 +3068,6 @@ static PyObject *impl_my_dialog_charts$$$function__3_chart_scaling(struct Nuitka
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_0ba8cfd5d769c2ce071761ecbdd9b74a);
         cache_frame_0ba8cfd5d769c2ce071761ecbdd9b74a = NULL;
     }
@@ -3114,10 +3077,8 @@ static PyObject *impl_my_dialog_charts$$$function__3_chart_scaling(struct Nuitka
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -3187,12 +3148,10 @@ static PyObject *impl_my_dialog_charts$$$function__4_resizeEvent(struct Nuitka_F
     assert(cache_frame_6214bbdec43b54ea2828a37442771727->m_type_description == NULL);
     frame_6214bbdec43b54ea2828a37442771727 = cache_frame_6214bbdec43b54ea2828a37442771727;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_6214bbdec43b54ea2828a37442771727);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_6214bbdec43b54ea2828a37442771727) == 2); // Frame stack
+    assert(Py_REFCNT(frame_6214bbdec43b54ea2828a37442771727) == 2);
 
     // Framed code:
     {
@@ -3320,21 +3279,13 @@ static PyObject *impl_my_dialog_charts$$$function__4_resizeEvent(struct Nuitka_F
         Py_DECREF(tmp_call_result_1);
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_6214bbdec43b54ea2828a37442771727);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_6214bbdec43b54ea2828a37442771727);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_6214bbdec43b54ea2828a37442771727, exception_lineno);
@@ -3357,7 +3308,6 @@ static PyObject *impl_my_dialog_charts$$$function__4_resizeEvent(struct Nuitka_F
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_6214bbdec43b54ea2828a37442771727);
         cache_frame_6214bbdec43b54ea2828a37442771727 = NULL;
     }
@@ -3367,10 +3317,8 @@ static PyObject *impl_my_dialog_charts$$$function__4_resizeEvent(struct Nuitka_F
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -3887,7 +3835,6 @@ PyObject *modulecode_my_dialog_charts(PyObject *module, struct Nuitka_MetaPathBa
     PyObject *tmp_dictset_value;
     struct Nuitka_FrameObject *frame_15ccd44b4d96c7fab8ff0807c8de301b_2;
     NUITKA_MAY_BE_UNUSED char const *type_description_2 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_15ccd44b4d96c7fab8ff0807c8de301b_2 = NULL;
     PyObject *exception_keeper_type_4;
     PyObject *exception_keeper_value_4;
     PyTracebackObject *exception_keeper_tb_4;
@@ -3912,7 +3859,6 @@ PyObject *modulecode_my_dialog_charts(PyObject *module, struct Nuitka_MetaPathBa
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_my_dialog_charts, (Nuitka_StringObject *)mod_consts[71], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_a2dfa1ea9bf95240fd98102024842f6e = MAKE_MODULE_FRAME(codeobj_a2dfa1ea9bf95240fd98102024842f6e, module_my_dialog_charts);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -5038,32 +4984,12 @@ PyObject *modulecode_my_dialog_charts(PyObject *module, struct Nuitka_MetaPathBa
 
             goto try_except_handler_6;
         }
-        if (isFrameUnusable(cache_frame_15ccd44b4d96c7fab8ff0807c8de301b_2)) {
-            Py_XDECREF(cache_frame_15ccd44b4d96c7fab8ff0807c8de301b_2);
+        frame_15ccd44b4d96c7fab8ff0807c8de301b_2 = MAKE_CLASS_FRAME(codeobj_15ccd44b4d96c7fab8ff0807c8de301b, module_my_dialog_charts, NULL, sizeof(void *));
 
-#if _DEBUG_REFCOUNTS
-            if (cache_frame_15ccd44b4d96c7fab8ff0807c8de301b_2 == NULL) {
-                count_active_frame_cache_instances += 1;
-            } else {
-                count_released_frame_cache_instances += 1;
-            }
-            count_allocated_frame_cache_instances += 1;
-#endif
-            cache_frame_15ccd44b4d96c7fab8ff0807c8de301b_2 = MAKE_CLASS_FRAME(codeobj_15ccd44b4d96c7fab8ff0807c8de301b, module_my_dialog_charts, NULL, sizeof(void *));
-#if _DEBUG_REFCOUNTS
-        } else {
-            count_hit_frame_cache_instances += 1;
-#endif
-        }
-        assert(cache_frame_15ccd44b4d96c7fab8ff0807c8de301b_2->m_type_description == NULL);
-        frame_15ccd44b4d96c7fab8ff0807c8de301b_2 = cache_frame_15ccd44b4d96c7fab8ff0807c8de301b_2;
-
-
-        // Push the new frame as the currently active one.
+        // Push the new frame as the currently active one, and we should be exclusively
+        // owning it.
         pushFrameStack(frame_15ccd44b4d96c7fab8ff0807c8de301b_2);
-
-        // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_15ccd44b4d96c7fab8ff0807c8de301b_2) == 2); // Frame stack
+        assert(Py_REFCNT(frame_15ccd44b4d96c7fab8ff0807c8de301b_2) == 2);
 
         // Framed code:
 
@@ -5135,21 +5061,13 @@ PyObject *modulecode_my_dialog_charts(PyObject *module, struct Nuitka_MetaPathBa
             }
         }
 
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_15ccd44b4d96c7fab8ff0807c8de301b_2);
-#endif
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         goto frame_no_exception_1;
+        frame_exception_exit_2:
 
-        frame_exception_exit_2:;
-
-#if 0
-        RESTORE_FRAME_EXCEPTION(frame_15ccd44b4d96c7fab8ff0807c8de301b_2);
-#endif
 
         if (exception_tb == NULL) {
             exception_tb = MAKE_TRACEBACK(frame_15ccd44b4d96c7fab8ff0807c8de301b_2, exception_lineno);
@@ -5165,26 +5083,14 @@ PyObject *modulecode_my_dialog_charts(PyObject *module, struct Nuitka_MetaPathBa
         );
 
 
-        // Release cached frame if used for exception.
-        if (frame_15ccd44b4d96c7fab8ff0807c8de301b_2 == cache_frame_15ccd44b4d96c7fab8ff0807c8de301b_2) {
-#if _DEBUG_REFCOUNTS
-            count_active_frame_cache_instances -= 1;
-            count_released_frame_cache_instances += 1;
-#endif
-
-            Py_DECREF(cache_frame_15ccd44b4d96c7fab8ff0807c8de301b_2);
-            cache_frame_15ccd44b4d96c7fab8ff0807c8de301b_2 = NULL;
-        }
 
         assertFrameObject(frame_15ccd44b4d96c7fab8ff0807c8de301b_2);
 
         // Put the previous frame back on top.
         popFrameStack();
 
-
         // Return the error.
         goto nested_frame_exit_1;
-
         frame_no_exception_1:;
         goto skip_nested_handling_1;
         nested_frame_exit_1:;
@@ -5364,18 +5270,13 @@ PyObject *modulecode_my_dialog_charts(PyObject *module, struct Nuitka_MetaPathBa
     // End of try:
     try_end_4:;
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_a2dfa1ea9bf95240fd98102024842f6e);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_2;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_a2dfa1ea9bf95240fd98102024842f6e);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_a2dfa1ea9bf95240fd98102024842f6e, exception_lineno);
@@ -5383,12 +5284,15 @@ PyObject *modulecode_my_dialog_charts(PyObject *module, struct Nuitka_MetaPathBa
         exception_tb = ADD_TRACEBACK(exception_tb, frame_a2dfa1ea9bf95240fd98102024842f6e, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_a2dfa1ea9bf95240fd98102024842f6e);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_2:;
     CHECK_OBJECT(tmp_class_creation_1__bases_orig);
     Py_DECREF(tmp_class_creation_1__bases_orig);

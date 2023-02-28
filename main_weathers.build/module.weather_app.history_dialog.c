@@ -1,5 +1,5 @@
 /* Generated code for Python module 'weather_app.history_dialog'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *

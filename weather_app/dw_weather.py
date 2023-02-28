@@ -1,9 +1,9 @@
-import requests
 from PySide6.QtWidgets import QMessageBox
-from requests.exceptions import ConnectionError
+from requests.exceptions import ConnectionError  # type: ignore
+import requests  # type: ignore
 
 
-def get_weather_dict(lat: float, lon: float) -> dict:
+def get_weather_dict(lat: float, lon: float) -> dict:  # type: ignore
     """
     Возвращает словарь с данными о погоде на семь дней
     :param lat:  широта
@@ -27,8 +27,6 @@ def get_weather_dict(lat: float, lon: float) -> dict:
     except ConnectionError:
         QMessageBox.warning(None, 'Внимание', 'Возможно отсутствует соединение\n'
                                               'с интернетом. Проверьте соединение!', QMessageBox.StandardButton.Ok)
-    except Exception as ex:
-        print(ex)
 
 
 def loc_to_coord(city_name: str) -> requests.models.Response:

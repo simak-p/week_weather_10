@@ -1,5 +1,5 @@
 /* Generated code for Python module 'idna.intranges'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -162,12 +162,10 @@ static PyObject *impl_idna$intranges$$$function__1_intranges_from_list(struct Nu
     assert(cache_frame_7c6fc2217cd1dfc08a9735bee29d93d5->m_type_description == NULL);
     frame_7c6fc2217cd1dfc08a9735bee29d93d5 = cache_frame_7c6fc2217cd1dfc08a9735bee29d93d5;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_7c6fc2217cd1dfc08a9735bee29d93d5);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_7c6fc2217cd1dfc08a9735bee29d93d5) == 2); // Frame stack
+    assert(Py_REFCNT(frame_7c6fc2217cd1dfc08a9735bee29d93d5) == 2);
 
     // Framed code:
     {
@@ -487,7 +485,7 @@ static PyObject *impl_idna$intranges$$$function__1_intranges_from_list(struct Nu
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
-        tmp_subscript_value_3 = MAKE_SLICEOBJ2(tmp_start_value_1, tmp_stop_value_1);
+        tmp_subscript_value_3 = MAKE_SLICE_OBJECT2(tmp_start_value_1, tmp_stop_value_1);
         Py_DECREF(tmp_start_value_1);
         Py_DECREF(tmp_stop_value_1);
         assert(!(tmp_subscript_value_3 == NULL));
@@ -725,32 +723,19 @@ static PyObject *impl_idna$intranges$$$function__1_intranges_from_list(struct Nu
         goto frame_return_exit_1;
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_7c6fc2217cd1dfc08a9735bee29d93d5);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_7c6fc2217cd1dfc08a9735bee29d93d5);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto try_return_handler_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_7c6fc2217cd1dfc08a9735bee29d93d5);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_7c6fc2217cd1dfc08a9735bee29d93d5, exception_lineno);
@@ -777,7 +762,6 @@ static PyObject *impl_idna$intranges$$$function__1_intranges_from_list(struct Nu
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_7c6fc2217cd1dfc08a9735bee29d93d5);
         cache_frame_7c6fc2217cd1dfc08a9735bee29d93d5 = NULL;
     }
@@ -787,10 +771,8 @@ static PyObject *impl_idna$intranges$$$function__1_intranges_from_list(struct Nu
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
@@ -901,12 +883,10 @@ static PyObject *impl_idna$intranges$$$function__2__encode_range(struct Nuitka_F
     assert(cache_frame_67a27531b3efc9ebed68d704b7d9ab47->m_type_description == NULL);
     frame_67a27531b3efc9ebed68d704b7d9ab47 = cache_frame_67a27531b3efc9ebed68d704b7d9ab47;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_67a27531b3efc9ebed68d704b7d9ab47);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_67a27531b3efc9ebed68d704b7d9ab47) == 2); // Frame stack
+    assert(Py_REFCNT(frame_67a27531b3efc9ebed68d704b7d9ab47) == 2);
 
     // Framed code:
     {
@@ -945,32 +925,19 @@ static PyObject *impl_idna$intranges$$$function__2__encode_range(struct Nuitka_F
         goto frame_return_exit_1;
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_67a27531b3efc9ebed68d704b7d9ab47);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_67a27531b3efc9ebed68d704b7d9ab47);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto function_return_exit;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_67a27531b3efc9ebed68d704b7d9ab47);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_67a27531b3efc9ebed68d704b7d9ab47, exception_lineno);
@@ -993,7 +960,6 @@ static PyObject *impl_idna$intranges$$$function__2__encode_range(struct Nuitka_F
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_67a27531b3efc9ebed68d704b7d9ab47);
         cache_frame_67a27531b3efc9ebed68d704b7d9ab47 = NULL;
     }
@@ -1003,10 +969,8 @@ static PyObject *impl_idna$intranges$$$function__2__encode_range(struct Nuitka_F
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
@@ -1075,12 +1039,10 @@ static PyObject *impl_idna$intranges$$$function__3__decode_range(struct Nuitka_F
     assert(cache_frame_90cbd7295cda94d2cd0e045f07fa47d3->m_type_description == NULL);
     frame_90cbd7295cda94d2cd0e045f07fa47d3 = cache_frame_90cbd7295cda94d2cd0e045f07fa47d3;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_90cbd7295cda94d2cd0e045f07fa47d3);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_90cbd7295cda94d2cd0e045f07fa47d3) == 2); // Frame stack
+    assert(Py_REFCNT(frame_90cbd7295cda94d2cd0e045f07fa47d3) == 2);
 
     // Framed code:
     {
@@ -1132,32 +1094,19 @@ static PyObject *impl_idna$intranges$$$function__3__decode_range(struct Nuitka_F
         goto frame_return_exit_1;
     }
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_90cbd7295cda94d2cd0e045f07fa47d3);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_90cbd7295cda94d2cd0e045f07fa47d3);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto function_return_exit;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_90cbd7295cda94d2cd0e045f07fa47d3);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_90cbd7295cda94d2cd0e045f07fa47d3, exception_lineno);
@@ -1179,7 +1128,6 @@ static PyObject *impl_idna$intranges$$$function__3__decode_range(struct Nuitka_F
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_90cbd7295cda94d2cd0e045f07fa47d3);
         cache_frame_90cbd7295cda94d2cd0e045f07fa47d3 = NULL;
     }
@@ -1189,10 +1137,8 @@ static PyObject *impl_idna$intranges$$$function__3__decode_range(struct Nuitka_F
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto function_exception_exit;
-
     frame_no_exception_1:;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
@@ -1298,12 +1244,10 @@ static PyObject *impl_idna$intranges$$$function__4_intranges_contain(struct Nuit
     assert(cache_frame_08c41b06ba03aee32e63c1e92fb21ef5->m_type_description == NULL);
     frame_08c41b06ba03aee32e63c1e92fb21ef5 = cache_frame_08c41b06ba03aee32e63c1e92fb21ef5;
 
-
-    // Push the new frame as the currently active one.
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
     pushFrameStack(frame_08c41b06ba03aee32e63c1e92fb21ef5);
-
-    // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_08c41b06ba03aee32e63c1e92fb21ef5) == 2); // Frame stack
+    assert(Py_REFCNT(frame_08c41b06ba03aee32e63c1e92fb21ef5) == 2);
 
     // Framed code:
     {
@@ -2135,32 +2079,19 @@ static PyObject *impl_idna$intranges$$$function__4_intranges_contain(struct Nuit
     branch_no_5:;
     branch_no_4:;
 
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_08c41b06ba03aee32e63c1e92fb21ef5);
-#endif
 
     // Put the previous frame back on top.
     popFrameStack();
-
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_08c41b06ba03aee32e63c1e92fb21ef5);
-#endif
+    frame_return_exit_1:
 
     // Put the previous frame back on top.
     popFrameStack();
 
-
     goto try_return_handler_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_08c41b06ba03aee32e63c1e92fb21ef5);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_08c41b06ba03aee32e63c1e92fb21ef5, exception_lineno);
@@ -2188,7 +2119,6 @@ static PyObject *impl_idna$intranges$$$function__4_intranges_contain(struct Nuit
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
-
         Py_DECREF(cache_frame_08c41b06ba03aee32e63c1e92fb21ef5);
         cache_frame_08c41b06ba03aee32e63c1e92fb21ef5 = NULL;
     }
@@ -2198,10 +2128,8 @@ static PyObject *impl_idna$intranges$$$function__4_intranges_contain(struct Nuit
     // Put the previous frame back on top.
     popFrameStack();
 
-
     // Return the error.
     goto try_except_handler_1;
-
     frame_no_exception_1:;
     tmp_return_value = Py_False;
     Py_INCREF(tmp_return_value);
@@ -2753,7 +2681,6 @@ PyObject *modulecode_idna$intranges(PyObject *module, struct Nuitka_MetaPathBase
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_idna$intranges, (Nuitka_StringObject *)mod_consts[19], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_2496466fe05f3cce64f37746131f2df0 = MAKE_MODULE_FRAME(codeobj_2496466fe05f3cce64f37746131f2df0, module_idna$intranges);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -3144,18 +3071,13 @@ PyObject *modulecode_idna$intranges(PyObject *module, struct Nuitka_MetaPathBase
         UPDATE_STRING_DICT1(moduledict_idna$intranges, (Nuitka_StringObject *)mod_consts[34], tmp_assign_source_11);
     }
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_2496466fe05f3cce64f37746131f2df0);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_2496466fe05f3cce64f37746131f2df0);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_2496466fe05f3cce64f37746131f2df0, exception_lineno);
@@ -3163,12 +3085,15 @@ PyObject *modulecode_idna$intranges(PyObject *module, struct Nuitka_MetaPathBase
         exception_tb = ADD_TRACEBACK(exception_tb, frame_2496466fe05f3cce64f37746131f2df0, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_2496466fe05f3cce64f37746131f2df0);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_1:;
 
     // Report to PGO about leaving the module without error.

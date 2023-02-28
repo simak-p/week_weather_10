@@ -1,5 +1,5 @@
 /* Generated code for Python module 'requests.packages'
- * created by Nuitka version 1.3.5
+ * created by Nuitka version 1.4.8
  *
  * This code is in part copyright 2022 Kay Hayen.
  *
@@ -484,7 +484,6 @@ PyObject *modulecode_requests$packages(PyObject *module, struct Nuitka_MetaPathB
         tmp_assign_source_2 = module_filename_obj;
         UPDATE_STRING_DICT0(moduledict_requests$packages, (Nuitka_StringObject *)mod_consts[1], tmp_assign_source_2);
     }
-    // Frame without reuse.
     frame_dd6172f6094863fb7c27738f2633a3ae = MAKE_MODULE_FRAME(codeobj_dd6172f6094863fb7c27738f2633a3ae, module_requests$packages);
 
     // Push the new frame as the currently active one, and we should be exclusively
@@ -1920,18 +1919,13 @@ PyObject *modulecode_requests$packages(PyObject *module, struct Nuitka_MetaPathB
     // End of try:
     try_end_5:;
 
-    // Restore frame exception if necessary.
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_dd6172f6094863fb7c27738f2633a3ae);
-#endif
+
+    // Put the previous frame back on top.
     popFrameStack();
 
     goto frame_no_exception_1;
+    frame_exception_exit_1:
 
-    frame_exception_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_dd6172f6094863fb7c27738f2633a3ae);
-#endif
 
     if (exception_tb == NULL) {
         exception_tb = MAKE_TRACEBACK(frame_dd6172f6094863fb7c27738f2633a3ae, exception_lineno);
@@ -1939,12 +1933,15 @@ PyObject *modulecode_requests$packages(PyObject *module, struct Nuitka_MetaPathB
         exception_tb = ADD_TRACEBACK(exception_tb, frame_dd6172f6094863fb7c27738f2633a3ae, exception_lineno);
     }
 
+
+
+    assertFrameObject(frame_dd6172f6094863fb7c27738f2633a3ae);
+
     // Put the previous frame back on top.
     popFrameStack();
 
     // Return the error.
     goto module_exception_exit;
-
     frame_no_exception_1:;
     Py_XDECREF(tmp_for_loop_3__iter_value);
     tmp_for_loop_3__iter_value = NULL;
