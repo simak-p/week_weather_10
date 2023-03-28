@@ -4,88 +4,34 @@ import pytz
 from PySide6.QtCore import QPointF, QDateTime
 from PySide6.QtWidgets import QLabel
 
+weather_code_dict = {0: 'Ясно', 1: 'Лёгкая облачность', 2: 'Переменная облачность', 3: 'Пасмурно', 45: 'Туман',
+                     48: 'Иней', 51: 'Лёгкая морось', 53: 'Умеренная морось', 55: 'Сильная изморось',
+                     56: 'Лёгкий моросящий дождь', 57: 'Плотный моросящий дождь', 61: 'Небольшой дождь',
+                     63: 'Средний дождь', 65: 'Сильный дождь', 66: 'Небольшой ледяной дождь',
+                     67: 'Сильный ледяной дождь', 71: 'Лёгкий снегопад', 73: 'Средний снегопад', 75: 'Сильный снегопад',
+                     77: 'Снежная крупа', 80: 'Небольшие линевые дожди', 81: 'Умеренные ливневые дожди',
+                     82: 'Сильные ливневые дожди', 85: 'Небольшой снегопад', 86: 'Сильный снегопад',
+                     95: 'Небольшие грозы', 96: 'Гроза с небольшим градом', 99: 'Гроза с сильным градом'}
 
-def w_code(code: float):
-    if code == 0.0:
-        code_str = 'Ясно'
-    elif code == 1.0:
-        code_str = 'В основном ясно'
-    elif code == 2.0:
-        code_str = 'Переменная облачность'
-    elif code == 3.0:
-        code_str = 'Пасмурно'
-    elif code == 45.0:
-        code_str = 'Туман'
-    elif code == 48.0:
-        code_str = 'Иней'
-    elif code == 51.0:
-        code_str = 'Лёгкая морось'
-    elif code == 53.0:
-        code_str = 'Умеренная морось'
-    elif code == 55.0:
-        code_str = 'Сильная изморось'
-    elif code == 56.0:
-        code_str = 'Лёгкий моросящий дождь'
-    elif code == 57.0:
-        code_str = 'Плотный моросящий дождь'
-    elif code == 61.0:
-        code_str = 'Небольшой дождь'
-    elif code == 63.0:
-        code_str = 'Средний дождь'
-    elif code == 65.0:
-        code_str = 'Сильный дождь'
-    elif code == 66.0:
-        code_str = 'Небольшой ледяной дождь'
-    elif code == 67.0:
-        code_str = 'Сильный ледяной дождь'
-    elif code == 71.0:
-        code_str = 'Лёгкий снегопад'
-    elif code == 73.0:
-        code_str = 'Средний снегопад'
-    elif code == 75.0:
-        code_str = 'Сильный снегопад'
-    elif code == 77.0:
-        code_str = 'Снежная крупа'
-    elif code == 80.0:
-        code_str = 'Небольшие линевые дожди'
-    elif code == 81.0:
-        code_str = 'Умеренные ливневые дожди'
-    elif code == 82.0:
-        code_str = 'Сильные ливневые дожди'
-    elif code == 85.0:
-        code_str = 'Небольшой снегопад'
-    elif code == 86.0:
-        code_str = 'Сильный снегопад'
-    elif code == 95.0:
-        code_str = 'Небольшие грозы'
-    elif code == 96.0:
-        code_str = 'Гроза с небольшим градом'
-    elif code == 99.0:
-        code_str = 'Гроза с сильным градом'
-    else:
-        code_str = 'Нет данных'
-    return code_str
+
+def w_code(weather_code: int):
+    for code in weather_code_dict.keys():
+        if code == weather_code:
+            return weather_code_dict[code]
+
+
+degree_code_dict = {range(22, 68): 'Северо-восточный', range(68, 112): 'Западный', range(112, 158): 'Юго-западный',
+                    range(158, 202): 'Южный', range(202, 248): 'Юго-восточный', range(248, 292): 'Восточный',
+                    range(292, 338): 'Северо-восточный'}
 
 
 def wind_srt(degree_f: float):
     degree = int(degree_f)
-    if degree in range(22, 68):
-        wind = 'Северо-восточный'
-    elif degree in range(68, 112):
-        wind = 'Западный'
-    elif degree in range(112, 158):
-        wind = 'Юго-западный'
-    elif degree in range(158, 202):
-        wind = 'Южный'
-    elif degree in range(202, 248):
-        wind = 'Юго-восточный'
-    elif degree in range(248, 292):
-        wind = 'Восточный'
-    elif degree in range(292, 338):
-        wind = 'Северо-восточный'
+    for wind in degree_code_dict.keys():
+        if degree in wind:
+            return degree_code_dict[wind]
     else:
-        wind = 'Северный'
-    return wind
+        return 'Северный'
 
 
 def create_str_daily(mw_dict: dict, label_list: list[QLabel], t_zone: str):
@@ -227,13 +173,13 @@ def y_axis_range(y_axes: list):
     :param y_axes:
     :return:
     """
-    n: int
+    global n
     full_axes = sum(y_axes, [])
     for n in range(1, 5):
-        if ((int(max(set(full_axes))) + 2) - (int(min(set(full_axes))) - n)) % 2 == 0:
-            break
-        else:
+        if ((int(max(set(full_axes))) + 2) - (int(min(set(full_axes))) - n)) % 2 != 0:
             n += 1
+        else:
+            break
     return [int(min(set(full_axes))) - n, int(max(set(full_axes))) + 2]
 
 

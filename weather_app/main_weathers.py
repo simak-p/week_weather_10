@@ -247,6 +247,7 @@ class MainWeather(QMainWindow):
         self.mw_dict = get_weather_dict(float(ret_list[3]), float(ret_list[4]))
         create_str_current(self.mw_dict['current_weather'], ret_list, self.ui.label)
         create_str_daily(self.mw_dict, self.label_list, ret_list[5])
+        print(self.mw_dict['daily'])
 
         city = self.dialog_favorite.ui.listView.currentIndex().data()
         for key in self.by_popularity_dict.keys():
